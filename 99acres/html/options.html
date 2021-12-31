@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99 acres Scrapper</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container" style="max-width: 700px;margin: 0 auto;">
+        <h2><b>Some Options for improve perfomence</b></h2>
+        <form method="get" id="mobileNumberForm">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="p-3" for="mobile">Mobile Number</label>
+                        <input type="number" min="1000000000" max="9999999999" minlength="10" maxlength="10"
+                            class="form-control" id="mobile" placeholder="Enter Mobile Number" required>
+                    </div>
+                    <br />
+                    <div class="form-group ">
+                        <button class="btn w-100 btn-primary" id="fetch_otp">Get OTP</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="p-5"></div>
+        <form method="get"  id="otpForm">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="p-3" for="mobile">The Latest OTP For the number</label>
+                        <input type="number" min="0001" max="9999" minlength="4" maxlength="4" class="form-control"
+                            id="otp" placeholder="4 Digits" required>
+                    </div>
+                    <br />
+                    <div class="form-group ">
+                        <button class="btn w-100 btn-primary" id="fetch_otp">Save OTP</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/options.js"></script>
+</body>
+
+</html>

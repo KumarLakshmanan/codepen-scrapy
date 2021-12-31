@@ -1,0 +1,53 @@
+{
+  "name": "99acres Uploader",
+  "description": "Upload Ad to 99acres.com",
+  "version": "1.4",
+  "manifest_version": 3,
+  "options_page": "99acres/html/options.html",
+  "permissions": [
+    "storage",
+    "tabs",
+    "declarativeContent",
+    "activeTab",
+    "scripting",
+    "*://*.99acres.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.99acres.com/*"],
+      "js": ["/99acres/js/content.js"],
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "48": "48.png",
+      "128": "128.png",
+      "512": "512.png"
+    }
+  },
+  "background": {
+    "service_worker": "/99acres/js/content.js"
+  },
+  "icons": {
+    "48": "48.png",
+    "128": "128.png",
+    "512": "512.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/99acres/js/script.js",
+        "/99acres/js/jquery.js",
+        "/99acres/js/search.js",
+        "/99acres/js/bootstrap.min.js",
+        "/99acres/js/xlsx.full.min.js",
+        "/99acres/js/xlsx.core.min.js",
+        "/99acres/js/popup.min.js",
+        "/99acres/js/jhxlsx.js",
+        "/99acres/js/FileSaver.js"
+      ],
+      "matches": ["*://*.99acres.com/*"]
+    }
+  ]
+}
