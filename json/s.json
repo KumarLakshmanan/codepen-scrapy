@@ -1,6 +1,6 @@
 {
     "preference": {
-        "value": "R"
+        "value": "S"
     },
     "agreement": {
         "value": "2"
@@ -18,14 +18,10 @@
         "value": []
     },
     "availableFor": {
-        "value": [
-            "1"
-        ]
+        "value": []
     },
     "additionalRooms": {
-        "value": [
-            "1"
-        ]
+        "value": []
     },
     "waterSource": {
         "value": []
@@ -34,35 +30,32 @@
         "value": []
     },
     "powerBackup": {
-        "value": "P"
+        "value": ""
     },
     "amenities": {
-        "value": [
-            23,
-            5
-        ]
+        "value": []
     },
     "bedroomNum": {
-        "value": "3"
+        "value": ""
     },
     "areaType": {},
     "noticeDuration": {
         "value": ""
     },
     "furnish": {
-        "value": 1
+        "value": ""
     },
     "parking": {
         "value": 0
     },
     "facing": {
-        "value": "2"
+        "value": ""
     },
     "flooring": {
         "value": ""
     },
     "widthOfFacingRoad": {
-        "value": "200"
+        "value": ""
     },
     "callPreference": {
         "value": []
@@ -73,16 +66,16 @@
         "value": "1"
     },
     "bathroomNum": {
-        "value": "3"
+        "value": ""
     },
     "balconyNum": {
-        "value": "2"
+        "value": ""
     },
     "ownership": {
         "value": ""
     },
     "price": {
-        "value": "12000"
+        "value": ""
     },
     "inclusive": {
         "value": false
@@ -97,19 +90,19 @@
         "value": true
     },
     "propertyType": {
-        "value": 1
+        "value": ""
     },
     "resCom": {
         "value": "R"
     },
     "superPropertyType": {
-        "value": 1
+        "value": ""
     },
     "totalFloor": {
-        "value": "3"
+        "value": ""
     },
     "floorNum": {
-        "value": 2
+        "value": ""
     },
     "areaUnit": {
         "value": 1
@@ -121,10 +114,10 @@
         "value": ""
     },
     "carpet": {
-        "value": "23423"
+        "value": ""
     },
     "age": {
-        "value": 6
+        "value": ""
     },
     "openParking": {
         "value": 0
@@ -133,7 +126,7 @@
         "value": 0
     },
     "propertyAvailability": {
-        "value": "I"
+        "value": ""
     },
     "availability": {},
     "isBrokerage": {
@@ -302,19 +295,13 @@
         "value": ""
     },
     "otherAmenities": {
-        "value": [
-            47
-        ]
+        "value": []
     },
     "propertyFeatures": {
-        "value": [
-            44
-        ]
+        "value": []
     },
     "societyFeatures": {
-        "value": [
-            12
-        ]
+        "value": []
     },
     "commonFurnish_diningTable": {
         "value": false
@@ -368,10 +355,10 @@
         "value": 0
     },
     "furnishing_Tv": {
-        "value": 1
+        "value": 0
     },
     "furnishing_Ac": {
-        "value": 1
+        "value": 0
     },
     "furnishing_Bed": {
         "value": 0
@@ -380,10 +367,10 @@
         "value": 0
     },
     "furnishing_Gey": {
-        "value": 1
+        "value": 0
     },
     "furnishing_Light": {
-        "value": 2
+        "value": 0
     },
     "furnishing_Ward": {
         "value": 0
@@ -392,7 +379,7 @@
         "value": false
     },
     "furnishing_Curt": {
-        "value": true
+        "value": false
     },
     "furnishing_Dinngtbl": {
         "value": false
@@ -436,7 +423,7 @@
     },
     "minimumContractDuration": {},
     "availabilityDate": {
-        "value": "2022-01-01"
+        "value": ""
     },
     "propertySpecification": {
         "value": "N"
@@ -463,10 +450,10 @@
         "value": false
     },
     "wheelChairFriendly": {
-        "value": true
+        "value": false
     },
     "petFriendly": {
-        "value": true
+        "value": false
     },
     "withinGatedCommunity": {
         "value": false
@@ -692,10 +679,10 @@
     },
     "city": {
         "value": {
-            "id": "191",
-            "label": "Tirunelveli",
-            "lat": 8.733,
-            "lng": 77.7
+            "id": "",
+            "label": "",
+            "lat": "",
+            "lng": ""
         }
     },
     "locationState": {
@@ -708,10 +695,10 @@
     },
     "locality": {
         "value": {
-            "id": "32027",
-            "label": "Palayamkottai",
-            "lat": 8.720286,
-            "lng": 77.739847
+            "id": "",
+            "label": "",
+            "lat": "",
+            "lng": ""
         }
     },
     "subLocality": {
@@ -724,10 +711,10 @@
     },
     "project": {
         "value": {
-            "id": "360219",
-            "label": "Johns Divine City",
-            "lat": 8.719523,
-            "lng": 77.746885
+            "id": "",
+            "label": "",
+            "lat": "",
+            "lng": ""
         }
     },
     "tower": {
@@ -755,9 +742,9 @@
     },
     "latLng": {
         "value": {
-            "lat": 8.719523,
-            "lng": 77.746885,
-            "field": "project"
+            "lat": 28.653386,
+            "lng": 77.228165,
+            "field": ""
         }
     },
     "floorPlanId": {
@@ -767,7 +754,7 @@
         "value": "O"
     },
     "description": {
-        "value": "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+        "value": "",
         "isAutoGenerated": false,
         "error": "",
         "descriptionReviewed": false
@@ -782,52 +769,27 @@
     "expectedAnnualReturnsCriteria": {
         "value": true
     },
-    "locationAdvantages": {
-        "value": [
-            {
-                "id": "10",
-                "label": "Close to Market"
-            }
-        ]
-    },
+    "locationAdvantages": [],
     "suggestUsp": [],
-    "lastActiveUrl": "/postproperty/otherdetails",
+    "lastActiveUrl": "/postproperty/primarydetails",
     "mediaUploadChannels": [],
     "PriceRecommender": {
         "loading": false,
         "minPrice": "",
         "maxPrice": "",
         "totalPrice": "",
-        "price": "12000",
+        "price": "",
         "pricingReasons": [],
         "otherReasons": "",
         "visible": false,
         "isEdit": false
     },
     "visitedPages": {
-        "PrimaryDetails": true,
-        "LocationDetails": true,
-        "BasicDetails": true,
-        "PhotoDetails": true,
-        "FeaturePricing": true,
-        "UspAmenities": true
+        "PrimaryDetails": true
     },
-    "lastUpdatedField": "widthOfFacingRoad",
+    "lastUpdatedField": "locatedInside",
     "CommercialProject": {
         "projectData": {}
     },
-    "premiumVersion": {
-        "complexLocationAdvantage": false,
-        "topUsp": true,
-        "gaiaErrors": {
-            "upstreamErrors": [
-                {
-                    "upstream": "cabisStatus",
-                    "code": 524,
-                    "message": "Upstream timed out"
-                }
-            ],
-            "conditionFailedErrors": []
-        }
-    }
+    "premiumVersion": {}
 }
