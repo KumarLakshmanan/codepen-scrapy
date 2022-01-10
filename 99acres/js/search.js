@@ -2,6 +2,8 @@ var myModalContent = `<button type="button" id="myModalOpen" class="btn btn-prim
 var myModal = document.createElement("div");
 myModal.innerHTML = myModalContent;
 myModal.setAttribute("id", "myModal");
+
+var area = 0;
 if (window.location.href.indexOf("postproperty") > -1) {
   document.body.appendChild(myModal);
 }
@@ -816,16 +818,16 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
       var data = csv.split("\n");
       var dataArray = [];
       for (var i = 0; i < data.length; i++) {
-        var dataRow = data[i].split(",");
-        dataArray.push(dataRow);
+        var datarow = data[i].split(",");
+        dataArray.push(datarow);
       }
       console.log(dataArray);
-      dataArray.forEach(function (dataRow) {
+      dataArray.forEach(function (datarow) {
         try {
-          if (dataRow[0] === "") {
+          if (datarow[0] === "") {
             return;
           }
-          dataRow[0] = dataRow[0]
+          datarow[0] = datarow[0]
             .replace(/\n/g, "")
             .replace(/\r/g, "")
             .replace(/\t/g, "")
@@ -833,7 +835,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
             .replace(/\f/g, "")
             .replace(/\v/g, "")
             .toLowerCase();
-          dataRow[1] = dataRow[1]
+          datarow[1] = datarow[1]
             .replace(/\n/g, "")
             .replace(/\r/g, "")
             .replace(/\t/g, "")
@@ -841,22 +843,205 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
             .replace(/\f/g, "")
             .replace(/\v/g, "")
             .toLowerCase();
-          switch (dataRow[0]) {
-            case "propertyType":
-              if (dataRow[1] === "rent") {
-                object.preference.value ="R";
-              } else if (dataRow[1] === "sale") {
-                object.preference.value ="S";
-              } else if (dataRow[1] === "P") {
+          switch (datarow[0]) {
+            case "type":
+              if (datarow[1] === "rent") {
+                object.preference.value = "R";
+              } else if (datarow[1] === "sale") {
+                object.preference.value = "S";
+              } else if (datarow[1] === "P") {
                 object.preference.value = "P";
-                 }   
+              }
               break;
             case "propertySubType":
-                if (dataRow[1] === "residential") {
-                    object.propertyType.value = "R";
-                } else if (dataRow[1] === "commercial") {
-                    object.propertyType.value = "C";
-                }
+              if (datarow[1] === "residential") {
+                object.resCom.value = "R";
+              } else if (datarow[1] === "commercial") {
+                object.resCom.value = "C";
+              }
+              break;
+            case "superPropertyType":
+              if (
+                datarow[1] === "office" ||
+                datarow[1] === "retail" ||
+                datarow[1] === "land" ||
+                datarow[1] === "storage" ||
+                datarow[1] === "industry" ||
+                datarow[1] === "hospitality"
+              ) {
+                object.superPropertyType.value = datarow[1];
+              } else if (datarow[1] === "other") {
+                object.superPropertyType.value = 81;
+              } else if (datarow[1] === "apartment") {
+                object.superPropertyType.value = 1;
+              } else if (datarow[1] === "independent house / villa") {
+                object.superPropertyType.value = 2;
+              } else if (datarow[1] === "independent / builder floor") {
+                object.superPropertyType.value = 4;
+              } else if (datarow[1] === "1 rk/ studio apartment") {
+                object.superPropertyType.value = 90;
+              } else if (datarow[1] === "serviced apartment") {
+                object.superPropertyType.value = 22;
+              } else if (datarow[1] === "farmhouse") {
+                object.superPropertyType.value = 5;
+              } else if (datarow[1] === "other") {
+                object.superPropertyType.value = 80;
+              }
+              break;
+            case "city":
+              object.city.value.label = datarow[1];
+              object.city.value.id = "";
+              object.city.value.lat = "";
+              object.city.value.lng = "";
+              break;
+            case "state":
+              if (datarow[1] === "tamil nadu") {
+                object.locationState.value.label = "Tamil Nadu";
+                object.locationState.value.id = "194";
+                object.locationState.value.lat = 11.57691;
+                object.locationState.value.lng = 78.68408;
+                object.latLng.value.lat = 11.57691;
+                object.latLng.value.lng = 78.68408;
+                object.latLng.value.field = "city";
+              } else if (datarow[1] === "kerala") {
+                object.locationState.value.label = "Kerala";
+                object.locationState.value.id = "139";
+                object.locationState.value.lat = 9.31899;
+                object.locationState.value.lng = 76.50879;
+                object.latLng.value.lat = 9.31899;
+                object.latLng.value.lng = 76.50879;
+                object.latLng.value.field = "city";
+              } else if (datarow[1] === "karnataka") {
+                object.locationState.value.label = "Karnataka";
+                object.locationState.value.id = "127";
+                object.locationState.value.lat = 14.78551;
+                object.locationState.value.lng = 75.79468;
+                object.latLng.value.lat = 14.78551;
+                object.latLng.value.lng = 75.79468;
+                object.latLng.value.field = "city";
+              } else if (datarow[1] === "andhra pradesh") {
+                object.locationState.value.label = "Andhra Pradesh";
+                object.locationState.value.id = "64";
+                object.locationState.value.lat = 16.46769;
+                object.locationState.value.lng = 78.65112;
+                object.latLng.value.lat = 16.46769;
+                object.latLng.value.lng = 78.65112;
+                object.latLng.value.field = "city";
+              } else if (datarow[1] === "telangana") {
+                object.locationState.value.label = "Telangana";
+                object.locationState.value.id = "1042906";
+                object.locationState.value.lat = 17.864173;
+                object.locationState.value.lng = 79.240416;
+                object.latLng.value.lat = 17.864173;
+                object.latLng.value.lng = 79.240416;
+                object.latLng.value.field = "city";
+              } else {
+                object.locationState.value.label = datarow[1];
+                object.locationState.value.id = "";
+                object.locationState.value.lat = "";
+                object.locationState.value.lng = "";
+              }
+              break;
+            case "subLocality":
+              object.subLocality.value.label = datarow[1];
+              object.subLocality.value.id = "";
+              object.subLocality.value.lat = "";
+              object.subLocality.value.lng = "";
+              break;
+            case "Apartment/Society":
+              object.project.value.label = datarow[1];
+              object.project.value.id = "";
+              object.project.value.lat = "";
+              object.project.value.lng = "";
+              break;
+            case "House No":
+              object.address.value = datarow[1];
+              break;
+            case "balconyNum":
+              object.balconyNum.value = datarow[1];
+              break;
+            case "bathroomNum":
+              object.bathroomNum.value = datarow[1];
+              break;
+            case "bedroomNum":
+              object.bedroomNum.value = datarow[1];
+              break;
+            case "carpetArea":
+              object.carpet.value = datarow[1];
+              area = parseInt(datarow[1]);
+              break;
+            case "age":
+              object.age.value = parseInt(datarow[1]);
+              break;
+            case "openParking":
+              object.openParking.value = parseInt(datarow[1]);
+              break;
+            case "coveredParking":
+              object.coveredParking.value = parseInt(datarow[1]);
+              break;
+            case "totalFloor":
+              object.totalFloor.value = parseInt(datarow[1]);
+              break;
+            case "floorNum":
+              object.floorNum.value = parseInt(datarow[1]);
+              break;
+            case "furnished":
+              if (datarow[1] === "full") {
+                object.furnish.value = 1;
+              } else if (datarow[1] === "semi") {
+                object.furnish.value = 4;
+              } else if (datarow[1] === "unfurnished") {
+                object.furnish.value = 2;
+              }
+              break;
+            case "property Availability":
+              if (datarow[1] === "ready to move") {
+                object.propertyAvailability.value = "I";
+              } else if (datarow[1] === "under construction") {
+                object.propertyAvailability.value = 5;
+              }
+              break;
+            case "available year":
+              object.availability.value = parseInt(datarow[1]);
+              break;
+            case "available month":
+              object.availabilityMonth.value = parseInt(datarow[1]);
+              break;
+            case "ownership":
+              if (datarow[1] === "freehold") {
+                object.ownership.value = 1;
+              } else if (datarow[1] === "leasehold") {
+                object.ownership.value = 2;
+              } else if (datarow[1] === "co-operative society") {
+                object.ownership.value = 3;
+              } else if (datarow[1] === "power of attorney") {
+                object.ownership.value = 4;
+              }
+              break;
+            case "description":
+              object.description.value = datarow[1];
+              object.description.isAutoGenerated = true;
+              break;
+            case "price":
+              object.price.value = datarow[1];
+              object.pricePerUnitArea = parseInt(datarow[1]) / area;
+              break;
+            case "tv":
+              object.furnishing_Tv.value = parseInt(datarow[1]);
+              break;
+            case "ac":
+              object.furnishing_Ac.value = parseInt(datarow[1]);
+              break;
+            case "bed":
+              object.furnishing_Bed.value = parseInt(datarow[1]);
+              break;
+            case "fan":
+              object.furnishing_Fan.value = parseInt(datarow[1]);
+              break;
+            case "light":
+              object.furnishing_Light.value = parseInt(datarow[1]);
+              break;
+            
             default:
               break;
           }
