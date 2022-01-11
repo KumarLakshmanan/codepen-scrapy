@@ -769,39 +769,50 @@ var object = {
   },
   usps: [],
   perUnitArea: {
-    value: "",
+      value: "superArea"
   },
   projectCoverPhoto: {
-    coverPhoto: null,
+      coverPhoto: null
   },
   expectedAnnualReturnsCriteria: {
-    value: true,
+      value: true
   },
   locationAdvantages: [],
   suggestUsp: [],
-  lastActiveUrl: "/postproperty/primarydetails",
+  lastActiveUrl: "/postproperty/otherdetails",
   mediaUploadChannels: [],
   PriceRecommender: {
-    loading: false,
-    minPrice: "",
-    maxPrice: "",
-    totalPrice: "",
-    price: "",
-    pricingReasons: [],
-    otherReasons: "",
-    visible: false,
-    isEdit: false,
+      loading: false,
+      minPrice: "",
+      maxPrice: "",
+      totalPrice: "",
+      price: "",
+      pricingReasons: [],
+      otherReasons: "",
+      visible: false,
+      isEdit: false
   },
-  visitedPages: {},
-  lastUpdatedField: "postedAs",
+  visitedPages: {
+      PostProperty: true,
+      PrimaryDetails: true,
+      LocationDetails: true,
+      BasicDetails: true,
+      PhotoDetails: true,
+      FeaturePricing: true,
+      UspAmenities: true
+  },
+  lastUpdatedField: "isPreLeased",
   CommercialProject: {
-    projectData: {},
+      projectData: {}
   },
-  premiumVersion: {},
+  premiumVersion: {
+      complexLocationAdvantage: false,
+      topUsp: true
+  }
 };
 
 document.querySelector("#myModalOpen").addEventListener("click", function () {
-  // get input file from user
+  // get input file f852rom user
   var input = document.createElement("input");
   input.setAttribute("type", "file");
   input.setAttribute("id", "myFile");
@@ -827,7 +838,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
           if (datarow[0] === "") {
             return;
           }
-          datarow[0] = datarow[0]
+          var val1 = datarow[0]
             .replace(/\n/g, "")
             .replace(/\r/g, "")
             .replace(/\t/g, "")
@@ -835,7 +846,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
             .replace(/\f/g, "")
             .replace(/\v/g, "")
             .toLowerCase();
-          datarow[1] = datarow[1]
+          var val2 = datarow[1]
             .replace(/\n/g, "")
             .replace(/\r/g, "")
             .replace(/\t/g, "")
@@ -843,48 +854,48 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
             .replace(/\f/g, "")
             .replace(/\v/g, "")
             .toLowerCase();
-          switch (datarow[0]) {
+          switch (val1) {
             case "type":
-              if (datarow[1] === "rent") {
+              if (val2 === "rent") {
                 object.preference.value = "R";
-              } else if (datarow[1] === "sale") {
+              } else if (val2 === "sale") {
                 object.preference.value = "S";
-              } else if (datarow[1] === "P") {
+              } else if (val2 === "P") {
                 object.preference.value = "P";
               }
               break;
             case "propertySubType":
-              if (datarow[1] === "residential") {
+              if (val2 === "residential") {
                 object.resCom.value = "R";
-              } else if (datarow[1] === "commercial") {
+              } else if (val2 === "commercial") {
                 object.resCom.value = "C";
               }
               break;
             case "superPropertyType":
               if (
-                datarow[1] === "office" ||
-                datarow[1] === "retail" ||
-                datarow[1] === "land" ||
-                datarow[1] === "storage" ||
-                datarow[1] === "industry" ||
-                datarow[1] === "hospitality"
+                val2 === "office" ||
+                val2 === "retail" ||
+                val2 === "land" ||
+                val2 === "storage" ||
+                val2 === "industry" ||
+                val2 === "hospitality"
               ) {
-                object.superPropertyType.value = datarow[1];
-              } else if (datarow[1] === "other") {
+                object.superPropertyType.value = val2;
+              } else if (val2 === "other") {
                 object.superPropertyType.value = 81;
-              } else if (datarow[1] === "apartment") {
+              } else if (val2 === "apartment") {
                 object.superPropertyType.value = 1;
-              } else if (datarow[1] === "independent house / villa") {
+              } else if (val2 === "independent house / villa") {
                 object.superPropertyType.value = 2;
-              } else if (datarow[1] === "independent / builder floor") {
+              } else if (val2 === "independent / builder floor") {
                 object.superPropertyType.value = 4;
-              } else if (datarow[1] === "1 rk/ studio apartment") {
+              } else if (val2 === "studio apartment") {
                 object.superPropertyType.value = 90;
-              } else if (datarow[1] === "serviced apartment") {
+              } else if (val2 === "serviced apartment") {
                 object.superPropertyType.value = 22;
-              } else if (datarow[1] === "farmhouse") {
+              } else if (val2 === "farmhouse") {
                 object.superPropertyType.value = 5;
-              } else if (datarow[1] === "other") {
+              } else if (val2 === "other") {
                 object.superPropertyType.value = 80;
               }
               break;
@@ -895,7 +906,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
               object.city.value.lng = "";
               break;
             case "state":
-              if (datarow[1] === "tamil nadu") {
+              if (val2 === "tamil nadu") {
                 object.locationState.value.label = "Tamil Nadu";
                 object.locationState.value.id = "194";
                 object.locationState.value.lat = 11.57691;
@@ -903,7 +914,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
                 object.latLng.value.lat = 11.57691;
                 object.latLng.value.lng = 78.68408;
                 object.latLng.value.field = "city";
-              } else if (datarow[1] === "kerala") {
+              } else if (val2 === "kerala") {
                 object.locationState.value.label = "Kerala";
                 object.locationState.value.id = "139";
                 object.locationState.value.lat = 9.31899;
@@ -911,7 +922,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
                 object.latLng.value.lat = 9.31899;
                 object.latLng.value.lng = 76.50879;
                 object.latLng.value.field = "city";
-              } else if (datarow[1] === "karnataka") {
+              } else if (val2 === "karnataka") {
                 object.locationState.value.label = "Karnataka";
                 object.locationState.value.id = "127";
                 object.locationState.value.lat = 14.78551;
@@ -919,7 +930,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
                 object.latLng.value.lat = 14.78551;
                 object.latLng.value.lng = 75.79468;
                 object.latLng.value.field = "city";
-              } else if (datarow[1] === "andhra pradesh") {
+              } else if (val2 === "andhra pradesh") {
                 object.locationState.value.label = "Andhra Pradesh";
                 object.locationState.value.id = "64";
                 object.locationState.value.lat = 16.46769;
@@ -927,7 +938,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
                 object.latLng.value.lat = 16.46769;
                 object.latLng.value.lng = 78.65112;
                 object.latLng.value.field = "city";
-              } else if (datarow[1] === "telangana") {
+              } else if (val2 === "telangana") {
                 object.locationState.value.label = "Telangana";
                 object.locationState.value.id = "1042906";
                 object.locationState.value.lat = 17.864173;
@@ -936,7 +947,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
                 object.latLng.value.lng = 79.240416;
                 object.latLng.value.field = "city";
               } else {
-                object.locationState.value.label = datarow[1];
+                object.locationState.value.label = val2;
                 object.locationState.value.id = "";
                 object.locationState.value.lat = "";
                 object.locationState.value.lng = "";
@@ -948,26 +959,26 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
               object.subLocality.value.lat = "";
               object.subLocality.value.lng = "";
               break;
-            case "Apartment/Society":
+            case "projectName":
               object.project.value.label = datarow[1];
               object.project.value.id = "";
               object.project.value.lat = "";
               object.project.value.lng = "";
               break;
-            case "House No":
-              object.address.value = datarow[1];
+            case "houseNo":
+              object.address.value =val2;
               break;
             case "balconyNum":
-              object.balconyNum.value = datarow[1];
+              object.balconyNum.value =val2;
               break;
             case "bathroomNum":
-              object.bathroomNum.value = datarow[1];
+              object.bathroomNum.value =val2;
               break;
             case "bedroomNum":
-              object.bedroomNum.value = datarow[1];
+              object.bedroomNum.value =val2;
               break;
             case "carpetArea":
-              object.carpet.value = datarow[1];
+              object.carpet.value =val2;
               area = parseInt(datarow[1]);
               break;
             case "age":
@@ -994,17 +1005,17 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
                 object.furnish.value = 2;
               }
               break;
-            case "property Availability":
+            case "availability":
               if (datarow[1] === "ready to move") {
                 object.propertyAvailability.value = "I";
               } else if (datarow[1] === "under construction") {
                 object.propertyAvailability.value = 5;
               }
               break;
-            case "available year":
+            case "availableYear":
               object.availability.value = parseInt(datarow[1]);
               break;
-            case "available month":
+            case "availableMonth":
               object.availabilityMonth.value = parseInt(datarow[1]);
               break;
             case "ownership":
@@ -1023,28 +1034,29 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
               object.description.isAutoGenerated = true;
               break;
             case "price":
-              object.price.value = datarow[1];
-              object.pricePerUnitArea = parseInt(datarow[1]) / area;
+              object.price.value = val2;
+              object.pricePerUnitArea = parseInt(val2) / area;
               break;
             case "tv":
-              object.furnishing_Tv.value = parseInt(datarow[1]);
+              object.furnishing_Tv.value = parseInt(val2);
               break;
             case "ac":
-              object.furnishing_Ac.value = parseInt(datarow[1]);
+              object.furnishing_Ac.value = parseInt(val2);
               break;
             case "bed":
-              object.furnishing_Bed.value = parseInt(datarow[1]);
+              object.furnishing_Bed.value = parseInt(val2);
               break;
             case "fan":
-              object.furnishing_Fan.value = parseInt(datarow[1]);
+              object.furnishing_Fan.value = parseInt(val2);
               break;
             case "light":
-              object.furnishing_Light.value = parseInt(datarow[1]);
+              object.furnishing_Light.value = parseInt(val2);
               break;
-            
             default:
               break;
           }
+          localStorage.setItem("ppfData", JSON.stringify(object));
+          window.location.reload();
         } catch (error) {
           console.log(error);
         }
@@ -1052,37 +1064,3 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
     };
   });
 });
-
-var variables = {
-  KindOfProperty: {
-    key: "resCom",
-    options: ["Commercial", "Residential"],
-    values: ["C", "R"],
-  },
-  IamLookingTo: {
-    key: "preference",
-    options: ["Sale", "Rent/Lease"],
-    values: ["S", "L"],
-  },
-  superPropertyType: {
-    key: "superPropertyType",
-    options: [
-      "Office",
-      "Retail",
-      "Land",
-      "Storage",
-      "Industry",
-      "Hospitality",
-      "Other",
-    ],
-    values: [
-      "Office",
-      "Retail",
-      "Land",
-      "Storage",
-      "Industry",
-      "Hospitality",
-      "Other",
-    ],
-  },
-};

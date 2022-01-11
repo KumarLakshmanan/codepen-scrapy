@@ -1,1 +1,29 @@
-preference,Rent
+type,rent
+propertySubType,residential
+superPropertyType,office
+city,Chennai
+state,Tamil nadu
+subLocality,Ambai
+projectName,Viveka Builders
+houseNo,12
+balconyNum,1
+bathroomNum,1
+bedroomNum,1
+carpetArea,1232
+age,0
+openParking,4
+coveredParking,2
+totalFloor,7
+floorNum,2
+furnished,full
+availability,under contruction
+availableYear,2022
+availableMonth,1
+ownership,freehold
+description,lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet
+price,121233
+tv,1
+fan,1
+ac,1
+bed,1
+light,1
