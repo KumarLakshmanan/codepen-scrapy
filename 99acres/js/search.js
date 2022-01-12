@@ -8,807 +8,800 @@ if (window.location.href.indexOf("postproperty") > -1) {
   document.body.appendChild(myModal);
 }
 
-var object = {
+var object ={
   preference: {
-    value: "S",
+    value: "S"
   },
   agreement: {
-    value: "2",
+    value: "2"
   },
   sharingCount: {
-    value: "",
+    value: ""
   },
   sharingType: {
-    value: "",
+    value: ""
   },
   tenantGender: {
-    value: "",
+    value: ""
   },
   suitableFor: {
-    value: [],
+    value: []
   },
   availableFor: {
-    value: [],
+    value: []
   },
   additionalRooms: {
-    value: [],
+    value: []
   },
   waterSource: {
-    value: [],
+    value: []
   },
   overlooking: {
-    value: [],
+    value: []
   },
   powerBackup: {
-    value: "",
+    value: ""
   },
   amenities: {
-    value: [],
+    value: []
   },
   bedroomNum: {
-    value: "",
+    value: ""
   },
   areaType: {},
   noticeDuration: {
-    value: "",
+    value: ""
   },
   furnish: {
-    value: "",
+    value: ""
   },
   parking: {
-    value: 0,
+    value: 0
   },
   facing: {
-    value: "",
+    value: ""
   },
   flooring: {
-    value: "",
+    value: ""
   },
   widthOfFacingRoad: {
-    value: "",
+    value: ""
   },
   callPreference: {
-    value: [],
+    value: []
   },
   callPreferencetext: {},
   updatedDescription: {},
   widthOfFacingRoadUnit: {
-    value: "1",
+    value: "1"
   },
   bathroomNum: {
-    value: "",
+    value: ""
   },
   balconyNum: {
-    value: "",
+    value: ""
   },
   ownership: {
-    value: "",
+    value: ""
   },
   price: {
-    value: "",
+    value: ""
   },
   inclusive: {
-    value: false,
+    value: false
   },
   taxGovtCharges: {
-    value: false,
+    value: false
   },
   negotiable: {
-    value: false,
+    value: false
   },
   electricityWaterCharges: {
-    value: true,
+    value: true
   },
   propertyType: {
-    value: "",
+    value: 1
   },
   resCom: {
-    value: "R",
+    value: "R"
   },
   superPropertyType: {
-    value: "",
+    value: 1
   },
   totalFloor: {
-    value: "",
+    value: ""
   },
   floorNum: {
-    value: "",
+    value: ""
   },
   areaUnit: {
-    value: 1,
+    value: 1
   },
   superBuiltup: {
-    value: "",
+    value: ""
   },
   builtup: {
-    value: "",
+    value: ""
   },
   carpet: {
-    value: "",
+    value: ""
   },
   age: {
-    value: "",
+    value: ""
   },
   openParking: {
-    value: 0,
+    value: 0
   },
   coveredParking: {
-    value: 0,
+    value: 0
   },
   propertyAvailability: {
-    value: "",
+    value: ""
   },
   availability: {},
   isBrokerage: {
-    value: "",
+    value: ""
   },
   brokerageType: {
-    value: "FIXED_AMOUNT",
+    value: "FIXED_AMOUNT"
   },
   brokerage: {
-    value: "",
+    value: ""
   },
   brokerageNegotiable: {
-    value: false,
+    value: false
   },
   maintenance: {
-    value: "",
+    value: ""
   },
   maintenanceCriteria: {
-    value: "1",
+    value: "1"
   },
   expectedRental: {
-    value: "",
+    value: ""
   },
   bookingAmount: {
-    value: "",
+    value: ""
   },
   annualDues: {
-    value: "",
+    value: ""
   },
   membership: {
-    value: "",
+    value: ""
   },
   bedsNum: {
-    value: "",
+    value: ""
   },
   capacity: {
-    value: "",
+    value: ""
   },
   bathroomAttached: {
-    value: false,
+    value: false
   },
   balconyAttached: {
-    value: false,
+    value: false
   },
   earlyLeavingCharges: {
-    value: "",
+    value: ""
   },
   earlyLeavingChargesType: {
-    value: "",
+    value: ""
   },
   rentAgreementDuration: {},
   depositType: {
-    value: "",
+    value: ""
   },
   deposit: {
-    value: "",
+    value: ""
   },
   petAllowed: {
-    value: "",
+    value: ""
   },
   drinkingAllowed: {
-    value: "",
+    value: ""
   },
   smokingAllowed: {
-    value: "",
+    value: ""
   },
   visitorAllowed: {
-    value: "",
+    value: ""
   },
   partiesAllowed: {
-    value: "",
+    value: ""
   },
   lastEntryTime: {},
   otherRule: {},
   totalPriceIncludes: {
-    value: [],
+    value: []
   },
   laundryAvailability: {
-    value: "",
+    value: ""
   },
   laundryCharge: {
-    value: "",
+    value: ""
   },
   laundryChargeType: {
-    value: "FIXED",
+    value: "FIXED"
   },
   waterAvailability: {
-    value: "",
+    value: ""
   },
   waterCharge: {
-    value: "",
+    value: ""
   },
   waterChargeType: {
-    value: "FIXED",
+    value: "FIXED"
   },
   wifiAvailability: {
-    value: "",
+    value: ""
   },
   wifiCharge: {
-    value: "",
+    value: ""
   },
   wifiChargeType: {
-    value: "FIXED",
+    value: "FIXED"
   },
   housekeepingAvailability: {
-    value: "",
+    value: ""
   },
   housekeepingCharge: {
-    value: "",
+    value: ""
   },
   housekeepingChargeType: {
-    value: "FIXED",
+    value: "FIXED"
   },
   electricityAvailability: {
-    value: "",
+    value: ""
   },
   electricityCharge: {
-    value: "",
+    value: ""
   },
   electricityChargeType: {
-    value: "FIXED",
+    value: "FIXED"
   },
   dthAvailability: {
-    value: "",
+    value: ""
   },
   dthCharge: {
-    value: "",
+    value: ""
   },
   dthChargeType: {
-    value: "FIXED",
+    value: "FIXED"
   },
   qualityRating: {
-    value: "",
+    value: ""
   },
   numberOfProperties: {
-    value: "",
+    value: ""
   },
   totalRooms: {
-    value: "",
+    value: ""
   },
   foodAvailability: {
-    value: "",
+    value: ""
   },
   foodType: {
-    value: "",
+    value: ""
   },
   foodAvailabilityWeekdays: {
-    value: [],
+    value: []
   },
   foodAvailabilityWeekends: {
-    value: [],
+    value: []
   },
   foodChargeType: {
-    value: "",
+    value: ""
   },
   foodCharge: {
-    value: "",
+    value: ""
   },
   breakfastCharge: {
-    value: "",
+    value: ""
   },
   lunchCharge: {
-    value: "",
+    value: ""
   },
   dinnerCharge: {
-    value: "",
+    value: ""
   },
   otherAmenities: {
-    value: [],
+    value: []
   },
   propertyFeatures: {
-    value: [],
+    value: []
   },
   societyFeatures: {
-    value: [],
+    value: []
   },
   commonFurnish_diningTable: {
-    value: false,
+    value: false
   },
   commonFurnish_Tv: {
-    value: 0,
+    value: 0
   },
   commonFurnish_washingMachine: {
-    value: 0,
+    value: 0
   },
   commonFurnish_Ac: {
-    value: 0,
+    value: 0
   },
   commonFurnish_sofa: {
-    value: false,
+    value: false
   },
   commonFurnish_WaterPurfier: {
-    value: false,
+    value: false
   },
   commonFurnish_ModularKitchen: {
-    value: false,
+    value: false
   },
   commonFurnish_fans: {
-    value: false,
+    value: false
   },
   commonFurnish_light: {
-    value: 0,
+    value: 0
   },
   commonFurnish_curtains: {
-    value: false,
+    value: false
   },
   commonFurnish_fridge: {
-    value: false,
+    value: false
   },
   commonFurnish_geyser: {
-    value: false,
+    value: false
   },
   commonFurnish_stove: {
-    value: false,
+    value: false
   },
   commonFurnish_microwave: {
-    value: false,
+    value: false
   },
   commonFurnish_chimney: {
-    value: false,
+    value: false
   },
   commonFurnish_exhaustFan: {
-    value: false,
+    value: false
   },
   commonFurnish_wardrobe: {
-    value: 0,
+    value: 0
   },
   furnishing_Tv: {
-    value: 0,
+    value: 0
   },
   furnishing_Ac: {
-    value: 0,
+    value: 0
   },
   furnishing_Bed: {
-    value: 0,
+    value: 0
   },
   furnishing_Fan: {
-    value: 0,
+    value: 0
   },
   furnishing_Gey: {
-    value: 0,
+    value: 0
   },
   furnishing_Light: {
-    value: 0,
+    value: 0
   },
   furnishing_Ward: {
-    value: 0,
+    value: 0
   },
   furnishing_Chmny: {
-    value: false,
+    value: false
   },
   furnishing_Curt: {
-    value: false,
+    value: false
   },
   furnishing_Dinngtbl: {
-    value: false,
+    value: false
   },
   furnishing_Exhstfn: {
-    value: false,
+    value: false
   },
   furnishing_Kit: {
-    value: false,
+    value: false
   },
   furnishing_Ref: {
-    value: false,
+    value: false
   },
   furnishing_Sofa: {
-    value: false,
+    value: false
   },
   furnishing_Stv: {
-    value: false,
+    value: false
   },
   furnishing_Washmchn: {
-    value: false,
+    value: false
   },
   furnishing_Wtrpurfr: {
-    value: false,
+    value: false
   },
   furnishing_fan_toggle: {
-    value: false,
+    value: false
   },
   furnishing_geyser_toggle: {
-    value: false,
+    value: false
   },
   furnishing_studytable: {
-    value: false,
+    value: false
   },
   furnishing_Microwave: {
-    value: false,
+    value: false
   },
   availabilityMonth: {},
   superArea: {
-    value: "",
+    value: ""
   },
   minimumContractDuration: {},
   availabilityDate: {
-    value: "",
+    value: ""
   },
   propertySpecification: {
-    value: "N",
+    value: "N"
   },
   minArea: {
-    value: "",
+    value: ""
   },
   maxArea: {
-    value: "",
+    value: ""
   },
   washroomNumber: {
-    value: "",
+    value: ""
   },
   plotLength: {
-    value: "",
+    value: ""
   },
   plotBreadth: {
-    value: "",
+    value: ""
   },
   isBoundaryWallMade: {
-    value: "",
+    value: ""
   },
   cornerProperty: {
-    value: false,
+    value: false
   },
   wheelChairFriendly: {
-    value: false,
+    value: false
   },
   petFriendly: {
-    value: false,
+    value: false
   },
   withinGatedCommunity: {
-    value: false,
+    value: false
   },
   pricePerUnitArea: {
-    value: "",
+    value: ""
   },
   availableRooms: {
-    value: "",
+    value: ""
   },
   priceRangeText: {},
   priceInWords: {},
   depositPriceInWords: {},
   depositMonthsInWords: {},
   meetingRoomsNum: {
-    value: "",
+    value: ""
   },
   minSeats: {
-    value: "",
+    value: ""
   },
   maxSeats: {
-    value: "",
+    value: ""
   },
   cabinsNum: {
-    value: "",
+    value: ""
   },
   receptionArea: {
-    value: "",
+    value: ""
   },
   washroomAvailable: {
-    value: "",
+    value: ""
   },
   privateWashrooms: {
-    value: 0,
+    value: 0
   },
   sharingWashrooms: {
-    value: 0,
+    value: 0
   },
   conferenceRoomsAvailable: {
-    value: "",
+    value: ""
   },
   conferenceRoomsCount: {
-    value: "",
+    value: ""
   },
   pantryType: {
-    value: "",
+    value: ""
   },
   pantryArea: {
-    value: "",
+    value: ""
   },
   pantryAreaUnit: {
-    value: 1,
+    value: 1
   },
   furnishingAvailable: {
-    value: "",
+    value: ""
   },
   centralAirConditioningAvailable: {
-    value: "",
+    value: ""
   },
   oxygenDuctAvailable: {
-    value: "",
+    value: ""
   },
   upsAvailable: {
-    value: "",
+    value: ""
   },
   fireSafetyMeasures: {
-    value: [],
+    value: []
   },
   rentIncrement: {
-    value: "",
+    value: ""
   },
   fireNoc: {
-    value: "",
+    value: ""
   },
   occupancyCertificate: {
-    value: "",
+    value: ""
   },
   lockInPeriod: {
-    value: "",
+    value: ""
   },
   officeUsedFor: {
-    value: [],
+    value: []
   },
   multiFloorSelect: {
-    value: "",
+    value: ""
   },
   multiFloorNum: {
-    value: [],
+    value: []
   },
   staircaseNum: {
-    value: "",
+    value: ""
   },
   dgUpsPriceIncluded: {
-    value: false,
+    value: false
   },
   wallsType: {
-    value: "",
+    value: ""
   },
   doorsAvailable: {
-    value: "",
+    value: ""
   },
   bareshellCentralAirConditioningAvailable: {
-    value: "",
+    value: ""
   },
   bsFlooring: {
-    value: "",
+    value: ""
   },
   commercialParkingAvailable: {
-    value: "",
+    value: ""
   },
   privateBasementParkingAvailable: {
-    value: false,
+    value: false
   },
   privateOutsideParkingAvailable: {
-    value: false,
+    value: false
   },
   publicParkingAvailable: {
-    value: false,
+    value: false
   },
   parkingCount: {
-    value: "",
+    value: ""
   },
   liftsAvailable: {
-    value: "",
+    value: ""
   },
   passengerLifts: {
-    value: 0,
+    value: 0
   },
   serviceLifts: {
-    value: 0,
+    value: 0
   },
   modernLiftsAvailable: {
-    value: false,
+    value: false
   },
   minimumLeasableSuperBuiltUp: {
-    value: "",
+    value: ""
   },
   priceType: {
-    value: "FIXED",
+    value: "FIXED"
   },
   hidePrice: {
-    value: "",
+    value: ""
   },
   minPrice: {
-    value: "",
+    value: ""
   },
   maxPrice: {
-    value: "",
+    value: ""
   },
   minPriceInWords: {},
   maxPriceInWords: {},
   verifyListing: {
-    value: false,
+    value: false
   },
   uploadImage: {
-    value: false,
+    value: false
   },
   reimburse: {
-    value: false,
+    value: false
   },
   assuredReturns: {
-    value: "",
+    value: ""
   },
   leaseGuarantee: {
-    value: "",
+    value: ""
   },
   entranceWidth: {
-    value: "",
+    value: ""
   },
   ceilingHeight: {
-    value: "",
+    value: ""
   },
   entranceWidthUnit: {
-    value: "1",
+    value: "1"
   },
   ceilingHeightUnit: {
-    value: "1",
+    value: "1"
   },
   washroomTypes: {
-    value: [],
+    value: []
   },
   parkingTypes: {
-    value: [],
+    value: []
   },
   shopLocatedIn: {
-    value: "",
+    value: ""
   },
   isPreLeased: {
-    value: "",
+    value: ""
   },
   currentMonthlyRent: {
-    value: "",
+    value: ""
   },
   currentLeaseTenure: {
-    value: "",
+    value: ""
   },
   annualRentIncrease: {
-    value: "",
+    value: ""
   },
   leasedTo: {
-    value: {},
+    value: {}
   },
   expectedAnnualReturns: {
-    value: "",
+    value: ""
   },
   hideExpectedAnnualReturns: {
-    value: false,
+    value: false
   },
   suitableBusinessType: {
-    value: [],
+    value: []
   },
   otherSuitableBusinessType: {
-    value: "",
+    value: ""
   },
   locatedNear: {
-    value: [],
+    value: []
   },
   mainRoadFacing: {
-    value: false,
+    value: false
   },
   shopLocatedInOthers: {
-    value: "",
+    value: ""
   },
   city: {
     value: {
       id: "",
       label: "",
       lat: "",
-      lng: "",
-    },
+      lng: ""
+    }
   },
   locationState: {
     value: {
       id: "",
       label: "",
       lat: "",
-      lng: "",
-    },
+      lng: ""
+    }
   },
   locality: {
     value: {
       id: "",
       label: "",
       lat: "",
-      lng: "",
-    },
+      lng: ""
+    }
   },
   subLocality: {
     value: {
       id: "",
       label: "",
       lat: "",
-      lng: "",
-    },
+      lng: ""
+    }
   },
   project: {
     value: {
       id: "",
       label: "",
       lat: "",
-      lng: "",
-    },
+      lng: ""
+    }
   },
   tower: {
     value: {
       id: "",
       label: "",
       lat: "",
-      lng: "",
-    },
+      lng: ""
+    }
   },
   zoneType: {
     value: {
       id: "",
-      label: "",
-    },
+      label: ""
+    }
   },
   locatedInside: {
     value: {
       id: "",
-      label: "",
-    },
+      label: ""
+    }
   },
   address: {
-    value: "",
+    value: ""
   },
   latLng: {
     value: {
       lat: 28.653386,
       lng: 77.228165,
-      field: "",
-    },
+      field: ""
+    }
   },
-  floorPlanId: "",
+  floorPlanId: {
+    value: ""
+  },
   postedAs: {
-    value: "O",
+    value: "O"
   },
   description: {
     value: "",
     isAutoGenerated: false,
     error: "",
-    descriptionReviewed: false,
+    descriptionReviewed: false
   },
   usps: [],
   perUnitArea: {
-      value: "superArea"
+    value: ""
   },
   projectCoverPhoto: {
-      coverPhoto: null
+    coverPhoto: null
   },
   expectedAnnualReturnsCriteria: {
-      value: true
+    value: true
   },
   locationAdvantages: [],
   suggestUsp: [],
-  lastActiveUrl: "/postproperty/otherdetails",
+  lastActiveUrl: "/postproperty/primarydetails",
   mediaUploadChannels: [],
   PriceRecommender: {
-      loading: false,
-      minPrice: "",
-      maxPrice: "",
-      totalPrice: "",
-      price: "",
-      pricingReasons: [],
-      otherReasons: "",
-      visible: false,
-      isEdit: false
+    loading: false,
+    minPrice: "",
+    maxPrice: "",
+    totalPrice: "",
+    price: "",
+    pricingReasons: [],
+    otherReasons: "",
+    visible: false,
+    isEdit: false
   },
   visitedPages: {
-      PostProperty: true,
-      PrimaryDetails: true,
-      LocationDetails: true,
-      BasicDetails: true,
-      PhotoDetails: true,
-      FeaturePricing: true,
-      UspAmenities: true
+    PrimaryDetails: true
   },
-  lastUpdatedField: "isPreLeased",
+  lastUpdatedField: "superPropertyType",
   CommercialProject: {
-      projectData: {}
+    projectData: {}
   },
-  premiumVersion: {
-      complexLocationAdvantage: false,
-      topUsp: true
-  }
+  premiumVersion: {}
 };
 
 document.querySelector("#myModalOpen").addEventListener("click", function () {
@@ -832,28 +825,17 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
         var datarow = data[i].split(",");
         dataArray.push(datarow);
       }
-      console.log(dataArray);
       dataArray.forEach(function (datarow) {
         try {
           if (datarow[0] === "") {
             return;
           }
-          var val1 = datarow[0]
-            .replace(/\n/g, "")
-            .replace(/\r/g, "")
-            .replace(/\t/g, "")
-            .replace(/\s/g, "")
-            .replace(/\f/g, "")
-            .replace(/\v/g, "")
-            .toLowerCase();
-          var val2 = datarow[1]
-            .replace(/\n/g, "")
-            .replace(/\r/g, "")
-            .replace(/\t/g, "")
-            .replace(/\s/g, "")
-            .replace(/\f/g, "")
-            .replace(/\v/g, "")
-            .toLowerCase();
+          datarow[0].toLowerCase().replaceAll("\r", "");
+          datarow[1].toLowerCase().replaceAll("\r", "");
+          datarow[1] = datarow[1].substring(0, datarow[1].length - 1);
+          var val1 = datarow[0];
+          var val2 = datarow[1];
+          console.log(dataArray);
           switch (val1) {
             case "type":
               if (val2 === "rent") {
@@ -881,22 +863,20 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
                 val2 === "hospitality"
               ) {
                 object.superPropertyType.value = val2;
-              } else if (val2 === "other") {
-                object.superPropertyType.value = 81;
               } else if (val2 === "apartment") {
                 object.superPropertyType.value = 1;
-              } else if (val2 === "independent house / villa") {
+              } else if (val2 === "independenthouse") {
                 object.superPropertyType.value = 2;
-              } else if (val2 === "independent / builder floor") {
+              } else if (val2 === "builderfloor") {
                 object.superPropertyType.value = 4;
-              } else if (val2 === "studio apartment") {
+              } else if (val2 === "studioapartment") {
                 object.superPropertyType.value = 90;
-              } else if (val2 === "serviced apartment") {
+              } else if (val2 === "servicedapartment") {
                 object.superPropertyType.value = 22;
               } else if (val2 === "farmhouse") {
                 object.superPropertyType.value = 5;
               } else if (val2 === "other") {
-                object.superPropertyType.value = 80;
+                object.superPropertyType.value = 81;
               }
               break;
             case "city":
@@ -906,7 +886,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
               object.city.value.lng = "";
               break;
             case "state":
-              if (val2 === "tamil nadu") {
+              if (val2 === "tamilnadu") {
                 object.locationState.value.label = "Tamil Nadu";
                 object.locationState.value.id = "194";
                 object.locationState.value.lat = 11.57691;
@@ -930,7 +910,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
                 object.latLng.value.lat = 14.78551;
                 object.latLng.value.lng = 75.79468;
                 object.latLng.value.field = "city";
-              } else if (val2 === "andhra pradesh") {
+              } else if (val2 === "andhrapradesh") {
                 object.locationState.value.label = "Andhra Pradesh";
                 object.locationState.value.id = "64";
                 object.locationState.value.lat = 16.46769;
@@ -966,19 +946,19 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
               object.project.value.lng = "";
               break;
             case "houseNo":
-              object.address.value =val2;
+              object.address.value = val2;
               break;
             case "balconyNum":
-              object.balconyNum.value =val2;
+              object.balconyNum.value = val2;
               break;
             case "bathroomNum":
-              object.bathroomNum.value =val2;
+              object.bathroomNum.value = val2;
               break;
             case "bedroomNum":
-              object.bedroomNum.value =val2;
+              object.bedroomNum.value = val2;
               break;
             case "carpetArea":
-              object.carpet.value =val2;
+              object.carpet.value = val2;
               area = parseInt(datarow[1]);
               break;
             case "age":
@@ -1056,7 +1036,7 @@ document.querySelector("#myModalOpen").addEventListener("click", function () {
               break;
           }
           localStorage.setItem("ppfData", JSON.stringify(object));
-          window.location.reload();
+          // window.location.reload();
         } catch (error) {
           console.log(error);
         }

@@ -1,6 +1,6 @@
 type,rent
 propertySubType,residential
-superPropertyType,office
+superPropertyType,apartment
 city,Chennai
 state,Tamil nadu
 subLocality,Ambai
@@ -15,7 +15,7 @@ openParking,4
 coveredParking,2
 totalFloor,7
 floorNum,2
-furnished,full
+furnished,semi
 availability,under contruction
 availableYear,2022
 availableMonth,1

@@ -21124,6 +21124,12 @@
             data: { latlng: { lat: 73.0048874281, lon: 20.26764024462 } },
             parent_city: "Other International",
           },
+          {
+            id: "1070285",
+            label: "Nalanda",
+            data: { latlng: { lat: 25.224654233366, lon: 85.483807508517 } },
+            parent_city: "Other International",
+          },
         ],
         n = r.filter(function (e) {
           return -1 === e.label.indexOf(" Others");
@@ -34665,19 +34671,35 @@
           return (function () {
             var e = Object(i.a)(
               n.a.mark(function e(t, a) {
-                var r, i, c, s, u;
+                var r, i, c, u, p, d, m, f, b;
                 return n.a.wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        return (
-                          (r = a()),
+                        if (
+                          ((r = a()),
                           (i =
                             +r.values.city.value.id ||
                             +r.values.locationState.value.id),
                           (c = r.values.resCom.value),
-                          (s = r.values.preference.value),
-                          (e.next = 6),
+                          (u = r.values.preference.value),
+                          (p = r.userState.userData.user.userClass),
+                          (d = r.values.price.value),
+                          (m = ""),
+                          "O" !== p)
+                        ) {
+                          e.next = 12;
+                          break;
+                        }
+                        return (
+                          (e.next = 10),
+                          l.a.get("".concat(o.a, "/bos/budgetConfig"))
+                        );
+                      case 10:
+                        (f = e.sent), (m = s(d, u, c, f));
+                      case 12:
+                        return (
+                          (e.next = 14),
                           l.b.post(
                             o.a + "/seller-aggregator/subscription/listing",
                             {
@@ -34685,13 +34707,15 @@
                               showFreePacks: !0,
                               orderByQuantity: !0,
                               resCom: c,
-                              preference: [s],
+                              preference: [u],
+                              userClass: p,
+                              budgetIdList: m ? [m] : null,
                             }
                           )
                         );
-                      case 6:
-                        return (u = e.sent), e.abrupt("return", u);
-                      case 8:
+                      case 14:
+                        return (b = e.sent), e.abrupt("return", b);
+                      case 16:
                       case "end":
                         return e.stop();
                     }
@@ -34702,6 +34726,18 @@
               return e.apply(this, arguments);
             };
           })();
+        },
+        s = function (e, t, a, r) {
+          var n = "";
+          return (
+            r &&
+              r.data &&
+              r.data[a + t] &&
+              r.data[a + t].forEach(function (t) {
+                e >= t.min_budget && e < t.max_budget && (n = t.id);
+              }),
+            n
+          );
         };
     },
     function (e, t, a) {
@@ -49604,7 +49640,7 @@
         cards: [
           {
             text: "Upgraded postings are viewed by upto 85% more buyers",
-            subText: "Plans from \u20b9850 onwards",
+            subText: "",
             img: "http://static.99acres.com/universalapp/img/BOS_USP_01.png",
             btnText: "Explore plans",
             color: "",
@@ -49613,7 +49649,7 @@
           },
           {
             text: "Your property will appear on top in all relevant searches",
-            subText: "Plans from \u20b9850 onwards",
+            subText: "",
             img: "http://static.99acres.com/universalapp/img/BOS_USP_02.png",
             btnText: "Explore plans",
             color: "blue",
@@ -49622,7 +49658,7 @@
           },
           {
             text: "Get a Dedicated property manager for hassle-free selling",
-            subText: "Plans from \u20b9850 onwards",
+            subText: "",
             img: "http://static.99acres.com/universalapp/img/BOS_USP_03.png",
             btnText: "Explore plans",
             color: "",
