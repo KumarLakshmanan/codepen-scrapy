@@ -37,15 +37,13 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "/99acres/js/script.js",
-        "/99acres/js/jquery.js",
         "/99acres/js/search.js",
-        "/99acres/js/bootstrap.min.js",
+        "/99acres/js/object.js",
+        "/99acres/js/jquery.min.js",
+        "/99acres/js/jszip.js",
+        "/99acres/js/xlsx.js",
         "/99acres/js/xlsx.full.min.js",
-        "/99acres/js/xlsx.core.min.js",
-        "/99acres/js/popup.min.js",
-        "/99acres/js/jhxlsx.js",
-        "/99acres/js/FileSaver.js"
+        "/99acres/css/style.css"
       ],
       "matches": ["*://*.99acres.com/*"]
     }
