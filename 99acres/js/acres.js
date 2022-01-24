@@ -30,7 +30,7 @@
           ((r = {}),
           Object(l.a)(r, i.WIDGET, "WidgetAbstractFactory"),
           Object(l.a)(r, i.INPUT, "InputAbstractFactory"),
-          a(229),
+          a(230),
           a(8)),
         s = {
           ONLY_INTEGERS: /(^[0]$)|(^[1-9][0-9]*$)/,
@@ -43,8 +43,8 @@
           ONLY_NUMBERS: /^[0-9]*$/,
           ONLY_ALPHABETS: /^[a-zA-Z][a-zA-Z ]*$/,
         },
-        u = a(143),
-        p = a(222);
+        u = a(144),
+        p = a(223);
       a.d(t, "e", function () {
         return n.a;
       }),
@@ -75,12 +75,12 @@
     function (e, t, a) {
       "use strict";
       var r = a(20),
-        n = (a(29), a(175)),
-        i = a(178),
-        o = a(171),
+        n = (a(26), a(176)),
+        i = a(179),
+        o = a(172),
         l = a(14),
-        c = a(153),
-        s = a(140),
+        c = a(154),
+        s = a(141),
         u = function () {
           return function (e) {
             e(
@@ -90,15 +90,15 @@
             );
           };
         },
-        p = a(179),
-        d = a(150),
+        p = a(180),
+        d = a(151),
         m = function () {
           return function (e) {
             e(Object(l.a)("address", { value: "" }));
           };
         },
-        f = a(209),
-        b = (a(317), a(12), a(105)),
+        f = a(210),
+        b = (a(318), a(12), a(105)),
         y = function () {
           return function (e) {
             e(
@@ -108,23 +108,23 @@
             );
           };
         },
-        g = a(176),
-        v = a(177),
+        g = a(177),
+        v = a(178),
         h = a(101),
-        E = a(147),
-        _ = a(241),
-        A = a(266),
+        E = a(148),
+        _ = a(242),
+        A = a(267),
         T = a(102),
         O = a(103),
         P = a(104),
         S = a(106),
-        C = a(142),
-        I = a(141),
+        C = a(143),
+        I = a(142),
         N = a(110),
-        L = a(112),
-        w = a(113),
+        w = a(112),
+        L = a(113),
         R = a(51),
-        j = a(28);
+        j = a(29);
       a.d(t, "w", function () {
         return k;
       }),
@@ -132,13 +132,13 @@
           return D;
         }),
         a.d(t, "t", function () {
-          return U;
-        }),
-        a.d(t, "u", function () {
           return B;
         }),
-        a.d(t, "r", function () {
+        a.d(t, "u", function () {
           return x;
+        }),
+        a.d(t, "r", function () {
+          return U;
         }),
         a.d(t, "x", function () {
           return F;
@@ -237,7 +237,7 @@
             };
           },
         },
-        U = {
+        B = {
           city: n.b,
           locationState: u,
           locality: i.b,
@@ -248,7 +248,7 @@
           subLocality: p.b,
           address: m,
         },
-        B = {
+        x = {
           city: T.a,
           locationState: s.a,
           locality: O.a,
@@ -259,7 +259,7 @@
           subLocality: I.a,
           address: d.a,
         },
-        x = { city: N.a, locationState: c.a, locality: L.a, project: w.a },
+        U = { city: N.a, locationState: c.a, locality: w.a, project: L.a },
         F = { city: h.a, locality: E.a, project: _.a, tower: A.a },
         M = function (e, t) {
           return !(t && !e);
@@ -450,7 +450,7 @@
         n = a(4),
         i = a.n(n),
         o = a(5),
-        l = a(166),
+        l = a(167),
         c = a.n(l),
         s = function (e) {
           if (200 === e.status) return e;
@@ -593,14 +593,25 @@
       "use strict";
       a.d(t, "a", function () {
         return i;
-      });
+      }),
+        a.d(t, "b", function () {
+          return o;
+        });
       var r = a(23),
-        n = a(29),
+        n = a(26),
         i = Object(n.a)(function () {
           return (
             "undefined" !== typeof navigator &&
             "mobile" === Object(r.a)(navigator.userAgent)
           );
+        }),
+        o = Object(n.a)(function () {
+          if ("undefined" !== typeof window) {
+            var e = (window || {}).location,
+              t = (e = void 0 === e ? {} : e).pathname;
+            return (void 0 === t ? "" : t).includes("qrCodeAwareness");
+          }
+          return !1;
         });
     },
     function (e, t, a) {
@@ -698,7 +709,7 @@
             )
           );
         },
-        b = a(181),
+        b = a(182),
         y = a.n(b),
         g = function (e) {
           var t = e.mainHeading,
@@ -810,17 +821,17 @@
         E = a(19),
         _ = a(34),
         A = a(32),
-        T = a(27),
+        T = a(28),
         O = a(33),
         P = a(42),
         S = a.n(P),
-        C = a(359),
-        I = a(358),
+        C = a(360),
+        I = a(359),
         N = a(24),
-        L = a(274),
-        w = a.n(L),
+        w = a(275),
+        L = a.n(w),
         R =
-          (a(320),
+          (a(321),
           (function (e) {
             function t(e) {
               var a;
@@ -910,21 +921,21 @@
           return S.a.createPortal(
             o.a.createElement(
               "div",
-              { className: w.a.snackbarWrapper },
+              { className: L.a.snackbarWrapper },
               o.a.cloneElement(t, { close: a, cancel: r })
             ),
             document.getElementById("layers")
           );
         },
-        k = a(139);
+        k = a(140);
       a.d(t, "b", function () {
         return D;
       }),
         a.d(t, "a", function () {
-          return U;
+          return B;
         });
       var D = { default: { open: !1 } },
-        U = function (e) {
+        B = function (e) {
           var t = Object(i.useRef)(null),
             a = Object(i.useRef)(null),
             c = Object(i.useRef)(null),
@@ -1004,11 +1015,11 @@
         c = a(100),
         s = a(80),
         u = a(13),
-        p = a(213),
+        p = a(214),
         d = a(23),
         m = a(15),
         f = a(12),
-        b = a(361);
+        b = a(362);
       a.d(t, "a", function () {
         return y;
       });
@@ -1128,7 +1139,7 @@
       var r = a(81),
         n = a(19),
         i = a(32),
-        o = a(27),
+        o = a(28),
         l = a(33),
         c = (function (e) {
           function t() {
@@ -1155,7 +1166,7 @@
     function (e, t, a) {
       "use strict";
       a.r(t);
-      var r = a(144);
+      var r = a(145);
       a.d(t, "ERROR_CODES", function () {
         return r.a;
       });
@@ -1210,7 +1221,7 @@
       a.d(t, "a", function () {
         return n;
       });
-      var r = a(29),
+      var r = a(26),
         n = Object(r.a)(function (e) {
           return e.includes("Mobile") ? "mobile" : "desktop";
         });
@@ -1223,6 +1234,21 @@
       var r = {};
     },
     ,
+    function (e, t, a) {
+      "use strict";
+      a.d(t, "a", function () {
+        return r;
+      });
+      var r = function (e) {
+        var t = {};
+        return function () {
+          var a = JSON.stringify(arguments);
+          if (a in t) return t[a];
+          var r = e.apply(this, arguments);
+          return (t[a] = r), r;
+        };
+      };
+    },
     ,
     ,
     function (e, t, a) {
@@ -1245,21 +1271,6 @@
     function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return r;
-      });
-      var r = function (e) {
-        var t = {};
-        return function () {
-          var a = JSON.stringify(arguments);
-          if (a in t) return t[a];
-          var r = e.apply(this, arguments);
-          return (t[a] = r), r;
-        };
-      };
-    },
-    function (e, t, a) {
-      "use strict";
-      a.d(t, "a", function () {
         return p;
       });
       var r = a(4),
@@ -1267,7 +1278,7 @@
         i = a(5),
         o = (a(1), a(10)),
         l = a(90),
-        c = a(170),
+        c = a(171),
         s = a(8),
         u = a(72),
         p = (function () {
@@ -1389,7 +1400,7 @@
           return b;
         }),
         a.d(t, "r", function () {
-          return w;
+          return L;
         }),
         a.d(t, "n", function () {
           return R;
@@ -1404,13 +1415,13 @@
           return D;
         }),
         a.d(t, "E", function () {
-          return U;
-        }),
-        a.d(t, "f", function () {
           return B;
         }),
-        a.d(t, "v", function () {
+        a.d(t, "f", function () {
           return x;
+        }),
+        a.d(t, "v", function () {
+          return U;
         }),
         a.d(t, "t", function () {
           return F;
@@ -1536,7 +1547,7 @@
           return Ne;
         }),
         a.d(t, "V", function () {
-          return Le;
+          return we;
         });
       var r = a(53),
         n = a(8),
@@ -1571,18 +1582,18 @@
         N =
           ("".concat(n.a, "/api-aggregator/user/advertisers"),
           "".concat(n.a, "/api-aggregator/user/advertisers")),
-        L = "".concat(
+        w = "".concat(
           n.a,
           "/do/sellerprofile/ajaxValidation/validateIfMobileExists/1"
         ),
-        w = "REGISTRATION_SUBMIT_SUCCESS",
+        L = "REGISTRATION_SUBMIT_SUCCESS",
         R = "PROFILE_MODIFY_SUCCESS",
         j = "PROFILE_MODIFY_SUCCESS_NEW",
         k = "LOGIN_SUBMIT_SUCCESS",
         D = "SWITCH_VIEW",
-        U = "SHOW_LOADER",
-        B = "HIDE_LOADER",
-        x = "RESEND_OTP_SUCCESS",
+        B = "SHOW_LOADER",
+        x = "HIDE_LOADER",
+        U = "RESEND_OTP_SUCCESS",
         F = "RESEND_OTP_FAIL",
         M = "RESEND_OTP_NOT_STARTED",
         W = "UPDATE_LOGIN_DATA",
@@ -1612,7 +1623,7 @@
                   Country_Code: e.userDto.contactDTO.countryCode,
                   Mobile: e.userDto.contactDTO.mobile1,
                 };
-                return Object(r.c)(L, Object(r.a)(o))
+                return Object(r.c)(w, Object(r.a)(o))
                   .then(function (o) {
                     if (void 0 == o)
                       return fetch(v, {
@@ -1631,7 +1642,7 @@
                           if (a && t.claimNumber && t.claimNumberAllowed)
                             i(Oe(t)),
                               i({ type: "ON_REGISTER" }),
-                              i(Le(Y)),
+                              i(we(Y)),
                               i({ type: V }),
                               i(ye(Q));
                           else if (a && t.claimNumber && !t.claimNumberAllowed)
@@ -1646,11 +1657,11 @@
                             o
                               ? (i(Pe(t)),
                                 setTimeout(function () {
-                                  i({ type: w, payload: n }),
+                                  i({ type: L, payload: n }),
                                     i({ type: "ON_REGISTER" });
                                 }, 1e3))
                               : o ||
-                                (i({ type: w, payload: n }),
+                                (i({ type: L, payload: n }),
                                 i({ type: "ON_REGISTER" }));
                           }
                           if ("O" === e.userDto.userClass) {
@@ -1674,11 +1685,11 @@
                         })
                         .catch(function (e) {
                           e.message || 500 === e.status
-                            ? (i({ type: B }), t(ie))
+                            ? (i({ type: x }), t(ie))
                             : e
                                 .text()
                                 .then(function (e) {
-                                  i({ type: B }),
+                                  i({ type: x }),
                                     t(e),
                                     console.log("Fetcherr", e);
                                 })
@@ -1717,7 +1728,7 @@
                 })
                 .then(function (e) {
                   e.errorCode
-                    ? (t(e.errorMessage), n({ type: B }))
+                    ? (t(e.errorMessage), n({ type: x }))
                     : (n(
                         "desk" != r && "mob" != r
                           ? { type: R, payload: e }
@@ -1727,7 +1738,7 @@
                       a && a(!0));
                 })
                 .catch(function (e) {
-                  n({ type: B }),
+                  n({ type: x }),
                     e.message
                       ? t(ie)
                       : e
@@ -1757,7 +1768,7 @@
               .then(function (e) {
                 if (!e) throw "";
                 e.errorCode && t({ type: F, payload: e.errorMessage }),
-                  t({ type: x });
+                  t({ type: U });
               })
               .catch(function (e) {
                 t({ type: F }), console.log("Fetcherr", e);
@@ -1777,7 +1788,7 @@
                 return e.json();
               })
               .then(function (e) {
-                e && e.otpStatus ? t({ type: x }) : t({ type: F });
+                e && e.otpStatus ? t({ type: U }) : t({ type: F });
               })
               .catch(function (e) {
                 t({ type: F }), console.log("Fetcherr", e);
@@ -1804,10 +1815,10 @@
                   return e.json();
                 })
                 .then(function (l) {
-                  if (l.errorCode) t(l), i({ type: B });
+                  if (l.errorCode) t(l), i({ type: x });
                   else if (r)
                     if (l.claimNumber && l.claimNumberAllowed)
-                      i(Oe(l)), i({ type: "ON_LOGIN" }), i(Le(Y)), i(ye(Q));
+                      i(Oe(l)), i({ type: "ON_LOGIN" }), i(we(Y)), i(ye(Q));
                     else if (l.claimNumber && !l.claimNumberAllowed)
                       i(Oe(l)), i({ type: "ON_LOGIN" }), i(ye(J));
                     else if ("LOGIN_MISSED_CALL" != e.mode || l.loginStatus)
@@ -1818,7 +1829,7 @@
                             i(Ee(l, a, r, n)))
                           : (i(Oe(l)), i({ type: "ON_LOGIN" }), i(ye(f)));
                       else {
-                        i(Oe(l)), i({ type: "ON_LOGIN" }), i(Le(H));
+                        i(Oe(l)), i({ type: "ON_LOGIN" }), i(we(H));
                         var c = "91" !== l.contact.mobile1.split("-")[0];
                         c
                           ? (i(Pe(l)),
@@ -1827,14 +1838,14 @@
                             }, 1e3))
                           : c || i(ye(o));
                       }
-                    else i(Oe(l)), i({ type: "ON_LOGIN" }), i(Le(K)), i(ye(s));
+                    else i(Oe(l)), i({ type: "ON_LOGIN" }), i(we(K)), i(ye(s));
                   else
                     i({ type: k, payload: l }),
                       i({ type: "ON_LOGIN" }),
                       i(Ee(l, a, r));
                 })
                 .catch(function (e) {
-                  i({ type: B }),
+                  i({ type: x }),
                     e.message
                       ? t && t(ie)
                       : e
@@ -1851,12 +1862,12 @@
         },
         de = function (e, t, a) {
           return function (n) {
-            if ((n({ type: U }), a)) {
+            if ((n({ type: B }), a)) {
               var i = Object(r.a)(e),
                 o = T;
               return Object(r.c)(o, i)
                 .then(function (e) {
-                  n({ type: B }), t(e, a), n(ve(e.profileId));
+                  n({ type: x }), t(e, a), n(ve(e.profileId));
                 })
                 .catch(function (e) {
                   return console.log("Fetcherr", e);
@@ -1873,7 +1884,7 @@
                 return e.json();
               })
               .then(function (e) {
-                n({ type: B }), t(e, a);
+                n({ type: x }), t(e, a);
               })
               .catch(function (e) {
                 return console.log("Fetcherr", e);
@@ -1884,10 +1895,10 @@
           return function (a) {
             var n = Object(r.a)(e);
             return (
-              a({ type: U }),
+              a({ type: B }),
               Object(r.c)(O, n)
                 .then(function (e) {
-                  a({ type: B }), t(e);
+                  a({ type: x }), t(e);
                 })
                 .catch(function (e) {
                   return console.log("Fetcherr", e);
@@ -1935,7 +1946,7 @@
         ge = function (e) {
           var t =
             !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          return { type: t ? U : B, payload: e };
+          return { type: t ? B : x, payload: e };
         },
         ve = function (e) {
           var t = {
@@ -1954,7 +1965,7 @@
         he = function (e, t, a) {
           return function (n) {
             var i = { Country_Code: e, Mobile: t };
-            return Object(r.c)(L, Object(r.a)(i))
+            return Object(r.c)(w, Object(r.a)(i))
               .then(function (r) {
                 a && a(r, "".concat(e, "-").concat(t));
               })
@@ -2104,7 +2115,7 @@
             r({ type: re, payload: { field: e, subField: t, value: a } });
           };
         },
-        Le = function (e) {
+        we = function (e) {
           return function (t) {
             t({ type: ne, payload: e });
           };
@@ -2116,7 +2127,7 @@
     function (e, t, a) {
       "use strict";
       var r = a(6),
-        n = a(244),
+        n = a(245),
         i = a(55),
         o = a(12),
         l = {
@@ -6897,7 +6908,7 @@
         });
       var n = a(3),
         i = a(2),
-        o = a(265),
+        o = a(266),
         l = function (e) {
           var t =
               arguments.length > 1 && void 0 !== arguments[1]
@@ -7051,6 +7062,7 @@
           SellToLease: { label: "SELL_TO_LEASE", topmost: "true" },
           LeaseToSell: { label: "LEASE_TO_SELL", topmost: "true" },
           CoworkingRequest: { label: "COWORKING_REQUEST", topmost: "true" },
+          QrCodeArareness: { label: "QR_CODE_AWARENESS", topmost: "true" },
         },
         y = {
           preference: { label: "BUSINESS_SEGMENT" },
@@ -7273,6 +7285,10 @@
           leaseToSellWidget: { label: "LEASE_TO_SELL_WIDGET", topmost: "true" },
           leaseToSellBtn: { label: "LEASE_TO_SELL_BTN" },
           Feature1: { label: "FEATURE1" },
+          VideoClipSkipAndPost: { label: "QR_CLIP_SKIP_AND_POST" },
+          VideoClipReplay: { label: "QR_CLIP_REPLAY" },
+          VideoClipTryToSkip: { label: "TRY_TO_SKIP_QR_CLIP" },
+          VideoClipPostPrpty: { label: "QR_CLIP_POST_PROPERTY" },
         },
         h = {
           PrimaryDetailsButton: { label: "CONTINUE" },
@@ -7283,8 +7299,8 @@
           UspamenitiesButton: { label: "FINAL_SUBMIT" },
           AbridgeFormButton: { label: "SUBMIT" },
         },
-        E = a(122),
-        _ = a(121),
+        E = a(123),
+        _ = a(122),
         A = function (e, t) {
           return function (a, r) {
             var n = r();
@@ -7415,7 +7431,7 @@
         n = a.n(r),
         i = a(5),
         o = a(30),
-        l = a(260),
+        l = a(261),
         c = function (e) {
           var t,
             a = e.values,
@@ -7488,15 +7504,15 @@
                 C,
                 I,
                 N,
-                L,
                 w,
+                L,
                 R,
                 j,
                 k,
                 D,
-                U,
                 B,
                 x,
+                U,
                 F,
                 M,
                 W,
@@ -7613,11 +7629,11 @@
                         })
                       );
                     case 45:
-                      if (!+(L = "".concat(a))) {
+                      if (!+(w = "".concat(a))) {
                         e.next = 52;
                         break;
                       }
-                      return (e.next = 49), Object(o.a)(t, L);
+                      return (e.next = 49), Object(o.a)(t, w);
                     case 49:
                       (e.t1 = e.sent), (e.next = 53);
                       break;
@@ -7625,22 +7641,22 @@
                       e.t1 = {};
                     case 53:
                       return (
-                        (w = e.t1),
-                        (j = (R = w || {}).label),
+                        (L = e.t1),
+                        (j = (R = L || {}).label),
                         (k = R.longLat),
                         (D = void 0 === k ? {} : k),
-                        (U = R.data),
-                        (B = (U = void 0 === U ? {} : U).latlng),
-                        (F = (x = void 0 === B ? {} : B).lat),
+                        (B = R.data),
+                        (x = (B = void 0 === B ? {} : B).latlng),
+                        (F = (U = void 0 === x ? {} : x).lat),
                         (M = void 0 === F ? "" : F),
-                        (W = x.lon),
+                        (W = U.lon),
                         (V = void 0 === W ? "" : W),
                         (G = D.x),
                         (H = void 0 === G ? "" : G),
                         (Y = D.y),
                         (Q = void 0 === Y ? "" : Y),
                         e.abrupt("return", {
-                          id: L,
+                          id: w,
                           label: j || r,
                           lat: M || Q,
                           lng: V || H,
@@ -7673,8 +7689,8 @@
       a.d(t, "a", function () {
         return i;
       });
-      var r = a(276),
-        n = a(261),
+      var r = a(277),
+        n = a(262),
         i = function (e) {
           if (Object(n.a)())
             return Object(r.parse)(document.cookie)[e] || void 0;
@@ -7730,15 +7746,15 @@
               C = void 0 === S ? "" : S,
               I = t.size,
               N = void 0 === I ? null : I,
-              L = t.blobUrl,
-              w = void 0 === L ? "" : L,
+              w = t.blobUrl,
+              L = void 0 === w ? "" : w,
               R = t.progress,
               j = void 0 === R ? 0 : R,
               k = t.error,
               D = void 0 === k ? null : k;
-            if (((this.blobUrl = w), (this.name = C), (this.size = N), m)) {
-              var U = window.URL || window.webkitURL;
-              (this.blobUrl = U.createObjectURL(m)),
+            if (((this.blobUrl = L), (this.name = C), (this.size = N), m)) {
+              var B = window.URL || window.webkitURL;
+              (this.blobUrl = B.createObjectURL(m)),
                 (this.name = m.name),
                 (this.size = m.size),
                 (this.blob = m);
@@ -7910,8 +7926,8 @@
             }[e] || -1
           );
         },
-        T = a(254),
-        O = a(26),
+        T = a(255),
+        O = a(27),
         P = function (e, t) {
           try {
             if (!e)
@@ -7983,11 +7999,11 @@
         N = function (e) {
           return e || 0 === e ? e.toString() : "";
         },
-        L = function (e, t, a) {
+        w = function (e, t, a) {
           return "Y" === a ? "RANGE" : "P" === a || e === t ? "FIXED" : "RANGE";
         },
-        w = a(80),
-        R = a(249),
+        L = a(80),
+        R = a(250),
         j = function (e) {
           if (+e) {
             var t = O.a.get().preLeasedTo.filter(function (t) {
@@ -8019,10 +8035,10 @@
             b = e.isPreLeased,
             y = e.preLeasedTo,
             g =
-              +w.currentMonthlyRent > 0 && ("FIXED" === c ? +t > 0 : +s > 0)
+              +L.currentMonthlyRent > 0 && ("FIXED" === c ? +t > 0 : +s > 0)
                 ? !!m &&
                   +m ===
-                    Object(R.a)(w.currentMonthlyRent, t, a, r, n, i, o, l, c, s)
+                    Object(R.a)(L.currentMonthlyRent, t, a, r, n, i, o, l, c, s)
                 : null;
           return {
             isPreLeased: { value: !!b },
@@ -8036,7 +8052,7 @@
           };
         },
         D = a(12),
-        U = function (e) {
+        B = function (e) {
           return e
             ? Object(D.a)()
               ? { shopLocatedIn: z("DEFAULT_OTHERS" === e ? "" : e) }
@@ -8048,23 +8064,23 @@
                 }
             : { shopLocatedIn: z("") };
         },
-        B = a(41),
-        x = a(38),
+        x = a(41),
+        U = a(38),
         F = function (e, t, a, r) {
-          if (Object(x.a)(e)) {
+          if (Object(U.a)(e)) {
             var n = [];
             t && n.push("1"), a && n.push("2");
             var i = !r || 0 === r.length;
-            return !n.length && !i && n.push(B.a.NONE), n;
+            return !n.length && !i && n.push(x.a.NONE), n;
           }
           return [];
         },
         M = function (e, t, a, r, n) {
-          if (Object(x.a)(e)) {
+          if (Object(U.a)(e)) {
             var i = [];
             a && i.push("1"), t && i.push("2"), r && i.push("3");
             var o = !n || 0 === n.length;
-            return !i.length && !o && i.push(B.a.NONE), i;
+            return !i.length && !o && i.push(x.a.NONE), i;
           }
         },
         W = function () {
@@ -8179,11 +8195,11 @@
                 T,
                 O,
                 S,
-                w,
+                L,
                 R,
                 j,
                 D,
-                B,
+                x,
                 G,
                 H,
                 Z,
@@ -8218,15 +8234,15 @@
                 Ce,
                 Ie,
                 Ne,
-                Le,
                 we,
+                Le,
                 Re,
                 je,
                 ke,
                 De,
-                Ue,
                 Be,
                 xe,
+                Ue,
                 Fe,
                 Me,
                 We,
@@ -8272,15 +8288,15 @@
                 Ct,
                 It,
                 Nt,
-                Lt,
                 wt,
+                Lt,
                 Rt,
                 jt,
                 kt,
                 Dt,
-                Ut,
                 Bt,
                 xt,
+                Ut,
                 Ft,
                 Mt,
                 Wt,
@@ -8326,15 +8342,15 @@
                 Ca,
                 Ia,
                 Na,
-                La,
                 wa,
+                La,
                 Ra,
                 ja,
                 ka,
                 Da,
-                Ua,
                 Ba,
                 xa,
+                Ua,
                 Fa,
                 Ma,
                 Wa,
@@ -8380,20 +8396,20 @@
                 Cr,
                 Ir,
                 Nr,
-                Lr,
                 wr,
+                Lr,
                 Rr,
                 jr,
                 kr,
                 Dr,
-                Ur,
-                Br = arguments;
+                Br,
+                xr = arguments;
               return n.a.wrap(function (e) {
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        (t = Br.length > 0 && void 0 !== Br[0] ? Br[0] : {}),
+                        (t = xr.length > 0 && void 0 !== xr[0] ? xr[0] : {}),
                         (a = t.listingCategory),
                         (r = t.postedAs),
                         (i = t.preference),
@@ -8405,11 +8421,11 @@
                         (O = t.balconyNum),
                         t.totalRooms,
                         (S = t.washroomNumber),
-                        (w = t.capacity),
+                        (L = t.capacity),
                         (R = t.specification),
                         (j = (R = void 0 === R ? {} : R).bedsNum),
                         (D = R.bathroomAttached),
-                        (B = R.balconyAttached),
+                        (x = R.balconyAttached),
                         (G = R.furnish),
                         (H = R.isBoundaryWallMade),
                         (Z = R.features),
@@ -8445,16 +8461,16 @@
                         (Ce = R.suitableForBusinessTypes),
                         (Ie = R.topUsp),
                         (Ne = R.complexLocationAdvantage),
-                        (Le = R.suggestedUsp),
-                        (we = t.rentalAttributes),
+                        (we = R.suggestedUsp),
+                        (Le = t.rentalAttributes),
                         (Re = t.location),
                         (je = (Re = void 0 === Re ? {} : Re).address),
                         (ke = Re.buildingId),
                         Re.buildingName,
                         (De = Re.city),
-                        (Ue = Re.cityName),
-                        (Be = Re.floorNum),
-                        (xe = Re.latitude),
+                        (Be = Re.cityName),
+                        (xe = Re.floorNum),
+                        (Ue = Re.latitude),
                         (Fe = Re.longitude),
                         (Me = Re.localityId),
                         (We = Re.localityName),
@@ -8500,43 +8516,43 @@
                         (Ct = ht.depositType),
                         (It = ht.maintenance),
                         (Nt = ht.maintenanceType),
-                        (Lt = ht.bookingAmount),
-                        (wt = ht.annualDues),
+                        (wt = ht.bookingAmount),
+                        (Lt = ht.annualDues),
                         (Rt = ht.membership),
                         (jt = ht.perUnitArea),
                         (kt = ht.displayType),
                         (Dt = ht.min),
-                        (Ut = ht.max),
-                        (Bt = t.pricing),
-                        (xt = (Bt = void 0 === Bt ? {} : Bt)
+                        (Bt = ht.max),
+                        (xt = t.pricing),
+                        (Ut = (xt = void 0 === xt ? {} : xt)
                           .laundryAvailability),
-                        (Ft = Bt.laundryCharge),
-                        (Mt = Bt.housekeepingAvailability),
-                        (Wt = Bt.housekeepingCharge),
-                        (Vt = Bt.electricityAvailability),
-                        (Gt = Bt.electricityCharge),
-                        (Ht = Bt.waterAvailability),
-                        (Yt = Bt.waterCharge),
-                        (Qt = Bt.dthAvailability),
-                        (Kt = Bt.dthCharge),
-                        (qt = Bt.wifiAvailability),
-                        (Jt = Bt.wifiCharges),
-                        (Xt = Bt.foodAvailability),
-                        (zt = Bt.foodType),
-                        (Zt = Bt.breakfastCharge),
-                        ($t = Bt.lunchCharge),
-                        (ea = Bt.dinnerCharge),
-                        (ta = Bt.foodMonthCharge),
-                        (aa = Bt.foodWeekdayAvailability),
-                        (ra = Bt.foodWeekendAvailability),
-                        (na = Bt.earlyLeavingChargesType),
-                        (ia = Bt.earlyLeavingCharges),
-                        (oa = Bt.taxGovtCharges),
-                        (la = Bt.electricityWaterCharges),
-                        (ca = Bt.inclusiveDgUpsPrice),
-                        (sa = Bt.yearlyRentIncrement),
-                        (ua = Bt.assuredReturns),
-                        (pa = Bt.leaseGuarantee),
+                        (Ft = xt.laundryCharge),
+                        (Mt = xt.housekeepingAvailability),
+                        (Wt = xt.housekeepingCharge),
+                        (Vt = xt.electricityAvailability),
+                        (Gt = xt.electricityCharge),
+                        (Ht = xt.waterAvailability),
+                        (Yt = xt.waterCharge),
+                        (Qt = xt.dthAvailability),
+                        (Kt = xt.dthCharge),
+                        (qt = xt.wifiAvailability),
+                        (Jt = xt.wifiCharges),
+                        (Xt = xt.foodAvailability),
+                        (zt = xt.foodType),
+                        (Zt = xt.breakfastCharge),
+                        ($t = xt.lunchCharge),
+                        (ea = xt.dinnerCharge),
+                        (ta = xt.foodMonthCharge),
+                        (aa = xt.foodWeekdayAvailability),
+                        (ra = xt.foodWeekendAvailability),
+                        (na = xt.earlyLeavingChargesType),
+                        (ia = xt.earlyLeavingCharges),
+                        (oa = xt.taxGovtCharges),
+                        (la = xt.electricityWaterCharges),
+                        (ca = xt.inclusiveDgUpsPrice),
+                        (sa = xt.yearlyRentIncrement),
+                        (ua = xt.assuredReturns),
+                        (pa = xt.leaseGuarantee),
                         (da = t.houseRules),
                         (ma = (da = void 0 === da ? {} : da).petAllowed),
                         (fa = da.drinkingAllowed),
@@ -8555,15 +8571,15 @@
                         (Ca = t.minimumContractDuration),
                         (Ia = t.noticeDuration),
                         (Na = t.rentalIncome),
-                        (La = t.projectUnitFloorPlanId),
-                        (wa = t.availability),
+                        (wa = t.projectUnitFloorPlanId),
+                        (La = t.availability),
                         (Ra = t.availableRooms),
                         (ja = t.age),
                         (ka = t.media),
                         (Da = t.officeSpecification),
-                        (Ua = (Da = void 0 === Da ? {} : Da).minSeat),
-                        (Ba = Da.maxSeat),
-                        (xa = Da.cabins),
+                        (Ba = (Da = void 0 === Da ? {} : Da).minSeat),
+                        (xa = Da.maxSeat),
+                        (Ua = Da.cabins),
                         (Fa = Da.meetingRooms),
                         (Ma = Da.privateWashrooms),
                         (Wa = Da.sharedWashrooms),
@@ -8587,7 +8603,7 @@
                         (ir = { photos: [] }),
                         (or = { selectedOptions: [] }),
                         (lr = c && c > 1 ? "1" : "2"),
-                        (cr = d(we, i)),
+                        (cr = d(Le, i)),
                         (sr = cr.availableFor),
                         (ur = cr.agreement),
                         (pr = cr.tenantGender),
@@ -8603,19 +8619,19 @@
                         (_r = f(oe)),
                         (Ar = _r.openParking),
                         (Tr = _r.coveredParking),
-                        (Or = y(wa, ja, vt)),
+                        (Or = y(La, ja, vt)),
                         (Pr = Or.ageValue),
                         (Sr = Or.availabilityValue),
                         (Cr = Or.propertyAvailability),
                         (Ir = Or.availabilityMonth),
                         (Nr = Or.availabilityDateValue),
-                        (Lr = E("FurnishingDetail", le, i)),
-                        (wr = E("CommonFurnishing", ce, i)),
+                        (wr = E("FurnishingDetail", le, i)),
+                        (Lr = E("CommonFurnishing", ce, i)),
                         (Rr = _(s, st, ut, pt)),
                         (jr = Rr.minArea),
                         (kr = Rr.maxArea),
                         (Dr = Rr.areaType),
-                        (Ur = "string" === typeof Ja ? Ja.split(",") : []),
+                        (Br = "string" === typeof Ja ? Ja.split(",") : []),
                         (nr.resCom = z(a)),
                         (nr.postedAs = z(r)),
                         (nr.preference = z(i)),
@@ -8631,7 +8647,7 @@
                         (nr.propertySpecification = z(s > 1 ? "MP" : "N")),
                         (e.t0 = z),
                         (e.next = 47),
-                        Object(b.b)("city", De, Ue, Ve, Ge)
+                        Object(b.b)("city", De, Be, Ve, Ge)
                       );
                     case 47:
                       return (
@@ -8695,11 +8711,11 @@
                         (nr.zoneType = (0, e.t14)(e.t15)),
                         (nr.address = z(je)),
                         (nr.latLng = z({
-                          lat: xe,
+                          lat: Ue,
                           lng: Fe,
                           field: Object(b.a)(He),
                         })),
-                        (nr.floorPlanId = z(La || null)),
+                        (nr.floorPlanId = z(wa || null)),
                         (nr.bedroomNum = z(
                           10 != l && 83 != l && h ? "".concat(h) : ""
                         )),
@@ -8707,11 +8723,11 @@
                         (nr.bathroomNum = z(T ? "".concat(T) : "")),
                         (nr.balconyNum = z(O ? "".concat(O) : "")),
                         (nr.washroomNumber = z(S ? "".concat(S) : "")),
-                        (nr.capacity = z(w)),
+                        (nr.capacity = z(L)),
                         (nr.bedsNum = z(j)),
                         (nr.availableRooms = z(Ra)),
                         (nr.bathroomAttached = z(D, u)),
-                        (nr.balconyAttached = z(B, u)),
+                        (nr.balconyAttached = z(x, u)),
                         (nr.areaUnit = z(it || lt || ct || ot || $e || 1)),
                         (nr.superBuiltup = z(at)),
                         (nr.builtup = z(91 == l ? "" : et)),
@@ -8727,7 +8743,7 @@
                         (nr.furnish = z(G)),
                         (nr.ownership = z(bt)),
                         (nr.totalFloor = z(yt, X)),
-                        (nr.floorNum = z(Be, X)),
+                        (nr.floorNum = z(xe, X)),
                         (nr.isBoundaryWallMade = z(H, u)),
                         (nr.openParking = z(Ar)),
                         (nr.coveredParking = z(Tr)),
@@ -8745,8 +8761,8 @@
                         (nr.depositType = z(Ct)),
                         (nr.maintenance = z(It)),
                         (nr.maintenanceCriteria = z(Nt ? "".concat(Nt) : "")),
-                        (nr.bookingAmount = z(Lt)),
-                        (nr.annualDues = z(wt)),
+                        (nr.bookingAmount = z(wt)),
+                        (nr.annualDues = z(Lt)),
                         (nr.membership = z(Rt)),
                         (nr.rentAgreementDuration = z(Sa ? Sa + "" : "")),
                         (nr.minimumContractDuration = z(Ca ? Ca + "" : "")),
@@ -8756,8 +8772,8 @@
                         (nr.brokerageType = z(Tt)),
                         (nr.brokerage = z(0 === Ot ? null : Ot)),
                         (nr.brokerageNegotiable = z(Pt, u)),
-                        (nr.laundryAvailability = z(Q(xt))),
-                        (nr.laundryChargeType = z(K(xt))),
+                        (nr.laundryAvailability = z(Q(Ut))),
+                        (nr.laundryChargeType = z(K(Ut))),
                         (nr.laundryCharge = z(Ft)),
                         (nr.housekeepingAvailability = z(Q(Mt))),
                         (nr.housekeepingChargeType = z(K(Mt))),
@@ -8776,7 +8792,7 @@
                         (nr.wifiCharge = z(Jt)),
                         (nr.totalPriceIncludes = z(
                           q({
-                            laundry: xt,
+                            laundry: Ut,
                             housekeeping: Mt,
                             electricity: Vt,
                             water: Ht,
@@ -8842,15 +8858,15 @@
                         (nr.projectCoverPhoto = Object(g.b)(ka)),
                         (ir = Object(g.a)(ka)),
                         (nr.minimumLeasableSuperBuiltUp = z(mt)),
-                        (nr.minSeats = z(Ua, N)),
-                        (nr.maxSeats = 0 !== Ba ? z(Ba, N) : ""),
-                        (nr.cabinsNum = z(xa, N)),
+                        (nr.minSeats = z(Ba, N)),
+                        (nr.maxSeats = 0 !== xa ? z(xa, N) : ""),
+                        (nr.cabinsNum = z(Ua, N)),
                         (nr.meetingRoomsNum = z(Fa, N)),
-                        (nr.privateWashrooms = z(Object(x.a)(l) ? 0 : +Ma)),
-                        (nr.sharingWashrooms = z(Object(x.a)(l) ? 0 : +Wa)),
+                        (nr.privateWashrooms = z(Object(U.a)(l) ? 0 : +Ma)),
+                        (nr.sharingWashrooms = z(Object(U.a)(l) ? 0 : +Wa)),
                         (nr.washroomAvailable = z(
                           (!Object(v.b)(Ma) && !Object(v.b)(Wa)) ||
-                            Object(x.a)(l)
+                            Object(U.a)(l)
                             ? 0
                             : 1
                         )),
@@ -8861,7 +8877,7 @@
                         (nr.pantryType = z(Ha)),
                         (nr.pantryArea = z(Ya, N)),
                         (nr.pantryAreaUnit = z(Ka)),
-                        (nr.multiFloorNum = z(Be, p)),
+                        (nr.multiFloorNum = z(xe, p)),
                         (nr.staircaseNum = z(se, N)),
                         (nr.modernLiftsAvailable = z(ue)),
                         (nr.passengerLifts = z(+pe)),
@@ -8872,9 +8888,9 @@
                         (nr.parkingCount = z(me)),
                         (nr.privateBasementParkingAvailable = z(fe)),
                         (nr.privateOutsideParkingAvailable = z(be)),
-                        (nr.publicParkingAvailable = z(!Object(x.a)(l) && ye)),
+                        (nr.publicParkingAvailable = z(!Object(U.a)(l) && ye)),
                         (nr.commercialParkingAvailable = z(
-                          Object(v.b)(me) || fe || be || (ye && !Object(x.a)(l))
+                          Object(v.b)(me) || fe || be || (ye && !Object(U.a)(l))
                             ? 1
                             : 0
                         )),
@@ -8886,26 +8902,26 @@
                         (nr.rentIncrement = z(sa)),
                         (nr.wallsType = z(he)),
                         (nr.doorsAvailable = z(za)),
-                        (nr.furnishingAvailable = z(Ur.includes("1"))),
+                        (nr.furnishingAvailable = z(Br.includes("1"))),
                         (nr.centralAirConditioningAvailable = z(
-                          91 === l && Ur.includes("2")
+                          91 === l && Br.includes("2")
                         )),
                         (nr.bareshellCentralAirConditioningAvailable = z(
-                          (92 === l && Ur.includes("2")) ||
-                            (!!Ur.includes("3") && 3)
+                          (92 === l && Br.includes("2")) ||
+                            (!!Br.includes("3") && 3)
                         )),
-                        (nr.oxygenDuctAvailable = z(Ur.includes("4"))),
-                        (nr.upsAvailable = z(Ur.includes("5"))),
+                        (nr.oxygenDuctAvailable = z(Br.includes("4"))),
+                        (nr.upsAvailable = z(Br.includes("5"))),
                         (nr.fireSafetyMeasures = z(
-                          Ur.filter(function (e) {
+                          Br.filter(function (e) {
                             return ["6", "7", "8", "9"].includes(e);
                           })
                         )),
                         (nr.verifyListing = z(tr, u)),
                         (nr.hidePrice = z("N" !== kt)),
                         (nr.minPrice = z(Dt ? "".concat(Dt) : "")),
-                        (nr.maxPrice = z(Ut ? "".concat(Ut) : "")),
-                        (nr.priceType = z(L(Dt, Ut, kt))),
+                        (nr.maxPrice = z(Bt ? "".concat(Bt) : "")),
+                        (nr.priceType = z(w(Dt, Bt, kt))),
                         (nr.entranceWidth = z(Ee, N)),
                         (nr.entranceWidthUnit = z(_e || 1, N)),
                         (nr.ceilingHeight = z(Ae, N)),
@@ -8926,18 +8942,18 @@
                               }),
                             }
                           : or),
-                        (nr.suggestUsp = z(Le)),
+                        (nr.suggestUsp = z(we)),
                         (nr = Object(o.a)(
                           {},
                           nr,
                           {},
-                          Lr,
-                          {},
                           wr,
                           {},
-                          k(Za, Et, It, Nt, Lt, wt, Ot, Tt, nr.priceType, Ut),
+                          Lr,
                           {},
-                          U(Xe)
+                          k(Za, Et, It, Nt, wt, Lt, Ot, Tt, nr.priceType, Bt),
+                          {},
+                          B(Xe)
                         )),
                         e.abrupt("return", {
                           values: nr,
@@ -8975,10 +8991,10 @@
       a.d(t, "a", function () {
         return l;
       });
-      var r = a(28),
+      var r = a(29),
         n = a(46),
         i = a(22),
-        o = a(29),
+        o = a(26),
         l = Object(o.a)(function () {
           var e = Object(i.a)("workflow");
           return (
@@ -9107,7 +9123,7 @@
       });
       var r = a(0),
         n = a.n(r),
-        i = a(163),
+        i = a(164),
         o = a.n(i);
       function l(e) {
         var t = e.variant,
@@ -9241,7 +9257,7 @@
       a.d(t, "a", function () {
         return n;
       });
-      var r = a(134),
+      var r = a(135),
         n = function () {
           return function (e, t) {
             e({ type: "SET_DROPOUTID", payload: { dropoutId: "" } }),
@@ -9263,7 +9279,7 @@
       });
       var r = a(0),
         n = a.n(r),
-        i = a(182),
+        i = a(183),
         o = a.n(i),
         l = function (e) {
           var t = e.errors,
@@ -9479,7 +9495,7 @@
       var r = a(2),
         n = a(3),
         i = a(68),
-        o = a(145),
+        o = a(146),
         l = a(43),
         c = a(118),
         s = a(41),
@@ -9678,9 +9694,9 @@
             otherRule: c.value,
           };
         },
-        P = a(149),
-        S = a(245),
-        C = a(246),
+        P = a(150),
+        S = a(246),
+        C = a(247),
         I = function (e) {
           var t = e.photoUpload,
             a = (t = void 0 === t ? {} : t).photos,
@@ -9703,13 +9719,13 @@
                 reasonDescription: i,
               };
         },
-        L = function (e) {
+        w = function (e) {
           var t = e.values,
             a = t.price.value,
             r = t.hidePrice.value;
           return Object(d.a)(null, e) && !r ? {} : { value: a };
         },
-        w = function (e) {
+        L = function (e) {
           var t = e.values,
             a = t.minPrice.value,
             r = t.maxPrice.value;
@@ -9738,7 +9754,7 @@
             a = Object(y.a)(e, "shopLocatedInOthers");
           return { locatedInside: Object(k.a)() ? t : a || t };
         },
-        U = function (e) {
+        B = function (e) {
           var t = e.values,
             a = t.suitableBusinessType.value,
             r = t.otherSuitableBusinessType.value;
@@ -9751,8 +9767,8 @@
                 .toString()
             : r;
         },
-        B = a(38),
-        x = a(86),
+        x = a(38),
+        U = a(86),
         F = function (e) {
           var t = e.values,
             a = e.premiumVersion,
@@ -9768,7 +9784,7 @@
                     a = e.text,
                     r = e.distanceId;
                   return {
-                    id: t.includes("Other") ? x.b[t] : t,
+                    id: t.includes("Other") ? U.b[t] : t,
                     tuples: [{ name: a, distanceId: r }],
                   };
                 })
@@ -9903,7 +9919,7 @@
             c = function () {
               return !(
                 "screening" === G &&
-                x &&
+                U &&
                 !Object(y.a)(e, "washroomTypes").length
               );
             },
@@ -9953,7 +9969,7 @@
                     ).join(","),
                     haveDoor: !!Object(y.a)(e, "doorsAvailable"),
                   }),
-                Object(B.a)(t) &&
+                Object(x.a)(t) &&
                   (n = {
                     privateWashrooms: c()
                       ? Object(y.a)(e, "washroomTypes").includes("1")
@@ -10012,14 +10028,14 @@
               }
             },
             k = e.metaData,
-            x = (k = void 0 === k ? {} : k).isOldShopsProperty,
+            U = (k = void 0 === k ? {} : k).isOldShopsProperty,
             G = k.accessSource,
             H = k.isListingVerified,
             Y = e.isEditProperty,
             Q = function () {
               return !(
                 "screening" === G &&
-                x &&
+                U &&
                 !Object(y.a)(e, "parkingTypes").length
               );
             },
@@ -10171,7 +10187,7 @@
                       entranceWidthUnit: p(Object(y.a)(e, "entranceWidthUnit")),
                       ceilingHeight: p(Object(y.a)(e, "ceilingHeight")),
                       ceilingHeightUnit: p(Object(y.a)(e, "ceilingHeightUnit")),
-                      suitableForBusinessTypes: U(e),
+                      suitableForBusinessTypes: B(e),
                       suggestedUsp: Object(y.a)(e, "suggestUsp"),
                     },
                     priceEstimatorAttribute: N(e),
@@ -10183,13 +10199,13 @@
                       {},
                       _(e),
                       {},
-                      L(e),
+                      w(e),
                       {
                         inclusive: e.values.inclusive.value ? "Y" : "N",
                         negotiable: e.values.negotiable.value ? "Y" : "N",
                         perUnitArea: e.values.pricePerUnitArea.value,
                       },
-                      w(e),
+                      L(e),
                       {},
                       R(e)
                     ),
@@ -10806,8 +10822,8 @@
       a.d(t, "a", function () {
         return i;
       });
-      var r = a(26),
-        n = a(29),
+      var r = a(27),
+        n = a(26),
         i = Object(n.a)(function (e) {
           return {
             defaultList: r.a.get()[e],
@@ -11291,7 +11307,7 @@
           viewType: "split",
           listLabel: "Select the unit",
         },
-        L = {
+        w = {
           label: "No. of Bathrooms",
           mandatory: !0,
           type: "advanceradio",
@@ -11319,7 +11335,7 @@
             constraints: { regex: r.f.ONLY_INTEGERS, maxValue: 99 },
           },
         },
-        w = {
+        L = {
           label: "Balconies",
           mandatory: !0,
           type: d.a.RADIO,
@@ -11392,7 +11408,7 @@
           viewType: "check",
           defaultValue: !1,
         },
-        U = {
+        B = {
           mandatory: !1,
           type: "toggle",
           label: "Price Negotiable",
@@ -11403,7 +11419,7 @@
           viewType: "check",
           defaultValue: !1,
         },
-        B = {
+        x = {
           mandatory: !1,
           type: "toggle",
           label: "Electricity & Water charges excluded",
@@ -11414,7 +11430,7 @@
           viewType: "check",
           defaultValue: !0,
         },
-        x = {
+        U = {
           mandatory: !0,
           type: "radio",
           view: "bubble",
@@ -12144,7 +12160,7 @@
           mandatory: !1,
           visible: !1,
         },
-        Le = {
+        we = {
           id: "waterChargeType",
           name: "waterChargeType",
           type: r.e.SELECT,
@@ -12158,7 +12174,7 @@
           visible: !1,
           listLabel: "Select water charges",
         },
-        we = {
+        Le = {
           id: "wifiAvailability",
           name: "wifiAvailability",
           parent: "Wifi",
@@ -12228,7 +12244,7 @@
           mandatory: !1,
           visible: !1,
         },
-        Ue = {
+        Be = {
           id: "housekeepingChargeType",
           name: "housekeepingChargeType",
           type: r.e.SELECT,
@@ -12239,7 +12255,7 @@
           visible: !1,
           listLabel: "Select housekeeping charges",
         },
-        Be = {
+        xe = {
           id: "electricityAvailability",
           name: "electricityAvailability",
           parent: "Electricity",
@@ -12252,7 +12268,7 @@
           mandatory: !1,
           visible: !1,
         },
-        xe = {
+        Ue = {
           id: "electricityCharge",
           name: "electricityCharge",
           parent: "Electricity",
@@ -12872,7 +12888,7 @@
           defaultValue: !1,
           iconClass: "iconS_furnish_32 icon_curtains",
         },
-        Lt = {
+        wt = {
           mandatory: !1,
           type: r.e.TOGGLE,
           label: "Dinning Table",
@@ -12884,7 +12900,7 @@
           defaultValue: !1,
           iconClass: "iconS_furnish_32 icon_dinningTable",
         },
-        wt = {
+        Lt = {
           mandatory: !1,
           type: r.e.TOGGLE,
           label: "Exhaust Fan",
@@ -12944,7 +12960,7 @@
           defaultValue: !1,
           iconClass: "iconS_furnish_32 icon_stove",
         },
-        Ut = {
+        Bt = {
           mandatory: !1,
           type: r.e.TOGGLE,
           label: "Washing Machine",
@@ -12956,7 +12972,7 @@
           defaultValue: !1,
           iconClass: "iconS_furnish_32 icon_washingMachine",
         },
-        Bt = {
+        xt = {
           mandatory: !1,
           type: r.e.TOGGLE,
           label: "Water Purifier",
@@ -12968,7 +12984,7 @@
           defaultValue: !1,
           iconClass: "iconS_furnish_32 icon_waterPurify",
         },
-        xt = {
+        Ut = {
           mandatory: !1,
           type: r.e.TOGGLE,
           label: "Fans",
@@ -13634,7 +13650,7 @@
           visible: !0,
           view: "bubble",
         },
-        La = {
+        wa = {
           label: "",
           mandatory: !0,
           type: r.e.NUMBER,
@@ -13645,7 +13661,7 @@
           placeholder: "Enter Number of Months",
           constraints: { regex: r.f.ONLY_INTEGERS, minValue: 0, maxValue: 120 },
         },
-        wa = {
+        La = {
           mandatory: !1,
           type: r.e.MULTISELECT,
           options: [
@@ -13863,7 +13879,7 @@
           viewType: "check",
           defaultValue: !1,
         },
-        Ua = {
+        Ba = {
           mandatory: !0,
           type: r.e.RADIO,
           label: "",
@@ -13879,7 +13895,7 @@
           visible: !0,
           view: "bubble",
         },
-        Ba = {
+        xa = {
           mandatory: !0,
           type: r.e.RADIO,
           label: "",
@@ -13893,7 +13909,7 @@
           visible: !0,
           view: "bubble",
         },
-        xa = {
+        Ua = {
           id: "bareshellCentralAirConditioningAvailable",
           name: "bareshellCentralAirConditioningAvailable",
           parent: "CommercialR2MFacilities",
@@ -14598,10 +14614,10 @@
           return N;
         }),
         a.d(t, "bathroomNum", function () {
-          return L;
+          return w;
         }),
         a.d(t, "balconyNum", function () {
-          return w;
+          return L;
         }),
         a.d(t, "ownership", function () {
           return R;
@@ -14616,13 +14632,13 @@
           return D;
         }),
         a.d(t, "negotiable", function () {
-          return U;
-        }),
-        a.d(t, "electricityWaterCharges", function () {
           return B;
         }),
-        a.d(t, "propertyType", function () {
+        a.d(t, "electricityWaterCharges", function () {
           return x;
+        }),
+        a.d(t, "propertyType", function () {
+          return U;
         }),
         a.d(t, "resCom", function () {
           return F;
@@ -14760,10 +14776,10 @@
           return Ne;
         }),
         a.d(t, "waterChargeType", function () {
-          return Le;
+          return we;
         }),
         a.d(t, "wifiAvailability", function () {
-          return we;
+          return Le;
         }),
         a.d(t, "wifiCharge", function () {
           return Re;
@@ -14778,13 +14794,13 @@
           return De;
         }),
         a.d(t, "housekeepingChargeType", function () {
-          return Ue;
-        }),
-        a.d(t, "electricityAvailability", function () {
           return Be;
         }),
-        a.d(t, "electricityCharge", function () {
+        a.d(t, "electricityAvailability", function () {
           return xe;
+        }),
+        a.d(t, "electricityCharge", function () {
+          return Ue;
         }),
         a.d(t, "electricityChargeType", function () {
           return Fe;
@@ -14922,10 +14938,10 @@
           return Nt;
         }),
         a.d(t, "furnishing_Dinngtbl", function () {
-          return Lt;
+          return wt;
         }),
         a.d(t, "furnishing_Exhstfn", function () {
-          return wt;
+          return Lt;
         }),
         a.d(t, "furnishing_Kit", function () {
           return Rt;
@@ -14940,13 +14956,13 @@
           return Dt;
         }),
         a.d(t, "furnishing_Washmchn", function () {
-          return Ut;
-        }),
-        a.d(t, "furnishing_Wtrpurfr", function () {
           return Bt;
         }),
-        a.d(t, "furnishing_fan_toggle", function () {
+        a.d(t, "furnishing_Wtrpurfr", function () {
           return xt;
+        }),
+        a.d(t, "furnishing_fan_toggle", function () {
+          return Ut;
         }),
         a.d(t, "furnishing_geyser_toggle", function () {
           return Ft;
@@ -15084,10 +15100,10 @@
           return Na;
         }),
         a.d(t, "lockInPeriod", function () {
-          return La;
+          return wa;
         }),
         a.d(t, "officeUsedFor", function () {
-          return wa;
+          return La;
         }),
         a.d(t, "multiFloorSelect", function () {
           return Ra;
@@ -15102,13 +15118,13 @@
           return Da;
         }),
         a.d(t, "wallsType", function () {
-          return Ua;
-        }),
-        a.d(t, "doorsAvailable", function () {
           return Ba;
         }),
-        a.d(t, "bareshellCentralAirConditioningAvailable", function () {
+        a.d(t, "doorsAvailable", function () {
           return xa;
+        }),
+        a.d(t, "bareshellCentralAirConditioningAvailable", function () {
+          return Ua;
         }),
         a.d(t, "bsFlooring", function () {
           return Fa;
@@ -15241,9 +15257,9 @@
       });
       var r = a(19),
         n = a(32),
-        i = a(27),
+        i = a(28),
         o = a(33),
-        l = a(293),
+        l = a(294),
         c = (function (e) {
           function t(e, a) {
             var o;
@@ -15290,8 +15306,8 @@
       a.d(t, "a", function () {
         return i;
       });
-      var r = a(135),
-        n = a(132),
+      var r = a(136),
+        n = a(133),
         i = function (e) {
           return function (t, a) {
             var i = a(),
@@ -21130,6 +21146,12 @@
             data: { latlng: { lat: 25.224654233366, lon: 85.483807508517 } },
             parent_city: "Other International",
           },
+          {
+            id: "1070595",
+            label: "Hamirpur",
+            data: { latlng: { lat: 31.688323600951, lon: 76.520848014852 } },
+            parent_city: "Other International",
+          },
         ],
         n = r.filter(function (e) {
           return -1 === e.label.indexOf(" Others");
@@ -21279,18 +21301,18 @@
       var r = a(19),
         n = a(34),
         i = a(32),
-        o = a(27),
+        o = a(28),
         l = a(33),
         c = a(0),
         s = a.n(c),
         u = a(42),
         p = a.n(u),
-        d = a(359),
-        m = a(358),
+        d = a(360),
+        m = a(359),
         f = a(24),
         b = a(75),
         y = a.n(b),
-        g = (a(319), a(242));
+        g = (a(320), a(243));
       a.d(t, "a", function () {
         return v;
       });
@@ -21525,10 +21547,10 @@
           return N;
         }),
         a.d(n, "furnishing_Sofa", function () {
-          return L;
+          return w;
         }),
         a.d(n, "furnishing_Stv", function () {
-          return w;
+          return L;
         }),
         a.d(n, "furnishing_Washmchn", function () {
           return R;
@@ -21543,13 +21565,13 @@
           return D;
         }),
         a.d(n, "furnishing_studytable", function () {
-          return U;
-        }),
-        a.d(n, "furnishing_Microwave", function () {
           return B;
         }),
-        a.d(n, "commonFurnish_diningTable", function () {
+        a.d(n, "furnishing_Microwave", function () {
           return x;
+        }),
+        a.d(n, "commonFurnish_diningTable", function () {
+          return U;
         }),
         a.d(n, "commonFurnish_Tv", function () {
           return F;
@@ -21721,15 +21743,15 @@
         C = { iconClass: "", viewType: "furnishToggle" },
         I = { iconClass: "", viewType: "furnishToggle" },
         N = { iconClass: "", viewType: "furnishToggle" },
-        L = { iconClass: "", viewType: "furnishToggle" },
         w = { iconClass: "", viewType: "furnishToggle" },
+        L = { iconClass: "", viewType: "furnishToggle" },
         R = { iconClass: "", viewType: "furnishToggle" },
         j = { iconClass: "", viewType: "furnishToggle" },
         k = { iconClass: "", viewType: "furnishToggle" },
         D = { iconClass: "", viewType: "furnishToggle" },
-        U = { iconClass: "", viewType: "furnishToggle" },
         B = { iconClass: "", viewType: "furnishToggle" },
         x = { iconClass: "", viewType: "furnishToggle" },
+        U = { iconClass: "", viewType: "furnishToggle" },
         F = { iconClass: "", viewType: "counterFirst" },
         M = { iconClass: "", viewType: "counterFirst" },
         W = { iconClass: "", viewType: "counterFirst" },
@@ -21981,7 +22003,7 @@
         h = a(102),
         E = a(84),
         _ = a(64),
-        A = (a(26), a(12)),
+        A = (a(27), a(12)),
         T = function (e) {
           return function (t, a) {
             var r = a(),
@@ -22076,7 +22098,7 @@
           return (function () {
             var r = Object(i.a)(
               n.a.mark(function r(i, c) {
-                var s, u, d, f, A, P, S, C, I, N, L, w, R, j, k, D, U, B;
+                var s, u, d, f, A, P, S, C, I, N, w, L, R, j, k, D, B, x;
                 return n.a.wrap(
                   function (r) {
                     for (;;)
@@ -22113,9 +22135,9 @@
                             (C = S.postedAs.value),
                             (I = S.city.value),
                             (N = S.resCom.value),
-                            (L = S.preference.value),
-                            (w = P.metaData),
-                            (R = (w = void 0 === w ? {} : w).accessSource),
+                            (w = S.preference.value),
+                            (L = P.metaData),
+                            (R = (L = void 0 === L ? {} : L).accessSource),
                             Object(E.a)(I.id, I.label, u, d))
                           ) {
                             r.next = 22;
@@ -22126,7 +22148,7 @@
                           );
                         case 22:
                           return (
-                            (r.prev = 22), (r.next = 25), m(u, d, C, N, R, L)
+                            (r.prev = 22), (r.next = 25), m(u, d, C, N, R, w)
                           );
                         case 25:
                           r.next = 36;
@@ -22168,12 +22190,12 @@
                           return (
                             (k = (j = A || {}).lat),
                             (D = void 0 === k ? "" : k),
-                            (U = j.lon),
-                            (B = void 0 === U ? "" : U),
+                            (B = j.lon),
+                            (x = void 0 === B ? "" : B),
                             i(Object(h.a)(u, d)),
                             i(
                               Object(b.a)("city", {
-                                value: { id: u, label: d, lat: D, lng: B },
+                                value: { id: u, label: d, lat: D, lng: x },
                               })
                             ),
                             i(Object(g.a)()),
@@ -22388,7 +22410,7 @@
       a.d(t, "a", function () {
         return n;
       });
-      var r = a(267),
+      var r = a(268),
         n = function () {
           return function (e, t) {
             var a = t().values,
@@ -22427,7 +22449,7 @@
       a.d(t, "a", function () {
         return n;
       });
-      var r = a(232),
+      var r = a(233),
         n = function (e) {
           return (
             null !== e &&
@@ -22444,15 +22466,15 @@
       a.d(t, "a", function () {
         return m;
       });
-      var r = a(269),
+      var r = a(270),
         n = a.n(r),
-        i = a(270),
+        i = a(271),
         o = a.n(i),
-        l = a(271),
+        l = a(272),
         c = a.n(l),
-        s = a(272),
+        s = a(273),
         u = a.n(s),
-        p = a(273),
+        p = a(274),
         d = a.n(p),
         m = [
           {
@@ -22745,7 +22767,7 @@
         n = a(0),
         i = a.n(n),
         o = a(99),
-        l = a(221),
+        l = a(222),
         c = {},
         s = function () {
           var e = Object(n.useRef)(null),
@@ -22823,6 +22845,7 @@
     },
     ,
     ,
+    ,
     function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
@@ -22831,7 +22854,7 @@
         a.d(t, "b", function () {
           return l;
         });
-      var r = a(29),
+      var r = a(26),
         n = a(12),
         i = [
           "PrimaryDetails",
@@ -22867,13 +22890,13 @@
       var r = a(4),
         n = a.n(r),
         i = a(5),
-        o = (a(315), a(14)),
+        o = (a(316), a(14)),
         l = { "Pooja room": "1", "Study room": "2", "Servant room": "3" },
         c = a(10),
         s = a(60),
         u = a(8),
         p = a(21),
-        d = a(133);
+        d = a(134);
       a.d(t, "b", function () {
         return m;
       }),
@@ -23255,7 +23278,7 @@
             e({ type: "UPDATE_PrimaryDetails", payload: { complete: o } }), o
           );
         },
-        l = a(136),
+        l = a(137),
         c = a(4),
         s = a.n(c),
         u = a(5),
@@ -23306,8 +23329,8 @@
           };
         })(),
         g = a(13),
-        v = (a(316), a(219)),
-        h = a(152),
+        v = (a(317), a(220)),
+        h = a(153),
         E = (function () {
           var e = Object(u.a)(
             s.a.mark(function e(t, a, r) {
@@ -23556,14 +23579,15 @@
           };
         },
         N = a(91),
-        L = a(3),
-        w = a(146),
+        w = a(3),
+        L = a(147),
         R = a(111),
         j = a(66),
         k = a(117),
         D = a(62),
-        U = a(61),
-        B = function (e) {
+        B = a(61),
+        x = ["R", "P"],
+        U = function (e) {
           return (function () {
             var e = Object(u.a)(
               s.a.mark(function e(t, a) {
@@ -23584,7 +23608,22 @@
                             (function () {
                               var e = Object(u.a)(
                                 s.a.mark(function e(t, a) {
-                                  var r, n, i, o, l, c, u, p, d, m, f, b, y, v;
+                                  var r,
+                                    n,
+                                    i,
+                                    o,
+                                    l,
+                                    c,
+                                    u,
+                                    p,
+                                    d,
+                                    m,
+                                    f,
+                                    b,
+                                    y,
+                                    v,
+                                    E,
+                                    _;
                                   return s.a.wrap(function (e) {
                                     for (;;)
                                       switch ((e.prev = e.next)) {
@@ -23597,8 +23636,12 @@
                                             (i = r.values),
                                             (o = i.resCom.value),
                                             (l = i.preference.value),
-                                            (c = r.metaData),
-                                            (u = (c = void 0 === c ? {} : c)
+                                            (c =
+                                              r.userState.userData.user
+                                                .userClass),
+                                            (u = void 0 === c ? "" : c),
+                                            (p = r.metaData),
+                                            (d = (p = void 0 === p ? {} : p)
                                               .dropoutDataSource),
                                             console.log("start subscription"),
                                             (e.next = 9),
@@ -23606,29 +23649,29 @@
                                           );
                                         case 9:
                                           return (
-                                            (p = e.sent),
-                                            (d = Object(j.c)(r)),
-                                            (m =
+                                            (m = e.sent),
+                                            (f = Object(j.c)(r)),
+                                            (b =
                                               r.userState.userData.user
                                                 .profileId),
                                             (e.next = 14),
-                                            Object(w.a)(m)
+                                            Object(L.a)(b)
                                           );
                                         case 14:
                                           if (
-                                            ((f = e.sent),
-                                            (b = p.listingPack),
-                                            (y = []),
-                                            b &&
-                                              b.details &&
-                                              (y = b.details.filter(function (
+                                            ((y = e.sent),
+                                            (v = m.listingPack),
+                                            (E = []),
+                                            v &&
+                                              v.details &&
+                                              (E = v.details.filter(function (
                                                 e
                                               ) {
                                                 return "F" != e.code;
                                               })),
-                                            console.log(y),
+                                            console.log(E),
                                             !(
-                                              0 === parseInt(f) || y.length > 0
+                                              0 === parseInt(y) || E.length > 0
                                             ))
                                           ) {
                                             e.next = 24;
@@ -23637,19 +23680,19 @@
                                           return t(I(!0)), e.abrupt("return");
                                         case 24:
                                           return (
-                                            (d.listing = Object(L.a)(
+                                            (f.listing = Object(w.a)(
                                               {},
-                                              d.listing,
+                                              f.listing,
                                               {
-                                                subscriptionId: b.details[0].id,
+                                                subscriptionId: v.details[0].id,
                                               }
                                             )),
                                             (e.next = 27),
-                                            Object(R.a)(d, t)
+                                            Object(R.a)(f, t)
                                           );
                                         case 27:
                                           if (
-                                            "success" != (v = e.sent).status
+                                            "success" != (_ = e.sent).status
                                           ) {
                                             e.next = 36;
                                             break;
@@ -23657,69 +23700,71 @@
                                           return (
                                             t({
                                               type: "UPDATE_INPUT_VALUE_propId",
-                                              payload: v.response.prop_id,
+                                              payload: _.response.prop_id,
                                             }),
                                             t({
                                               type: "UPDATE_INPUT_VALUE_spid",
-                                              payload: v.response.spid,
+                                              payload: _.response.spid,
                                             }),
                                             t({
                                               type: "UPDATE_INPUT_VALUE_quality_score",
-                                              payload: v.response.quality_score,
+                                              payload: _.response.quality_score,
                                             }),
                                             t({
                                               type: "UPDATE_INPUT_VALUE_isSuspicious",
-                                              payload: v.response.isSuspicious,
+                                              payload: _.response.isSuspicious,
                                             }),
                                             t({
                                               type: "UPDATE_INPUT_VALUE_showRequestVerify",
                                               payload:
-                                                v.response.showRequestVerify,
+                                                _.response.showRequestVerify,
                                             }),
                                             t({
                                               type: "UPDATE_UspamenitiesButton",
                                               payload: {
                                                 redirect:
-                                                  "/thankyou?prop_id=".concat(
-                                                    v.response.prop_id
-                                                  ),
+                                                  "O" === u && x.includes(l)
+                                                    ? "/qrCodeAwareness"
+                                                    : "/thankyou?prop_id=".concat(
+                                                        _.response.prop_id
+                                                      ),
                                               },
                                             }),
                                             e.abrupt(
                                               "return",
-                                              !Object(h.a)(u) ||
-                                                v.response.prop_id
+                                              !Object(h.a)(d) ||
+                                                _.response.prop_id
                                             )
                                           );
                                         case 36:
-                                          if ("fail" == v.status)
+                                          if ("fail" == _.status)
                                             if (
-                                              v.error &&
+                                              _.error &&
                                               "duplicateListing" ==
-                                                v.error.nextAction
+                                                _.error.nextAction
                                             )
                                               k.a.updateProps({
                                                 similarPropertyId:
-                                                  v.error.similarPropertyId,
+                                                  _.error.similarPropertyId,
                                                 listing_qty: 1,
-                                                Subid: b.details[0].id,
-                                                code: b.details[0].code,
-                                                profileId: m,
+                                                Subid: v.details[0].id,
+                                                code: v.details[0].code,
+                                                profileId: b,
                                               }),
                                                 k.a.sheet.current.open();
                                             else if (
-                                              v.error &&
-                                              v.error.errorMsg
+                                              _.error &&
+                                              _.error.errorMsg
                                             )
                                               try {
-                                                A.Logger.log(v.error.errorMsg),
+                                                A.Logger.log(_.error.errorMsg),
                                                   g.b.open({
                                                     type: "error",
                                                     message: S.a.createElement(
                                                       D.a,
                                                       {
                                                         errors:
-                                                          v.error.errorMsg,
+                                                          _.error.errorMsg,
                                                       }
                                                     ),
                                                     confirm: "Continue",
@@ -23736,7 +23781,7 @@
                                                     "Uh Oh! Something went wrong! Please try again later",
                                                   confirm: "ok",
                                                 });
-                                              } catch (E) {}
+                                              } catch (T) {}
                                             }
                                         case 37:
                                         case "end":
@@ -23789,7 +23834,7 @@
                                               r.userState.userData.user
                                                 .profileId),
                                             (e.next = 11),
-                                            Object(w.a)(p)
+                                            Object(L.a)(p)
                                           );
                                         case 11:
                                           if (
@@ -23814,7 +23859,7 @@
                                           return t(I(!0)), e.abrupt("return");
                                         case 21:
                                           return (
-                                            (u.listing = Object(L.a)(
+                                            (u.listing = Object(w.a)(
                                               {},
                                               u.listing,
                                               {
@@ -23953,9 +23998,9 @@
             };
           })();
         },
-        x =
+        F =
           (a(90),
-          a(170),
+          a(171),
           function () {
             return (function () {
               var e = Object(u.a)(
@@ -24197,9 +24242,9 @@
               };
             })();
           }),
-        F = a(240),
-        M = a(155),
-        W = function (e) {
+        M = a(241),
+        W = a(156),
+        V = function (e) {
           return (function () {
             var e = Object(u.a)(
               s.a.mark(function e(t, a) {
@@ -24217,10 +24262,10 @@
                             e.next = 6;
                             break;
                           }
-                          return e.abrupt("return", t(Object(M.a)()));
+                          return e.abrupt("return", t(Object(W.a)()));
                         case 6:
                           return (
-                            (e.prev = 6), (e.t0 = t), (e.next = 10), t(F.a)
+                            (e.prev = 6), (e.t0 = t), (e.next = 10), t(M.a)
                           );
                         case 10:
                           (e.t1 = e.sent),
@@ -24258,9 +24303,9 @@
             };
           })();
         },
-        V = a(37),
-        G = a(12),
-        H = function (e) {
+        G = a(37),
+        H = a(12),
+        Y = function (e) {
           return (function () {
             var e = Object(u.a)(
               s.a.mark(function e(t, a) {
@@ -24309,7 +24354,7 @@
                                             })
                                           );
                                         case 3:
-                                          Object(G.a)() &&
+                                          Object(H.a)() &&
                                             T.a.reviewPhoto.open(),
                                             (e.next = 9);
                                           break;
@@ -24341,7 +24386,7 @@
                         }
                         return (
                           (e.next = 9),
-                          o(t(Object(V.a)("photoUpload_inProcess", "custom")))
+                          o(t(Object(G.a)("photoUpload_inProcess", "custom")))
                         );
                       case 9:
                         return e.abrupt("return", e.sent);
@@ -24359,17 +24404,17 @@
             };
           })();
         },
-        Y = function (e) {
+        Q = function (e) {
           return function (t, a) {
             return e.forEach(function (e) {
               a(Object(l.c)(e, !0));
             });
           };
         },
-        Q = a(67),
-        K = a(93),
-        q = a(218),
-        J = function (e) {
+        K = a(67),
+        q = a(93),
+        J = a(219),
+        X = function (e) {
           return (function () {
             var t = Object(u.a)(
               s.a.mark(function t(a, r) {
@@ -24389,14 +24434,14 @@
                             (u = {
                               media: !0,
                               displayLabel: !1,
-                              source: Object(G.a)() ? "M" : "IP",
+                              source: Object(H.a)() ? "M" : "IP",
                               accessSource: o,
                             }),
                             l && (u.screeningId = l),
                             (p = ""
                               .concat(f.a, "/api-aggregator/ppf-data?propId=")
                               .concat(e, "&")
-                              .concat(Object(Q.a)(u))),
+                              .concat(Object(K.a)(u))),
                             (t.next = 10),
                             m.a.get(p, null, 2e6)
                           );
@@ -24411,15 +24456,15 @@
                             (y = (b = void 0 === b ? {} : b).media),
                             (g = b.verified),
                             (v = (g = void 0 === g ? {} : g).status),
-                            (h = Object(K.a)(y)),
+                            (h = Object(q.a)(y)),
                             (E = { isListingVerified: "Y" === v }),
                             (E = c
-                              ? Object(L.a)({}, E, {
+                              ? Object(w.a)({}, E, {
                                   isBeforePreLeaseListing: !1,
                                 })
                               : E),
                             a({
-                              type: q.a.REPLACE_MEDIA,
+                              type: J.a.REPLACE_MEDIA,
                               payload: { photoUploadData: h },
                             }),
                             a({
@@ -24452,8 +24497,8 @@
             };
           })();
         },
-        X = a(134),
-        z = function (e, t, a) {
+        z = a(135),
+        Z = function (e, t, a) {
           return (function () {
             var t = Object(u.a)(
               s.a.mark(function t(r, n) {
@@ -24474,7 +24519,7 @@
                             (d.listing.propId = e),
                             (d.listing.postedBy = b),
                             (d.accessSource = c),
-                            (d.source = Object(G.a)() ? "M" : "IP"),
+                            (d.source = Object(H.a)() ? "M" : "IP"),
                             (t.prev = 10),
                             (t.next = 13),
                             m.b.post(
@@ -24500,10 +24545,10 @@
                             t.next = 52;
                             break;
                           }
-                          return (t.next = 19), r(J(e));
+                          return (t.next = 19), r(X(e));
                         case 19:
                           if (
-                            (Object(X.a)(), (t.prev = 20), "master_edit" !== c)
+                            (Object(z.a)(), (t.prev = 20), "master_edit" !== c)
                           ) {
                             t.next = 26;
                             break;
@@ -24520,7 +24565,7 @@
                               message:
                                 "Your changes have been saved successfully",
                               confirm: "Ok",
-                              viewType: Object(G.a)() ? "" : "MODAL",
+                              viewType: Object(H.a)() ? "" : "MODAL",
                               trackingObj: h,
                             })
                           );
@@ -24550,7 +24595,7 @@
                                 "Thank you! This property is now non-suspicious and added to your successful screening list. Do you want to make more changes?",
                               confirm: "Yes",
                               cancel: "No",
-                              viewType: Object(G.a)() ? "" : "MODAL",
+                              viewType: Object(H.a)() ? "" : "MODAL",
                             })
                           );
                         case 40:
@@ -24563,7 +24608,7 @@
                             (A = (_ = void 0 === _ ? {} : _).screeningType),
                             (O = _.ownerScreening),
                             (P = _.pname),
-                            (C = Object(Q.a)({
+                            (C = Object(K.a)({
                               screening_type: A,
                               ownerScreening: O,
                               pname: P,
@@ -24603,7 +24648,7 @@
                               type: "error",
                               message: S.a.createElement(D.a, { errors: I }),
                               confirm: "Ok",
-                              viewType: Object(G.a)() ? "" : "MODAL",
+                              viewType: Object(H.a)() ? "" : "MODAL",
                             })
                           );
                         case 63:
@@ -24634,8 +24679,8 @@
             };
           })();
         },
-        Z = a(23),
-        $ = function () {
+        $ = a(23),
+        ee = function () {
           return (function () {
             var e = Object(u.a)(
               s.a.mark(function e(t, a) {
@@ -24665,7 +24710,7 @@
                               confirm: "Buy our Services",
                               cancel: "Cancel",
                               viewType:
-                                "desktop" == Object(Z.a)(navigator.userAgent)
+                                "desktop" == Object($.a)(navigator.userAgent)
                                   ? "MODAL"
                                   : "",
                             })
@@ -24701,9 +24746,9 @@
             };
           })();
         },
-        ee = a(247),
-        te = a(263),
-        ae = function (e) {
+        te = a(248),
+        ae = a(264),
+        re = function (e) {
           return (function () {
             var e = Object(u.a)(
               s.a.mark(function e(t, a) {
@@ -24724,7 +24769,7 @@
                           }
                           return e.abrupt("return", !0);
                         case 6:
-                          return (e.prev = 6), (e.next = 9), t(Object(ee.a)());
+                          return (e.prev = 6), (e.next = 9), t(Object(te.a)());
                         case 9:
                           (o = e.sent), (e.next = 16);
                           break;
@@ -24750,11 +24795,11 @@
                             e.next = 37;
                             break;
                           }
-                          if (((e.prev = 19), !Object(G.a)())) {
+                          if (((e.prev = 19), !Object(H.a)())) {
                             e.next = 25;
                             break;
                           }
-                          return (e.next = 23), t(B());
+                          return (e.next = 23), t(U());
                         case 23:
                           e.next = 29;
                           break;
@@ -24817,12 +24862,12 @@
                           if (
                             (t({ type: "SET_LISTING_PACKS", payload: c }),
                             (e.prev = 51),
-                            !Object(G.a)())
+                            !Object(H.a)())
                           ) {
                             e.next = 57;
                             break;
                           }
-                          return (e.next = 55), t(B());
+                          return (e.next = 55), t(U());
                         case 55:
                           e.next = 59;
                           break;
@@ -24842,7 +24887,7 @@
                         case 67:
                           return (
                             (e.next = 69),
-                            t(Object(te.a)({ subscriptionId: l[0].subId }))
+                            t(Object(ae.a)({ subscriptionId: l[0].subId }))
                           );
                         case 69:
                           return e.abrupt("return", e.sent);
@@ -24869,22 +24914,22 @@
             };
           })();
         },
-        re = a(239),
-        ne = a(227),
-        ie = function () {
+        ne = a(240),
+        ie = a(228),
+        oe = function () {
           return function (e, t) {
             var a = t().PriceRecommender;
             return (
               !(a = void 0 === a ? {} : a).loading &&
               (e({
-                type: ne.a.SET_PRICE_RECOMMENDER,
+                type: ie.a.SET_PRICE_RECOMMENDER,
                 payload: { visible: !1 },
               }),
               !0)
             );
           };
         },
-        oe = function (e) {
+        le = function (e) {
           return (
             e({ type: "SET_PROFILE_RERA_PANEL", payload: "RERA" }),
             e({
@@ -24894,7 +24939,7 @@
             !0
           );
         },
-        le = function () {
+        ce = function () {
           return (function () {
             var e = Object(u.a)(
               s.a.mark(function e(t, a) {
@@ -24938,7 +24983,7 @@
                               type: "SET_USER_STATE",
                               payload: { id: l, label: c },
                             }),
-                            e.abrupt("return", oe(t))
+                            e.abrupt("return", le(t))
                           );
                         case 20:
                           if ("A" !== n.userClass) {
@@ -25006,7 +25051,7 @@
                             },
                           });
                         case 42:
-                          return e.abrupt("return", oe(t));
+                          return e.abrupt("return", le(t));
                         case 43:
                           e.next = 71;
                           break;
@@ -25099,7 +25144,7 @@
                             e.next = 71;
                             break;
                           }
-                          return e.abrupt("return", oe(t));
+                          return e.abrupt("return", le(t));
                         case 71:
                           if (0 != o) {
                             e.next = 76;
@@ -25116,7 +25161,7 @@
                               type: "SET_USER_STATE",
                               payload: { id: l, label: c },
                             }),
-                            e.abrupt("return", oe(t))
+                            e.abrupt("return", le(t))
                           );
                         case 76:
                           return e.abrupt("return", !0);
@@ -25141,9 +25186,9 @@
             };
           })();
         },
-        ce = a(2),
-        se = a(55),
-        ue = function () {
+        se = a(2),
+        ue = a(55),
+        pe = function () {
           return (function () {
             var e = Object(u.a)(
               s.a.mark(function e(t, a) {
@@ -25164,7 +25209,7 @@
                           (d = n.productType),
                           (m = r.isEditProperty),
                           (e.next = 6),
-                          t(z(m, 0, "approveListing"))
+                          t(Z(m, 0, "approveListing"))
                         );
                       case 6:
                         e.sent &&
@@ -25183,18 +25228,18 @@
                             return ["ownerScreening", "approveEntity"].indexOf(
                               t
                             ) > -1
-                              ? Object(L.a)({}, e, Object(ce.a)({}, t, f[t]))
-                              : Object(L.a)(
+                              ? Object(w.a)({}, e, Object(se.a)({}, t, f[t]))
+                              : Object(w.a)(
                                   {},
                                   e,
-                                  Object(ce.a)(
+                                  Object(se.a)(
                                     {},
-                                    Object(se.snakeCase)(t),
+                                    Object(ue.snakeCase)(t),
                                     f[t]
                                   )
                                 );
                           }, {})),
-                          (y = Object(Q.a)(b)),
+                          (y = Object(K.a)(b)),
                           (window.location.href =
                             "/do/screening/action/index?".concat(y)));
                       case 8:
@@ -25209,7 +25254,7 @@
             };
           })();
         },
-        pe = function () {
+        de = function () {
           return function (e, t) {
             var a = t(),
               r = a.metaData,
@@ -25233,18 +25278,18 @@
               },
               d = Object.keys(p).reduce(function (e, t) {
                 return ["ownerScreening", "showDeleteForm"].indexOf(t) > -1
-                  ? Object(L.a)({}, e, Object(ce.a)({}, t, p[t]))
-                  : Object(L.a)(
+                  ? Object(w.a)({}, e, Object(se.a)({}, t, p[t]))
+                  : Object(w.a)(
                       {},
                       e,
-                      Object(ce.a)({}, Object(se.snakeCase)(t), p[t])
+                      Object(se.a)({}, Object(ue.snakeCase)(t), p[t])
                     );
               }, {}),
-              m = Object(Q.a)(d);
+              m = Object(K.a)(d);
             window.location.href = "/do/screening/action/index?".concat(m);
           };
         },
-        de = function () {
+        me = function () {
           return function (e, t) {
             var a = t(),
               r = a.metaData,
@@ -25268,20 +25313,20 @@
               },
               d = Object.keys(p).reduce(function (e, t) {
                 return ["ownerScreening", "showHoldForm"].indexOf(t) > -1
-                  ? Object(L.a)({}, e, Object(ce.a)({}, t, p[t]))
-                  : Object(L.a)(
+                  ? Object(w.a)({}, e, Object(se.a)({}, t, p[t]))
+                  : Object(w.a)(
                       {},
                       e,
-                      Object(ce.a)({}, Object(se.snakeCase)(t), p[t])
+                      Object(se.a)({}, Object(ue.snakeCase)(t), p[t])
                     );
               }, {}),
-              m = Object(Q.a)(d);
+              m = Object(K.a)(d);
             window.location.href = "/do/screening/action/index?".concat(m);
           };
         },
-        me = a(248),
-        fe = a(82),
-        be = function (e, t) {
+        fe = a(249),
+        be = a(82),
+        ye = function (e, t) {
           return (function () {
             var a = Object(u.a)(
               s.a.mark(function a(r, n) {
@@ -25298,11 +25343,11 @@
                               "/api-aggregator/post-property"
                             )),
                             (l = Object(j.c)(i)),
-                            (c = Object(L.a)({}, l, {
-                              listing: Object(L.a)({}, l.listing, {}, t, {
+                            (c = Object(w.a)({}, l, {
+                              listing: Object(w.a)({}, l.listing, {}, t, {
                                 subscriptionId: e,
                               }),
-                              source: Object(G.a)() ? "M" : "IP",
+                              source: Object(H.a)() ? "M" : "IP",
                             })),
                             (a.prev = 4),
                             (a.next = 7),
@@ -25313,8 +25358,8 @@
                             "success" === (u = a.sent).status &&
                               (gtag_report_conversion(),
                               fbq("track", "Contact"),
-                              r(Object(U.a)()),
-                              Object(fe.a)()),
+                              r(Object(B.a)()),
+                              Object(be.a)()),
                             a.abrupt("return", u)
                           );
                         case 12:
@@ -25335,7 +25380,7 @@
             };
           })();
         },
-        ye = (function () {
+        ge = (function () {
           var e = Object(u.a)(
             s.a.mark(function e(t) {
               return s.a.wrap(function (e) {
@@ -25355,7 +25400,7 @@
                             errors: t.errorMsg,
                           }),
                           confirm: "Continue",
-                          viewType: Object(G.a)() ? "" : "MODAL",
+                          viewType: Object(H.a)() ? "" : "MODAL",
                         })
                       );
                     case 4:
@@ -25370,7 +25415,7 @@
                           message:
                             "Uh Oh! Something went wrong! Please try again later",
                           confirm: "ok",
-                          viewType: Object(G.a)() ? "" : "MODAL",
+                          viewType: Object(H.a)() ? "" : "MODAL",
                         })
                       );
                     case 9:
@@ -25384,8 +25429,8 @@
             return e.apply(this, arguments);
           };
         })(),
-        ge = a(14),
-        ve = function (e) {
+        ve = a(14),
+        he = function (e) {
           return (function () {
             var t = Object(u.a)(
               s.a.mark(function t(a, r) {
@@ -25407,7 +25452,7 @@
                             (m = l.price.value),
                             (f = l.preference.value),
                             "R" === e &&
-                              a(Object(ge.a)("furnish", { value: d || 2 }, !0)),
+                              a(Object(ve.a)("furnish", { value: d || 2 }, !0)),
                             (t.prev = 6),
                             (t.next = 9),
                             Object(N.a)(+u || +p, c, null, null, f)
@@ -25427,7 +25472,7 @@
                             t.next = 30;
                             break;
                           }
-                          return (t.next = 22), a(be(b, v));
+                          return (t.next = 22), a(ye(b, v));
                         case 22:
                           if (
                             ((h = t.sent),
@@ -25452,7 +25497,7 @@
                             t.next = 30;
                             break;
                           }
-                          return (t.next = 30), ye(T);
+                          return (t.next = 30), ge(T);
                         case 30:
                           t.next = 34;
                           break;
@@ -25479,7 +25524,7 @@
             };
           })();
         },
-        he = function (e) {
+        Ee = function (e) {
           var t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
@@ -25492,7 +25537,7 @@
                   for (;;)
                     switch ((a.prev = a.next)) {
                       case 0:
-                        return (a.next = 2), r(ve(e));
+                        return (a.next = 2), r(he(e));
                       case 2:
                         if (!(n = a.sent)) {
                           a.next = 8;
@@ -25500,7 +25545,7 @@
                         }
                         return (
                           r({ type: "revertToSnapshot" }),
-                          r(Object(me.a)(n)),
+                          r(Object(fe.a)(n)),
                           r(
                             "C" === t
                               ? {
@@ -25532,7 +25577,7 @@
             };
           })();
         },
-        Ee = function () {
+        _e = function () {
           return (function () {
             var e = Object(u.a)(
               s.a.mark(function e(t, a) {
@@ -25610,9 +25655,9 @@
             };
           })();
         },
-        _e = a(20),
-        Ae = a(168),
-        Te = (function () {
+        Ae = a(20),
+        Te = a(169),
+        Oe = (function () {
           var e = Object(u.a)(
             s.a.mark(function e(t) {
               var a, r;
@@ -25621,7 +25666,7 @@
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        (a = Object(Ae.a)(t)),
+                        (a = Object(Te.a)(t)),
                         (e.next = 3),
                         m.b.post(
                           "".concat(f.a, "/api-aggregator/ppf-data/uspV2"),
@@ -25641,7 +25686,7 @@
             return e.apply(this, arguments);
           };
         })(),
-        Oe = function (e) {
+        Pe = function (e) {
           return (function () {
             var e = Object(u.a)(
               s.a.mark(function e(t, a) {
@@ -25661,7 +25706,7 @@
                             e.next = 36;
                             break;
                           }
-                          return (e.prev = 5), (e.next = 8), Te(r);
+                          return (e.prev = 5), (e.next = 8), Oe(r);
                         case 8:
                           if (!(l = e.sent).status || !l.usps) {
                             e.next = 27;
@@ -25673,7 +25718,7 @@
                                 a = e.uspTag;
                               return { id: "".concat(t), label: a };
                             })),
-                            (u = Object(_e.a)(c)).unshift({
+                            (u = Object(Ae.a)(c)).unshift({
                               id: -1,
                               label: "Select",
                             }),
@@ -25763,55 +25808,55 @@
           return I;
         }),
         a.d(t, "startSubscriptionFlow", function () {
-          return B;
+          return U;
         }),
         a.d(t, "showProfileSection", function () {
-          return x;
+          return F;
         }),
         a.d(t, "updateDescription", function () {
-          return W;
+          return V;
         }),
         a.d(t, "checkPhotos", function () {
-          return H;
-        }),
-        a.d(t, "validatePages", function () {
           return Y;
         }),
+        a.d(t, "validatePages", function () {
+          return Q;
+        }),
         a.d(t, "editProperty", function () {
-          return z;
+          return Z;
         }),
         a.d(t, "checkBuilder", function () {
-          return $;
+          return ee;
         }),
         a.d(t, "updateSubscription", function () {
-          return ae;
+          return re;
         }),
         a.d(t, "doLoginGenerate", function () {
-          return re.a;
+          return ne.a;
         }),
         a.d(t, "checkPriceRecommender", function () {
-          return ie;
+          return oe;
         }),
         a.d(t, "showDesktopProfile", function () {
-          return le;
+          return ce;
         }),
         a.d(t, "approveListing", function () {
-          return ue;
-        }),
-        a.d(t, "disapproveListing", function () {
           return pe;
         }),
-        a.d(t, "putOnHoldListing", function () {
+        a.d(t, "disapproveListing", function () {
           return de;
         }),
-        a.d(t, "postTargetPreferenceProperty", function () {
-          return he;
+        a.d(t, "putOnHoldListing", function () {
+          return me;
         }),
-        a.d(t, "checkCoworkingOwner", function () {
+        a.d(t, "postTargetPreferenceProperty", function () {
           return Ee;
         }),
+        a.d(t, "checkCoworkingOwner", function () {
+          return _e;
+        }),
         a.d(t, "showTopUsp", function () {
-          return Oe;
+          return Pe;
         });
     },
     function (e, t, a) {
@@ -25905,7 +25950,7 @@
       a.d(t, "a", function () {
         return i;
       });
-      var r = a(262),
+      var r = a(263),
         n = a(37),
         i = function () {
           var e =
@@ -25933,9 +25978,9 @@
       var n = a(3),
         i = a(100),
         o = a(80),
-        l = a(231),
-        c = a(173),
-        s = a(169),
+        l = a(232),
+        c = a(174),
+        s = a(170),
         u = {
           common: Object(n.a)({}, o, {}, l),
           mobile: Object(n.a)({}, i.a.mobile, {}, c.a.mobile, {}, s.a.mobile),
@@ -25970,7 +26015,7 @@
           photoUpload: { parent: "PhotoDetails", type: p.d.WIDGET },
           Location: { parent: "LocationDetails", type: p.d.WIDGET },
         }),
-        b = a(29),
+        b = a(26),
         y = a(23);
       a.d(t, "a", function () {
         return v;
@@ -26011,10 +26056,10 @@
       var r = a(6),
         n = a(16),
         i = a(108),
-        o = a(157),
+        o = a(158),
         l = a(15),
         c = a(18),
-        s = a(211),
+        s = a(212),
         u = a(19),
         p = a(34),
         d = new ((function () {
@@ -26071,7 +26116,7 @@
           );
         })())(),
         m = a(1),
-        f = a(217);
+        f = a(218);
       a.d(t, "a", function () {
         return y;
       }),
@@ -26232,19 +26277,19 @@
       var r = a(19),
         n = a(34),
         i = a(32),
-        o = a(27),
+        o = a(28),
         l = a(33),
         c = a(0),
         s = a.n(c),
         u = a(42),
         p = a.n(u),
-        d = a(359),
-        m = a(358),
+        d = a(360),
+        m = a(359),
         f = a(24),
         b = a(63),
         y = a.n(b),
         g =
-          (a(321),
+          (a(322),
           (function (e) {
             function t(e) {
               var a;
@@ -27034,7 +27079,7 @@
         d = a(114),
         m = a(7),
         f = a(103),
-        b = a(123),
+        b = a(124),
         y = a(69),
         g = (function () {
           var e = Object(i.a)(
@@ -27110,7 +27155,7 @@
           return (function () {
             var y = Object(i.a)(
               n.a.mark(function i(y, h) {
-                var _, A, T, O, P, S, C, I, N, L, w, R;
+                var _, A, T, O, P, S, C, I, N, w, L, R;
                 return n.a.wrap(
                   function (n) {
                     for (;;)
@@ -27211,13 +27256,13 @@
                           return (
                             !a && e && y(Object(b.d)()),
                             (N = (I = o || {}).x),
-                            (L = void 0 === N ? "" : N),
-                            (w = I.y),
-                            (R = void 0 === w ? "" : w),
+                            (w = void 0 === N ? "" : N),
+                            (L = I.y),
+                            (R = void 0 === L ? "" : L),
                             y(Object(f.a)(e, t)),
                             y(
                               Object(l.a)("locality", {
-                                value: { id: e, label: t, lat: R, lng: L },
+                                value: { id: e, label: t, lat: R, lng: w },
                               })
                             ),
                             y(Object(c.a)()),
@@ -27430,8 +27475,8 @@
       a.d(t, "a", function () {
         return l;
       });
-      var r = a(124),
-        n = a(28),
+      var r = a(125),
+        n = a(29),
         i = a(51),
         o = a(22),
         l = function (e) {
@@ -27727,12 +27772,12 @@
       var r = a(116),
         n = a(6),
         i = a(64),
-        o = a(133),
-        l = a(155),
-        c = a(224),
-        s = a(144),
-        u = a(174),
-        p = a(216),
+        o = a(134),
+        l = a(156),
+        c = a(225),
+        s = a(145),
+        u = a(175),
+        p = a(217),
         d = a(18),
         m = function () {
           var e =
@@ -27758,12 +27803,12 @@
             );
           };
         },
-        f = a(225),
-        b = a(243),
-        y = a(226),
+        f = a(226),
+        b = a(244),
+        y = a(227),
         g = a(71),
         v = a(51),
-        h = a(28);
+        h = a(29);
       a.d(t, "b", function () {
         return E;
       }),
@@ -28006,7 +28051,7 @@
       var r = a(3),
         n = a(72),
         i = a(86),
-        o = a(149),
+        o = a(150),
         l = function (e) {
           var t = e.values,
             a = t.currentMonthlyRent.value,
@@ -28271,7 +28316,7 @@
           },
           parent: "App",
         },
-        s = a(252);
+        s = a(253);
       t.a = { mobile: r, desktop: s };
     },
     function (e, t, a) {
@@ -28327,7 +28372,7 @@
         i = a.n(n),
         o = a(95),
         l = a.n(o),
-        c = a(148),
+        c = a(149),
         s = a(99),
         u = a(12),
         p = function (e) {
@@ -28403,8 +28448,8 @@
     },
     function (e, t, a) {
       "use strict";
-      var r = a(275),
-        n = a(251);
+      var r = a(276),
+        n = a(252);
       t.a = { mobile: r, desktop: n };
     },
     function (e, t, a) {
@@ -28413,7 +28458,7 @@
         return i;
       });
       var r = a(68),
-        n = a(151),
+        n = a(152),
         i = function () {
           var e =
             !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
@@ -28504,7 +28549,7 @@
           return o;
         });
       var r = a(14),
-        n = a(142),
+        n = a(143),
         i = function () {
           return function (e) {
             e(Object(r.a)("locatedInside", { value: { id: "", label: "" } }));
@@ -28551,7 +28596,7 @@
           return o;
         });
       var r = a(14),
-        n = a(141),
+        n = a(142),
         i = function () {
           return function (e) {
             e(
@@ -28582,8 +28627,8 @@
         m = a(8),
         f = a(37),
         b = a(82),
-        y = a(137),
-        g = a(156),
+        y = a(138),
+        g = a(157),
         v = a.n(g),
         h = a(71),
         E = a(73),
@@ -28667,7 +28712,7 @@
           N = Object(p.d)(function (e) {
             return e.metaData;
           }).accessSource,
-          L = Object(d.g)();
+          w = Object(d.g)();
         Object(n.useEffect)(
           function () {
             var e = { propId: t, accessSource: N, source: "D" };
@@ -28764,7 +28809,7 @@
                                   y(),
                                   I(Object(A.a)()),
                                   Object(b.a)(),
-                                  L.push(
+                                  w.push(
                                     "/postproperty/thankyou?prop_id=" + e.propId
                                   ))
                                 : (console.log(e.errors),
@@ -28792,7 +28837,7 @@
           )
         );
       }
-      var O = a(139);
+      var O = a(140);
       a.d(t, "a", function () {
         return P;
       }),
@@ -28880,16 +28925,16 @@
         n = a(6),
         i = a(0),
         o = a.n(i),
-        l = a(127),
+        l = a(128),
         c = a.n(l),
         s = a(65),
         u = a(49),
         p = a.n(u),
-        d = a(277),
+        d = a(278),
         m = a.n(d),
-        f = a(278),
+        f = a(279),
         b = a.n(f),
-        y = a(279),
+        y = a(280),
         g = a.n(y),
         v = function () {
           return o.a.createElement(
@@ -28966,9 +29011,9 @@
             )
           );
         },
-        h = a(280),
+        h = a(281),
         E = a.n(h),
-        _ = a(234),
+        _ = a(235),
         A = function () {
           return o.a.createElement(
             "div",
@@ -28979,11 +29024,11 @@
             })
           );
         },
-        T = a(183),
+        T = a(184),
         O = a.n(T),
         P = a(109),
         S = a(37),
-        C = a(128),
+        C = a(129),
         I = a.n(C),
         N = function () {
           return o.a.createElement(
@@ -29020,9 +29065,9 @@
             })
           );
         },
-        L = a(46),
-        w = function () {
-          var e = Object(L.a)("primarydetails");
+        w = a(46),
+        L = function () {
+          var e = Object(w.a)("primarydetails");
           return o.a.createElement(
             "div",
             {
@@ -29036,8 +29081,8 @@
             })
           );
         },
-        R = a(235),
-        j = a(184),
+        R = a(236),
+        j = a(185),
         k = a.n(j),
         D = function (e) {
           var t = e.children,
@@ -29054,17 +29099,17 @@
             t
           );
         },
-        U = a(281),
-        B = a.n(U),
-        x = function () {
+        B = a(282),
+        x = a.n(B),
+        U = function () {
           return o.a.createElement(
             D,
-            { styleClass: B.a.tooltipWrap },
+            { styleClass: x.a.tooltipWrap },
             o.a.createElement(R.a, null)
           );
         },
-        F = a(236),
-        M = a(282),
+        F = a(237),
+        M = a(283),
         W = a.n(M),
         V = function () {
           return o.a.createElement(
@@ -29073,8 +29118,8 @@
             o.a.createElement(F.a, null)
           );
         },
-        G = a(237),
-        H = a(283),
+        G = a(238),
+        H = a(284),
         Y = a.n(H),
         Q = function (e) {
           var t = e.isNewSection;
@@ -29084,8 +29129,8 @@
             o.a.createElement(G.a, null)
           );
         },
-        K = a(238),
-        q = a(284),
+        K = a(239),
+        q = a(285),
         J = a.n(q),
         X = function () {
           return o.a.createElement(
@@ -29094,7 +29139,7 @@
             o.a.createElement(K.a, null)
           );
         },
-        z = a(253),
+        z = a(254),
         Z = {
           padding: "2px 4px",
           background: "#EC9930",
@@ -29134,13 +29179,13 @@
                 case "OwnershipToolTip":
                   return A;
                 case "ShopLocatedInToolTip":
-                  return w;
+                  return L;
                 case "PreLeaseTooltip":
                   return Q;
                 case "PreLeaseDetailsTooltip":
                   return V;
                 case "PreLeaseAnnualReturnsTooltip":
-                  return x;
+                  return U;
                 case "InvestmentBenefitsTooltip":
                   return X;
                 default:
@@ -29343,14 +29388,14 @@
     function (e, t, a) {
       "use strict";
       var r = a(11),
-        n = a(259),
-        i = a(138),
+        n = a(260),
+        i = a(139),
         o = a(4),
         l = a.n(o),
         c = a(5),
         s = a(7),
         u = a(14),
-        p = a(250);
+        p = a(251);
       t.a = Object(r.b)(
         function (e, t) {
           var a = e.suspiciousFields,
@@ -29494,8 +29539,8 @@
           return t.furnish.visible && "P" == t.values.preference.value;
         },
         c =
-          (a(122),
-          a(121),
+          (a(123),
+          a(122),
           function (e, t) {
             return "screening" === t.metaData.accessSource;
           }),
@@ -29653,7 +29698,7 @@
               ![15, 18, 19, 17, 83, 10, 6, 82, 91, 92, 16, 9, 20].includes(+r))
           );
         },
-        L = function (e, t) {
+        w = function (e, t) {
           var a = t.values,
             r = a.propertyType.value,
             n = a.preference.value;
@@ -29666,7 +29711,7 @@
               ![15, 18, 19, 17, 83, 10, 6, 82, 16, 9, 20].includes(+r))
           );
         },
-        w = function (e, t) {
+        L = function (e, t) {
           var a = t.values,
             r = a.propertyType.value;
           return 5 === a.propertyAvailability.value && [91, 92].includes(+r);
@@ -29696,12 +29741,12 @@
               ![15, 18, 19, 17, 83, 10, 6, 82, 91, 92, 16, 9, 20].includes(+r))
           );
         },
-        U = function (e, t) {
+        B = function (e, t) {
           var a = t.values,
             r = a.propertyType.value;
           return "S" === a.preference.value && [6, 82].includes(+r);
         },
-        B = function (e, t) {
+        x = function (e, t) {
           var a = t.values,
             r = a.propertyType.value,
             n = a.preference.value;
@@ -29710,7 +29755,7 @@
             [6, 82, 91, 92, 16, 20, 9, 15, 18].includes(+r)
           );
         },
-        x = function (e, t) {
+        U = function (e, t) {
           return 5 === t.values.propertyAvailability.value;
         },
         F = function (e, t) {
@@ -29788,7 +29833,7 @@
             case "hideExpectedAnnualReturns":
               return h;
             case "propertyAvailability":
-              return t ? _ : a ? B : r.a;
+              return t ? _ : a ? x : r.a;
             case "facing":
               return t ? A : r.a;
             case "ownership":
@@ -29809,9 +29854,9 @@
             case "taxGovtCharges":
               return t ? N : i.z;
             case "electricityWaterCharges":
-              return t ? L : r.a;
+              return t ? w : r.a;
             case "availability":
-              return t ? w : a ? x : r.a;
+              return t ? L : a ? U : r.a;
             case "age":
               return t ? R : a ? F : r.a;
             case "availabilityDate":
@@ -29822,7 +29867,7 @@
               return t ? D : a ? V : r.a;
             case "AssuredReturns":
             case "LeaseGuarantee":
-              return t ? U : r.a;
+              return t ? B : r.a;
             case "parkingTypes":
               return a ? W : r.a;
             default:
@@ -29837,11 +29882,11 @@
         n = a(19),
         i = a(34),
         o = a(32),
-        l = a(27),
+        l = a(28),
         c = a(33),
         s = a(0),
         u = a.n(s),
-        p = a(160),
+        p = a(161),
         d = a.n(p),
         m = {
           ToggleHTML: function (e, t, a) {
@@ -29969,7 +30014,7 @@
         n = a(6),
         i = a(3),
         o = a(2),
-        l = a(29),
+        l = a(26),
         c = (a(12), a(23)),
         s =
           ((r = {
@@ -30666,7 +30711,7 @@
       "use strict";
       var r = a(0),
         n = a.n(r),
-        i = a(159),
+        i = a(160),
         o = a.n(i);
       t.a = function (e) {
         var t = e.width,
@@ -30773,7 +30818,7 @@
         c = a(15),
         s = a(19),
         u = a(32),
-        p = a(27),
+        p = a(28),
         d = a(33),
         m = (function (e) {
           function t() {
@@ -30912,8 +30957,8 @@
       a.d(t, "a", function () {
         return l;
       });
-      var r = a(124),
-        n = a(28),
+      var r = a(125),
+        n = a(29),
         i = a(51),
         o = a(22),
         l = function (e) {
@@ -30949,9 +30994,9 @@
         i = a.n(n),
         o = a(96),
         l = a.n(o),
-        c = a(208),
+        c = a(209),
         s = a(59),
-        u = (a(314), a(137)),
+        u = (a(315), a(138)),
         p = a(71),
         d = a(10),
         m = a(45),
@@ -30960,7 +31005,7 @@
         y = a(8),
         g = a(37),
         v = a(82),
-        h = a(156),
+        h = a(157),
         E = a.n(h),
         _ = a(73),
         A = a(61);
@@ -30976,8 +31021,8 @@
           C = Object(n.useState)([]),
           I = Object(r.a)(C, 2),
           N = (I[0], I[1], y.a),
-          L = Object(f.c)(),
-          w = Object(b.g)();
+          w = Object(f.c)(),
+          L = Object(b.g)();
         Object(n.useEffect)(
           function () {
             console.log(e);
@@ -31000,7 +31045,7 @@
             .concat(P.City_Text ? P.City_Text : ""),
           k = Object(u.a)(P.Price),
           D = P.media,
-          U =
+          B =
             D && D.photos && D.photos.length
               ? D.photos.filter(function (e) {
                   return "Y" == e.coverPhoto;
@@ -31023,8 +31068,8 @@
               i.a.createElement(
                 "div",
                 { className: l.a.duplicatePropTuple },
-                U && U[0] && U[0].variants
-                  ? i.a.createElement("img", { src: Object(_.b)(U[0]) })
+                B && B[0] && B[0].variants
+                  ? i.a.createElement("img", { src: Object(_.b)(B[0]) })
                   : i.a.createElement("img", { src: E.a }),
                 i.a.createElement(
                   "div",
@@ -31112,30 +31157,30 @@
                         .then(function (t) {
                           console.log(t),
                             t.result
-                              ? (L({
+                              ? (w({
                                   type: "UPDATE_INPUT_VALUE_propId",
                                   payload: t.propId,
                                 }),
-                                L({
+                                w({
                                   type: "UPDATE_INPUT_VALUE_spid",
                                   payload: t.propId.slice(1),
                                 }),
-                                L({
+                                w({
                                   type: "UPDATE_INPUT_VALUE_quality_score",
                                   payload: "",
                                 }),
-                                L({
+                                w({
                                   type: "UPDATE_INPUT_VALUE_isSuspicious",
                                   payload: "",
                                 }),
-                                L({
+                                w({
                                   type: "UPDATE_INPUT_VALUE_showRequestVerify",
                                   payload: !1,
                                 }),
                                 e.close(),
-                                L(Object(A.a)()),
+                                w(Object(A.a)()),
                                 Object(v.a)(),
-                                w.push(
+                                L.push(
                                   "/postproperty/thankyou?prop_id=" + t.propId
                                 ))
                               : (console.log(t.errors),
@@ -31172,7 +31217,7 @@
           return o;
         });
       var r = a(6),
-        n = a(143),
+        n = a(144),
         i = Object.entries(n.a).map(function (e) {
           var t = Object(r.a)(e, 2),
             a = t[0],
@@ -31189,12 +31234,12 @@
       var r = a(19),
         n = a(34),
         i = a(32),
-        o = a(27),
+        o = a(28),
         l = a(33),
         c = a(0),
         s = a.n(c),
         u =
-          (a(318),
+          (a(319),
           (function (e) {
             function t(e) {
               var a;
@@ -31277,7 +31322,7 @@
         return i;
       });
       var r = a(68),
-        n = a(151),
+        n = a(152),
         i = function () {
           var e =
             !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
@@ -31512,7 +31557,7 @@
               ];
         },
         d = a(7),
-        m = a(26),
+        m = a(27),
         f = function (e, t) {
           var a = t.values.propertyType.value,
             r = m.a.get().propertyAmenity;
@@ -31530,10 +31575,10 @@
           }
           return a ? r[a].default : [];
         },
-        b = a(255),
-        y = a(256),
-        g = a(257),
-        v = a(258),
+        b = a(256),
+        y = a(257),
+        g = a(258),
+        v = a(259),
         h = a(6),
         E = function (e, t) {
           var a = m.a.get().propTypePhotoMapping;
@@ -31863,7 +31908,7 @@
           visible: !1,
           parent: "FeaturePricing",
         },
-        E = a(220),
+        E = a(221),
         _ = {
           label: "Property facing",
           tagName: "4",
@@ -31984,7 +32029,7 @@
           visible: !0,
           parent: "PrimaryDetails",
         },
-        L = {
+        w = {
           label: "Floor Details",
           tagName: "4",
           mandatory: !0,
@@ -31998,7 +32043,7 @@
           visible: !0,
           parent: "BasicDetails",
         },
-        w = {
+        L = {
           mandatory: !0,
           id: "Area",
           visible: !0,
@@ -32069,7 +32114,7 @@
           visible: !0,
           parent: "BasicDetails",
         },
-        U = {
+        B = {
           label: "Early leaving charges",
           optional: !0,
           entities: {
@@ -32082,7 +32127,7 @@
           visisble: !1,
           type: "form",
         },
-        B = {
+        x = {
           id: "Deposit",
           type: "form",
           label: "Security deposit",
@@ -32097,7 +32142,7 @@
             depositMonthsInWords: r.d.INPUT,
           },
         },
-        x = {
+        U = {
           id: "RentAgreementDuration",
           type: "form",
           label: "Duration of agreement",
@@ -32281,7 +32326,7 @@
           subLabel: "It is recommended to give more details.",
         },
         Z = a(68),
-        $ = a(145),
+        $ = a(146),
         ee = {
           id: "MinimumContractDuration",
           type: "form",
@@ -32563,7 +32608,7 @@
           parent: "BasicDetails",
           optional: !0,
         },
-        Le = {
+        we = {
           label: "Construction status of walls",
           mandatory: !0,
           type: "form",
@@ -32572,7 +32617,7 @@
           visible: !0,
           parent: "BasicDetails",
         },
-        we = {
+        Le = {
           label: "Are doors constructed",
           mandatory: !0,
           type: "form",
@@ -32629,7 +32674,7 @@
           parent: "Lifts",
           hidePaddingSpace: !0,
         },
-        Ue = {
+        Be = {
           mandatory: !0,
           type: "form",
           entities: { minimumLeasableSuperBuiltUpArea: "widget" },
@@ -32638,7 +32683,7 @@
           parent: "BasicDetails",
           hidePaddingSpace: !1,
         },
-        Be = {
+        xe = {
           label: "",
           type: "split",
           entities: { minimumLeasableSuperBuiltUp: "input", areaUnit: "input" },
@@ -32646,7 +32691,7 @@
           visible: !0,
           parent: "MinimumLeasableArea",
         },
-        xe = {
+        Ue = {
           label: "Display Price / Range ?",
           mandatory: !1,
           type: "form",
@@ -32942,10 +32987,10 @@
           return N;
         }),
         a.d(t, "FloorDetails", function () {
-          return L;
+          return w;
         }),
         a.d(t, "Area", function () {
-          return w;
+          return L;
         }),
         a.d(t, "Age", function () {
           return R;
@@ -32960,13 +33005,13 @@
           return D;
         }),
         a.d(t, "EarlyLeavingCharges", function () {
-          return U;
-        }),
-        a.d(t, "Deposit", function () {
           return B;
         }),
-        a.d(t, "RentAgreementDuration", function () {
+        a.d(t, "Deposit", function () {
           return x;
+        }),
+        a.d(t, "RentAgreementDuration", function () {
+          return U;
         }),
         a.d(t, "HouseRules", function () {
           return F;
@@ -33104,10 +33149,10 @@
           return Ne;
         }),
         a.d(t, "BareshellWalls", function () {
-          return Le;
+          return we;
         }),
         a.d(t, "DoorsAvailable", function () {
-          return we;
+          return Le;
         }),
         a.d(t, "BSFlooring", function () {
           return Re;
@@ -33122,13 +33167,13 @@
           return De;
         }),
         a.d(t, "MinimumLeasableArea", function () {
-          return Ue;
-        }),
-        a.d(t, "minimumLeasableSuperBuiltUpArea", function () {
           return Be;
         }),
-        a.d(t, "HidePrice", function () {
+        a.d(t, "minimumLeasableSuperBuiltUpArea", function () {
           return xe;
+        }),
+        a.d(t, "HidePrice", function () {
+          return Ue;
         }),
         a.d(t, "PriceType", function () {
           return Fe;
@@ -33909,9 +33954,9 @@
             return e.apply(this, arguments);
           };
         })(),
-        f = a(147),
+        f = a(148),
         b = a(107),
-        y = a(123),
+        y = a(124),
         g = a(13),
         v = a(15),
         h = (function () {
@@ -33966,10 +34011,10 @@
         P = a(12),
         S = a(6),
         C = a(72),
-        I = a(264),
+        I = a(265),
         N = a(48),
-        L = a(135),
-        w = a(132),
+        w = a(136),
+        L = a(133),
         R = function (e) {
           return (function () {
             var t = Object(i.a)(
@@ -33995,8 +34040,8 @@
                   j,
                   k,
                   D,
-                  U,
-                  B;
+                  B,
+                  x;
                 return n.a.wrap(
                   function (t) {
                     for (;;)
@@ -34043,58 +34088,58 @@
                             (D = k.filter(function (e) {
                               return e.constant === g;
                             })[0]),
-                            (U = "string" === typeof j ? j.split(",") : []),
-                            ((B = {}).amenities = y),
-                            (B.totalFloor = h
+                            (B = "string" === typeof j ? j.split(",") : []),
+                            ((x = {}).amenities = y),
+                            (x.totalFloor = h
                               ? Object(N.c)(h, N.b).value
                               : void 0),
-                            (B.staircaseNum = _
+                            (x.staircaseNum = _
                               ? Object(N.c)(_).value
                               : void 0),
-                            (B.fireNoc = A
+                            (x.fireNoc = A
                               ? Object(N.c)(A ? 1 : 0).value
                               : void 0),
-                            (B.occupancyCertificate = T
+                            (x.occupancyCertificate = T
                               ? Object(N.c)(T ? 1 : 0).value
                               : void 0),
-                            (B.passengerLifts = O
+                            (x.passengerLifts = O
                               ? Object(N.c)(O).value
                               : void 0),
-                            (B.serviceLifts = P
+                            (x.serviceLifts = P
                               ? Object(N.c)(P).value
                               : void 0),
-                            (B.liftsAvailable = O || P || !0 === R ? 1 : 0),
-                            (B.furnishingAvailable = Object(N.c)(
-                              U.includes("1")
+                            (x.liftsAvailable = O || P || !0 === R ? 1 : 0),
+                            (x.furnishingAvailable = Object(N.c)(
+                              B.includes("1")
                             ).value),
-                            (B.centralAirConditioningAvailable = Object(N.c)(
-                              91 === u && U.includes("2")
+                            (x.centralAirConditioningAvailable = Object(N.c)(
+                              91 === u && B.includes("2")
                             ).value),
-                            (B.bareshellCentralAirConditioningAvailable =
+                            (x.bareshellCentralAirConditioningAvailable =
                               Object(N.c)(
                                 (92 === u && j && j.includes("2")) ||
-                                  (!!U.includes("3") && 3)
+                                  (!!B.includes("3") && 3)
                               ).value),
-                            (B.oxygenDuctAvailable = Object(N.c)(
-                              U.includes("4")
+                            (x.oxygenDuctAvailable = Object(N.c)(
+                              B.includes("4")
                             ).value),
-                            (B.upsAvailable = Object(N.c)(
-                              U.includes("5")
+                            (x.upsAvailable = Object(N.c)(
+                              B.includes("5")
                             ).value),
-                            (B.fireSafetyMeasures = Object(N.c)(
-                              U.filter(function (e) {
+                            (x.fireSafetyMeasures = Object(N.c)(
+                              B.filter(function (e) {
                                 return ["6", "7", "8", "9"].includes(e);
                               })
                             ).value),
                             "READY_TO_MOVE" === E || "NEW_LAUNCH" === E
-                              ? (B.propertyAvailability = "I")
+                              ? (x.propertyAvailability = "I")
                               : "UNDER_CONSTRUCTION" === E &&
-                                (B.propertyAvailability = 5),
+                                (x.propertyAvailability = 5),
                             a({
                               type: "SET_PROJECT_DATA",
                               payload: f.projectDetails,
                             }),
-                            Object.entries(B)
+                            Object.entries(x)
                               .filter(function (e) {
                                 var t = Object(S.a)(e, 2);
                                 t[0];
@@ -34109,10 +34154,10 @@
                                   i[r].defaultValue !== i.values[r].value &&
                                     !i.isEditProperty)
                                 ) {
-                                  var o = Object(L.a)(r).pageId;
+                                  var o = Object(w.a)(r).pageId;
                                   i[o] &&
                                     i[o].complete &&
-                                    a(Object(w.validatePage)(o, !1));
+                                    a(Object(L.validatePage)(o, !1));
                                 }
                               }),
                             (t.t0 = D),
@@ -34240,7 +34285,7 @@
           return (function () {
             var s = Object(i.a)(
               n.a.mark(function i(s, p) {
-                var d, v, h, P, S, C, I, N, L, w, k, D, U, B, x;
+                var d, v, h, P, S, C, I, N, w, L, k, D, B, x, U;
                 return n.a.wrap(
                   function (n) {
                     for (;;)
@@ -34351,14 +34396,14 @@
                         case 31:
                           if (
                             ((N = n.sent),
-                            (L = N.parent),
-                            !(w = L ? L.split("_")[0] : "") ||
+                            (w = N.parent),
+                            !(L = w ? w.split("_")[0] : "") ||
                               Object(E.q)("city"))
                           ) {
                             n.next = 39;
                             break;
                           }
-                          return (n.next = 37), s(Object(O.a)(w, null, !0));
+                          return (n.next = 37), s(Object(O.a)(L, null, !0));
                         case 37:
                           if (n.sent) {
                             n.next = 39;
@@ -34368,9 +34413,9 @@
                         case 39:
                           if (
                             ((D = (k = c || {}).x),
-                            (U = void 0 === D ? "" : D),
-                            (B = k.y),
-                            (x = void 0 === B ? "" : B),
+                            (B = void 0 === D ? "" : D),
+                            (x = k.y),
+                            (U = void 0 === x ? "" : x),
                             s(Object(A.a)(e, t)),
                             e && I && s(Object(y.d)()),
                             (n.t3 = +e && I),
@@ -34390,7 +34435,7 @@
                           if (
                             (s(
                               Object(l.a)("project", {
-                                value: { id: e, label: t, lat: x, lng: U },
+                                value: { id: e, label: t, lat: U, lng: B },
                               })
                             ),
                             s(Object(T.a)()),
@@ -34435,11 +34480,11 @@
           })();
         },
         D = a(84),
-        U = a(64);
+        B = a(64);
       a.d(t, "a", function () {
-        return B;
+        return x;
       });
-      var B = function (e, t, a) {
+      var x = function (e, t, a) {
         return (function () {
           var r = Object(i.a)(
             n.a.mark(function r(i, l) {
@@ -34481,7 +34526,7 @@
                           break;
                         }
                         return (
-                          i(Object(U.a)("project", !0)), r.abrupt("return", s)
+                          i(Object(B.a)("project", !0)), r.abrupt("return", s)
                         );
                       case 17:
                         return (
@@ -34578,7 +34623,7 @@
       __webpack_require__.d(__webpack_exports__, "a", function () {
         return executeOperation;
       });
-      var _memoizer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(29),
+      var _memoizer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26),
         executeOperation = Object(_memoizer__WEBPACK_IMPORTED_MODULE_0__.a)(
           eval
         );
@@ -34683,7 +34728,8 @@
                             +r.values.locationState.value.id),
                           (c = r.values.resCom.value),
                           (u = r.values.preference.value),
-                          (p = r.userState.userData.user.userClass),
+                          (p = ((r.userState.userData || {}).user || {})
+                            .userClass),
                           (d = r.values.price.value),
                           (m = ""),
                           "O" !== p)
@@ -34756,7 +34802,7 @@
       a.d(t, "a", function () {
         return n;
       });
-      var r = a(29),
+      var r = a(26),
         n = Object(r.a)(function (e, t, a, r, n, i, o, l, c, s) {
           var u = 0;
           a &&
@@ -35035,7 +35081,7 @@
           visible: !1,
           parent: "PriceRange",
         },
-        L = {
+        w = {
           tagName: "4",
           mandatory: !1,
           type: r.g.DUMMY_FORM,
@@ -35048,7 +35094,7 @@
           parent: "Pricing",
           widgetClass: "inlineContainer",
         },
-        w = {
+        L = {
           mandatory: !0,
           type: r.g.DUMMY_FORM,
           entities: {
@@ -35118,7 +35164,7 @@
           parent: "FeaturePricingDetails",
           widgetClass: "flexContainer",
         },
-        U = {
+        B = {
           mandatory: !0,
           type: r.g.DUMMY_FORM,
           entities: {
@@ -35132,7 +35178,7 @@
           parent: "UspAmenities",
           widgetClass: "flexContainer",
         },
-        B = {
+        x = {
           id: "VerifiedListing",
           parent: "UspAmenities",
           type: r.g.FORM,
@@ -35145,7 +35191,7 @@
             reimburse: r.d.INPUT,
           },
         },
-        x = { widgetClass: "inlineContainer" },
+        U = { widgetClass: "inlineContainer" },
         F = {
           entities: {
             shopLocatedIn: r.d.INPUT,
@@ -35250,10 +35296,10 @@
           return N;
         }),
         a.d(t, "PriceRange", function () {
-          return L;
+          return w;
         }),
         a.d(t, "PrimaryDetailsButtonsWrapper", function () {
-          return w;
+          return L;
         }),
         a.d(t, "LocationDetailsButtonsWrapper", function () {
           return R;
@@ -35268,13 +35314,13 @@
           return D;
         }),
         a.d(t, "UspAmenitiesButtonsWrapper", function () {
-          return U;
-        }),
-        a.d(t, "VerifiedListing", function () {
           return B;
         }),
-        a.d(t, "OfficeSetup", function () {
+        a.d(t, "VerifiedListing", function () {
           return x;
+        }),
+        a.d(t, "OfficeSetup", function () {
+          return U;
         }),
         a.d(t, "ShopLocatedIn", function () {
           return F;
@@ -35493,7 +35539,7 @@
       "use strict";
       var r = a(0),
         n = a.n(r),
-        i = a(185),
+        i = a(186),
         o = a.n(i);
       console.log(o.a);
       var l = function () {
@@ -35503,7 +35549,7 @@
             n.a.createElement("div", { className: "".concat(o.a.infoTag) })
           );
         },
-        c = a(186),
+        c = a(187),
         s = a.n(c);
       console.log(s.a);
       var u = function () {
@@ -35513,7 +35559,7 @@
             n.a.createElement("div", { className: "".concat(s.a.tickTag) })
           );
         },
-        p = a(285),
+        p = a(286),
         d = a.n(p);
       t.a = function (e) {
         var t = e.variant,
@@ -35581,7 +35627,7 @@
       });
       var r = a(3),
         n = a(115),
-        i = a(26),
+        i = a(27),
         o = function (e, t) {
           var a = t.values.propertyType.value,
             o = i.a.get().propertyAmenity;
@@ -35605,7 +35651,7 @@
       });
       var r = a(3),
         n = a(115),
-        i = a(26),
+        i = a(27),
         o = function (e, t) {
           var a = t.values.propertyType.value,
             o = i.a.get().propertyAmenity;
@@ -35629,7 +35675,7 @@
       });
       var r = a(3),
         n = a(115),
-        i = a(26),
+        i = a(27),
         o = function (e, t) {
           var a = t.values.propertyType.value,
             o = i.a.get().propertyAmenity;
@@ -35706,10 +35752,10 @@
       "use strict";
       var r = a(0),
         n = a.n(r),
-        i = a(161),
+        i = a(162),
         o = a.n(i),
-        l = a(172),
-        c = a(162),
+        l = a(173),
+        c = a(163),
         s = a.n(c),
         u = function (e) {
           var t = e.reason,
@@ -35832,7 +35878,7 @@
     function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
-        return v;
+        return h;
       });
       var r = a(4),
         n = a.n(r),
@@ -35841,132 +35887,137 @@
         l = a(0),
         c = a.n(l),
         s = a(111),
-        u = a(180),
+        u = a(181),
         p = a(66),
         d = a(62),
         m = a(13),
         f = a(15),
         b = a(22),
-        y = a(28),
+        y = a(29),
         g = a(51),
-        v =
-          (a(61),
-          function (e) {
-            return (function () {
-              var t = Object(o.a)(
-                n.a.mark(function t(a, r) {
-                  var o, l, v, h, E, _;
-                  return n.a.wrap(function (t) {
-                    for (;;)
-                      switch ((t.prev = t.next)) {
-                        case 0:
-                          return (
-                            (o = r()),
-                            (l = o.userState.userData.user.profileId),
-                            (v = Object(p.c)(o)),
-                            (h = Object(b.a)("refPropId")),
-                            (E = [y.a.COM_RENT_POST].includes(Object(g.a)())
-                              ? h
-                              : ""),
-                            (v.listing = Object(i.a)({}, v.listing, {}, e, {
-                              derivedPropId: E,
-                            })),
-                            (t.next = 8),
-                            Object(s.a)(v, a)
-                          );
-                        case 8:
-                          if ("success" != (_ = t.sent).status) {
-                            t.next = 17;
-                            break;
-                          }
-                          return (
-                            a({
-                              type: "UPDATE_INPUT_VALUE_propId",
-                              payload: _.response.prop_id,
-                            }),
-                            a({
-                              type: "UPDATE_INPUT_VALUE_spid",
-                              payload: _.response.spid,
-                            }),
-                            a({
-                              type: "UPDATE_INPUT_VALUE_quality_score",
-                              payload: _.response.quality_score,
-                            }),
-                            a({
-                              type: "UPDATE_INPUT_VALUE_isSuspicious",
-                              payload: _.response.isSuspicious,
-                            }),
-                            a({
-                              type: "UPDATE_INPUT_VALUE_showRequestVerify",
-                              payload: _.response.showRequestVerify,
-                            }),
-                            a({
-                              type: "UPDATE_UspamenitiesButton",
-                              payload: {
-                                redirect: "/thankyou?prop_id=".concat(
-                                  _.response.prop_id
-                                ),
-                              },
-                            }),
-                            t.abrupt("return", !0)
-                          );
-                        case 17:
-                          if ("fail" != _.status) {
-                            t.next = 20;
-                            break;
-                          }
-                          if (
-                            _.error &&
-                            "duplicateListing" == _.error.nextAction
-                          )
-                            u.a.updateProps({
-                              similarPropertyId: _.error.similarPropertyId,
-                              listing_qty: 1,
-                              Subid: e.subscriptionId,
-                              profileId: l,
-                            }),
-                              u.a.sheet.current.open();
-                          else if (_.error && _.error.errorMsg)
-                            try {
-                              f.Logger.log(_.error.errorMsg),
-                                setTimeout(function () {
-                                  m.b.open({
-                                    type: "error",
-                                    message: c.a.createElement(d.a, {
-                                      errors: _.error.errorMsg,
-                                    }),
-                                    confirm: "Continue",
-                                    viewType: "MODAL",
-                                  });
-                                }, 0);
-                            } catch (n) {}
-                          else {
-                            f.Logger.error("Unable to Post Property!");
-                            try {
-                              m.b.open({
-                                type: "error",
-                                message:
-                                  "Uh Oh! Something went wrong! Please try again later",
-                                confirm: "ok",
-                                viewType: "MODAL",
-                              });
-                            } catch (A) {}
-                          }
-                          return t.abrupt("return", !1);
-                        case 20:
-                          return t.abrupt("return", _);
-                        case 21:
-                        case "end":
-                          return t.stop();
-                      }
-                  }, t);
-                })
-              );
-              return function (e, a) {
-                return t.apply(this, arguments);
-              };
-            })();
-          });
+        v = (a(61), ["R", "P"]),
+        h = function (e) {
+          return (function () {
+            var t = Object(o.a)(
+              n.a.mark(function t(a, r) {
+                var o, l, h, E, _, A, T, O, P, S, C, I;
+                return n.a.wrap(function (t) {
+                  for (;;)
+                    switch ((t.prev = t.next)) {
+                      case 0:
+                        return (
+                          (o = r()),
+                          (l = o.userState.userData.user.userClass),
+                          (h = void 0 === l ? "" : l),
+                          (E = o.values),
+                          (_ = (E = void 0 === E ? {} : E).preference),
+                          (A = (_ = void 0 === _ ? {} : _).value),
+                          (T = void 0 === A ? "" : A),
+                          (O = o.userState.userData.user.profileId),
+                          (P = Object(p.c)(o)),
+                          (S = Object(b.a)("refPropId")),
+                          (C = [y.a.COM_RENT_POST].includes(Object(g.a)())
+                            ? S
+                            : ""),
+                          (P.listing = Object(i.a)({}, P.listing, {}, e, {
+                            derivedPropId: C,
+                          })),
+                          (t.next = 13),
+                          Object(s.a)(P, a)
+                        );
+                      case 13:
+                        if ("success" != (I = t.sent).status) {
+                          t.next = 22;
+                          break;
+                        }
+                        return (
+                          a({
+                            type: "UPDATE_INPUT_VALUE_propId",
+                            payload: I.response.prop_id,
+                          }),
+                          a({
+                            type: "UPDATE_INPUT_VALUE_spid",
+                            payload: I.response.spid,
+                          }),
+                          a({
+                            type: "UPDATE_INPUT_VALUE_quality_score",
+                            payload: I.response.quality_score,
+                          }),
+                          a({
+                            type: "UPDATE_INPUT_VALUE_isSuspicious",
+                            payload: I.response.isSuspicious,
+                          }),
+                          a({
+                            type: "UPDATE_INPUT_VALUE_showRequestVerify",
+                            payload: I.response.showRequestVerify,
+                          }),
+                          a({
+                            type: "UPDATE_UspamenitiesButton",
+                            payload: {
+                              redirect:
+                                "O" === h && v.includes(T)
+                                  ? "/qrCodeAwareness"
+                                  : "/thankyou?prop_id=".concat(
+                                      I.response.prop_id
+                                    ),
+                            },
+                          }),
+                          t.abrupt("return", !0)
+                        );
+                      case 22:
+                        if ("fail" != I.status) {
+                          t.next = 25;
+                          break;
+                        }
+                        if (I.error && "duplicateListing" == I.error.nextAction)
+                          u.a.updateProps({
+                            similarPropertyId: I.error.similarPropertyId,
+                            listing_qty: 1,
+                            Subid: e.subscriptionId,
+                            profileId: O,
+                          }),
+                            u.a.sheet.current.open();
+                        else if (I.error && I.error.errorMsg)
+                          try {
+                            f.Logger.log(I.error.errorMsg),
+                              setTimeout(function () {
+                                m.b.open({
+                                  type: "error",
+                                  message: c.a.createElement(d.a, {
+                                    errors: I.error.errorMsg,
+                                  }),
+                                  confirm: "Continue",
+                                  viewType: "MODAL",
+                                });
+                              }, 0);
+                          } catch (n) {}
+                        else {
+                          f.Logger.error("Unable to Post Property!");
+                          try {
+                            m.b.open({
+                              type: "error",
+                              message:
+                                "Uh Oh! Something went wrong! Please try again later",
+                              confirm: "ok",
+                              viewType: "MODAL",
+                            });
+                          } catch (N) {}
+                        }
+                        return t.abrupt("return", !1);
+                      case 25:
+                        return t.abrupt("return", I);
+                      case 26:
+                      case "end":
+                        return t.stop();
+                    }
+                }, t);
+              })
+            );
+            return function (e, a) {
+              return t.apply(this, arguments);
+            };
+          })();
+        };
     },
     function (e, t, a) {
       "use strict";
@@ -36024,16 +36075,16 @@
       var r = a(3),
         n = a(60),
         i = a(46),
-        o = a(230),
+        o = a(231),
         l = { 1: "email", 2: "whatsapp" },
         c = a(22),
         s = function () {
           return l[Object(c.a)("ref")];
         },
         u = a(45),
-        p = a(233),
+        p = a(234),
         d = a(12);
-      a(124);
+      a(125);
       a.d(t, "a", function () {
         return m;
       });
@@ -36488,9 +36539,9 @@
       "use strict";
       var r = a(0),
         n = a.n(r),
-        i = (a(322), a(73)),
+        i = (a(323), a(73)),
         o =
-          (a(323),
+          (a(324),
           function (e) {
             var t = e.tagName,
               a = e.children,
@@ -36769,7 +36820,7 @@
       "use strict";
       var r = a(19),
         n = a(32),
-        i = a(27),
+        i = a(28),
         o = a(33),
         l = (function (e) {
           function t() {
@@ -36793,7 +36844,7 @@
           }
           return Object(o.a)(t, e), t;
         })(a(81).a),
-        c = a(450);
+        c = a(451);
       a.d(t, "a", function () {
         return s;
       });
@@ -36822,9 +36873,9 @@
       "use strict";
       var r = a(19),
         n = a(32),
-        i = a(27),
+        i = a(28),
         o = a(33),
-        l = a(371),
+        l = a(372),
         c = {
           radio: "",
           checkbox: [],
@@ -36836,7 +36887,7 @@
           autoSuggestor: {},
         },
         s = a(21),
-        u = a(209);
+        u = a(210);
       a.d(t, "a", function () {
         return p;
       });
@@ -36888,7 +36939,7 @@
       var r = a(6),
         n = a(0),
         i = a.n(n),
-        o = a(526),
+        o = a(527),
         l = a.n(o),
         c = a(11),
         s = a(37);
@@ -36956,8 +37007,8 @@
         n = a(2),
         i = a(3),
         o = a(6),
-        l = a(211),
-        c = a(228),
+        l = a(212),
+        c = a(229),
         s = function (e, t) {
           return "Retail" === t.values.superPropertyType.value
             ? "What type of retail space do you have ?"
@@ -36985,7 +37036,7 @@
               return e.label;
           }
         },
-        m = a(137),
+        m = a(138),
         f = function (e, t) {
           var a = t.values,
             r = a.minArea.value,
@@ -37126,8 +37177,8 @@
             ? "Floors Allowed For Construction"
             : "Floor Details";
         },
-        P = a(122),
-        S = a(121),
+        P = a(123),
+        S = a(122),
         C = function (e, t) {
           return Object(P.a)(Object(S.b)(), t) ? "Save" : "Continue";
         },
@@ -37139,7 +37190,7 @@
           var a = t.values.deposit.value;
           return a ? "".concat(a, " month(s)") : "";
         },
-        L = function (e, t) {
+        w = function (e, t) {
           return "Retail" === t.values.superPropertyType.value
             ? "Your retail space type is "
             : "Your ".concat(
@@ -37147,7 +37198,7 @@
                 " type is "
               );
         },
-        w = function (e, t) {
+        L = function (e, t) {
           var a = e.id,
             r = t.values,
             n = r.resCom.value,
@@ -37198,16 +37249,16 @@
               return e.label;
           }
         },
-        U = function (e, t) {
+        B = function (e, t) {
           return "screening" === t.metaData.accessSource
             ? "Select you property kind"
             : "";
         },
-        B = function (e, t) {
+        x = function (e, t) {
           Object(u.a)(navigator.userAgent), t.values.propertyType.value;
           return e.label;
         },
-        x = function (e, t) {
+        U = function (e, t) {
           var a = Object(u.a)(navigator.userAgent),
             r = t.values.propertyType.value;
           return (91 != r && 92 != r) || "mobile" != a
@@ -37229,7 +37280,7 @@
               case "SubPropertyType":
                 return s;
               case "superPropertyType":
-                return U;
+                return B;
               case "totalFloor":
                 return p;
               case "Pricing":
@@ -37258,21 +37309,21 @@
               case "PhotoDetailsButton":
                 return C;
               case "CollapsibleSubPropertyType":
-                return L;
+                return w;
               case "price":
               case "pricePerUnitArea":
-                return w;
+                return L;
               case "balconyNum":
                 return k;
               case "PricingDetails":
                 return D;
               case "meetingRoomsNum":
-                return B;
+                return x;
               case "privateWashrooms":
               case "sharingWashrooms":
               case "passengerLifts":
               case "serviceLifts":
-                return x;
+                return U;
               case "OfficeUsedFor":
                 return F;
               case "Washrooms":
@@ -38022,7 +38073,7 @@
             },
           ],
         },
-        re = a(244),
+        re = a(245),
         ne = a(12),
         ie = function (e, t) {
           var a = e.id,
@@ -38120,7 +38171,7 @@
             ? "Total no. of rooms in PG"
             : "Total no. of beds in PG";
         },
-        be = a(405),
+        be = a(406),
         ye = function (e, t) {
           var a = t.values.areaUnit.value;
           if (a) {
@@ -38229,7 +38280,7 @@
             }
           })(e.id)(e, t);
         },
-        Oe = a(374),
+        Oe = a(375),
         Pe = function (e, t) {
           var a = t.values.totalPriceIncludes.value,
             n = t.totalPriceIncludes.options.filter(function (e) {
@@ -38251,7 +38302,7 @@
               : {}
           );
         },
-        Se = a(220),
+        Se = a(221),
         Ce = function (e, t) {
           var a = t.values.preference.value,
             r = t.values.furnish.value;
@@ -38294,7 +38345,7 @@
                 })
             : {};
         },
-        Le = function (e, t) {
+        we = function (e, t) {
           return (function (e) {
             switch (e) {
               case "TotalPriceIncludes":
@@ -38312,7 +38363,7 @@
             }
           })(e.id)(e, t);
         },
-        we = function (e, t) {
+        Le = function (e, t) {
           var a = t.values,
             r = a.propertyType.value,
             n = a.propertySpecification.value;
@@ -38334,7 +38385,7 @@
           return (function (e) {
             switch (e) {
               case "Area":
-                return we;
+                return Le;
               case "FloorDetails":
                 return Re;
               default:
@@ -38366,16 +38417,16 @@
             }
           })(e.id)(e, t);
         },
-        Ue = function (e, t) {
+        Be = function (e, t) {
           var a = Object(S.b)().find(function (e) {
             return !(void 0 === t[e].complete || t[e].complete);
           });
           return a ? t[a].path : "";
         },
-        Be = function (e, t) {
+        xe = function (e, t) {
           return t.isEditProperty;
         },
-        xe = function (e, t) {
+        Ue = function (e, t) {
           var a = t.values.furnish.value;
           return 1 == a
             ? "* Atleast 3 selections are mandatory"
@@ -38387,7 +38438,7 @@
           return (function (e) {
             switch (e) {
               case "FurnishingDetail":
-                return xe;
+                return Ue;
               default:
                 return function (e) {
                   return e.warning;
@@ -38471,7 +38522,7 @@
             }
           })(e.id)(e, t);
         },
-        qe = a(251),
+        qe = a(252),
         Je = function (e, t) {
           var a = t.values.preference.value;
           return ["S", "R"].indexOf(a) > -1 ? null : qe.Furnishing.expandMore;
@@ -38764,15 +38815,15 @@
                     case "placeholder":
                       return Te;
                     case "addMore":
-                      return Le;
+                      return we;
                     case "subLabel":
                       return je;
                     case "actions":
                       return De;
                     case "redirect":
-                      return Ue;
-                    case "stickyButton":
                       return Be;
+                    case "stickyButton":
+                      return xe;
                     case "warning":
                       return Fe;
                     case "headerText":
@@ -38832,11 +38883,11 @@
         n = a(19),
         i = a(34),
         o = a(32),
-        l = a(27),
+        l = a(28),
         c = a(33),
         s = a(0),
         u = a.n(s),
-        p = a(503),
+        p = a(504),
         d = a.n(p),
         m = (function (e) {
           function t(e) {
@@ -38927,7 +38978,7 @@
       a.d(t, "a", function () {
         return r;
       });
-      var r = new (a(435).a)();
+      var r = new (a(436).a)();
     },
     function (e, t, a) {
       "use strict";
@@ -38938,10 +38989,10 @@
         n = a(83),
         i = a(0),
         o = a.n(i),
-        l = a(434),
+        l = a(435),
         c = a.n(l),
         s = (a(55), a(21)),
-        u = a(210),
+        u = a(211),
         p = function (e) {
           var t = e.errorMessage,
             a = e.value,
@@ -38983,9 +39034,9 @@
               "inputContainerStyleClass",
             ]),
             N = Object(i.useState)(!1),
-            L = Object(r.a)(N, 2),
-            w = L[0],
-            R = L[1],
+            w = Object(r.a)(N, 2),
+            L = w[0],
+            R = w[1],
             j = Object(i.useCallback)(
               function (e) {
                 P && R(!1), f && f(e), g && g(e);
@@ -39004,13 +39055,13 @@
               },
               [y]
             ),
-            U = Object(i.useRef)(null);
+            B = Object(i.useRef)(null);
           return (
             Object(i.useEffect)(
               function () {
-                O && U.current.focus();
+                O && B.current.focus();
               },
-              [U, O]
+              [B, O]
             ),
             o.a.createElement(
               "div",
@@ -39046,7 +39097,7 @@
                   Object.assign(
                     {
                       required: !0,
-                      ref: U,
+                      ref: B,
                       id: "".concat(_, "-input"),
                       disabled: E,
                       value: a,
@@ -39110,7 +39161,7 @@
                     )
                   )
               ),
-              w &&
+              L &&
                 P &&
                 o.a.createElement(
                   "span",
@@ -39165,7 +39216,7 @@
         n = a(83),
         i = a(0),
         o = a.n(i),
-        l = a(428),
+        l = a(429),
         c = a.n(l);
       t.a = function (e) {
         var t = e.notRequired,
@@ -39246,18 +39297,18 @@
         n = a(19),
         i = a(34),
         o = a(32),
-        l = a(27),
+        l = a(28),
         c = a(33),
         s = a(0),
         u = a.n(s),
         p = a(42),
         d = a.n(p),
-        m = (a(11), a(359)),
-        f = a(358),
-        b = a(508),
+        m = (a(11), a(360)),
+        f = a(359),
+        b = a(509),
         y = a.n(b),
-        g = (a(509), a(417), a(24)),
-        v = a(242),
+        g = (a(510), a(418), a(24)),
+        v = a(243),
         h =
           (a(59),
           (function (e) {
@@ -39429,10 +39480,10 @@
       });
       var r = a(19),
         n = a(32),
-        i = a(27),
+        i = a(28),
         o = a(33),
         l = a(55),
-        c = a(371),
+        c = a(372),
         s = a(16),
         u = (function (e) {
           function t(e) {
@@ -39511,7 +39562,7 @@
         n = a(83),
         i = a(0),
         o = a.n(i),
-        l = a(381),
+        l = a(382),
         c = a(37),
         s = a(11),
         u = function (e) {
@@ -39579,7 +39630,7 @@
       "use strict";
       var r = a(3),
         n = a(2),
-        i = a(218),
+        i = a(219),
         o = {
           photos: {},
           deletedPhotos: [],
@@ -39626,12 +39677,12 @@
         }, {}),
         p = { lat: 28.653386, lng: 77.228165, field: "" },
         d = [],
-        m = a(254),
-        f = a(517),
+        m = a(255),
+        f = a(518),
         b = { coverPhoto: null },
-        y = a(518),
+        y = a(519),
         g = a(94),
-        v = a(317),
+        v = a(318),
         h = {
           id: "state",
           placeholder: "State",
@@ -39869,8 +39920,8 @@
           },
         }),
         I = { listingPacks: [], freeListingCount: 0 },
-        N = a(227),
-        L = {
+        N = a(228),
+        w = {
           loading: !1,
           minPrice: "",
           maxPrice: "",
@@ -39881,14 +39932,14 @@
           visible: !1,
           isEdit: !1,
         },
-        w = N.a.FETCH_PRICE_RECOMMENDER_INIT,
+        L = N.a.FETCH_PRICE_RECOMMENDER_INIT,
         R = N.a.RESET_PRICE_RECOMMENDER,
         j = N.a.SET_PRICE_RECOMMENDER,
         k = N.a.SET_PRICING_REASONS,
         D = { visible: !1 },
-        U = a(519),
-        B = [],
-        x = a(520),
+        B = a(520),
+        x = [],
+        U = a(521),
         F = [];
       t.a = {
         state: {
@@ -39999,15 +40050,15 @@
             var e =
                 arguments.length > 0 && void 0 !== arguments[0]
                   ? arguments[0]
-                  : L,
+                  : w,
               t = arguments.length > 1 ? arguments[1] : void 0,
               a = t.type,
               n = t.payload;
             switch (a) {
-              case w:
+              case L:
                 return Object(r.a)({}, e, { loading: !0 });
               case R:
-                return L;
+                return w;
               case j:
                 return Object(r.a)({}, e, {}, n);
               case k:
@@ -40032,8 +40083,8 @@
                 return e;
             }
           },
-          CommercialProject: U.a,
-          TopUsp: x.a,
+          CommercialProject: B.a,
+          TopUsp: U.a,
         },
         value: Object(r.a)({}, u, {
           latLng: function () {
@@ -40134,7 +40185,7 @@
             var e =
                 arguments.length > 0 && void 0 !== arguments[0]
                   ? arguments[0]
-                  : B,
+                  : x,
               t = arguments.length > 1 ? arguments[1] : void 0;
             switch (t.type) {
               case "UPDATE_INPUT_VALUE_LOCATION_ADVANTAGES":
@@ -40163,7 +40214,7 @@
       "use strict";
       var r = a(0),
         n = a.n(r),
-        i = a(507),
+        i = a(508),
         o = a.n(i);
       t.a = function (e) {
         var t = e.children,
@@ -40210,7 +40261,7 @@
       var r = a(2),
         n = a(0),
         i = a.n(n),
-        o = a(544),
+        o = a(545),
         l = a.n(o);
       t.a = function (e) {
         var t, a;
@@ -40376,13 +40427,13 @@
           return Da;
         }),
         a.d(o, "page", function () {
-          return Ua;
-        }),
-        a.d(o, "header", function () {
           return Ba;
         }),
-        a.d(o, "button", function () {
+        a.d(o, "header", function () {
           return xa;
+        }),
+        a.d(o, "button", function () {
+          return Ua;
         }),
         a.d(o, "static", function () {
           return Fa;
@@ -40397,9 +40448,9 @@
         p = a(0),
         d = a.n(p),
         m = a(79),
-        f = a(592),
+        f = a(593),
         b = a.n(f),
-        y = a(215),
+        y = a(216),
         g = function (e) {
           var t = e.config,
             a = t.stepNumber,
@@ -40596,11 +40647,11 @@
           }
         )(g),
         E = a(3),
-        _ = a(368),
-        A = a(367),
-        T = a(362),
-        O = a(209),
-        P = a(369),
+        _ = a(369),
+        A = a(368),
+        T = a(363),
+        O = a(210),
+        P = a(370),
         S = function () {
           var e = Object(s.c)(),
             t = Object(s.d)(function (e) {
@@ -40673,10 +40724,10 @@
         },
         C = a(80),
         I = a(20),
-        N = a(451),
-        L = a(14),
-        w = a(37),
-        R = a(135),
+        N = a(452),
+        w = a(14),
+        L = a(37),
+        R = a(136),
         j = function (e, t) {
           try {
             var a = Object(R.a)(t).entityTree,
@@ -40722,10 +40773,10 @@
             var a = t.entity;
             return {
               updateValue: function (t) {
-                e(Object(L.a)(a, { value: t }));
+                e(Object(w.a)(a, { value: t }));
               },
               getTrackingDetails: function (t, a, r) {
-                return e(Object(w.a)(t, a, !1, null, r));
+                return e(Object(L.a)(t, a, !1, null, r));
               },
               updateOptions: function (t) {
                 e({ type: "UPDATE_".concat(a), payload: { options: t } });
@@ -40733,8 +40784,8 @@
             };
           }
         )(N.a),
-        U = a(411),
-        B = Object(s.b)(
+        B = a(412),
+        x = Object(s.b)(
           function (e, t) {
             var a = t.entity;
             return Object(E.a)(
@@ -40776,15 +40827,15 @@
             var a = t.entity;
             return {
               updateValue: function (t) {
-                e(Object(L.a)(a, { value: t }));
+                e(Object(w.a)(a, { value: t }));
               },
               getTrackingDetails: function (t, a, r) {
-                return e(Object(w.a)(t, a, !1, null, r));
+                return e(Object(L.a)(t, a, !1, null, r));
               },
             };
           }
-        )(U.a),
-        x = a(394),
+        )(B.a),
+        U = a(395),
         F = function (e, t, a) {
           return !t && a ? "".concat(e, " (Optional)") : e;
         },
@@ -40815,12 +40866,12 @@
             var a = t.entity;
             return {
               selectOption: function (t) {
-                e(Object(L.a)(a, { value: t }));
+                e(Object(w.a)(a, { value: t }));
               },
             };
           }
-        )(x.a),
-        W = a(593),
+        )(U.a),
+        W = a(594),
         V = a.n(W),
         G = function (e) {
           var t = e.doCount,
@@ -40896,7 +40947,7 @@
             var a = t.entity;
             return {
               updateValue: function (t) {
-                e(Object(L.a)(a, { value: t }));
+                e(Object(w.a)(a, { value: t }));
               },
             };
           }
@@ -40997,7 +41048,7 @@
             a = e.label;
           return d.a.createElement("div", { className: t }, a);
         }),
-        Q = a(217),
+        Q = a(218),
         K = function (e, t, a) {
           return !t && a ? "".concat(e, " (Optional)") : e;
         },
@@ -41021,7 +41072,7 @@
             var a = t.entity;
             return {
               updateValue: function (t) {
-                e(Object(L.a)(a, { value: t }));
+                e(Object(w.a)(a, { value: t }));
               },
               performValidations: function (t) {
                 e(Object(Q.a)(a));
@@ -41035,22 +41086,22 @@
         J = a(4),
         X = a.n(J),
         z = a(5),
-        Z = a(594),
+        Z = a(595),
         $ = a.n(Z),
         ee = a(59),
         te = a(15),
         ae = a(99),
-        re = a(372),
+        re = a(373),
         ne = {
           ProfilePanel: "Profile",
           ReraPanel: "Profile",
           TopUsp: "Choose 4 top USPs",
         },
-        ie = (a(13), a(139)),
-        oe = a(575),
-        le = a(512),
-        ce = a(132),
-        se = a(218),
+        ie = (a(13), a(140)),
+        oe = a(576),
+        le = a(513),
+        ce = a(133),
+        se = a(219),
         ue = function () {
           return function (e, t) {
             return (
@@ -41062,7 +41113,7 @@
             );
           };
         },
-        pe = a(576),
+        pe = a(577),
         de = Object(s.b)(
           function (e, t) {
             var a = t.entity;
@@ -41223,7 +41274,7 @@
                   d.a.createElement(t, { entity: e.id })
                 );
               }),
-            L = Object.entries(l)
+            w = Object.entries(l)
               .map(function (e) {
                 var t = Object(u.a)(e, 2),
                   a = t[0],
@@ -41238,7 +41289,7 @@
                   d.a.createElement(t, { entity: e.id })
                 );
               }),
-            w = Object.entries(f)
+            L = Object.entries(f)
               .map(function (e) {
                 var t = Object(u.a)(e, 2),
                   a = t[0],
@@ -41293,17 +41344,17 @@
               })(i, a)
             ),
             N,
-            L,
-            w
+            w,
+            L
           );
         }),
-        me = a(595),
+        me = a(596),
         fe = a.n(me),
-        be = a(366),
-        ye = a(596),
+        be = a(367),
+        ye = a(597),
         ge = a.n(ye),
         ve = (a(55), a(21)),
-        he = a(210),
+        he = a(211),
         Ee = function (e) {
           var t = e.id,
             a = e.errorMessage,
@@ -41464,7 +41515,7 @@
             )
           );
         },
-        _e = a(378),
+        _e = a(379),
         Ae = Object(s.b)(
           function (e, t) {
             var a = t.entity,
@@ -41499,7 +41550,7 @@
             var a = t.entity;
             return {
               updateValue: function (t) {
-                e(Object(L.a)(a, { value: t }));
+                e(Object(w.a)(a, { value: t }));
               },
             };
           }
@@ -41674,7 +41725,7 @@
             c && d.a.createElement("div", { className: fe.a.error }, c)
           );
         }),
-        Te = a(591),
+        Te = a(592),
         Oe = Object(s.b)(
           function (e, t) {
             var a = t.entity;
@@ -41684,12 +41735,12 @@
             var a = t.entity;
             return {
               updateValue: function (t) {
-                e(Object(L.a)(a, { value: t }));
+                e(Object(w.a)(a, { value: t }));
               },
             };
           }
         )(Te.a),
-        Pe = a(452),
+        Pe = a(453),
         Se = function (e, t) {
           return (
             t.filter(function (t) {
@@ -41737,7 +41788,7 @@
             var a = t.entity;
             return {
               updateValue: function (t) {
-                e(Object(L.a)(a, { value: t }));
+                e(Object(w.a)(a, { value: t }));
               },
               performValidations: function (t) {
                 e(Object(Q.a)(a));
@@ -41748,8 +41799,8 @@
             };
           }
         )(Pe.a),
-        Le = a(437),
-        we = Object(s.b)(
+        we = a(438),
+        Le = Object(s.b)(
           function (e, t) {
             var a = t.entity;
             return {
@@ -41762,13 +41813,13 @@
             var a = t.entity;
             return {
               updateValue: function (t) {
-                e(Object(L.a)(a, { value: t }));
+                e(Object(w.a)(a, { value: t }));
               },
             };
           }
-        )(Le.a),
-        Re = a(216),
-        je = a(133),
+        )(we.a),
+        Re = a(217),
+        je = a(134),
         ke = function (e, t, a) {
           return !t && a ? "".concat(e, " (Optional)") : e;
         },
@@ -41800,14 +41851,14 @@
             var a = t.entity;
             return {
               updateValue: function (t) {
-                e(Object(L.a)(a, { value: t })),
+                e(Object(w.a)(a, { value: t })),
                   "expectedAnnualReturns" === a &&
                     e({
                       type: "UPDATE_INPUT_VALUE_expectedAnnualReturnsCriteria",
                       payload: { value: !1 },
                     }),
                   "pricePerUnitArea" == a &&
-                    e(Object(L.a)("perUnitArea", { value: -1 }));
+                    e(Object(w.a)("perUnitArea", { value: -1 }));
               },
               performValidations: function (t) {
                 var r;
@@ -41824,7 +41875,7 @@
                 e(
                   (function (e, t) {
                     return function (a) {
-                      /\.$/.test(t) && a(Object(L.a)(e, { value: "" }));
+                      /\.$/.test(t) && a(Object(w.a)(e, { value: "" }));
                     };
                   })(a, r)
                 ),
@@ -41833,10 +41884,10 @@
             };
           }
         )(Ee),
-        Ue = a(599),
-        Be = a.n(Ue),
-        xe = a(600),
-        Fe = a.n(xe),
+        Be = a(600),
+        xe = a.n(Be),
+        Ue = a(601),
+        Fe = a.n(Ue),
         Me = [
           "January",
           "February",
@@ -41946,7 +41997,7 @@
           },
         });
       }
-      var He = a(258),
+      var He = a(259),
         Ye = function (e) {
           return Object(He.a)({}, e);
         },
@@ -41976,11 +42027,11 @@
             var a = t.entity;
             return {
               updateValue: function (t) {
-                e(Object(L.a)(a, { value: t }));
+                e(Object(w.a)(a, { value: t }));
               },
               setAvailabilityYear: function (t, a) {
-                e(Object(L.a)("availability", { value: t })),
-                  e(Object(L.a)("availabilityMonth", { value: a }));
+                e(Object(w.a)("availability", { value: t })),
+                  e(Object(w.a)("availabilityMonth", { value: a }));
               },
             };
           }
@@ -41999,7 +42050,7 @@
           Object(p.useEffect)(function () {}, []);
           return d.a.createElement(
             "div",
-            { id: i, className: Be.a.advanceWrapper },
+            { id: i, className: xe.a.advanceWrapper },
             n &&
               d.a.createElement(
                 "span",
@@ -42042,10 +42093,10 @@
                 availabilityYear: s,
               })
             ),
-            o && d.a.createElement("div", { className: Be.a.error }, o)
+            o && d.a.createElement("div", { className: xe.a.error }, o)
           );
         }),
-        Ke = a(601),
+        Ke = a(602),
         qe = a.n(Ke),
         Je = Object(s.b)(
           function (e, t) {
@@ -42056,10 +42107,10 @@
           null,
           { forwardRef: !0 }
         )(re.a),
-        Xe = a(151),
-        ze = (a(174), a(471)),
-        Ze = a(213),
-        $e = a(224),
+        Xe = a(152),
+        ze = (a(175), a(472)),
+        Ze = a(214),
+        $e = a(225),
         et = function (e, t) {
           var a = [];
           return (
@@ -42111,7 +42162,7 @@
                   Object(Ze.b)().furnish.forEach(function (t) {
                     e(Object(ze.a)(t));
                   }),
-                  e(Object(L.a)(a, { value: t }));
+                  e(Object(w.a)(a, { value: t }));
               },
               validateFurnishing: function () {
                 e(Object($e.a)());
@@ -42123,7 +42174,7 @@
                 e({ type: "revertToSnapshot" });
               },
               getTrackingDetails: function () {
-                return e(Object(w.a)("furnish_addMore", "custom"));
+                return e(Object(L.a)("furnish_addMore", "custom"));
               },
             };
           }
@@ -42366,7 +42417,7 @@
             c && d.a.createElement("div", { className: qe.a.error }, c)
           );
         }),
-        at = a(453),
+        at = a(454),
         rt = Object(s.b)(
           function (e, t) {
             var a = t.entity;
@@ -42388,7 +42439,7 @@
             var a = t.entity;
             return {
               updateSelectData: function (t) {
-                e(Object(L.a)(a, { value: t }));
+                e(Object(w.a)(a, { value: t }));
               },
             };
           }
@@ -42396,8 +42447,8 @@
         nt = a(100),
         it = a(23),
         ot = a(12),
-        lt = a(404),
-        ct = a(602),
+        lt = a(405),
+        ct = a(603),
         st = a.n(ct),
         ut = function (e) {
           var t = e.searchText,
@@ -42454,8 +42505,8 @@
             C = P[1],
             I = Object(p.useState)(!1),
             N = Object(u.a)(I, 2),
-            L = N[0],
-            w = N[1];
+            w = N[0],
+            L = N[1];
           return (
             Object(p.useEffect)(
               function () {
@@ -42493,10 +42544,10 @@
                     v(e);
                   },
                   onFocus: function () {
-                    T(!0), f && w(!0);
+                    T(!0), f && L(!0);
                   },
                   onBlur: function () {
-                    T(!1), f && w(!1);
+                    T(!1), f && L(!1);
                     var e = g.trim(),
                       t =
                         i.find(function (t) {
@@ -42530,7 +42581,7 @@
                   })
               ),
               f &&
-                L &&
+                w &&
                 d.a.createElement(
                   "span",
                   { className: "input_placeholder_inactive m-t-1" },
@@ -42539,8 +42590,8 @@
             )
           );
         },
-        dt = a(259),
-        mt = a(472),
+        dt = a(260),
+        mt = a(473),
         ft = a.n(mt),
         bt = function (e) {
           var t = e.listLabel,
@@ -42837,7 +42888,7 @@
               updateValue: function (t) {
                 var r = t.id,
                   n = t.label;
-                return e(Object(L.a)(a, { value: { id: r, label: n } }));
+                return e(Object(w.a)(a, { value: { id: r, label: n } }));
               },
               performValidations: function (t) {
                 return e(Object(Q.a)(a, t));
@@ -42849,14 +42900,14 @@
             ? d.a.createElement(yt, e)
             : d.a.createElement(pt, e);
         }),
-        ht = a(231),
-        Et = a(208),
-        _t = a(375),
-        At = a(603),
+        ht = a(232),
+        Et = a(209),
+        _t = a(376),
+        At = a(604),
         Tt = a.n(At),
         Ot = a(2),
-        Pt = a(29),
-        St = a(211),
+        Pt = a(26),
+        St = a(212),
         Ct = function (e, t) {
           var a = e.values.propertyType.value,
             r = void 0 === a ? "" : a,
@@ -42887,7 +42938,7 @@
             p = i.reduce(function (e, t) {
               return s.includes(t[0]) && e;
             }, !0);
-          return { entities: Lt(i), visible: !!i.length, locked: p };
+          return { entities: wt(i), visible: !!i.length, locked: p };
         },
         It = function (e) {
           return {
@@ -42901,7 +42952,7 @@
               e({ type: "revertToSnapshot" });
             },
             getTrackingDetails: function (t, a) {
-              return e(Object(w.a)(t, a));
+              return e(Object(L.a)(t, a));
             },
           };
         },
@@ -42934,7 +42985,7 @@
             Ct(e, a)
           );
         },
-        Lt = Object(Pt.a)(function (e) {
+        wt = Object(Pt.a)(function (e) {
           return e.reduce(function (e, t) {
             var a = Object(u.a)(t, 2),
               r = a[0],
@@ -42942,13 +42993,13 @@
             return Object(E.a)({}, e, Object(Ot.a)({}, r, n));
           }, {});
         }),
-        wt = a(219),
+        Lt = a(220),
         Rt = Object(s.b)(function (e, t) {
           var a = t.entity,
             r = {}.metaData,
             n = (r = void 0 === r ? {} : r).dropoutDataSource;
           return Object(E.a)({}, Nt(e, t), {
-            isValid: e[a].valid && Object(wt.a)(n),
+            isValid: e[a].valid && Object(Lt.a)(n),
           });
         }, It)(function (e) {
           var t = e.entities,
@@ -42976,9 +43027,9 @@
             C = e.isNewSection,
             I = Object(it.a)(navigator.userAgent),
             N = Object(p.useRef)(null),
-            L = Object(p.useRef)(null),
-            w = Object(p.useState)(!1),
-            R = Object(u.a)(w, 2),
+            w = Object(p.useRef)(null),
+            L = Object(p.useState)(!1),
+            R = Object(u.a)(L, 2),
             j = R[0],
             k = R[1],
             D = (function () {
@@ -43016,9 +43067,9 @@
               };
             })();
           console.log("rerendering - formwidget", t, a, r);
-          var U = m ? "(Optional)" : "",
-            B = n && n.panel && Ra(l.d.PAGE, n.panel),
-            x = s && s.component && Ra(l.d.WIDGET, s.component);
+          var B = m ? "(Optional)" : "",
+            x = n && n.panel && Ra(l.d.PAGE, n.panel),
+            U = s && s.component && Ra(l.d.WIDGET, s.component);
           return (
             r &&
             d.a.createElement(
@@ -43029,13 +43080,13 @@
                 {
                   header_text: a,
                   sub_text: i,
-                  header_subText: U,
+                  header_subText: B,
                   error: c,
                   knowMore: f ? { icon: "icon_lockIcon iconS_PPF_20" } : s,
                   knowMoreOnClick: f
                     ? null
                     : function (e) {
-                        "mobile" == I && L.current.open();
+                        "mobile" == I && w.current.open();
                       },
                   warning: g,
                   hoverComponent: _,
@@ -43113,15 +43164,15 @@
                 d.a.createElement(
                   Je,
                   { ref: N, entity: n.panel },
-                  d.a.createElement(B, { entity: n.panel })
+                  d.a.createElement(x, { entity: n.panel })
                 ),
               s &&
                 s.component &&
-                d.a.createElement(ae.a, { ref: L }, d.a.createElement(x, null))
+                d.a.createElement(ae.a, { ref: w }, d.a.createElement(U, null))
             )
           );
         }),
-        jt = a(604),
+        jt = a(605),
         kt = a.n(jt),
         Dt = Object(s.b)(
           function (e, t) {
@@ -43155,7 +43206,7 @@
                       r[1];
                       return !!e.values[n].value && t && !0;
                     }, !0);
-                return { entities: Ut(a), visible: !!a.length, validInput: r };
+                return { entities: Bt(a), visible: !!a.length, validInput: r };
               })(e, a)
             );
           },
@@ -43200,14 +43251,14 @@
                         },
                         d.a.createElement(
                           "div",
-                          Object.assign({}, Object(w.a)(y[0], "input", !0)(), {
+                          Object.assign({}, Object(L.a)(y[0], "input", !0)(), {
                             id: y[0] + "-input",
                           }),
                           d.a.createElement(g, { entity: y[0] })
                         ),
                         d.a.createElement(
                           "div",
-                          Object.assign({}, Object(w.a)(y[1], "input", !0)(), {
+                          Object.assign({}, Object(L.a)(y[1], "input", !0)(), {
                             id: y[1] + "-input",
                           }),
                           d.a.createElement(v, { entity: y[1] })
@@ -43232,7 +43283,7 @@
                             return b(!f);
                           },
                         },
-                        Object(w.a)("".concat(i, "_expandMore"), "custom")
+                        Object(L.a)("".concat(i, "_expandMore"), "custom")
                       ),
                       d.a.createElement(
                         "span",
@@ -43249,14 +43300,14 @@
                       },
                       d.a.createElement(
                         "div",
-                        Object.assign({}, Object(w.a)(y[0], "input", !0)(), {
+                        Object.assign({}, Object(L.a)(y[0], "input", !0)(), {
                           id: y[0] + "-input",
                         }),
                         d.a.createElement(g, { entity: y[0] })
                       ),
                       d.a.createElement(
                         "div",
-                        Object.assign({}, Object(w.a)(y[1], "input", !0)(), {
+                        Object.assign({}, Object(L.a)(y[1], "input", !0)(), {
                           id: y[1] + "-input",
                         }),
                         d.a.createElement(v, { entity: y[1] })
@@ -43265,7 +43316,7 @@
               )
             : null;
         }),
-        Ut = Object(Pt.a)(function (e) {
+        Bt = Object(Pt.a)(function (e) {
           return e.reduce(function (e, t) {
             var a = Object(u.a)(t, 2),
               r = a[0],
@@ -43273,9 +43324,9 @@
             return Object(E.a)({}, e, Object(Ot.a)({}, r, n));
           }, {});
         }),
-        Bt = a(173),
-        xt = a(605),
-        Ft = a.n(xt),
+        xt = a(174),
+        Ut = a(606),
+        Ft = a.n(Ut),
         Mt = Object(s.b)(
           function (e, t) {
             var a = t.entity;
@@ -43411,8 +43462,8 @@
             return Object(E.a)({}, e, Object(Ot.a)({}, r, n));
           }, {});
         }),
-        Vt = a(26),
-        Gt = a(606),
+        Vt = a(27),
+        Gt = a(607),
         Ht = a.n(Gt),
         Yt = Object(s.b)(Nt, It)(function (e) {
           var t = e.entities,
@@ -43439,7 +43490,7 @@
             )
           );
         }),
-        Qt = a(607),
+        Qt = a(608),
         Kt = a.n(Qt),
         qt = a(108),
         Jt = function e(t) {
@@ -43545,7 +43596,7 @@
                       )
                     : d.a.createElement(
                         "span",
-                        _(Object(w.a)("".concat(t, "_addMore"), "custom", !0)),
+                        _(Object(L.a)("".concat(t, "_addMore"), "custom", !0)),
                         d.a.createElement("i", {
                           className:
                             "iconS_PPFDesk_16 icon_bluePlusIcon ".concat(
@@ -43562,7 +43613,7 @@
             )
           );
         }),
-        zt = a(608),
+        zt = a(609),
         Zt = a.n(zt),
         $t = {
           SuperArea: { input: "superArea", label: "Plot Area" },
@@ -43699,7 +43750,7 @@
             return Object(E.a)({}, e, Object(Ot.a)({}, r, n));
           }, {});
         }),
-        aa = a(609),
+        aa = a(610),
         ra = a.n(aa),
         na = function (e) {
           return e.toString().replace(/,/g, " ");
@@ -43760,22 +43811,22 @@
                     ra.a.completion_score_icon
                   ),
                 }),
-              r && d.a.createElement("p", { className: na(i) }, u),
+              r && d.a.createElement("h1", { className: na(i) }, u),
               o && d.a.createElement("p", { className: na(l) }, p)
             )
           );
         }),
         ca = a(16),
-        sa = a(610),
+        sa = a(611),
         ua = a.n(sa),
-        pa = a(401),
-        da = a(447),
-        ma = a(590),
-        fa = a(475),
+        pa = a(402),
+        da = a(448),
+        ma = a(591),
+        fa = a(476),
         ba = a(51),
-        ya = a(28),
-        ga = a(407),
-        va = a(136),
+        ya = a(29),
+        ga = a(409),
+        va = a(137),
         ha = function (e) {
           var t = e.metaData,
             a = (t = void 0 === t ? {} : t).isOldShopsProperty;
@@ -43826,7 +43877,7 @@
                 e(Object(va.b)(a, t));
               },
               getTrackingDetails: function (t, a) {
-                return e(Object(w.a)(t, a));
+                return e(Object(L.a)(t, a));
               },
               updateCurrentPageId: function (t) {
                 e({ type: "UPDATE_CURRENT_PAGE_ID", payload: t }),
@@ -43952,12 +44003,12 @@
           );
         }),
         _a = a(573),
-        Aa = a(617),
+        Aa = a(618),
         Ta = a.n(Aa),
-        Oa = a(618),
+        Oa = a(619),
         Pa = a.n(Oa),
-        Sa = a(569),
-        Ca = a(524);
+        Sa = a(570),
+        Ca = a(525);
       var Ia,
         Na = Object(s.b)(function (e) {
           var t = e.values,
@@ -44116,7 +44167,7 @@
             )
           );
         }),
-        La =
+        wa =
           (((Ia = function (e) {
             var t = e.entity;
             return Object(Ot.a)({}, t, Wa(Object(pa.a)(t, "page")));
@@ -44143,8 +44194,8 @@
               );
             };
           })(Ea),
-          a(421)),
-        wa = Object(s.b)(function (e, t) {
+          a(422)),
+        La = Object(s.b)(function (e, t) {
           var a = t.entity,
             r = e.isEditProperty,
             n = e.referrer,
@@ -44164,7 +44215,7 @@
             accessSource: o,
             showCloseIcon: l,
           });
-        }, null)(La.a),
+        }, null)(wa.a),
         Ra = function (e, t) {
           switch (e) {
             case l.d.PAGE:
@@ -44175,8 +44226,8 @@
               return (function (e) {
                 var t = Object(it.a)(navigator.userAgent),
                   a =
-                    ht[e] || Bt.a[t][e]
-                      ? Object(E.a)({}, ht[e], {}, Bt.a[t][e])
+                    ht[e] || xt.a[t][e]
+                      ? Object(E.a)({}, ht[e], {}, xt.a[t][e])
                       : null;
                 switch (a ? a.type : l.g.CUSTOM) {
                   case l.g.FORM:
@@ -44207,7 +44258,7 @@
                 );
                 switch (t && t.type ? t.type : l.e.CUSTOM) {
                   case l.e.RADIO:
-                    return B;
+                    return x;
                   case l.e.CUSTOM:
                     return r[e];
                   case l.e.CHECKBOX:
@@ -44233,7 +44284,7 @@
                   case l.e.TEXTAREA:
                     return Ne;
                   case l.e.DATEPICKER:
-                    return we;
+                    return Le;
                   case l.e.AVAILABILITY_RADIO:
                     return Qe;
                   case l.e.FURNISH_INPUT:
@@ -44251,12 +44302,12 @@
             case l.d.STATIC:
               return la;
             case l.d.DESKTOP_HEADER:
-              return wa;
+              return La;
             default:
               throw new ca.b("Entity config is not correct for :" + e);
           }
         },
-        ja = a(389),
+        ja = a(390),
         ka = function (e) {
           return function () {
             var t =
@@ -44292,7 +44343,7 @@
             }
           };
         },
-        Ua = function (e) {
+        Ba = function (e) {
           return function () {
             var t =
                 arguments.length > 0 && void 0 !== arguments[0]
@@ -44311,7 +44362,7 @@
             }
           };
         },
-        Ba = function (e) {
+        xa = function (e) {
           return function () {
             var t =
                 arguments.length > 0 && void 0 !== arguments[0]
@@ -44328,7 +44379,7 @@
             }
           };
         },
-        xa = function (e) {
+        Ua = function (e) {
           return function () {
             var t =
                 arguments.length > 0 && void 0 !== arguments[0]
@@ -44453,12 +44504,12 @@
     ,
     function (e, t, a) {
       "use strict";
-      var r = a(363),
-        n = a(373),
-        i = a(396),
+      var r = a(364),
+        n = a(374),
+        i = a(397),
         o = a(19),
         l = a(32),
-        c = a(27),
+        c = a(28),
         s = a(33),
         u = (function (e) {
           function t(e) {
@@ -44473,7 +44524,7 @@
           }
           return Object(s.a)(t, e), t;
         })(i.a),
-        p = a(371),
+        p = a(372),
         d = (function (e) {
           function t(e) {
             var a;
@@ -44540,8 +44591,8 @@
           return Object(s.a)(t, e), t;
         })(a(81).a),
         y = a(55),
-        g = (n.a, a(413)),
-        v = a(425),
+        g = (n.a, a(414)),
+        v = a(426),
         h = (function (e) {
           function t(e) {
             var a;
@@ -44600,7 +44651,7 @@
     },
     function (e, t, a) {
       "use strict";
-      var r = a(382),
+      var r = a(383),
         n = a(1),
         i = {
           mandatory: !1,
@@ -44670,7 +44721,7 @@
       });
       var r = a(0),
         n = a.n(r),
-        i = a(534),
+        i = a(535),
         o = a.n(i),
         l = function () {
           return n.a.createElement(
@@ -44741,20 +44792,20 @@
         o = a(6),
         l = a(0),
         c = a.n(l),
-        s = a(424),
+        s = a(425),
         u = a.n(s),
         p = a(99),
-        d = (a(15), a(412)),
+        d = (a(15), a(413)),
         m = a(23),
-        f = a(148),
-        b = a(210),
-        y = a(372),
+        f = a(149),
+        b = a(211),
+        y = a(373),
         g = a(55),
         v = a(59),
-        h = a(410),
-        E = a(368),
-        _ = a(208),
-        A = a(511),
+        h = a(411),
+        E = a(369),
+        _ = a(209),
+        A = a(512),
         T = a.n(A),
         O = function (e) {
           var t = e.entity,
@@ -44777,8 +44828,8 @@
             C = Object(l.useState)(""),
             I = Object(o.a)(C, 2),
             N = I[0],
-            L = I[1],
-            w = Object(l.useCallback)(
+            w = I[1],
+            L = Object(l.useCallback)(
               function (e) {
                 a(e);
               },
@@ -44806,9 +44857,9 @@
                   })(b, u),
                   t = e.valid,
                   r = e.error;
-                t && a(b), L(r);
+                t && a(b), w(r);
               },
-              [L, b, u, a]
+              [w, b, u, a]
             );
           return c.a.createElement(
             _.a,
@@ -44826,7 +44877,7 @@
                     .concat(n === t ? T.a.selected : ""),
                   key: t,
                   onClick: function () {
-                    return w(t);
+                    return L(t);
                   },
                 },
                 c.a.createElement(
@@ -44933,21 +44984,21 @@
           C = e.addOtherLabel,
           I = e.inputPlaceholder,
           N = e.constraints,
-          L = Object(l.useRef)(null),
           w = Object(l.useRef)(null),
+          L = Object(l.useRef)(null),
           R = Object(l.useRef)(null),
           j = Object(m.a)(navigator.userAgent),
           k = Object(l.useState)(!1),
           D = Object(o.a)(k, 2),
-          U = D[0],
-          B = D[1],
-          x = Object(l.useCallback)(
+          B = D[0],
+          x = D[1],
+          U = Object(l.useCallback)(
             function () {
-              B(!1);
+              x(!1);
             },
-            [B]
+            [x]
           ),
-          F = Object(f.a)(x),
+          F = Object(f.a)(U),
           M = (function () {
             var e = Object(i.a)(
               n.a.mark(function e(t) {
@@ -44966,7 +45017,7 @@
                             e.next = 7;
                             break;
                           }
-                          B(!U), (e.next = 27);
+                          x(!B), (e.next = 27);
                           break;
                         case 7:
                           (e.prev = 7),
@@ -44975,7 +45026,7 @@
                           break;
                         case 11:
                           return (
-                            (e.t1 = r), (e.next = 14), w.current.openAndWait()
+                            (e.t1 = r), (e.next = 14), L.current.openAndWait()
                           );
                         case 14:
                           return (
@@ -44985,7 +45036,7 @@
                           );
                         case 17:
                           return (
-                            (e.t3 = r), (e.next = 20), L.current.openAndWait()
+                            (e.t3 = r), (e.next = 20), w.current.openAndWait()
                           );
                         case 20:
                           (e.t4 = e.sent), (0, e.t3)(e.t4);
@@ -45011,7 +45062,7 @@
           })();
         Object(l.useLayoutEffect)(
           function () {
-            U &&
+            B &&
               "desktop" === j &&
               (R.current.clientHeight >
               window.innerHeight - F.current.getBoundingClientRect().bottom + 10
@@ -45020,7 +45071,7 @@
                 : ((R.current.style.top = "100%"),
                   (R.current.style.bottom = "auto")));
           },
-          [F, U, j]
+          [F, B, j]
         );
         var W = Object(l.useCallback)(
           function () {
@@ -45030,7 +45081,7 @@
                 return c.a.createElement(
                   y.a,
                   {
-                    ref: w,
+                    ref: L,
                     title: _,
                     closeIcnClass: "iconS_Common_24 icon_close",
                   },
@@ -45048,7 +45099,7 @@
               default:
                 return c.a.createElement(
                   p.a,
-                  { ref: L },
+                  { ref: w },
                   c.a.createElement(d.a, {
                     options: a,
                     selectedId: t,
@@ -45130,7 +45181,7 @@
                   className: ""
                     .concat(u.a.dropdownList, " ")
                     .concat(
-                      U && u.a.showDropdown,
+                      B && u.a.showDropdown,
                       " pageComponent select-dropdown"
                     ),
                 },
@@ -45142,7 +45193,7 @@
                   {
                     key: e.id,
                     onClick: function (t) {
-                      r(e.id), B(!1);
+                      r(e.id), x(!1);
                     },
                   },
                   c.a.createElement("span", null, e.label)
@@ -45159,7 +45210,7 @@
       });
       var r = a(0),
         n = a.n(r),
-        i = a(504),
+        i = a(505),
         o = a.n(i);
       function l(e) {
         var t = e.variant,
@@ -45197,9 +45248,9 @@
       });
       var r = a(19),
         n = a(32),
-        i = a(27),
+        i = a(28),
         o = a(33),
-        l = (a(55), a(371)),
+        l = (a(55), a(372)),
         c =
           (a(16),
           (function (e) {
@@ -45222,13 +45273,13 @@
       var r = a(19),
         n = a(34),
         i = a(32),
-        o = a(27),
+        o = a(28),
         l = a(33),
         c = a(0),
         s = a.n(c),
-        u = a(379),
+        u = a(380),
         p = a.n(u),
-        d = a(429),
+        d = a(430),
         m = (function (e) {
           function t() {
             return (
@@ -45409,7 +45460,7 @@
           return N;
         }),
         a.d(o, "expectedAnnualReturnsCriteriaText", function () {
-          return L;
+          return w;
         });
       var l = {};
       a.r(l),
@@ -45434,10 +45485,10 @@
       var c = a(6),
         s = a(3),
         u = a(1),
-        p = a(231),
+        p = a(232),
         d = a(80),
-        m = a(169),
-        f = a(402),
+        m = a(170),
+        f = a(403),
         b = { mobile: r, desktop: n },
         y = {
           type: u.d.PAGE,
@@ -45486,8 +45537,8 @@
           headerText: "Common Area Furnishings",
           isPanel: !0,
         },
-        _ = a(568),
-        A = a(466),
+        _ = a(569),
+        A = a(468),
         T = {
           id: "noBrokerageText",
           type: u.d.STATIC,
@@ -45518,7 +45569,7 @@
           labelClassName: ["caption_strong_medium"],
           containerClassName: ["m-8", "m-t-0"],
         },
-        S = a(473),
+        S = a(474),
         C = a.n(S),
         I = {
           id: "subHeaderText",
@@ -45527,7 +45578,7 @@
           photoSource: C.a,
           visible: !0,
           parent: "PrimaryDetails",
-          labelClassName: ["title_l_bold"],
+          labelClassName: ["title_l_bold title_center"],
           containerClassName: ["subHeaderTextContainer"],
         },
         N = {
@@ -45538,7 +45589,7 @@
           parent: "EarlyLeavingCharges",
           labelClassName: ["caption_strong_medium"],
         },
-        L = {
+        w = {
           id: "expectedAnnualReturnsCriteriaText",
           type: u.d.STATIC,
           label: "Based on 99acres estimations",
@@ -45546,15 +45597,15 @@
           parent: "ExpectedAnnualReturns",
           labelClassName: ["input_placeholder_inactive"],
         },
-        w = a(389),
-        R = a(567),
+        L = a(390),
+        R = a(568),
         j = a(19),
         k = a(32),
-        D = a(27),
-        U = a(33),
-        B = a(439),
-        x = a(374),
-        F = a(373),
+        D = a(28),
+        B = a(33),
+        x = a(440),
+        U = a(375),
+        F = a(374),
         M = (function (e) {
           function t(e) {
             var a;
@@ -45580,8 +45631,8 @@
               E = void 0 !== h && h;
             return (
               (a.warning = c),
-              n && (a.knowMore = new B.a(n)),
-              o && (a.addMore = new x.a(o)),
+              n && (a.knowMore = new x.a(n)),
+              o && (a.addMore = new U.a(o)),
               (a.widgetClass = u),
               (a.expandMore = d),
               (a.hoverComponent = f),
@@ -45591,7 +45642,7 @@
               a
             );
           }
-          return Object(U.a)(t, e), t;
+          return Object(B.a)(t, e), t;
         })(F.a),
         W = (function (e) {
           function t(e) {
@@ -45601,7 +45652,7 @@
             var r = e.expandMore;
             return (a.valid = !0), (a.expandMore = r), a;
           }
-          return Object(U.a)(t, e), t;
+          return Object(B.a)(t, e), t;
         })(F.a),
         V = (function (e) {
           function t(e) {
@@ -45615,7 +45666,7 @@
               a
             );
           }
-          return Object(U.a)(t, e), t;
+          return Object(B.a)(t, e), t;
         })(F.a),
         G = (function (e) {
           function t(e) {
@@ -45639,7 +45690,7 @@
               a
             );
           }
-          return Object(U.a)(t, e), t;
+          return Object(B.a)(t, e), t;
         })(F.a),
         H = (function (e) {
           function t(e) {
@@ -45658,23 +45709,23 @@
               d = void 0 === p ? "" : p;
             return (
               (a.warning = o),
-              n && (a.knowMore = new B.a(n)),
+              n && (a.knowMore = new x.a(n)),
               (a.widgetClass = c),
               (a.expandMore = u),
               (a.hoverComponent = d),
               a
             );
           }
-          return Object(U.a)(t, e), t;
+          return Object(B.a)(t, e), t;
         })(F.a),
-        Y = a(912),
+        Y = a(919),
         Q = a(16),
-        K = a(425),
+        K = a(426),
         q = a(100),
-        J = a(173),
-        X = a(465),
+        J = a(174),
+        X = a(466),
         z = a(23),
-        Z = a(516);
+        Z = a(517);
       a.d(t, "a", function () {
         return $;
       }),
@@ -45702,16 +45753,16 @@
                 var t = Object(z.a)(navigator.userAgent),
                   a = m.a[t][e],
                   r = b[t][e];
-                return a ? new w.a(a) : r ? new Z.a(r) : new w.h(i[e]);
+                return a ? new L.a(a) : r ? new Z.a(r) : new L.h(i[e]);
               })(e);
             case u.d.HEADER:
-              return new w.e(_[e]);
+              return new L.e(_[e]);
             case u.d.BUTTON:
-              return new w.b(X.a[a][e]);
+              return new L.b(X.a[a][e]);
             case u.d.STATIC:
               return new K.a(o[e]);
             case u.d.DESKTOP_HEADER:
-              return new w.c(A[e]);
+              return new L.c(A[e]);
             default:
               throw new Q.b("Entity key : ".concat(e));
           }
@@ -45853,7 +45904,7 @@
         o = a(3),
         l = a(83),
         c = a(10),
-        s = a(209),
+        s = a(210),
         u = a(48),
         p = a(8),
         d = a(21),
@@ -45861,7 +45912,7 @@
         f = a(70),
         b = a(55),
         y = a(12),
-        g = a(233),
+        g = a(234),
         v = a(38);
       a.d(t, "a", function () {
         return O;
@@ -45959,15 +46010,15 @@
                 C,
                 I,
                 N,
-                L,
                 w,
+                L,
                 R,
                 j,
                 k,
                 D,
-                U,
                 B,
                 x,
+                U,
                 F,
                 M,
                 W,
@@ -46027,14 +46078,14 @@
                         (C = h.suspiciousFields),
                         (I = h.propertyTypeLabel),
                         (N = h.screeningSource),
-                        (L = h.source),
-                        (w = h.productType),
+                        (w = h.source),
+                        (L = h.productType),
                         (R = h.postedAsLabel),
                         (j = h.verified),
                         (k = (j = void 0 === j ? {} : j).status),
                         (D = h.redirectionUrl),
-                        (U = h.specification.suitableForBusinessTypes),
-                        (B = b.userDetails),
+                        (B = h.specification.suitableForBusinessTypes),
+                        (x = b.userDetails),
                         "D" !== P || i)
                       ) {
                         e.next = 18;
@@ -46045,11 +46096,11 @@
                       return (e.next = 20), Object(u.a)(b.listing);
                     case 20:
                       if (
-                        ((x = e.sent),
-                        (F = x.values),
-                        (M = x.photoUpload),
-                        (W = x.premiumVersion),
-                        (V = x.TopUsp),
+                        ((U = e.sent),
+                        (F = U.values),
+                        (M = U.photoUpload),
+                        (W = U.premiumVersion),
+                        (V = U.TopUsp),
                         b.listing &&
                           b.listing.lockFields &&
                           s.a.setLockedFields(E, !1, "screening" === l && F),
@@ -46071,8 +46122,8 @@
                         (q = {
                           propertyTypeLabel: I,
                           photoScreening: "FROM_PHOTO_SCREENING" === N,
-                          source: L,
-                          productType: w,
+                          source: w,
+                          productType: L,
                           postedAsLabel: R,
                           redirectionUrl: D,
                           isListingVerified: "Y" === k,
@@ -46092,7 +46143,7 @@
                           (q = Object(o.a)({}, q, { beforePreLease: !0 })),
                         !r ||
                           !Object(v.a)(te) ||
-                          (U && 0 !== U.length) ||
+                          (B && 0 !== B.length) ||
                           (q = Object(o.a)({}, q, { isOldShopsProperty: !0 })),
                         e.abrupt("return", {
                           values: F,
@@ -46100,7 +46151,7 @@
                           suspiciousFields: A(C, K),
                           completionScore: b.listing.qualityScore,
                           photoUpload: M,
-                          userDetails: B,
+                          userDetails: x,
                           childPropData: { propId: _ },
                           parentPropData: { propId: O },
                           additionalData: q,
@@ -46124,7 +46175,7 @@
       "use strict";
       var r = a(0),
         n = a.n(r),
-        i = a(515),
+        i = a(516),
         o = a.n(i);
       t.a = function (e) {
         var t = e.matchingText,
@@ -46178,8 +46229,8 @@
       a.d(t, "a", function () {
         return i;
       });
-      var r = a(138),
-        n = a(362),
+      var r = a(139),
+        n = a(363),
         i = function (e) {
           return new n.a(
             function (t, a) {
@@ -46190,122 +46241,6 @@
             "UPDATE_INPUT_VALUE_".concat(e),
             !1
           );
-        };
-    },
-    function (e, t, a) {
-      "use strict";
-      var r = a(6),
-        n = a(417),
-        i = {
-          propAvail: "propertyAvailability",
-          localityName: "locality",
-          propName: "project",
-          min: "minArea",
-          max: "maxArea",
-        },
-        o = a(66),
-        l = a(149),
-        c = a(245),
-        s = a(246),
-        u = {
-          features: l.a,
-          furnishingAttributes: o.b,
-          otherFurnishings: o.a,
-          availability: function (e) {
-            return Object(c.a)(e).availability;
-          },
-          age: function (e) {
-            return Object(c.a)(e).age;
-          },
-          photos: s.a,
-          description: function (e) {
-            return e.values.description.value;
-          },
-        },
-        p = a(232),
-        d = a(26);
-      a.d(t, "b", function () {
-        return f;
-      }),
-        a.d(t, "a", function () {
-          return b;
-        });
-      var m = function (e) {
-          return (
-            !(!e || Object(n.isNullOrUndefined)(e)) &&
-            (Object(p.a)(e)
-              ? "" !== e.id
-              : !Object(n.isArray)(e) || e.length > 0)
-          );
-        },
-        f = function (e) {
-          if (!e.values) return 0;
-          var t = e.values,
-            a = t.propertyType.value,
-            n = t.preference.value;
-          if (a && n) {
-            var o = d.a.get().qualityScore["".concat(a)][n];
-            return Object.entries(o).reduce(function (a, n) {
-              var o = Object(r.a)(n, 2),
-                l = o[0],
-                c = o[1];
-              return (
-                a +
-                l
-                  .split("|")
-                  .map(function (e) {
-                    var t = e.replace(".value", "").split(".").pop();
-                    return i[t] || t;
-                  })
-                  .reduce(function (a, r) {
-                    var n = u[r],
-                      i = n ? n(e) : "";
-                    return (
-                      a ||
-                      (function (e, t, a) {
-                        switch (e) {
-                          case "transactType":
-                            return t;
-                          case "listingCode":
-                          case "productType":
-                            return a.propertyView && a.propertyView.propId
-                              ? t
-                              : 0;
-                          case "havePhoto":
-                            return u.photos(a).filter(function (e) {
-                              return !e.markForDelete;
-                            }).length > 0
-                              ? t
-                              : 0;
-                          default:
-                            return 0;
-                        }
-                      })(r, c, e) ||
-                      (m(i) ? b(e.values, c) : 0) ||
-                      (t[r] && m(t[r].value) ? b(e.values, c) : 0)
-                    );
-                  }, 0)
-              );
-            }, 0);
-          }
-          return 0;
-        },
-        b = function (e, t) {
-          if (Object(n.isArray)(t)) {
-            var a = t.find(function (t) {
-              var a = Object(r.a)(Object.entries(t.fieldsData)[0], 2),
-                i = a[0],
-                o = a[1];
-              i = i.replace(".value", "").split(".").pop();
-              var l =
-                e[i] &&
-                !Object(n.isNullOrUndefined)(e[i].value) &&
-                o.includes("".concat(e[i].value));
-              return "E" === t.operation ? l : !l;
-            });
-            return a ? a.weight : 0;
-          }
-          return t;
         };
     },
     function (e, t, a) {
@@ -46467,18 +46402,134 @@
     },
     function (e, t, a) {
       "use strict";
+      var r = a(6),
+        n = a(418),
+        i = {
+          propAvail: "propertyAvailability",
+          localityName: "locality",
+          propName: "project",
+          min: "minArea",
+          max: "maxArea",
+        },
+        o = a(66),
+        l = a(150),
+        c = a(246),
+        s = a(247),
+        u = {
+          features: l.a,
+          furnishingAttributes: o.b,
+          otherFurnishings: o.a,
+          availability: function (e) {
+            return Object(c.a)(e).availability;
+          },
+          age: function (e) {
+            return Object(c.a)(e).age;
+          },
+          photos: s.a,
+          description: function (e) {
+            return e.values.description.value;
+          },
+        },
+        p = a(233),
+        d = a(27);
+      a.d(t, "b", function () {
+        return f;
+      }),
+        a.d(t, "a", function () {
+          return b;
+        });
+      var m = function (e) {
+          return (
+            !(!e || Object(n.isNullOrUndefined)(e)) &&
+            (Object(p.a)(e)
+              ? "" !== e.id
+              : !Object(n.isArray)(e) || e.length > 0)
+          );
+        },
+        f = function (e) {
+          if (!e.values) return 0;
+          var t = e.values,
+            a = t.propertyType.value,
+            n = t.preference.value;
+          if (a && n) {
+            var o = d.a.get().qualityScore["".concat(a)][n];
+            return Object.entries(o).reduce(function (a, n) {
+              var o = Object(r.a)(n, 2),
+                l = o[0],
+                c = o[1];
+              return (
+                a +
+                l
+                  .split("|")
+                  .map(function (e) {
+                    var t = e.replace(".value", "").split(".").pop();
+                    return i[t] || t;
+                  })
+                  .reduce(function (a, r) {
+                    var n = u[r],
+                      i = n ? n(e) : "";
+                    return (
+                      a ||
+                      (function (e, t, a) {
+                        switch (e) {
+                          case "transactType":
+                            return t;
+                          case "listingCode":
+                          case "productType":
+                            return a.propertyView && a.propertyView.propId
+                              ? t
+                              : 0;
+                          case "havePhoto":
+                            return u.photos(a).filter(function (e) {
+                              return !e.markForDelete;
+                            }).length > 0
+                              ? t
+                              : 0;
+                          default:
+                            return 0;
+                        }
+                      })(r, c, e) ||
+                      (m(i) ? b(e.values, c) : 0) ||
+                      (t[r] && m(t[r].value) ? b(e.values, c) : 0)
+                    );
+                  }, 0)
+              );
+            }, 0);
+          }
+          return 0;
+        },
+        b = function (e, t) {
+          if (Object(n.isArray)(t)) {
+            var a = t.find(function (t) {
+              var a = Object(r.a)(Object.entries(t.fieldsData)[0], 2),
+                i = a[0],
+                o = a[1];
+              i = i.replace(".value", "").split(".").pop();
+              var l =
+                e[i] &&
+                !Object(n.isNullOrUndefined)(e[i].value) &&
+                o.includes("".concat(e[i].value));
+              return "E" === t.operation ? l : !l;
+            });
+            return a ? a.weight : 0;
+          }
+          return t;
+        };
+    },
+    function (e, t, a) {
+      "use strict";
       var r = a(0),
         n = a.n(r),
         i = a(19),
         o = a(34),
         l = a(32),
-        c = a(27),
+        c = a(28),
         s = a(33),
         u = a(11),
-        p = a(427),
+        p = a(428),
         d = a.n(p),
-        m = a(500),
-        f = a(532),
+        m = a(501),
+        f = a(533),
         b = a.n(f),
         y = function () {
           var e = Object(r.useCallback)(function () {
@@ -46505,10 +46556,10 @@
             n.a.createElement("i", { class: "iconS_whatsapp_16 icon_whatsapp" })
           );
         },
-        g = a(359),
-        v = a(358),
+        g = a(360),
+        v = a(359),
         h =
-          (a(533),
+          (a(534),
           (function (e) {
             function t(e) {
               var a;
@@ -46702,7 +46753,7 @@
           };
         })(h),
         _ = a(79),
-        A = (a(45), a(484));
+        A = (a(45), a(485));
       a.d(t, "a", function () {
         return T;
       });
@@ -46736,11 +46787,11 @@
         n = a(19),
         i = a(34),
         o = a(32),
-        l = a(27),
+        l = a(28),
         c = a(33),
         s = a(0),
         u = a.n(s),
-        p = a(510),
+        p = a(511),
         d = a.n(p),
         m = {
           ToggleHTML: function (e, t, a) {
@@ -46864,11 +46915,11 @@
       var r = a(6),
         n = a(0),
         i = a.n(n),
-        o = a(506),
+        o = a(507),
         l = a.n(o),
-        c = a(378),
-        s = a(423),
-        u = a(210),
+        c = a(379),
+        s = a(424),
+        u = a(211),
         p = function (e) {
           var t = e.options,
             a = e.selectedId,
@@ -46895,10 +46946,10 @@
               I.map(function (e) {
                 return e.id;
               }).indexOf(a) > -1,
-            L = Object(n.useState)(N),
-            w = Object(r.a)(L, 2),
-            R = w[0],
-            j = w[1];
+            w = Object(n.useState)(N),
+            L = Object(r.a)(w, 2),
+            R = L[0],
+            j = L[1];
           R && ((C = t), (I = [])),
             Object(n.useEffect)(
               function () {
@@ -47114,7 +47165,7 @@
       });
       var r = a(0),
         n = a.n(r),
-        i = a(424),
+        i = a(425),
         o = a.n(i),
         l = function (e) {
           var t = e.close,
@@ -47189,7 +47240,7 @@
       });
       var r = a(19),
         n = a(32),
-        i = a(27),
+        i = a(28),
         o = a(33),
         l = (function (e) {
           function t(e) {
@@ -47220,8 +47271,8 @@
               C = void 0 !== S && S,
               I = e.buttonIconClass,
               N = void 0 === I ? "" : I,
-              L = e.disabled,
-              w = void 0 !== L && L;
+              w = e.disabled,
+              L = void 0 !== w && w;
             return (
               (a.visible = C),
               (a.viewType = l),
@@ -47236,12 +47287,12 @@
               (a.buttonClass = T),
               (a.actionFallbacks = P),
               (a.buttonIconClass = N),
-              (a.disabled = w),
+              (a.disabled = L),
               a
             );
           }
           return Object(o.a)(t, e), t;
-        })(a(371).a);
+        })(a(372).a);
     },
     function (e, t, a) {
       "use strict";
@@ -47249,11 +47300,11 @@
         n = a(19),
         i = a(34),
         o = a(32),
-        l = a(27),
+        l = a(28),
         c = a(33),
         s = a(0),
         u = a.n(s),
-        p = a(521),
+        p = a(522),
         d = a.n(p),
         m = (function (e) {
           function t(e) {
@@ -47475,14 +47526,14 @@
       var r = a(19),
         n = a(34),
         i = a(32),
-        o = a(27),
+        o = a(28),
         l = a(33),
         c = a(0),
         s = a.n(c),
         u = a(11),
-        p = a(370),
+        p = a(371),
         d = a(31),
-        m = a(552),
+        m = a(553),
         f = a.n(m),
         b = (function (e) {
           function t() {
@@ -47593,18 +47644,18 @@
         i = a(19),
         o = a(34),
         l = a(32),
-        c = a(27),
+        c = a(28),
         s = a(33),
         u = a(0),
         p = a.n(u),
         d = a(11),
-        m = a(379),
+        m = a(380),
         f = a.n(m),
-        b = a(366),
-        y = a(415),
+        b = a(367),
+        y = a(416),
         g = a(31),
-        v = a(380),
-        h = a(437),
+        v = a(381),
+        h = a(438),
         E = (function (e) {
           function t() {
             var e, a;
@@ -47687,7 +47738,7 @@
                           .concat(f.a.loginformContainer, " ")
                           .concat(f.a.reraDetailsContainer),
                       },
-                      A.registrationStatus === L &&
+                      A.registrationStatus === w &&
                         p.a.createElement(
                           "div",
                           null,
@@ -47877,18 +47928,18 @@
           }
         )(E),
         A = a(59),
-        T = a(449),
-        O = a(398),
-        P = a(411),
-        S = a(448),
-        C = (a(501), a(421)),
-        I = a(212),
+        T = a(450),
+        O = a(399),
+        P = a(412),
+        S = a(449),
+        C = (a(502), a(422)),
+        I = a(213),
         N = a(45);
       a.d(t, "a", function () {
-        return L;
+        return w;
       });
-      var L = "REGISTERED",
-        w = (function (e) {
+      var w = "REGISTERED",
+        L = (function (e) {
           function t(e) {
             var a;
             return (
@@ -47917,7 +47968,7 @@
                 if (
                   (c.registrationStatus ||
                     ((y.registrationStatus = "Select your RERA status"), h++),
-                  c.registrationStatus === L
+                  c.registrationStatus === w
                     ? void 0 === c.rera
                       ? ((y.registrationNumber =
                           "Enter your RERA registeration number"),
@@ -47952,7 +48003,7 @@
                           ((y.grantDate =
                             "Grant Date cannot be after the current date"),
                           h++))
-                    : c.registrationStatus !== L &&
+                    : c.registrationStatus !== w &&
                       (void 0 === c.rera
                         ? ((y.registrationType = "Select license type"), h++)
                         : (c.rera.registrationType &&
@@ -48057,7 +48108,7 @@
                     _.contactDto &&
                       _.contactDto.mobile1 &&
                       delete _.contactDto.mobile1,
-                    c.registrationStatus === L)
+                    c.registrationStatus === w)
                   ) {
                     var A = Object(n.a)(
                       {
@@ -48106,8 +48157,8 @@
               (a.getReraStatus = function (e) {
                 switch (e) {
                   case 1:
-                    console.log(L),
-                      a.props.updateUserState("registrationStatus", "", L),
+                    console.log(w),
+                      a.props.updateUserState("registrationStatus", "", w),
                       a.props.updateUserStateError(
                         "rera",
                         "registrationStatus",
@@ -48149,7 +48200,7 @@
                   t = (void 0 === e ? {} : e).userData,
                   r = (void 0 === t ? {} : t).input,
                   n = void 0 === r ? {} : r;
-                return n.registrationStatus === L
+                return n.registrationStatus === w
                   ? 1
                   : "APPLIED_FOR" === n.registrationStatus
                   ? 2
@@ -48268,7 +48319,7 @@
                         p.a.createElement(
                           "div",
                           null,
-                          l.registrationStatus === L &&
+                          l.registrationStatus === w &&
                             p.a.createElement(
                               "div",
                               null,
@@ -48421,18 +48472,18 @@
             },
           };
         }
-      )(w);
+      )(L);
     },
     function (e, t, a) {
       "use strict";
       var r = a(0),
         n = a.n(r),
-        i = a(525),
+        i = a(526),
         o = a.n(i),
         l = a(79),
-        c = (a(364), a(51)),
-        s = a(28),
-        u = a(477),
+        c = (a(365), a(51)),
+        s = a(29),
+        u = a(478),
         p = a(8);
       t.a = function (e) {
         var t = e.showBackButton,
@@ -48547,9 +48598,9 @@
       var r = a(6),
         n = a(0),
         i = a.n(n),
-        o = a(368),
-        l = a(395),
-        c = a(505),
+        o = a(369),
+        l = a(396),
+        c = a(506),
         s = a.n(c),
         u = function (e) {
           var t = e.label,
@@ -48660,7 +48711,7 @@
       });
       var r = a(19),
         n = a(32),
-        i = a(27),
+        i = a(28),
         o = a(33),
         l = (function (e) {
           function t(e) {
@@ -48696,7 +48747,7 @@
             );
           }
           return Object(o.a)(t, e), t;
-        })(a(371).a);
+        })(a(372).a);
     },
     function (e, t, a) {
       "use strict";
@@ -48705,12 +48756,12 @@
       });
       var r = a(0),
         n = a.n(r),
-        i = a(527),
+        i = a(528),
         o = a.n(i),
-        l = a(528),
+        l = a(529),
         c = a.n(l),
-        s = a(481),
-        u = a(529),
+        s = a(482),
+        u = a(530),
         p = a.n(u);
       function d(e) {
         var t = e.propId,
@@ -48803,14 +48854,14 @@
       var r = a(19),
         n = a(34),
         i = a(32),
-        o = a(27),
+        o = a(28),
         l = a(33),
         c = a(0),
         s = a.n(c),
         u = a(11),
         p = a(31),
-        d = a(380),
-        m = a(154),
+        d = a(381),
+        m = a(155),
         f = (function (e) {
           function t() {
             var e, a;
@@ -48937,8 +48988,8 @@
         o = a(6),
         l = a(0),
         c = a.n(l),
-        s = a(404),
-        u = a(549),
+        s = a(405),
+        u = a(550),
         p = a.n(u),
         d = function (e) {
           var t = e.activeSuggestion,
@@ -48983,7 +49034,7 @@
           );
         },
         m = a(55),
-        f = a(550),
+        f = a(551),
         b = a.n(f),
         y = function (e) {
           var t = e.inputBehaviour,
@@ -49046,9 +49097,9 @@
             });
           }),
           a(3),
-          a(551)),
+          a(552)),
         v = a.n(g),
-        h = (a(1), a(368));
+        h = (a(1), a(369));
       t.a = function (e) {
         var t = e.id,
           a = e.value,
@@ -49070,13 +49121,13 @@
           C = S[0],
           I = S[1],
           N = Object(l.useState)(!1),
-          L = Object(o.a)(N, 2),
-          w = L[0],
-          R = L[1],
+          w = Object(o.a)(N, 2),
+          L = w[0],
+          R = w[1],
           j = Object(l.useState)(0),
           k = Object(o.a)(j, 2),
           D = k[0],
-          U =
+          B =
             (k[1],
             Object(m.debounce)(
               (function () {
@@ -49103,7 +49154,7 @@
               })(),
               b
             )),
-          B = Object(l.useCallback)(
+          x = Object(l.useCallback)(
             function (e, t) {
               R(!1), I([]), T({ id: e, label: t });
             },
@@ -49120,7 +49171,7 @@
               A(e);
               var t = u.minLength;
               if (e.length < t) R(!1);
-              else if (_) U(e);
+              else if (_) B(e);
               else {
                 var a = g.filter(function (t) {
                   return t.label.toLowerCase().indexOf(e.toLowerCase()) > -1;
@@ -49133,12 +49184,12 @@
             },
             errorMessage: E,
           }),
-          w
+          L
             ? c.a.createElement(d, {
                 activeSuggestion: D,
                 suggestions: C,
                 suggestionQuery: r,
-                onSelect: B,
+                onSelect: x,
               })
             : null
         );
@@ -49311,9 +49362,9 @@
         n = a(6),
         i = a(0),
         o = a.n(i),
-        l = a(514),
+        l = a(515),
         c = a.n(l),
-        s = a(165),
+        s = a(166),
         u = a.n(s),
         p = a(23),
         d = function () {
@@ -49539,7 +49590,7 @@
       a.d(t, "a", function () {
         return n;
       });
-      var r = a(407),
+      var r = a(409),
         n = function (e, t) {
           return t({ type: "SET_COMPLETION_SCORE", payload: Object(r.b)(e) });
         };
@@ -49549,7 +49600,7 @@
       var r = a(19),
         n = a(34),
         i = a(32),
-        o = a(27),
+        o = a(28),
         l = a(33),
         c = a(0),
         s = a.n(c),
@@ -49700,9 +49751,9 @@
       var r = a(6),
         n = a(0),
         i = a.n(n),
-        o = a(547),
+        o = a(548),
         l = a.n(o),
-        c = a(370);
+        c = a(371);
       t.a = function (e) {
         var t = Object(n.useState)({ type: "password" }),
           a = Object(r.a)(t, 2),
@@ -49736,12 +49787,12 @@
       var r = a(19),
         n = a(34),
         i = a(32),
-        o = a(27),
-        l = a(125),
+        o = a(28),
+        l = a(126),
         c = a(33),
         s = a(0),
         u = a.n(s),
-        p = a(433),
+        p = a(434),
         d = a(90),
         m = a(11),
         f = a(31),
@@ -49889,10 +49940,10 @@
       var i = {};
       a.r(i),
         a.d(i, "PrimaryDetailsButton", function () {
-          return B;
+          return x;
         }),
         a.d(i, "LocationDetailsButton", function () {
-          return x;
+          return U;
         }),
         a.d(i, "BasicDetailsButton", function () {
           return F;
@@ -49932,7 +49983,7 @@
           return I;
         }),
         a.d(l, "static", function () {
-          return L;
+          return w;
         }),
         a.d(l, "button", function () {
           return K;
@@ -49941,14 +49992,14 @@
           return J;
         });
       var c = a(20),
-        s = a(213),
-        u = a(365),
-        p = a(362),
-        d = a(369),
-        m = a(440),
-        f = a(499),
+        s = a(214),
+        u = a(366),
+        p = a(363),
+        d = a(370),
+        m = a(441),
+        f = a(500),
         b = a(23),
-        y = a(406),
+        y = a(407),
         g = function (e) {
           var t = s.a[Object(b.a)(navigator.userAgent)],
             a = t[e.id]
@@ -49970,7 +50021,7 @@
         },
         v = a(6),
         h = a(1),
-        E = a(157),
+        E = a(158),
         _ = function (e) {
           return "PreLeasedDetails" === e
             ? "Please enter valid values"
@@ -50116,7 +50167,7 @@
           return a.concat(r);
         },
         N = [new p.a(Object(u.a)("subHeaderText"), "DUMMY")],
-        L = function (e) {
+        w = function (e) {
           var t = s.a[Object(b.a)(navigator.userAgent)],
             a = t[e.id]
               ? t[e.id].map(function (t) {
@@ -50129,7 +50180,7 @@
             r = n[e.id] || [];
           return [].concat(Object(c.a)(a), Object(c.a)(r));
         },
-        w = function (e, t) {
+        L = function (e, t) {
           if (e.userState.userData && e.userState.userData.user) {
             var a = e.userState.userData.user;
             Object(b.a)(navigator.userAgent);
@@ -50141,10 +50192,10 @@
           }
         },
         R = a(80),
-        j = a(377),
-        k = a(132),
-        D = a(121),
-        U = function (e) {
+        j = a(378),
+        k = a(133),
+        D = a(122),
+        B = function (e) {
           return Object.keys(R)
             .concat(Object.keys(j.a.value))
             .map(function (e) {
@@ -50169,12 +50220,12 @@
                 })
             );
         },
-        B = U("PrimaryDetailsButton"),
-        x = U("LocationDetailsButton"),
-        F = U("BasicDetailsButton"),
-        M = U("PhotoDetailsButton"),
-        W = U("FeaturePricingDetailsButton"),
-        V = U("UspamenitiesButton"),
+        x = B("PrimaryDetailsButton"),
+        U = B("LocationDetailsButton"),
+        F = B("BasicDetailsButton"),
+        M = B("PhotoDetailsButton"),
+        W = B("FeaturePricingDetailsButton"),
+        V = B("UspamenitiesButton"),
         G = Object.keys(R)
           .concat(Object.keys(j.a.value))
           .map(function (e) {
@@ -50208,14 +50259,14 @@
             : null,
         K = function (e) {
           var t = (Q && Q.pathname.includes("/editproperty") && i[e.id]) || [],
-            a = (e.id = [new p.a(w, "only for initializing")]);
+            a = (e.id = [new p.a(L, "only for initializing")]);
           return [].concat(Object(c.a)(t), a);
         },
         q = [new p.a(Object(u.a)("PrimaryDetailsHeader"), "DUMMY_ACTION")],
         J = function (e) {
           return o[e.id] || [];
         },
-        X = a(389);
+        X = a(390);
       a(16);
       a.d(t, "a", function () {
         return z;
@@ -50247,11 +50298,11 @@
         o = a(6),
         l = a(0),
         c = a.n(l),
-        s = a(553),
+        s = a(554),
         u = a.n(s),
         p = a(51),
         d = (a(46), a(2)),
-        m = a(28),
+        m = a(29),
         f = {
           primaryDetails: {},
           location:
@@ -50272,13 +50323,13 @@
             i),
           coworkingRequest: Object(d.a)({}, m.a.POST, ["SectionInfo"]),
         },
-        b = a(431),
+        b = a(432),
         y = a.n(b),
-        g = a(554),
+        g = a(555),
         v = a.n(g),
-        h = a(555),
+        h = a(556),
         E = a.n(h),
-        _ = a(488),
+        _ = a(489),
         A = a.n(_),
         T = {
           location: {
@@ -50333,13 +50384,13 @@
             )
           );
         },
-        P = a(489),
+        P = a(490),
         S = a(3),
         C = a(11),
-        I = a(557),
+        I = a(558),
         N = a.n(I),
-        L = a(400),
-        w = a(90),
+        w = a(401),
+        L = a(90),
         R = [
           { id: "USER", label: "User Profile" },
           { id: "PROPERTY", label: "Property Profile" },
@@ -50407,7 +50458,7 @@
                 m = (d = void 0 === d ? {} : d).mobile1,
                 f = d.mobile2,
                 b = d.mobile3,
-                y = w.a.filter(function (e) {
+                y = L.a.filter(function (e) {
                   var t = e.id;
                   return +s === +t;
                 })[0];
@@ -50425,7 +50476,7 @@
                   [
                     { label: "Paid / Free", data: "F" === o ? "Free" : "Paid" },
                     { label: "Source", data: l },
-                    { label: "Mode", data: L.a[r].label },
+                    { label: "Mode", data: w.a[r].label },
                   ],
                   { label: "Property Type", data: n },
                   { label: "Class", data: i },
@@ -50476,13 +50527,13 @@
             )
           );
         }),
-        D = a(558),
-        U = a.n(D),
-        B = function () {
+        D = a(559),
+        B = a.n(D),
+        x = function () {
           return c.a.createElement(
             "div",
             { className: y.a.contentWrap },
-            c.a.createElement("img", { style: { width: "160px" }, src: U.a }),
+            c.a.createElement("img", { style: { width: "160px" }, src: B.a }),
             c.a.createElement(
               "div",
               {
@@ -50539,12 +50590,12 @@
             )
           );
         },
-        x = function (e) {
+        U = function (e) {
           switch (e) {
             case "SectionInfo":
               return O;
             case "PhotoDetailsInfo":
-              return B;
+              return x;
             case "NeedHelp":
               return P.a;
             case "UserPropertyInfo":
@@ -50572,8 +50623,8 @@
         );
         var d = Object(p.a)(),
           m = i && d && f[i] ? f[i][d] : [],
-          b = x("NeedHelp"),
-          y = x("UserPropertyInfo");
+          b = U("NeedHelp"),
+          y = U("UserPropertyInfo");
         return c.a.createElement(
           "div",
           { id: "rightSection", className: u.a.rightSection },
@@ -50584,7 +50635,7 @@
                 null,
                 m &&
                   m.map(function (e) {
-                    var t = x(e);
+                    var t = U(e);
                     return c.a.createElement(t, { activeUrl: i });
                   }),
                 c.a.createElement(b, null)
@@ -50597,15 +50648,15 @@
       var r = a(19),
         n = a(34),
         i = a(32),
-        o = a(27),
+        o = a(28),
         l = a(33),
         c = a(0),
         s = a.n(c),
-        u = a(379),
+        u = a(380),
         p = a.n(u),
-        d = (a(711), a(31)),
+        d = (a(712), a(31)),
         m = a(11),
-        f = a(428),
+        f = a(429),
         b = a.n(f),
         y = function (e) {
           return s.a.createElement(
@@ -50726,8 +50777,8 @@
             };
           }
         )(g),
-        h = a(415),
-        E = (a(433), a(90), a(398), a(445)),
+        h = a(416),
+        E = (a(434), a(90), a(399), a(446)),
         _ = (function (e) {
           function t() {
             var e, a;
@@ -50919,10 +50970,10 @@
         n = a(6),
         i = a(0),
         o = a.n(i),
-        l = a(502),
+        l = a(503),
         c = a.n(l),
-        s = a(366),
-        u = a(423),
+        s = a(367),
+        u = a(424),
         p = a(55),
         d = a(41),
         m = function (e) {
@@ -50953,10 +51004,10 @@
                 }),
                 v
               ).length > 0,
-            L = Object(i.useState)(N),
-            w = Object(n.a)(L, 2),
-            R = w[0],
-            j = w[1];
+            w = Object(i.useState)(N),
+            L = Object(n.a)(w, 2),
+            R = L[0],
+            j = L[1];
           R && ((C = m), (I = [])),
             Object(i.useEffect)(
               function () {
@@ -50980,12 +51031,12 @@
               },
               [j]
             ),
-            U = 1 === v.length && v.includes(d.a.NONE),
-            B = Object(i.useCallback)(
+            B = 1 === v.length && v.includes(d.a.NONE),
+            x = Object(i.useCallback)(
               function () {
-                !U && h([d.a.NONE]);
+                !B && h([d.a.NONE]);
               },
-              [U, h]
+              [B, h]
             );
           return o.a.createElement(
             "div",
@@ -51144,7 +51195,7 @@
                   default:
                     return "";
                 }
-              })(E, U, g, B, T),
+              })(E, B, g, x, T),
             I.length > 0 &&
               o.a.createElement(
                 "div",
@@ -51174,10 +51225,10 @@
       });
       var r = a(0),
         n = a.n(r),
-        i = a(513),
+        i = a(514),
         o = a.n(i),
-        l = a(210),
-        c = a(436),
+        l = a(211),
+        c = a(437),
         s = a(55),
         u = function (e) {
           var t = e.error,
@@ -51281,11 +51332,11 @@
         l = a(6),
         c = a(0),
         s = a.n(c),
-        u = a(438),
+        u = a(439),
         p = a.n(u),
         d = a(23),
         m = a(99),
-        f = a(412),
+        f = a(413),
         b = function (e) {
           e.id;
           var t = e.selectedIds,
@@ -51366,7 +51417,7 @@
             },
             [A]
           );
-          var L = function (e) {
+          var w = function (e) {
             var a = Object(r.a)(t);
             a.indexOf(e) > -1
               ? a.splice(a.indexOf(e), 1)
@@ -51445,11 +51496,11 @@
             ),
             s.a.createElement(
               m.a,
-              { ref: T, closeOnSelect: !1, selectOption: L },
+              { ref: T, closeOnSelect: !1, selectOption: w },
               s.a.createElement(f.a, {
                 options: a,
                 selectedId: t,
-                selectOption: L,
+                selectOption: w,
                 listLabel: E,
                 multiSelect: !0,
                 listSubLabel: _,
@@ -51465,7 +51516,7 @@
                     {
                       className: "".concat(p.a.checkbox_wrapper),
                       onClick: function (t) {
-                        L(e.id);
+                        w(e.id);
                       },
                     },
                     s.a.createElement(
@@ -51645,7 +51696,7 @@
       var r = a(19),
         n = a(34),
         i = a(32),
-        o = a(27),
+        o = a(28),
         l = a(33),
         c = a(0),
         s = a.n(c),
@@ -51698,8 +51749,8 @@
         l = a(0),
         c = a(11),
         s = a(79),
-        u = a(560),
-        p = a(652),
+        u = a(561),
+        p = a(653),
         d = function (e, t) {
           var a = Object(c.c)(),
             r = Object(s.g)(),
@@ -51838,7 +51889,7 @@
           return i.d;
         });
       var n = a(467),
-        i = a(390),
+        i = a(391),
         o = a(1),
         l = {
           type: o.e.BUTTON,
@@ -51988,107 +52039,7 @@
     function (e, t, a) {
       "use strict";
       a.r(t);
-      var r = {
-          id: "PrimaryDetailsHeader",
-          type: "desktopHeader",
-          parent: "PrimayDetails",
-          showBackButton: !1,
-          headerLabel: "Fill out these Basic Details",
-          headerSubLabel: "",
-        },
-        n = {
-          id: "LocationHeader",
-          type: "desktopHeader",
-          parent: "LocationDetails",
-          showBackButton: !0,
-          headerLabel: "Where is your property located?",
-          headerSubLabel:
-            "An accurate location helps you connect with the right buyers",
-          backAction: "/primarydetails",
-        },
-        i = {
-          id: "BasicDetailsHeader",
-          type: "desktopHeader",
-          parent: "BasicDetails",
-          showBackButton: !0,
-          headerLabel: "Tell us about your property",
-          headerSubLabel: "",
-          backAction: "/location",
-        },
-        o = {
-          id: "PhotoUploadHeader",
-          type: "desktopHeader",
-          parent: "PhotoDetails",
-          showBackButton: !0,
-          headerLabel: "Add photos of your property",
-          headerSubLabel:
-            "A picture is worth a thousand words. 87% of buyers look at photos before buying",
-          backAction: "/basicdetails",
-          optionalText: "(Optional)",
-        },
-        l = {
-          id: "FeaturePricingHeader",
-          type: "desktopHeader",
-          parent: "FeaturePricing",
-          showBackButton: !0,
-          headerLabel: "Add pricing and details...",
-          backAction: "/photodetails",
-        },
-        c = {
-          id: "UspAmenitiesHeader",
-          type: "desktopHeader",
-          parent: "UspAmenities",
-          showBackButton: !0,
-          headerLabel: "Add amenities/unique features",
-          headerSubLabel: "All fields on this page are optional",
-          backAction: "/featurepricing",
-        },
-        s = a(1),
-        u = {
-          id: "PostForRentHeader",
-          type: s.d.DESKTOP_HEADER,
-          parent: "PostForRent",
-          showBackButton: !1,
-          headerLabel: "Just 1 step and you\u2019re done",
-          headerSubLabel: "",
-        },
-        p = {
-          id: "PostForSaleHeader",
-          type: s.d.DESKTOP_HEADER,
-          parent: "PostForSale",
-          showBackButton: !1,
-          headerLabel: "Just 1 step and you\u2019re done",
-          headerSubLabel: "",
-        };
-      a.d(t, "PrimaryDetailsHeader", function () {
-        return r;
-      }),
-        a.d(t, "LocationHeader", function () {
-          return n;
-        }),
-        a.d(t, "BasicDetailsHeader", function () {
-          return i;
-        }),
-        a.d(t, "PhotoUploadHeader", function () {
-          return o;
-        }),
-        a.d(t, "FeaturePricingHeader", function () {
-          return l;
-        }),
-        a.d(t, "UspAmenitiesHeader", function () {
-          return c;
-        }),
-        a.d(t, "PostForRentHeader", function () {
-          return u;
-        }),
-        a.d(t, "PostForSaleHeader", function () {
-          return p;
-        });
-    },
-    function (e, t, a) {
-      "use strict";
-      a.r(t);
-      var r = a(390),
+      var r = a(391),
         n = a(1),
         i = {
           mandatory: !1,
@@ -52211,8 +52162,8 @@
           buttontype: "refreshDuplicateListing",
           action: "",
         },
-        m = a(382),
-        f = a(418);
+        m = a(383),
+        f = a(419);
       a.d(t, "PostForSaleButton", function () {
         return r.c;
       }),
@@ -52253,7 +52204,106 @@
           return f.a;
         });
     },
-    ,
+    function (e, t, a) {
+      "use strict";
+      a.r(t);
+      var r = {
+          id: "PrimaryDetailsHeader",
+          type: "desktopHeader",
+          parent: "PrimayDetails",
+          showBackButton: !1,
+          headerLabel: "Fill out these Basic Details",
+          headerSubLabel: "",
+        },
+        n = {
+          id: "LocationHeader",
+          type: "desktopHeader",
+          parent: "LocationDetails",
+          showBackButton: !0,
+          headerLabel: "Where is your property located?",
+          headerSubLabel:
+            "An accurate location helps you connect with the right buyers",
+          backAction: "/primarydetails",
+        },
+        i = {
+          id: "BasicDetailsHeader",
+          type: "desktopHeader",
+          parent: "BasicDetails",
+          showBackButton: !0,
+          headerLabel: "Tell us about your property",
+          headerSubLabel: "",
+          backAction: "/location",
+        },
+        o = {
+          id: "PhotoUploadHeader",
+          type: "desktopHeader",
+          parent: "PhotoDetails",
+          showBackButton: !0,
+          headerLabel: "Add photos of your property",
+          headerSubLabel:
+            "A picture is worth a thousand words. 87% of buyers look at photos before buying",
+          backAction: "/basicdetails",
+          optionalText: "(Optional)",
+        },
+        l = {
+          id: "FeaturePricingHeader",
+          type: "desktopHeader",
+          parent: "FeaturePricing",
+          showBackButton: !0,
+          headerLabel: "Add pricing and details...",
+          backAction: "/photodetails",
+        },
+        c = {
+          id: "UspAmenitiesHeader",
+          type: "desktopHeader",
+          parent: "UspAmenities",
+          showBackButton: !0,
+          headerLabel: "Add amenities/unique features",
+          headerSubLabel: "All fields on this page are optional",
+          backAction: "/featurepricing",
+        },
+        s = a(1),
+        u = {
+          id: "PostForRentHeader",
+          type: s.d.DESKTOP_HEADER,
+          parent: "PostForRent",
+          showBackButton: !1,
+          headerLabel: "Just 1 step and you\u2019re done",
+          headerSubLabel: "",
+        },
+        p = {
+          id: "PostForSaleHeader",
+          type: s.d.DESKTOP_HEADER,
+          parent: "PostForSale",
+          showBackButton: !1,
+          headerLabel: "Just 1 step and you\u2019re done",
+          headerSubLabel: "",
+        };
+      a.d(t, "PrimaryDetailsHeader", function () {
+        return r;
+      }),
+        a.d(t, "LocationHeader", function () {
+          return n;
+        }),
+        a.d(t, "BasicDetailsHeader", function () {
+          return i;
+        }),
+        a.d(t, "PhotoUploadHeader", function () {
+          return o;
+        }),
+        a.d(t, "FeaturePricingHeader", function () {
+          return l;
+        }),
+        a.d(t, "UspAmenitiesHeader", function () {
+          return c;
+        }),
+        a.d(t, "PostForRentHeader", function () {
+          return u;
+        }),
+        a.d(t, "PostForSaleHeader", function () {
+          return p;
+        });
+    },
     ,
     function (e, t, a) {
       "use strict";
@@ -52262,14 +52312,14 @@
         i = a(19),
         o = a(34),
         l = a(32),
-        c = a(27),
-        s = a(125),
+        c = a(28),
+        s = a(126),
         u = a(33),
         p = a(0),
         d = a.n(p),
-        m = a(522),
+        m = a(523),
         f = a.n(m),
-        b = a(523),
+        b = a(524),
         y = a.n(b),
         g = (function (e) {
           function t() {
@@ -52428,6 +52478,7 @@
         })(d.a.Component);
       t.a = v;
     },
+    ,
     function (e, t, a) {
       "use strict";
       a.d(t, "a", function () {
@@ -52438,8 +52489,8 @@
         i = a(80),
         o = a(14),
         l = a(23),
-        c = a(135),
-        s = a(136),
+        c = a(136),
+        s = a(137),
         u = function (e) {
           return function (t, a) {
             try {
@@ -52504,7 +52555,7 @@
       a.d(t, "a", function () {
         return n;
       });
-      var r = a(435),
+      var r = a(436),
         n = (new r.a(), new r.a());
     },
     function (e, t, a) {
@@ -52531,7 +52582,7 @@
         i = a(6),
         o = a(0),
         l = a.n(o),
-        c = a(364),
+        c = a(365),
         s = {},
         u = function (e) {
           s = e;
@@ -52579,10 +52630,10 @@
       a.d(t, "a", function () {
         return l;
       });
-      var r = a(400),
+      var r = a(401),
         n = a(12),
-        i = a(482),
-        o = a(442),
+        i = a(483),
+        o = a(443),
         l = function (e, t, a, l, c, s, u) {
           return u
             ? "It\u2019s done,your request is received"
@@ -52655,7 +52706,7 @@
       "use strict";
       var r = a(0),
         n = a.n(r),
-        i = a(556),
+        i = a(557),
         o = a.n(i);
       t.a = function () {
         return n.a.createElement(
@@ -52709,8 +52760,8 @@
     function (e, t, a) {
       "use strict";
       a.r(t);
-      var r = a(134),
-        n = a(362),
+      var r = a(135),
+        n = a(363),
         i = a(55),
         o = a(408),
         l = a(4),
@@ -52812,7 +52863,7 @@
         f = function (e) {
           return new n.a(m, "UPDATE_INPUT_VALUE_".concat(e), !1);
         },
-        b = a(454),
+        b = a(455),
         y = function (e) {
           return new n.a(
             function (e, t) {
@@ -52894,7 +52945,7 @@
           }, "UPDATE_INPUT_VALUE_resCom"),
         ],
         E = a(14),
-        _ = a(249),
+        _ = a(250),
         A = function (e) {
           return new n.a(function (e, t) {
             var a = e.values,
@@ -52997,16 +53048,16 @@
         C = [f("carpet"), S("carpet")],
         I = [f("builtup"), S("builtup")],
         N = [f("superBuiltup"), S("superBuiltup")],
-        L = [S("superBuiltup")],
-        w = [f("project")],
+        w = [S("superBuiltup")],
+        L = [f("project")],
         R = [f("locality")],
-        j = a(406),
+        j = a(407),
         k = [Object(j.a)("description")],
-        D = a(365),
-        U = [new n.a(Object(D.a)("hidePrice"), "UPDATE_ACCESS_SOURCE")],
-        B = [new n.a(Object(D.a)("priceType"), "UPDATE_ACCESS_SOURCE")],
-        x = [new n.a(Object(D.a)("verifyListing"), "UPDATE_ACCESS_SOURCE")],
-        F = a(224),
+        D = a(366),
+        B = [new n.a(Object(D.a)("hidePrice"), "UPDATE_ACCESS_SOURCE")],
+        x = [new n.a(Object(D.a)("priceType"), "UPDATE_ACCESS_SOURCE")],
+        U = [new n.a(Object(D.a)("verifyListing"), "UPDATE_ACCESS_SOURCE")],
+        F = a(225),
         M = [
           new n.a(
             function (e, t, a) {
@@ -53016,7 +53067,7 @@
             !1
           ),
         ],
-        W = a(225),
+        W = a(226),
         V = [
           new n.a(
             function (e, t, a) {
@@ -53035,7 +53086,7 @@
             !1
           ),
         ],
-        H = a(226),
+        H = a(227),
         Y = [
           new n.a(
             function (e, t, a) {
@@ -53054,7 +53105,7 @@
             !1
           ),
         ],
-        K = (a(138), a(243)),
+        K = (a(139), a(244)),
         q = function (e) {
           return new n.a(
             function (e, t) {
@@ -53081,7 +53132,7 @@
               t(Object(E.a)("hideExpectedAnnualReturns", { value: !1 }, !0));
           }, "UPDATE_INPUT_VALUE_expectedAnnualReturns"),
         ],
-        le = a(132),
+        le = a(133),
         ce = a(12),
         se = [
           new n.a(
@@ -53126,10 +53177,10 @@
           return N;
         }),
         a.d(t, "superArea", function () {
-          return L;
+          return w;
         }),
         a.d(t, "project", function () {
-          return w;
+          return L;
         }),
         a.d(t, "locality", function () {
           return R;
@@ -53138,13 +53189,13 @@
           return k;
         }),
         a.d(t, "hidePrice", function () {
-          return U;
-        }),
-        a.d(t, "priceType", function () {
           return B;
         }),
-        a.d(t, "verifyListing", function () {
+        a.d(t, "priceType", function () {
           return x;
+        }),
+        a.d(t, "verifyListing", function () {
+          return U;
         }),
         a.d(t, "furnish", function () {
           return M;
@@ -53209,14 +53260,14 @@
       var r = a(0),
         n = a.n(r),
         i = a(11),
-        o = a(1271),
-        l = a(376),
+        o = a(1280),
+        l = a(377),
         c = a.n(l),
         s = {
           "": [
             {
               title: "Post Property",
-              link: "/postproperty",
+              link: "/postproperty/",
               icnClass: "icn_ppfflag",
             },
             { title: "Home", link: "/", icnClass: "icn99" },
@@ -53333,9 +53384,9 @@
         d = a(19),
         m = a(34),
         f = a(32),
-        b = a(27),
+        b = a(28),
         y = a(33),
-        g = a(459),
+        g = a(460),
         v = (function (e) {
           function t(e) {
             var a;
@@ -53405,9 +53456,9 @@
             t
           );
         })(n.a.PureComponent),
-        h = a(530),
+        h = a(531),
         E = a.n(h),
-        _ = a(531),
+        _ = a(532),
         A = a.n(_),
         T = function (e) {
           var t = e.onlyImg,
@@ -54025,8 +54076,8 @@
             T = (A = void 0 === A ? {} : A).user,
             P = (T = void 0 === T ? {} : T).name,
             C = T.profileId,
-            L = e.logoutHandler,
-            w = function () {
+            w = e.logoutHandler,
+            L = function () {
               var e = new XMLHttpRequest();
               (e.onload = function () {
                 4 == this.readyState &&
@@ -54046,7 +54097,7 @@
               }),
                 h.remove("PROPLOGIN"),
                 h.remove("DISP_NAME"),
-                L(),
+                w(),
                 e.open("GET", "/do/logout/out", !0),
                 e.send(),
                 window.location.reload();
@@ -54159,7 +54210,7 @@
                                 ? e.isLogout
                                   ? n.a.createElement(
                                       "li",
-                                      { key: t, onClick: w },
+                                      { key: t, onClick: L },
                                       n.a.createElement(
                                         p,
                                         { title: e.title, href: e.link },
@@ -54190,7 +54241,7 @@
                                   {
                                     key: t,
                                     style:
-                                      "/postproperty" == e.link
+                                      "/postproperty/" == e.link
                                         ? { borderBottom: "1px solid #ececec" }
                                         : {},
                                   },
@@ -54198,7 +54249,7 @@
                                     n.a.createElement("i", {
                                       className: ""
                                         .concat(
-                                          "/postproperty" == e.link
+                                          "/postproperty/" == e.link
                                             ? c.a.bgSize24_c
                                             : "/my99acres/make_pending_payment/" ==
                                               e.link
@@ -54224,7 +54275,7 @@
                                         },
                                         "NEW"
                                       ),
-                                    "/postproperty" == e.link &&
+                                    "/postproperty/" == e.link &&
                                       n.a.createElement(
                                         "span",
                                         { className: c.a.freeTag },
@@ -54284,7 +54335,7 @@
         n = a(0),
         i = a.n(n),
         o = a(79),
-        l = a(383),
+        l = a(384),
         c = a.n(l),
         s = function (e) {
           var t = e.id,
@@ -54403,9 +54454,9 @@
             )
           );
         },
-        p = a(461),
+        p = a(462),
         d = a(3),
-        m = a(252),
+        m = a(253),
         f = new Map([
           [
             m.PrimaryDetails.id,
@@ -54436,12 +54487,12 @@
           ],
         ]),
         b = a(71),
-        y = a(400),
+        y = a(401),
         g = a(70),
         v = a(11),
-        h = a(559),
+        h = a(560),
         E = a.n(h),
-        _ = a(223),
+        _ = a(224),
         A = Object(v.b)(function (e) {
           return { completionScore: e.completionScore };
         })(function (e) {
@@ -54476,8 +54527,8 @@
             )
           );
         }),
-        T = a(405),
-        O = a(121),
+        T = a(406),
+        O = a(122),
         P = function (e, t, a) {
           if (t)
             switch (e) {
@@ -54526,15 +54577,15 @@
           C = void 0 === S ? "" : S,
           I = e.photos,
           N = void 0 === I ? {} : I,
-          L = e.furnishingState,
-          w = void 0 === L ? {} : L,
+          w = e.furnishingState,
+          L = void 0 === w ? {} : w,
           R = e.ownershipState,
           j = void 0 === R ? {} : R,
           k = e.noticeState,
           D = void 0 === k ? {} : k,
-          U = e.suspiciousPages,
-          B = e.visitedPages,
-          x = Object(o.g)();
+          B = e.suspiciousPages,
+          x = e.visitedPages,
+          U = Object(o.g)();
         return i.a.createElement(
           i.a.Fragment,
           null,
@@ -54578,7 +54629,7 @@
                                 ? Object(b.d)(function () {
                                     return v.complete;
                                   })
-                                : (B[n.id] || c < a) &&
+                                : (x[n.id] || c < a) &&
                                   Object(b.d)(function () {
                                     return v.complete;
                                   }) &&
@@ -54674,7 +54725,7 @@
                                               }) || "",
                                             A = _
                                               ? Object(b.d)(function () {
-                                                  return w.options.find(
+                                                  return L.options.find(
                                                     function (e) {
                                                       return e.id === _;
                                                     }
@@ -54749,7 +54800,7 @@
                                             .concat(I, " Cabin")
                                             .concat(I > 1 ? "s" : "");
                                         } else if (92 === v) {
-                                          var L =
+                                          var w =
                                               Object(b.d)(function () {
                                                 return t.superBuiltup.value;
                                               }) || "",
@@ -54759,7 +54810,7 @@
                                                   .minimumLeasableSuperBuiltUp.value;
                                               }) || "";
                                           o = ""
-                                            .concat(L, " ")
+                                            .concat(w, " ")
                                             .concat(
                                               h ? h.label : "",
                                               " Super built-up area "
@@ -54779,11 +54830,11 @@
                                               Object(b.d)(function () {
                                                 return t.carpet.value;
                                               }) || "",
-                                            U =
+                                            B =
                                               Object(b.d)(function () {
                                                 return t.superArea.value;
                                               }) || "",
-                                            B =
+                                            x =
                                               Object(b.d)(function () {
                                                 return t.superBuiltup.value;
                                               }) || "";
@@ -54794,16 +54845,16 @@
                                                   h ? h.label : "",
                                                   " Carpet Area"
                                                 ))
-                                            : U
+                                            : B
                                             ? (o = ""
-                                                .concat(U, " ")
+                                                .concat(B, " ")
                                                 .concat(
                                                   h ? h.label : "",
                                                   " Plot Area"
                                                 ))
-                                            : B &&
+                                            : x &&
                                               (o = ""
-                                                .concat(B, " ")
+                                                .concat(x, " ")
                                                 .concat(
                                                   h ? h.label : "",
                                                   " Super built-up Area"
@@ -54812,8 +54863,8 @@
                                         break;
                                       case Array.from(f.keys())[3]:
                                         if (N && N.constructor === Object) {
-                                          var x = Object.entries(N).length;
-                                          if (0 === x)
+                                          var U = Object.entries(N).length;
+                                          if (0 === U)
                                             return "You might get low responses..";
                                           var F = Object.entries(N).filter(
                                               function (e) {
@@ -54839,16 +54890,16 @@
                                           W > 0
                                             ? (o = "Uploaded "
                                                 .concat(F, " of ")
-                                                .concat(x, ". ")
+                                                .concat(U, ". ")
                                                 .concat(W, " failed"))
-                                            : F > 0 && x === F && 0 === W
+                                            : F > 0 && U === F && 0 === W
                                             ? (o = "Uploaded "
                                                 .concat(F, " of ")
-                                                .concat(x))
+                                                .concat(U))
                                             : M > 0 &&
                                               (o = "Uploading "
                                                 .concat(M, " of ")
-                                                .concat(x));
+                                                .concat(U));
                                         }
                                         break;
                                       case Array.from(f.keys())[4]:
@@ -54930,9 +54981,9 @@
                                 } else o = "Step ".concat(i);
                                 return "" === o && (o = "Step ".concat(i)), o;
                               })(n.id, d, l, E, t),
-                              L =
+                              w =
                                 I.length > 27 ? I.substring(0, 27) + "..." : I,
-                              R = U.indexOf(n.id) > -1,
+                              R = B.indexOf(n.id) > -1,
                               k = (function (e, t, a) {
                                 if (t)
                                   switch (e) {
@@ -54958,10 +55009,10 @@
                                       heading: n.heading,
                                       complete: E,
                                       isSuspiciousPage: R,
-                                      history: x,
+                                      history: U,
                                       active: l,
                                       redirectUrl: A,
-                                      truncatedSubheading: L,
+                                      truncatedSubheading: w,
                                       fullSubheading: I,
                                     })
                                   )
@@ -54975,10 +55026,10 @@
                                       key: o,
                                       heading: k || n.heading,
                                       complete: E,
-                                      history: x,
+                                      history: U,
                                       active: l,
                                       redirectUrl: A,
-                                      truncatedSubheading: L,
+                                      truncatedSubheading: w,
                                       fullSubheading: I,
                                       childComponent: P(n.id, E, N),
                                       yellowWarning: k,
@@ -55177,7 +55228,7 @@
       });
       var r = a(19),
         n = a(32),
-        i = a(27),
+        i = a(28),
         o = a(33),
         l = (function (e) {
           function t(e) {
@@ -55190,7 +55241,7 @@
             );
           }
           return Object(o.a)(t, e), t;
-        })(a(396).a);
+        })(a(397).a);
     },
     function (e, t, a) {
       "use strict";
@@ -55201,7 +55252,7 @@
           return l;
         });
       var r = a(3),
-        n = a(222),
+        n = a(223),
         i = {
           headerText: "",
           value: "",
@@ -55458,7 +55509,7 @@
       var r = a(6),
         n = a(0),
         i = a.n(n),
-        o = a(536),
+        o = a(537),
         l = a.n(o),
         c = a(7),
         s = a(8);
@@ -55485,7 +55536,7 @@
           S = P[0],
           C = P[1];
         Object(n.useEffect)(function () {
-          h(I()), T(N()), C(L());
+          h(I()), T(N()), C(w());
         }, []);
         var I = function () {
             return b
@@ -55692,7 +55743,7 @@
               ? "How is life in ".concat(a.value.label, "?")
               : "Be the active community contributor, people need...";
           },
-          L = function () {
+          w = function () {
             return b
               ? "Share your experience & help others"
               : "...and get more insights";
@@ -55782,7 +55833,7 @@
         l = a(0),
         c = a(11),
         s = a(408),
-        u = a(443),
+        u = a(444),
         p = function () {
           var e = Object(c.c)(),
             t = Object(l.useState)(""),
@@ -55963,7 +56014,7 @@
       var r = a(0),
         n = a.n(r),
         i = a(12),
-        o = a(543),
+        o = a(544),
         l = a.n(o);
       t.a = function (e) {
         var t = e.position,
@@ -56042,13 +56093,13 @@
       var r = a(19),
         n = a(34),
         i = a(32),
-        o = a(27),
+        o = a(28),
         l = a(33),
         c = a(0),
         s = a.n(c),
-        u = a(546),
+        u = a(547),
         p = a.n(u),
-        d = a(370),
+        d = a(371),
         m = (function (e) {
           function t(e) {
             var a;
@@ -56358,7 +56409,7 @@
       var r = a(4),
         n = a.n(r),
         i = a(5),
-        o = a(146),
+        o = a(147),
         l = function () {
           return (function () {
             var e = Object(i.a)(
@@ -56400,14 +56451,14 @@
       });
       var r = a(7),
         n = a(102),
-        i = a(140),
+        i = a(141),
         o = a(103),
-        l = a(141),
+        l = a(142),
         c = a(104),
-        s = a(150),
-        u = (a(209), a(105)),
+        s = a(151),
+        u = (a(210), a(105)),
         p = a(106),
-        d = a(142),
+        d = a(143),
         m = {
           city: n.a,
           locationState: i.a,
@@ -56436,9 +56487,9 @@
       a.r(t);
       var r = a(19),
         n = a(32),
-        i = a(27),
+        i = a(28),
         o = a(33),
-        l = a(363),
+        l = a(364),
         c = (function (e) {
           function t(e) {
             var a;
@@ -56586,7 +56637,7 @@
           }
           return Object(o.a)(t, e), t;
         })(l.a),
-        f = a(413),
+        f = a(414),
         b = (function (e) {
           function t(e) {
             var a;
@@ -56812,7 +56863,7 @@
     function (e, t, a) {
       "use strict";
       a.r(t);
-      var r = a(611),
+      var r = a(612),
         n = {
           showCompletion: !1,
           completionPercentage: 0,
@@ -56829,7 +56880,7 @@
           stepNumber: 2,
           backAction: "/postproperty/",
         },
-        i = a(473),
+        i = a(474),
         o = {
           showCompletion: !1,
           completionPercentage: 0,
@@ -56846,7 +56897,7 @@
           parent: "PrimaryDetails",
           stepNumber: 1,
         },
-        l = a(612),
+        l = a(613),
         c = {
           showCompletion: !1,
           completionPercentage: 0,
@@ -56864,7 +56915,7 @@
           stepNumber: 4,
           backAction: "/postproperty/featurepricing",
         },
-        s = a(613),
+        s = a(614),
         u = {
           showCompletion: !1,
           completionPercentage: 0,
@@ -56878,7 +56929,7 @@
           stepNumber: 3,
           backAction: "/postproperty/basicdetails",
         },
-        p = a(474),
+        p = a(475),
         d = a.n(p),
         m = {
           showCompletion: !1,
@@ -56896,7 +56947,7 @@
           subLabel: "Just 1 step.. and you\u2019re done",
           showSubLabelOnSticky: !1,
         },
-        f = a(614),
+        f = a(615),
         b = {
           showCompletion: !0,
           completionPercentage: 0,
@@ -56931,7 +56982,7 @@
           parent: "PostForSale",
           showSubLabelOnSticky: !1,
         },
-        g = a(615),
+        g = a(616),
         v = {
           showCompletion: !0,
           completionPercentage: 0,
@@ -56949,7 +57000,7 @@
           parent: "LeaseToSell",
           showSubLabelOnSticky: !1,
         },
-        h = a(616),
+        h = a(617),
         E = {
           showCompletion: !1,
           completionPercentage: 0,
@@ -56998,14 +57049,14 @@
       "use strict";
       var r = a(0),
         n = a.n(r),
-        i = a(619),
+        i = a(620),
         o = a.n(i),
-        l = a(395),
-        c = a(620),
+        l = a(396),
+        c = a(621),
         s = a.n(c),
-        u = a(621),
+        u = a(622),
         p = a.n(u),
-        d = a(622),
+        d = a(623),
         m = a.n(d),
         f = function (e) {
           var t = e.validatePage;
@@ -57023,9 +57074,13 @@
               n.a.createElement(
                 "div",
                 { className: "display_xxl_bold" },
-                "Post Your Property in ",
-                n.a.createElement("br", null),
-                " 3 Simple Steps"
+                n.a.createElement(
+                  "h1",
+                  null,
+                  "Post Your Property in ",
+                  n.a.createElement("br", null),
+                  " 3 Simple Steps"
+                )
               )
             ),
             n.a.createElement(
@@ -57123,9 +57178,9 @@
             )
           );
         },
-        b = a(623),
+        b = a(624),
         y = a.n(b),
-        g = a(624),
+        g = a(625),
         v = a.n(g),
         h = function () {
           return n.a.createElement(
@@ -57210,9 +57265,9 @@
             )
           );
         },
-        E = a(625),
+        E = a(626),
         _ = a.n(E),
-        A = a(626),
+        A = a(627),
         T = a.n(A),
         O = function (e) {
           var t = e.validatePage;
@@ -57300,9 +57355,9 @@
             )
           );
         },
-        P = a(476),
+        P = a(477),
         S = a.n(P),
-        C = a(414),
+        C = a(415),
         I = function (e) {
           var t = e.label,
             a = e.subLabel,
@@ -57323,9 +57378,9 @@
             n.a.createElement("div", { className: "body_large" }, " ", r)
           );
         },
-        N = a(627),
-        L = a.n(N),
-        w = [
+        N = a(628),
+        w = a.n(N),
+        L = [
           {
             label: "Sangeeta Singh",
             subLabel: "Owner, New Delhi",
@@ -57358,7 +57413,7 @@
             n.a.createElement(
               "div",
               { className: S.a.testimonialLogo },
-              n.a.createElement("img", { width: "80", src: L.a }),
+              n.a.createElement("img", { width: "80", src: w.a }),
               n.a.createElement(
                 "span",
                 { className: "input_label_inactive" },
@@ -57387,7 +57442,7 @@
                   compAttr: "recomm",
                   viewType: "desktop",
                 },
-                w.map(function (e) {
+                L.map(function (e) {
                   var t = e.label,
                     a = e.subLabel,
                     r = e.description;
@@ -57401,12 +57456,12 @@
             )
           );
         },
-        j = a(628),
+        j = a(629),
         k = a.n(j),
         D = a(470),
-        U = a(455),
         B = a(456),
         x = a(457),
+        U = a(458),
         F = function () {
           return n.a.createElement(
             "div",
@@ -57424,22 +57479,22 @@
             n.a.createElement(
               D.a,
               { isOpen: !0, labelClass: "title_semiBold" },
-              n.a.createElement(U.a, {
+              n.a.createElement(B.a, {
                 id: "abountPosting",
                 label: "About posting on 99acres",
               }),
-              n.a.createElement(B.a, {
+              n.a.createElement(x.a, {
                 id: "postingReasons",
                 label: "Why should you choose 99acres?",
               }),
-              n.a.createElement(x.a, {
+              n.a.createElement(U.a, {
                 id: "advPostingSteps",
                 label: "Steps to post an advertisement for a property",
               })
             )
           );
         },
-        M = a(441);
+        M = a(442);
       a.d(t, "a", function () {
         return W;
       });
@@ -57476,7 +57531,7 @@
       "use strict";
       var r = a(0),
         n = a.n(r),
-        i = a(538),
+        i = a(539),
         o = a.n(i);
       console.log(o.a);
       var l = function () {
@@ -57486,7 +57541,7 @@
             n.a.createElement("div", { className: "".concat(o.a.infoTag) })
           );
         },
-        c = a(539),
+        c = a(540),
         s = a.n(c);
       console.log(s.a);
       var u = function () {
@@ -57496,7 +57551,7 @@
             n.a.createElement("div", { className: "".concat(s.a.tickTag) })
           );
         },
-        p = a(540),
+        p = a(541),
         d = a.n(p);
       console.log(d.a);
       t.a = function (e) {
@@ -57517,7 +57572,6 @@
         );
       };
     },
-    ,
     function (e, t, a) {
       "use strict";
       var r = a(4),
@@ -57526,13 +57580,13 @@
         o = a(6),
         l = a(0),
         c = a(11),
-        s = a(248),
+        s = a(249),
         u = function (e) {
           return function (t) {
             t({ type: "SET_PARENT_PROP_DATA", payload: e });
           };
         },
-        p = a(403);
+        p = a(404);
       a.d(t, "a", function () {
         return d;
       });
@@ -57734,12 +57788,13 @@
           return c.manager;
         };
     },
+    ,
     function (e, t, a) {
       "use strict";
       var r = a(4),
         n = a.n(r),
         i = a(5),
-        o = a(403),
+        o = a(404),
         l = a(13),
         c = a(12),
         s = (function () {
@@ -57783,7 +57838,7 @@
           };
         })(),
         u = a(22),
-        p = a(28),
+        p = a(29),
         d = a(51);
       a.d(t, "a", function () {
         return f;
@@ -57919,7 +57974,7 @@
         o = a(5),
         l = a(45),
         c = a(10),
-        s = a(483),
+        s = a(484),
         u = a(8),
         p = (function () {
           var e = Object(o.a)(
@@ -57991,8 +58046,8 @@
           return _;
         });
       var i = a(20),
-        o = a(471),
-        l = a(213),
+        o = a(472),
+        l = a(214),
         c = {
           price: ["expectedAnnualReturns", "hideExpectedAnnualReturns"],
           currentMonthlyRent: [
@@ -58008,10 +58063,10 @@
           expectedAnnualReturns: ["hideExpectedAnnualReturns"],
         },
         s = ["furnish", "priceType", "totalPriceIncludes"],
-        u = a(362),
-        p = a(256),
-        d = a(257),
-        m = a(255),
+        u = a(363),
+        p = a(257),
+        d = a(258),
+        m = a(256),
         f = [
           new u.a(function (e, t, a) {
             var r = e.values.propertyFeatures.value,
@@ -58086,7 +58141,7 @@
             );
           }, "UPDATE_INPUT_VALUE_numberOfProperties"),
         ],
-        v = (a(171), a(123)),
+        v = (a(172), a(124)),
         h = [
           new u.a(function (e, t, a) {
             t(Object(v.d)());
@@ -58141,7 +58196,7 @@
           ].concat(Object(i.a)(a));
         },
         A = a(1),
-        T = a(389);
+        T = a(390);
       a(16);
       a.d(t, "a", function () {
         return O;
@@ -58159,11 +58214,11 @@
       "use strict";
       var r = a(0),
         n = a.n(r),
-        i = a(597),
+        i = a(598),
         o = a.n(i),
         l = a(99),
         c = a(65),
-        s = a(598),
+        s = a(599),
         u = a.n(s),
         p = function (e) {
           var t = e.platform;
@@ -58215,9 +58270,9 @@
             )
           );
         },
-        d = a(212),
+        d = a(213),
         m = a(12),
-        f = a(172);
+        f = a(173);
       a.d(t, "a", function () {
         return b;
       });
@@ -58806,7 +58861,7 @@
       });
       var r = a(0),
         n = a.n(r),
-        i = a(674),
+        i = a(675),
         o = a.n(i),
         l = a(59),
         c = function (e) {
@@ -58921,7 +58976,7 @@
       });
       var r = a(0),
         n = a.n(r),
-        i = a(674),
+        i = a(675),
         o = a.n(i),
         l = a(59),
         c = function (e) {
@@ -59079,7 +59134,7 @@
         o = a(6),
         l = a(0),
         c = a.n(l),
-        s = a(749),
+        s = a(750),
         u = a.n(s),
         p = a(59),
         d = a(60),
@@ -59087,8 +59142,8 @@
         f = function (e) {
           return !(!e || 10 !== e.length || !m.f.INTEGERS_EXCLUDE_ZERO.test(e));
         },
-        b = a(380),
-        y = a(154),
+        b = a(381),
+        y = a(155),
         g = { apiErrorMsg: "", apiSuccesMsg: "", isPosting: !1 },
         v = function (e, t) {
           switch (t.type) {
@@ -59126,15 +59181,15 @@
           C = Object(o.a)(S, 2),
           I = C[0],
           N = C[1],
-          L = Object(l.useReducer)(v, g),
-          w = Object(o.a)(L, 2),
-          R = w[0],
-          j = w[1],
+          w = Object(l.useReducer)(v, g),
+          L = Object(o.a)(w, 2),
+          R = L[0],
+          j = L[1],
           k = Object(l.useRef)(!1),
           D = Object(l.useState)("91"),
-          U = Object(o.a)(D, 2),
-          B = U[0],
-          x = U[1],
+          B = Object(o.a)(D, 2),
+          x = B[0],
+          U = B[1],
           F = function (e) {
             e.stopPropagation(),
               f(O)
@@ -59302,14 +59357,14 @@
                 handleBlur: V,
                 autocomplete: "on",
                 content: O,
-                Country_Code: B,
+                Country_Code: x,
                 countryList: y.a.countryCodeList,
                 controlFunc: function (e) {
                   return W(e);
                 },
                 controlFuncCity: function (e) {
                   var t = e.target.value ? e.target.value.substr(1) : "91";
-                  x(t);
+                  U(t);
                 },
                 errormsg: I,
                 selectfieldId: "countryCode",
@@ -59472,7 +59527,7 @@
       a.d(t, "a", function () {
         return n;
       });
-      var r = a(369),
+      var r = a(370),
         n = function (e) {
           return function (t, a) {
             t(i(e));
@@ -59504,8 +59559,8 @@
         return o;
       });
       var r = a(11),
-        n = a(735),
-        i = a(651),
+        n = a(736),
+        i = a(652),
         o = Object(r.b)(
           function (e) {
             return { userData: e.userState.userData };
@@ -59550,7 +59605,7 @@
         return i;
       });
       var r = a(1),
-        n = a(135),
+        n = a(136),
         i = function (e) {
           if (e) {
             var t = Object(n.a)(e).type;
@@ -59571,8 +59626,8 @@
         return o;
       });
       var r = a(6),
-        n = a(121),
-        i = a(136),
+        n = a(122),
+        i = a(137),
         o = function () {
           return function (e, t) {
             var a = t(),
@@ -59606,6 +59661,301 @@
         mobWrap: "coworkingRequest_mobWrap__aPvBI",
       };
     },
+    function (e, t) {
+      e.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAACwCAYAAADNNApxAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA9xSURBVHgB7Z1rbBzVFcfPzK7jZ9ZLbGNC7GUT0wBuHjZCkBSnWUs0H4CWUEUlBQomVcNDanFFSksrETsfCoVIJKoUKiTiQNQ0rSJi2nwKlWLTQANC2CTgkFDjjWMeDjFeO357d6f3zHpt7+7MemZ33vf+pNF6Z+/anvnPedwzd+7lQAUtHYLXXQgPCwA1nAAB4MBLdnuBYjiATkGAIOeC1ulpaH/kJi4IFoZT0qjlrOB38dDEcXAPUC7wggjQWl4IzZsquE6wIGkFR4t2FcFOYs2NwFDLgXAEmq1m8bKCo1XnuOAoum9gZEqQiF5vJdElBUex3S44QX70AyNbQjxA/QMrreHiUwRnYuuCZURPEHwmC+8AJrYeWMK9u+e/wQSNZJn+dF/IIZdqeT7A0gIAz6LYe9zkmI4CjIUBhqcAzg0BjIfBsuBxrFhMjo8cW4F74ePCDY/n4gjA5ckFjw09Zwt5rQcTmbXwGVfek65xZSHAd5ekPxHpQOHf7bem6PlE4O+Vx4TOBDy2vpHYRZ0OjoeGB6/nXgOTmJVu5uqTZdVVJF0vzVxspGDmpOZneFL1Ao8pG7ER/O5Kb+z3pDtHQhSaMHSCSYj/2sHPhAB5Ccg1QrGXe0ATrCY6irM+S7HnU5IX+31pRPe78qEBTEI8THLVNXAyPXK8arUSOw6e3DuWxWLf12OxWGg0KEjxotixZeO1pMDfu7IY4JNB6c+JW8eK5R4wAVHm188Lg5xEyTR/RhhGZrz7NcDApPRnJGNfbkbGzqM752Tq4zcUAyMLbkgTqV0cbAYT4KOC9B9GN1dZBIwswHhekiv7cQBMgCe6rpX6IM0/ylBBaZ70fhLH14IJ8HLuvCQPGBqAxSkZ/GACfFTmD6f5RxkqSHcesdgFBiNr4Qxt0LrLly0W+3ecBxOcYSpMcMpgglMGE5wymOCUwQSnjIzvAk+GBegemJD8LNfFQ1WpvWuzfaEpGJ6MJOzD48p1c1DhtW9VSrXgKPSpC6PQ8eVY2naPry8TT44dwWM8ciYk+7knzwXVV+fBuusKwW6oFvzI6UH4ZjT9oDRPnr0jBV6oKCZaeTJ9Q9MwPBGBU72j0HVpAras9ooXgF1QJThadlzsKnI7rXZZPnhyUw82183b1rrjrPMR6/WlWjCKjULjucCf0RM8ULvENserWHB0c139sZiNQm/E8bwUgtaMFwMK3N49ErsA+sfJOSkAO6DY9/YNxZIYPNDaa+1xcHqC5yDu3fDc2AXlgoemxdeK4hxbxSw9iecq6P3sgmLBJ8OxoaVlhTnAsC+s8EIZmj4OcPdv/gJasW/HfeArvyph3zN/64AzF6X7x89trYXVvtSxHCfPXYLn3/wEtGB1pRee+2nt7HtM1HLdE7bqj2sq+MnTn4OeoNgooBRD49KJU+/lUdnvqCcxVmPXtMpmoz2ZS6cMJjhlMMEpQ7HgZYtj4d7udXLaUZy0YWWpakkuK7rYHFVZejZiH3vx0ZR9T+z+B/T2D4JZ1N1QBr+7Z1XCvjO9IXjmcAc4FcMey69bUwVWw1daRES/OnGnfaqkGcECMmUwwSmDCU4ZhsVwTNCSGRoZBzPBkusT+99P2Dc0Zp9725lgmOCH3voArAbW2Q9d7gGaYC6dMpjglMEEpwwmOGUwwSlD0yx931M/Aa0oLtJmGiksne7bditoQXGB/Wc60lTw+zfdAlbDV1oI95cuB0YM5tIpgwlOGUxwytA0hj//5seK2951c4U4zjuZl986R+rZ05LfwVKoHIfeCcLJT7UajiyNmA/cbu98QFvB/6l8wD+ePGnBz0PvwBio5dA7+tfEcYSM3QVnLp0ymOCUwQSnDCY4ZTDBKUPb0urtfsVtMUuX4q7aCtknQY2g9/KYhk+bWg9tb55suw2yZf7z12aAffm7X3Su4MylUwYTnDKY4JTBBKcMTZO2dDc31CKXxUv+3f7BlAmA5IjfmCkuoHP6MU0FX/PbY6AVp/90d4ro+PTKydPd4s/41MrQ6Nz03cdeeBTq1s49oSo+VfLq3FMlvQNzFyPeAEke9rSh6bjjnzpBLLZ0e3p6+79V/Dw5epv5Ii/EmYvmPaduJCyGUwYTnDKY4JTBBKcMJjhlGJalh169L2Xfmqf/pWr82nOP/0h2EoHVVcsS3uMTJ8eerpds6ytJ7ePH27JZnCzE6hXXKm6LfXg1xZvZ2ZzYLE4MJ8EEpwwmOGUYFsO9P/87ZAuuuKB0Ev77f3AL7NuR+viy2kTRaTALpwwmOGWoEhxX4WNIg2uX2WH9MsUxHNfaxAVWcaG6LWuUDTagib9++K24cuOWNV5yjqw7NYhiC49b9/BkFBiJ4LmJrzU+PGHt88NiOGVo2i2TqpdrybEXH4NsOf3CD4FmmIVTBhOcMlQLHl9lmDHHZGSuO5Zr8UWfFAteVRpbYxP7mh1f0FualGL++SgrsvZ4d+WCl+SCJzfWvP3zESY6xC7+9u4R6OqPjY+vLs+z/LpuqrJ0LLgcOT0o9sVF0b8ch7JCV9pF5O1wEqRAEdNVFrHf3T0wNRviygrdsHHFYrA6qheqQ9Gx4hY/IbjhgcvRPTABD9xcAnYCLff4+WFFbXPdnLiO+DqfPdYQV90PR9E3rfSIB9g3NEW26bTt7ba+NoIibqwqgm9GwvJtXByJ125yfHlie7uQceEFha/OyycuOx+cCK616kRsNYjRSkSGh2H0/VMw1dcHk2e7YOqLPnHD/dErc+GAX+yBygIPhK+pgGiRByZXVMNUVbX4PuyvBqPhDp4XJO/prS8HKNVmjnpHgEJOEGGH/31c3KaJuNlCTnyQ9Hs6BUFoneb59vpgMAg6wwRfgNH3TokCD75xJMFy9YBkAq2RaPS171+82Ao6wQSXAYW+9Oc9ots2GrR8ThCa6np7XwONYYInYabQyeghPBN8Bky+vvrjLrhC3LfVQOHDHFevRYxnd8sIAwf2w//uudOSYiMktvtzBKHnHZ9vJ2QJ1RaOmTdadYgkZHYhW2un1sLRhaNV20lsBK3dLQgn3q6s3AwZQKXg46Q/3fOzrZr0pc0ARed5/uhJn68RVEJdpU0U+8GtuvepDYHjXiJxvbiA55trFXp4qizcUWLPIHBc01g02vRxtbIyLTWCY8zufWK7o8SOQ0TfeWVsrEGJ6FQIjmLbOWYrISIILaGxsdoTgUDadlQIjl0vJ4sdh9yEeQOCwbQLqzlecCyTWrWgojUzBZr9p66/XraNowVHV46CU0YgPDXVKOfaHS04xm2zyK2oEDdTIEmcnGt3rOB4/9rMuL382WfhO7t3g0l40bX3+P0pHzhScLNd+dVbtkDJpk1QvG6duJlEoC8cDiTvdKTgoaPmWndl41zF00QrB87l2pls5Y4UfNDEGyIodt682I1xfP4FYDApVu44wc2M3Sjutdu2pezHfW6PB8wArVxoapp97zjBzYzdPmLJUsLiPjOtvO3AAW/8jaMEH+/qMtW6MVmTA63crATOHY3OXm2OEhyTNbNYdfjwgm3MsnKO4zbG3bqjBB82qYSKlp2noMiCFo7dNRMItM+4dccIjn1vM9y52viMBRkzEjji1hvw1TGCmzWOfCmJzXkqSqgY65dKZPJ6Q26srMVX5wj+nvGCo3i+DOIyJnBG19mjHBfAOO4Ywc1w574MkzB06ejajQRvnWIcd4zg+GSnkSwhyZdcN+zT7dvhg7o6cftsxw7JNvFau5Hk4GhXcAD4QEHE4LFq6Sw0TP6fSXxunGwTffKex+huWiQSqXGE4EZbt9Ju2EKghRuZwPEc5xyXbhRa3wyRK8fqgeAUlz5lYMLmS7obli0otlFWTsQuZhaugoXq5ZmCF5FR3TQmuAr07EoZNVCCzeKkkPiwJSXc+MorYqauhvhwqKFT+haQHGHhi5bp7w7VJGoYlzHOxzel6G3lUYALjhAc50LTk0qNEzU5jBgO5QiX7irWT3C5YUvpGDh+XCwGxb+vpqKGf+ur/ftVhwQl8Dzf4QjB0aW7iJXrUW3LpJ+MgsVjsYeIvVrB4Ig48dutPbt2gdZEw+Ehx2TpOTq4XL26YQuh13CosNvd6RjB82/Sft7SVSosU2t0iOWd9cFgyDHdsoJb12k6Hj2benkm3bJk4sOhMB/QBEG4gC+OEbzwNu1cYLbDivH7WtTHsdCDuYAmCRzPHxVfwCFg4pajUX9c7bAlvdByONQ0QDu+Oqq06rkj+xGhmQ5b0guNhkN1xCfyY4InYSWxEffixdnX8Dlu7+zvI1uQbP7kNuNhsB0YxwtJ8pbpCFaMuxgz9a5nZwL+b5nG8rg7F38PBxCSmmx1eBpsCVp5poLjCb10xF5TcS6IIByov3AhGH/LRwT4SKrd1zZdh8774y1i1Y0RQ4hGE+Za5zkO2qQajhGXfnkCbIeLuL6SBuMH+luUtg19fW3zd/CRHJBdX+P8ENiSkoe3MSsnCJFIc/I+/pHlXIi8tkl9YWDCvlZe9ktrZduGQ2J3snUjYrdMiMKbct/7aCDm3u1GKXHrmLHTCEnCQ9M83yz1mSh4JBcOYCOpBij2f/vtKfrSPxj7OI9V4DiuWW7FBFFwdOucAHvlfoFdRc8jd9Cu+T11orfVBYOy854krJL6+jnhc5K1p52ctbIIoKLQXuuh4BzpVliWSm+UrIeSIHjLeaGGlN4+TN4vRQ7xDZ5F5D60DZYGxznSXQ/dCe5+Z8+oPM1xtUTsznRtUoR9/VOhkePhJXAYKPayx+4EfsR5E+SLcNyv07nyOCk3Tx66kdtDfEMzOIxweQV8tfuwuMKv0xAEoVmJ2Iis6z54Tmginz4LCty7nVjU3QVLd2x1jKWj2Bt6e5uUtk8r5sGzQkDgYf9CiZzdQNHLd263f0xX6MYTvrJQg5azgt/tgifJj08q/Y4dQLGXPrXVlqKLNROOu3dDMNgGKlEsHgpPEvIAuOBX5Es1YBy6XWDo1pe8vAsWH7fVLdFOko3fm+lSlBmdzJYOwevOgxpBYuCEHbnuF/XF/MWeRs7ix0Pi9d4wzzfhcGPIEEclZNlwwu/3u6LRJnK/+GGwHp0CideZuPBkmOBJ/MfvDxBTarGCtWOsxrq42sQsHUxwGd72+xt4QUBrD4DBzCRle8mtiz3ZuG8pmOALcNLvr4lGo404I7EBVt9GXHezFq5bDia4CojVb4ZodLNW4qMlk5yhNRKJtEdcrlatrVkKJniGiEke6Z5y0WgNz/NrSQbtnem1eMlJnV2BYGacQYiLxeMg8RYXSNvOHJerbX2GXats+D/X1oaPg89IlAAAAABJRU5ErkJggg==";
+    },
+    function (e, t) {
+      e.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADlSURBVHgB7ZThDYIwEIUP4wBsIG7ACB3BEVjBCWQD3UA3wQ1wA3QCdIKzp9fkpbECrf/kJY+Wu+NrQ9ojmjVVzJzrWFh31hWlSqDWLYCdZIGCYuSgQoGYwE8K761LmiKEIhjyNew8j4I6sMY3UHfQdB0CldYNuGNP8BtEBhZ67ToENjwgD9zCt43GVi62oHiVALrpuP4FWPQIJVLA1yzL7jp3O7+45BIKpegM74U6pK08+H1BjLdQWAPHzUDdUdMVjRUPX5Dd16M2Fu7F9grtObVf6NxvQtP6xCc4gAVY89j+8N96AkKTiGMpXKkrAAAAAElFTkSuQmCC";
+    },
+    function (e, t) {
+      e.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD9SURBVHgB1ZWNDYIwEIWLcQA2ADdgBNjAERylI7iBruAE6AS4AWEC3eC8I0fyqC2/auJLXmivx9dLW4oxfy0iisXmk1JopY594/pM2TX7MBdMLrwbA3AnmSBdDJfqJAB5Aj9r3oOdrYFbT66Fysf3ZsKy7KF/1DwbgmXsElzDWlbO5olymKitOgTOaVi9ZSHdTO2XmpN0sY2ZLtkgAcRRFFluXwDU6HO3BPwGZzehxLngO8IhnsB4qy0MPtlX6KdqVCFQgBdctbx3k1xtD8s5cq088d5pMVPlwgNx790yC+7ETr6juAiubfcSWl85gGv9SGIauW5Xib7xg/i5Xp8o+yxZQZl2AAAAAElFTkSuQmCC";
+    },
+    function (e, t, a) {
+      "use strict";
+      var r = a(6),
+        n = a(0),
+        i = a.n(n),
+        o = null,
+        l = 60,
+        c = null;
+      t.a = function (e) {
+        return function (t) {
+          var a = t.propertyDetails,
+            s = void 0 === a ? {} : a,
+            u = Object(n.useState)(60),
+            p = Object(r.a)(u, 2),
+            d = p[0],
+            m = p[1],
+            f = Object(n.useState)(1),
+            b = Object(r.a)(f, 2),
+            y = b[0],
+            g = b[1],
+            v = Object(n.useState)(0),
+            h = Object(r.a)(v, 2),
+            E = h[0],
+            _ = h[1],
+            A = function () {
+              l > 0 ? m(--l) : clearInterval(c);
+            };
+          Object(n.useEffect)(function () {
+            window.addEventListener("click", T.yt.unMuteClip);
+          }, []);
+          var T = T || {};
+          return (
+            (window.onYouTubeIframeAPIReady = function () {
+              setTimeout(T.yt.onYouTubeIframeAPIReady, 500);
+            }),
+            (T.yt = {
+              player: {},
+              playClip: function () {},
+              loadApi: function () {
+                var e = document.createElement("script"),
+                  t = document.getElementsByTagName("script")[0];
+                (e.src = "//www.youtube.com/iframe_api"),
+                  (e.async = !0),
+                  t.parentNode.insertBefore(e, t),
+                  console.log("API Loaded");
+              },
+              onYouTubeIframeAPIReady: function () {
+                console.log("API Ready?"),
+                  (window.YT = window.YT || {}),
+                  "function" === typeof window.YT.Player &&
+                    (T.yt.player = new window.YT.Player("iframeTest", {
+                      videoId: "ONc07oIxVsA",
+                      events: {
+                        onReady: T.yt.onPlayerReady,
+                        onError: T.yt.onPlayerError,
+                        onStateChange: T.yt.onPlayerStateChange,
+                      },
+                    }));
+              },
+              onPlayerReady: function (e) {
+                T.yt.player.playVideo(),
+                  T.yt.player.setVolume(0),
+                  _(0),
+                  (o = e);
+              },
+              onPlayerStateChange: function (e) {
+                e.data === window.YT.PlayerState.PLAYING
+                  ? (g(1), !c && (c = setInterval(A, 1e3)))
+                  : e.data === window.YT.PlayerState.PAUSED
+                  ? (g(0),
+                    T.yt.player.setVolume(90),
+                    _(90),
+                    clearInterval(c),
+                    (c = null))
+                  : e.data === window.YT.PlayerState.ENDED && ((o = e), m(-1));
+              },
+              unMuteClip: function () {
+                (T.yt.player || {}).setVolume &&
+                  (T.yt.player.setVolume(90), _(90)),
+                  window.removeEventListener("click", T.yt.unMuteClip);
+              },
+              onPlayerError: function (e) {
+                console.log(
+                  "youtube clip error details: " + e.target.src + " - " + e.data
+                );
+              },
+              init: function () {
+                this.loadApi();
+              },
+            }),
+            T.yt.init(),
+            i.a.createElement(e, {
+              replayClip: function () {
+                m(0), o.target.playVideo();
+              },
+              skipClip: function () {
+                o.target.stopVideo(),
+                  clearInterval(c),
+                  (window.location.href =
+                    "/postproperty/thankyou?prop_id=".concat(s.propId || ""));
+              },
+              timer: d,
+              setTimer: m,
+              clipId: "ONc07oIxVsA",
+              playPauseClip: function () {
+                y
+                  ? (g(0), o.target.pauseVideo())
+                  : (g(1), o.target.playVideo());
+              },
+              playPauseState: y,
+              setClipSound: function (e) {
+                o.target.setVolume(e), _(e);
+              },
+              clipSound: E,
+            })
+          );
+        };
+      };
+    },
+    function (e, t, a) {
+      "use strict";
+      a.d(t, "a", function () {
+        return s;
+      });
+      var r = a(0),
+        n = a.n(r),
+        i = a(762),
+        o = a.n(i),
+        l = [
+          {
+            subHeader: "A tenant would call you",
+            text: "An imposter will call you as a tenant",
+          },
+          {
+            subHeader: "Paying advance rent",
+            text: "He/She will easily agree or would even urge you to take advance payment or booking amount",
+          },
+          {
+            subHeader: "Try to gain your trust",
+            text: "They share fake govt IDs and also transfer a small amount in your account via UPI app",
+          },
+          {
+            subHeader: "QR code on WhatsApp",
+            text: "They would generate a QR code of higher amount and then ask you to scan it to receive booking amount",
+          },
+        ],
+        c = [
+          {
+            subHeader: "Never scan a QR code to receive money",
+            text: "QR codes only deduct money from your account",
+            className: "yellowCrossIcn",
+          },
+          {
+            subHeader: "Don\u2019t transact money via WhatsApp",
+            text: "Fraudsters use WhatsApp & Messenger to share QR codes",
+            className: "yellowCrossIcn",
+          },
+          {
+            subHeader: "Never share PIN to receive money",
+            text: "Only fraudsters ask you to share UPI pin or password to transfer money",
+            className: "yellowCrossIcn",
+          },
+          {
+            subHeader: "Verify all documents",
+            text: "Fraudsters share fake govt IDs. Verify Aadhar card at ",
+            className: "greenCrossIcn",
+          },
+          {
+            subHeader: "Tenant Police verification",
+            text: "Submit documents for Police verification, online or offline",
+            className: "greenCrossIcn",
+          },
+        ],
+        s = function (e) {
+          var t = e.customStyle,
+            a = void 0 === t ? {} : t;
+          return n.a.createElement(
+            "div",
+            { className: o.a.cardWrap, style: a },
+            n.a.createElement(
+              "div",
+              { className: o.a.qrHeader },
+              "What is QR code scam?"
+            ),
+            l.map(function (e, t) {
+              return n.a.createElement(
+                "div",
+                { className: o.a.list },
+                n.a.createElement(
+                  "span",
+                  { className: o.a.count },
+                  t + 1,
+                  ". "
+                ),
+                n.a.createElement(
+                  "span",
+                  { className: o.a.subHeader },
+                  l[t].subHeader,
+                  3 === t &&
+                    n.a.createElement("i", {
+                      className: "iconS_Common_20 icon_yellowAlertIcn",
+                    }),
+                  " "
+                ),
+                n.a.createElement(
+                  "div",
+                  { className: o.a.text },
+                  l[t].text,
+                  ". "
+                )
+              );
+            }),
+            n.a.createElement(
+              "div",
+              { className: o.a.qrHeader },
+              "Do\u2019s & Don\u2019ts"
+            ),
+            c.map(function (e, t) {
+              return n.a.createElement(
+                "div",
+                { className: o.a.list },
+                n.a.createElement(
+                  "div",
+                  { style: { display: "flex" } },
+                  n.a.createElement("i", {
+                    className: "iconS_Common_20 icon_".concat(c[t].className),
+                  }),
+                  n.a.createElement(
+                    "span",
+                    { className: o.a.subHeader },
+                    c[t].subHeader,
+                    " "
+                  )
+                ),
+                n.a.createElement(
+                  "div",
+                  { className: o.a.text },
+                  c[t].text,
+                  " ",
+                  3 === t &&
+                    n.a.createElement(
+                      "a",
+                      {
+                        href: "https://myaadhaar.uidai.gov.in/verifyAadhaar",
+                        target: "_blank",
+                      },
+                      " ",
+                      "UIDAI website"
+                    ),
+                  " "
+                )
+              );
+            }),
+            n.a.createElement(
+              "div",
+              {
+                className: ""
+                  .concat(o.a.bottomContent, " ")
+                  .concat(Object.keys(a).length ? "" : o.a.mg_25, "  "),
+              },
+              n.a.createElement(
+                "div",
+                null,
+                "99acres will never call you on behalf of a tenant. We devote a significant amount of time & resources to keep genuine users on our platform. But your safety is a shared responsibility, yours and ours."
+              ),
+              n.a.createElement("div", { className: "spacer20" }),
+              n.a.createElement("div", null, " Stay alert, stay safe!")
+            )
+          );
+        };
+    },
+    function (e, t, a) {
+      e.exports = {
+        cardWrap: "QrCard_cardWrap__2kiit",
+        qrHeader: "QrCard_qrHeader__2BhC-",
+        list: "QrCard_list__2z617",
+        count: "QrCard_count__3RiXJ",
+        subHeader: "QrCard_subHeader__3z2xe",
+        text: "QrCard_text__3oV3H",
+        bottomContent: "QrCard_bottomContent__1L2bv",
+        mg_25: "QrCard_mg_25__3rf_J",
+      };
+    },
     ,
     function (e, t, a) {
       "use strict";
@@ -59614,7 +59964,7 @@
       });
       var r = a(51),
         n = a(46),
-        i = a(28),
+        i = a(29),
         o = function (e) {
           var t = Object(r.a)();
           return !(
@@ -59624,6 +59974,7 @@
             Object(n.a)("leaseToSell") ||
             Object(n.a)("sellToLease") ||
             Object(n.a)("singleFormPosting") ||
+            Object(n.a)("qrCodeAwareness") ||
             e ||
             [i.a.POST_SIMILAR, i.a.COM_RENT_POST].indexOf(t) > -1
           );
@@ -59635,8 +59986,8 @@
         return c;
       });
       var r = a(31),
-        n = a(28),
-        i = a(135),
+        n = a(29),
+        i = a(136),
         o = a(51),
         l = a(12),
         c = function (e) {
@@ -59666,9 +60017,9 @@
       });
       var r = a(0),
         n = a.n(r),
-        i = a(760),
+        i = a(767),
         o = a.n(i),
-        l = a(670),
+        l = a(671),
         c = a.n(l),
         s = a(59),
         u = function (e) {
@@ -59783,9 +60134,9 @@
       var r = a(0),
         n = a.n(r),
         i = a(12),
-        o = a(673),
-        l = a(675),
-        c = a(670),
+        o = a(674),
+        l = a(676),
+        c = a(671),
         s = a.n(c),
         u = function (e) {
           var t = e.close,
@@ -59813,15 +60164,15 @@
       var r = a(6),
         n = a(0),
         i = a.n(n),
-        o = a(763),
+        o = a(770),
         l = a.n(o),
-        c = a(212),
+        c = a(213),
         s = a(59),
-        u = a(764),
+        u = a(771),
         p = a.n(u),
-        d = a(765),
+        d = a(772),
         m = a.n(d),
-        f = a(766),
+        f = a(773),
         b = a.n(f),
         y = [
           {
@@ -59979,11 +60330,11 @@
       var r = a(0),
         n = a.n(r),
         i = a(12),
-        o = a(673),
-        l = a(675),
-        c = a(768),
+        o = a(674),
+        l = a(676),
+        c = a(775),
         s = a.n(c),
-        u = a(769),
+        u = a(776),
         p = a.n(u),
         d = function (e) {
           var t = e.close,
@@ -60107,7 +60458,7 @@
         l = a(6),
         c = a(0),
         s = a(51),
-        u = a(28),
+        u = a(29),
         p = a(82),
         d = a(60),
         m = a(46),
@@ -60118,9 +60469,9 @@
             Object(m.a)("/editproperty")
           );
         },
-        b = a(230),
-        y = a(265),
-        g = a(262),
+        b = a(231),
+        y = a(266),
+        g = a(263),
         v = function (e) {
           var t = {};
           e && (t = { user: { profile_id: e.user.profileId } });
@@ -60138,8 +60489,8 @@
         E = a(83),
         _ = a(22),
         A = a(45),
-        T = a(276),
-        O = a(261),
+        T = a(277),
+        O = a(262),
         P = function (e, t) {
           if (Object(O.a)()) {
             var a = Object(h.a)({}, t, {
@@ -60212,8 +60563,8 @@
             return e.apply(this, arguments);
           };
         })(),
-        L = a(292),
-        w = a(2),
+        w = a(293),
+        L = a(2),
         R = a(13),
         j = a(47),
         k = a(23),
@@ -60226,13 +60577,13 @@
                   return Object(h.a)(
                     {},
                     e,
-                    Object(w.a)({}, a, { value: t[a] })
+                    Object(L.a)({}, a, { value: t[a] })
                   );
                 }, {})
               : null;
           } catch (a) {}
         },
-        U = (function () {
+        B = (function () {
           var e = Object(o.a)(
             i.a.mark(function e() {
               var t, a, r, n, o, l, c, s, u, m, f, b, y, g, v;
@@ -60307,7 +60658,7 @@
                                   return Object(h.a)(
                                     {},
                                     e,
-                                    Object(w.a)({}, t.uiId, new j.a(t))
+                                    Object(L.a)({}, t.uiId, new j.a(t))
                                   );
                                 },
                                 {}
@@ -60346,8 +60697,8 @@
             return e.apply(this, arguments);
           };
         })(),
-        B = a(48),
-        x = (function () {
+        x = a(48),
+        U = (function () {
           var e = Object(o.a)(
             i.a.mark(function e() {
               return i.a.wrap(
@@ -60458,7 +60809,7 @@
                         }
                         throw Error;
                       case 9:
-                        return (e.next = 11), Object(B.a)(n.result.listing);
+                        return (e.next = 11), Object(x.a)(n.result.listing);
                       case 11:
                         return (
                           (o = e.sent),
@@ -60483,7 +60834,7 @@
                         );
                       case 22:
                         return (
-                          (e.prev = 22), (e.t0 = e.catch(3)), (e.next = 26), x()
+                          (e.prev = 22), (e.t0 = e.catch(3)), (e.next = 26), U()
                         );
                       case 26:
                         throw (console.error(e.t0), e.t0);
@@ -60502,7 +60853,7 @@
             return e.apply(this, arguments);
           };
         })(),
-        G = a(403),
+        G = a(404),
         H = a(12),
         Y = (function () {
           var e = Object(o.a)(
@@ -60616,10 +60967,10 @@
             return e.apply(this, arguments);
           };
         })(),
-        q = a(574),
-        J = a(209),
+        q = a(575),
+        J = a(210),
         X = a(43),
-        z = a(454),
+        z = a(455),
         Z = (function () {
           var e = Object(o.a)(
             i.a.mark(function e(t) {
@@ -60677,9 +61028,9 @@
                           (u = l.LocalityId),
                           (p = l.Mode),
                           (d = l.Res_Com),
-                          (e.t0 = Object(B.c)(d)),
-                          (e.t1 = Object(B.c)(p)),
-                          (e.t2 = B.c),
+                          (e.t0 = Object(x.c)(d)),
+                          (e.t1 = Object(x.c)(p)),
+                          (e.t2 = x.c),
                           (e.next = 16),
                           Object(X.b)("city", c)
                         );
@@ -60687,7 +61038,7 @@
                         return (
                           (e.t3 = e.sent),
                           (e.t4 = (0, e.t2)(e.t3)),
-                          (e.t5 = B.c),
+                          (e.t5 = x.c),
                           (e.next = 21),
                           Object(X.b)("locality", u, s)
                         );
@@ -60778,21 +61129,21 @@
         })(),
         $ =
           ((r = {}),
-          Object(w.a)(r, u.a.POST, U),
-          Object(w.a)(r, u.a.EDIT, Q),
-          Object(w.a)(r, u.a.DROPOUT, V),
-          Object(w.a)(r, u.a.CRAWLING, K),
-          Object(w.a)(r, u.a.POST_SIMILAR, q.a),
-          Object(w.a)(r, u.a.COM_RENT_POST, q.a),
-          Object(w.a)(r, u.a.POST_PREFILL, q.a),
-          Object(w.a)(r, u.a.FSL_POSTING, Z),
+          Object(L.a)(r, u.a.POST, B),
+          Object(L.a)(r, u.a.EDIT, Q),
+          Object(L.a)(r, u.a.DROPOUT, V),
+          Object(L.a)(r, u.a.CRAWLING, K),
+          Object(L.a)(r, u.a.POST_SIMILAR, q.a),
+          Object(L.a)(r, u.a.COM_RENT_POST, q.a),
+          Object(L.a)(r, u.a.POST_PREFILL, q.a),
+          Object(L.a)(r, u.a.FSL_POSTING, Z),
           r),
         ee = function (e) {
           return $[e];
         },
-        te = a(367),
-        ae = (a(450), a(16));
-      a(232);
+        te = a(368),
+        ae = (a(451), a(16));
+      a(233);
       function re(e, t) {
         var a = t && t.type,
           r = (a && 'action "'.concat(String(a), '"')) || "an action";
@@ -60853,12 +61204,12 @@
       var ie = a(15),
         oe = a(573),
         le = a(1),
-        ce = a(362),
+        ce = a(363),
         se = a(94),
-        ue = a(296),
-        pe = a(297),
-        de = (a(298), a(475)),
-        me = a(134),
+        ue = a(297),
+        pe = a(298),
+        de = (a(299), a(476)),
+        me = a(135),
         fe = Object(se.applyMiddleware)(
           function (e) {
             return function (e) {
@@ -60884,13 +61235,13 @@
           }
         );
       var be = a(55),
-        ye = a(381),
-        ge = a(401),
-        ve = a(389),
-        he = a(377),
+        ye = a(382),
+        ge = a(402),
+        ve = a(390),
+        he = a(378),
         Ee = a(19),
         _e = a(32),
-        Ae = a(27),
+        Ae = a(28),
         Te = a(33),
         Oe =
           (a(81).a,
@@ -60934,7 +61285,7 @@
               return e;
           }
         },
-        Ce = a(417),
+        Ce = a(418),
         Ie = function () {
           var e =
               arguments.length > 0 && void 0 !== arguments[0]
@@ -60951,7 +61302,7 @@
           }
         },
         Ne = a(31),
-        Le = {
+        we = {
           currentView: Ne.e,
           showLoader: !1,
           resendOTP: Ne.u,
@@ -60962,11 +61313,11 @@
           stateObject: {},
           flow: Ne.k,
         },
-        we = function () {
+        Le = function () {
           var e =
               arguments.length > 0 && void 0 !== arguments[0]
                 ? arguments[0]
-                : Le,
+                : we,
             t = arguments.length > 1 ? arguments[1] : void 0,
             a = t.type,
             r = t.payload,
@@ -60998,10 +61349,10 @@
                     input: Object(h.a)(
                       {},
                       o.input,
-                      Object(w.a)(
+                      Object(L.a)(
                         {},
                         r.field,
-                        Object(h.a)({}, s, Object(w.a)({}, r.subField, r.value))
+                        Object(h.a)({}, s, Object(L.a)({}, r.subField, r.value))
                       )
                     ),
                   }),
@@ -61012,7 +61363,7 @@
                   input: Object(h.a)(
                     {},
                     o.input,
-                    Object(w.a)({}, r.field, r.value)
+                    Object(L.a)({}, r.field, r.value)
                   ),
                 }),
               });
@@ -61023,16 +61374,16 @@
                   userData: Object(h.a)(
                     {},
                     o,
-                    Object(w.a)(
+                    Object(L.a)(
                       {},
                       r.field,
-                      Object(h.a)({}, u, Object(w.a)({}, r.subField, r.value))
+                      Object(h.a)({}, u, Object(L.a)({}, r.subField, r.value))
                     )
                   ),
                 });
               }
               return Object(h.a)({}, e, {
-                userData: Object(h.a)({}, o, Object(w.a)({}, r.field, r.value)),
+                userData: Object(h.a)({}, o, Object(L.a)({}, r.field, r.value)),
               });
             case Ne.K:
               var p = o.error,
@@ -61050,13 +61401,13 @@
                         error: Object(h.a)(
                           {},
                           d,
-                          Object(w.a)(
+                          Object(L.a)(
                             { count: f },
                             r.field,
                             Object(h.a)(
                               {},
                               b,
-                              Object(w.a)({}, r.subField, r.value)
+                              Object(L.a)({}, r.subField, r.value)
                             )
                           )
                         ),
@@ -61073,7 +61424,7 @@
                       error: Object(h.a)(
                         {},
                         d,
-                        Object(w.a)({}, r.field, r.value)
+                        Object(L.a)({}, r.field, r.value)
                       ),
                     }),
                   })
@@ -61090,7 +61441,7 @@
                 C = r.value,
                 I = C.userError,
                 N = C.reraError,
-                L = C.companyError,
+                w = C.companyError,
                 R = C.contactError,
                 j = C.errorCount;
               return Object(h.a)({}, e, {
@@ -61099,7 +61450,7 @@
                     count: j,
                     user: Object(h.a)({}, E, {}, I),
                     rera: Object(h.a)({}, A, {}, N),
-                    company: Object(h.a)({}, O, {}, L),
+                    company: Object(h.a)({}, O, {}, w),
                     contact: Object(h.a)({}, S, {}, R),
                   }),
                 }),
@@ -61107,10 +61458,10 @@
             case Ne.r:
               var k = r.userData.contact.mobile1,
                 D = k.split("-")[0],
-                U = "91" == D ? Ne.l : Ne.j;
+                B = "91" == D ? Ne.l : Ne.j;
               return Object(h.a)({}, e, {
                 showLoader: !1,
-                currentView: U,
+                currentView: B,
                 userData: r.userData,
                 flow: Ne.p,
                 isLoggedIn: !0,
@@ -61147,7 +61498,7 @@
             case Ne.a:
               return Object(h.a)({}, e, { isOTPLogin: r });
             case Ne.B:
-              return Object(h.a)({}, Le, { userData: {} });
+              return Object(h.a)({}, we, { userData: {} });
             case Ne.C:
               return Object(h.a)({}, e, { userData: n });
             case Ne.D:
@@ -61201,7 +61552,7 @@
         },
         ke = a(14),
         De = a(24),
-        Ue = {
+        Be = {
           siteLinksLeft: "0%",
           hotProjectsLeft: "-100%",
           hotAreasLeft: "-100%",
@@ -61213,11 +61564,11 @@
           honeyPropId: "",
           viewAsTableTitle: "",
         },
-        Be = function () {
+        xe = function () {
           var e =
               arguments.length > 0 && void 0 !== arguments[0]
                 ? arguments[0]
-                : Ue,
+                : Be,
             t = arguments.length > 1 ? arguments[1] : void 0,
             a = t.type,
             r = t.data;
@@ -61274,14 +61625,14 @@
               return Object(h.a)({}, e);
           }
         },
-        xe = {
+        Ue = {
           overlayData: { visibility: !1, className: "", backdropClick: !1 },
         },
         Fe = function () {
           var e =
               arguments.length > 0 && void 0 !== arguments[0]
                 ? arguments[0]
-                : xe,
+                : Ue,
             t = arguments.length > 1 ? arguments[1] : void 0;
           switch (t.type) {
             case "UPDATE_OVERLAY":
@@ -61303,14 +61654,14 @@
               return e;
           }
         },
-        We = a(268),
-        Ve = a(171),
+        We = a(269),
+        Ve = a(172),
         Ge = function (e) {
           return "true" === Object(A.a)("IS_EU");
         },
-        He = a(169),
-        Ye = a(447),
-        Qe = a(562),
+        He = a(170),
+        Ye = a(448),
+        Qe = a(563),
         Ke = a(36),
         qe = function (e) {
           return "undefined" !== typeof window &&
@@ -61323,8 +61674,8 @@
             ? document.referrer
             : null;
         },
-        Je = a(123),
-        Xe = a(175),
+        Je = a(124),
+        Xe = a(176),
         ze = function () {
           var e =
               arguments.length > 0 && void 0 !== arguments[0]
@@ -61342,7 +61693,7 @@
           }
         },
         Ze = a(80),
-        $e = a(567),
+        $e = a(568),
         et = a(100),
         tt = { currentPageId: "" },
         at = function () {
@@ -61399,9 +61750,9 @@
               return e;
           }
         },
-        ct = a(518),
-        st = a(568),
-        ut = a(466),
+        ct = a(519),
+        st = a(569),
+        ut = a(468),
         pt = { propId: "", preference: "", price: "" },
         dt = function () {
           var e =
@@ -61535,7 +61886,7 @@
             startSubscriptionFlow: [],
           },
         },
-        St = a(418),
+        St = a(419),
         Ct = function () {
           var e =
               arguments.length > 0 && void 0 !== arguments[0]
@@ -61562,9 +61913,9 @@
               return e;
           }
         },
-        Nt = a(516),
-        Lt = a(402),
-        wt = a(467),
+        Nt = a(517),
+        wt = a(403),
+        Lt = a(467),
         Rt = function () {
           var e =
               arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -61591,7 +61942,7 @@
               return e;
           }
         },
-        kt = a(519),
+        kt = a(520),
         Dt = {
           id: "LeaseToSellHeaderDesktop",
           type: le.d.DESKTOP_HEADER,
@@ -61600,7 +61951,7 @@
           headerLabel: "Just 1 step and you\u2019re done",
           headerSubLabel: "",
         },
-        Ut = function () {
+        Bt = function () {
           var e =
               arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             t = arguments.length > 1 ? arguments[1] : void 0,
@@ -61613,7 +61964,7 @@
               return e;
           }
         },
-        Bt = function () {
+        xt = function () {
           var e =
               arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             t = arguments.length > 1 ? arguments[1] : void 0,
@@ -61626,12 +61977,12 @@
               return e;
           }
         },
-        xt = {},
+        Ut = {},
         Ft = function () {
           var e =
               arguments.length > 0 && void 0 !== arguments[0]
                 ? arguments[0]
-                : xt,
+                : Ut,
             t = arguments.length > 1 ? arguments[1] : void 0,
             a = t.type,
             r = t.payload;
@@ -61642,7 +61993,7 @@
               return e;
           }
         },
-        Mt = a(520),
+        Mt = a(521),
         Wt = {
           PrimaryDetails: le.d.PAGE,
           BasicDetails: le.d.PAGE,
@@ -61670,7 +62021,7 @@
           var e = {};
           return (
             "mobile" == Object(k.a)(navigator.userAgent)
-              ? (((e = Oe(Wt)).hamburgerState = Be),
+              ? (((e = Oe(Wt)).hamburgerState = xe),
                 (e.overlay = Fe),
                 (e.AbridgeForm = Ot),
                 (e.AbridgeFormHeader = Object(ye.b)(
@@ -61700,7 +62051,7 @@
                   new ve.c(ut.PostForSaleHeader)
                 )),
                 (e.LeaseToSellHeaderDesktop = Object(ye.b)(new ve.c(Dt)))),
-            (e.AbridgedForm = Object(ye.b)(new Nt.a(Lt.a))),
+            (e.AbridgedForm = Object(ye.b)(new Nt.a(wt.a))),
             (e.values = (function () {
               var e = Object(h.a)(
                 {},
@@ -61718,7 +62069,7 @@
                     return Object(h.a)(
                       {},
                       e,
-                      Object(w.a)({}, t, function () {
+                      Object(L.a)({}, t, function () {
                         var e =
                             arguments.length > 0 && void 0 !== arguments[0]
                               ? arguments[0]
@@ -61740,21 +62091,21 @@
                 )
               );
             })()),
-            (e.PostForRent = Object(ye.b)(new Nt.a(Lt.c))),
-            (e.PostForSale = Object(ye.b)(new Nt.a(Lt.d))),
-            (e.LeaseToSell = Object(ye.b)(new Nt.a(Lt.b))),
-            (e.SellToLease = Object(ye.b)(new Nt.a(Lt.e))),
+            (e.PostForRent = Object(ye.b)(new Nt.a(wt.c))),
+            (e.PostForSale = Object(ye.b)(new Nt.a(wt.d))),
+            (e.LeaseToSell = Object(ye.b)(new Nt.a(wt.b))),
+            (e.SellToLease = Object(ye.b)(new Nt.a(wt.e))),
             (e.PostForRentButton = Object(ye.b)(
-              new ve.b(wt.PostForRentButton)
+              new ve.b(Lt.PostForRentButton)
             )),
             (e.PostForSaleButton = Object(ye.b)(
-              new ve.b(wt.PostForSaleButton)
+              new ve.b(Lt.PostForSaleButton)
             )),
             (e.LeaseToSellButton = Object(ye.b)(
-              new ve.b(wt.LeaseToSellButton)
+              new ve.b(Lt.LeaseToSellButton)
             )),
             (e.SellToLeaseButton = Object(ye.b)(
-              new ve.b(wt.SellToLeaseButton)
+              new ve.b(Lt.SellToLeaseButton)
             )),
             (e.propertyView = je),
             (e.lastAction = Pe),
@@ -61762,7 +62113,7 @@
             (e.lastUpdatedField = Ct),
             (e.previouslyPosted = lt),
             (e.completionScore = Ie),
-            (e.userState = we),
+            (e.userState = Le),
             (e.isEditProperty = Me),
             (e.isEU = Ge),
             (e.referrer = qe),
@@ -61776,23 +62127,23 @@
             (e.suspiciousFields = vt),
             (e.isPostForRentSuccess = Rt),
             (e.isPostForSaleSuccess = jt),
-            (e.isSellToLeaseConversionSuccess = Ut),
-            (e.isLeaseToSellConversionSuccess = Bt),
+            (e.isSellToLeaseConversionSuccess = Bt),
+            (e.isLeaseToSellConversionSuccess = xt),
             (e.CommercialProject = kt.a),
             (e.premiumVersion = Ft),
             (e.TopUsp = Mt.a),
             e
           );
         },
-        Ht = a(440),
-        Yt = a(407),
-        Qt = a(227),
-        Kt = a(369),
-        qt = a(582),
-        Jt = a(228),
+        Ht = a(441),
+        Yt = a(409),
+        Qt = a(228),
+        Kt = a(370),
+        qt = a(583),
+        Jt = a(229),
         Xt = a(35),
-        zt = a(177),
-        Zt = a(176),
+        zt = a(178),
+        Zt = a(177),
         $t = function (e) {
           var t = {};
           try {
@@ -62214,11 +62565,11 @@
           );
         };
       "undefined" !== typeof window && (window.updateDate = {});
-      var ea = a(517),
+      var ea = a(518),
         ta = function (e) {
           d.a.set("dropoutId", e);
         },
-        aa = a(26),
+        aa = a(27),
         ra = (function () {
           var e = Object(o.a)(
             i.a.mark(function e(t) {
@@ -62285,7 +62636,7 @@
             return e.apply(this, arguments);
           };
         })(),
-        na = a(233),
+        na = a(234),
         ia = function () {
           var e =
               arguments.length > 0 && void 0 !== arguments[0]
@@ -62453,7 +62804,7 @@
         pa = (function () {
           var e = Object(o.a)(
             i.a.mark(function e(t) {
-              var a, r, n, l, c, p, d, y, g, T, O, P, N, w, R;
+              var a, r, n, l, c, p, d, y, g, T, O, P, N, L, R;
               return i.a.wrap(
                 function (e) {
                   for (;;)
@@ -62491,7 +62842,7 @@
                           (e.prev = 15),
                           (e.t2 = aa.a),
                           (e.next = 19),
-                          Object(L.a)()
+                          Object(w.a)()
                         );
                       case 19:
                         return (
@@ -62526,13 +62877,13 @@
                         if (
                           ((P = (O = T || {}).beforePreLease),
                           (N = O.isListingVerified),
-                          (w = O.accessSource),
+                          (L = O.accessSource),
                           (t.current = $t(
                             Object(h.a)({}, g, {
                               LoginInput: Object(ea.a)(p),
                               PreLeasedBanner: {
                                 visible:
-                                  P && (!N || "master_edit_verified" === w),
+                                  P && (!N || "master_edit_verified" === L),
                               },
                               userState: {
                                 currentView: "LOGIN",
@@ -62548,7 +62899,7 @@
                             })
                           )),
                           (e.prev = 37),
-                          (e.t4 = !Object(H.a)()),
+                          (e.t4 = !Object(H.b)() && !Object(H.a)()),
                           !e.t4)
                         ) {
                           e.next = 42;
@@ -63340,19 +63691,413 @@
     ,
     ,
     ,
-    ,
+    function (e, t, a) {
+      "use strict";
+      var r = a(0),
+        n = a(79),
+        i = a(80),
+        o = a(378),
+        l = a(1),
+        c = a(363),
+        s = (a(133), a(122), a(60)),
+        u = function (e, t) {
+          return function (a, r) {
+            var n = t.pathname,
+              i = r().metaData.dropoutDataSource;
+            return !(
+              e ||
+              "/postproperty" === n ||
+              "/postproperty/" === n ||
+              "/postproperty/thankyou" === n ||
+              "/postproperty/register" === n ||
+              window.location.hostname.includes("propadmin") ||
+              s.a.get("neverShow") ||
+              "/postproperty/coworkingRequest" === n ||
+              i
+            );
+          };
+        },
+        p = a(11),
+        d = ["mousedown", "keydown", "touchstart", "click"];
+      t.a = function (e, t) {
+        var a = Object(n.h)(),
+          s = Object(r.useRef)(null),
+          m = Object(p.c)(),
+          f = Object(r.useCallback)(
+            function () {
+              s.current && clearTimeout(s.current),
+                m(u(e, a)) && (s.current = setTimeout(t.current.open, 12e4));
+            },
+            [e, a, s, t, m]
+          );
+        Object(r.useEffect)(function () {
+          Object.keys(i)
+            .concat(Object.keys(o.a.value))
+            .map(function (e) {
+              var t = (i[e] || {}).type,
+                a =
+                  [l.e.NUMBER, l.e.TEXT, l.e.TEXTAREA].indexOf(t) > -1 ||
+                  ["description"].indexOf(e) > -1;
+              return new c.a(
+                function (t, a) {
+                  return a({
+                    type: "SET_LAST_UPDATED_FIELD",
+                    payload: { field: e },
+                  });
+                },
+                a ? "INPUT_BLUR_".concat(e) : "UPDATE_INPUT_VALUE_".concat(e),
+                !1
+              );
+            });
+        }, []),
+          Object(r.useEffect)(
+            function () {
+              if (!e)
+                return (
+                  d.forEach(function (e) {
+                    window.addEventListener(e, f);
+                  }),
+                  f(),
+                  function (e) {
+                    return d.forEach(function (e) {
+                      window.removeEventListener(e, f);
+                    });
+                  }
+                );
+            },
+            [e, f]
+          ),
+          Object(r.useEffect)(
+            function () {
+              !m(u(e, a)) && s.current && clearTimeout(s.current);
+            },
+            [a, e, s, m]
+          );
+      };
+    },
+    function (e, t, a) {
+      "use strict";
+      var r = a(0),
+        n = a(79),
+        i = a(11),
+        o = (a(29), a(51)),
+        l = a(220),
+        c = a(153),
+        s = a(60),
+        u = function () {
+          return function (e, t) {
+            var a = window.location.pathname,
+              r = (Object(o.a)(), t()),
+              n = r.metaData.dropoutDataSource,
+              i = r.isEditProperty,
+              u = r.userState,
+              p = (u = void 0 === u ? {} : u).userData,
+              d = (p = void 0 === p ? {} : p).user,
+              m = (d = void 0 === d ? {} : d).userClass,
+              f = r.values,
+              b = f.preference.value,
+              y = f.propertyType.value,
+              g = f.resCom.value,
+              v = f.city.value.id,
+              h = f.locality.value.id;
+            return (
+              !(
+                i ||
+                "/postproperty" === a ||
+                "/postproperty/" === a ||
+                "/postproperty/thankyou" === a ||
+                "/postproperty/register" === a ||
+                window.location.hostname.includes("propadmin") ||
+                s.a.get("dropoutSubmitted") ||
+                Object(l.a)(n) ||
+                Object(c.a)(n)
+              ) &&
+              b &&
+              y &&
+              g &&
+              v &&
+              h &&
+              "O" === m
+            );
+          };
+        },
+        p = a(652),
+        d = a(755),
+        m = a.n(d),
+        f = ["mousedown", "keydown", "touchstart", "click"];
+      t.a = function (e) {
+        var t = Object(n.h)(),
+          a = Object(i.c)(),
+          o = Object(i.d)(function (e) {
+            return e.metaData && e.metaData.dropoutDataSource;
+          }),
+          l = Object(r.useRef)(null),
+          c = Object(r.useCallback)(
+            function () {
+              l.current && clearTimeout(l.current),
+                a(u()) &&
+                  (l.current = setTimeout(function () {
+                    return a(Object(p.a)(o || "PPF_DROPOUT"));
+                  }, 72e5));
+            },
+            [t, l, a, o]
+          );
+        Object(r.useEffect)(
+          function () {
+            if (!e)
+              return (
+                f.forEach(function (e) {
+                  window.addEventListener(e, c);
+                }),
+                c(),
+                function (e) {
+                  return f.forEach(function (e) {
+                    window.removeEventListener(e, c);
+                  });
+                }
+              );
+          },
+          [e, c]
+        ),
+          Object(r.useEffect)(
+            function () {
+              !a(u()) && l.current && clearTimeout(l.current);
+            },
+            [t, e, l, a]
+          );
+        var s = Object(r.useCallback)(
+          function (e) {
+            console.log(a(u())),
+              a(u()) && a(Object(p.a)(o || "PPF_DROPOUT", e));
+          },
+          [a, o]
+        );
+        Object(r.useEffect)(
+          function () {
+            var e = new m.a();
+            return (
+              window.addEventListener("beforeunload", function (t) {
+                s(e);
+              }),
+              function () {
+                return window.removeEventListener("beforeunload", s);
+              }
+            );
+          },
+          [s]
+        );
+      };
+    },
+    function (e, t, a) {
+      "use strict";
+      var r = a(11),
+        n = a(14),
+        i = a(12),
+        o = a(6),
+        l = a(0),
+        c = a.n(l),
+        s = a(382),
+        u = a(392),
+        p = a(1),
+        d = a(463);
+      t.a = Object(r.b)(null, function (e, t) {
+        return {
+          resolveInitialState: function () {
+            e(Object(n.a)("preference", { value: "R" }, !0)),
+              e(Object(n.a)("agreement", { value: "2" }, !0)),
+              e(Object(n.a)("price", { value: "" }, !0)),
+              e(Object(n.a)("pricePerUnitArea", { value: "" }, !0)),
+              e(Object(n.a)("electricityWaterCharges", { value: !0 }, !0)),
+              e({ type: "UPDATE_Pricing", payload: { addMore: void 0 } }),
+              e({ type: "UPDATE_PricingDetails", payload: { visible: !1 } }),
+              e({
+                type: "UPDATE_INPUT_VALUE_description",
+                payload: { description: "", isAutoGenerated: !1 },
+              });
+          },
+          showHeaderBack: function () {
+            e({
+              type: "UPDATE_PostForRentHeader",
+              payload: Object(i.a)()
+                ? { showBack: !0 }
+                : { showBackButton: !0 },
+            });
+          },
+        };
+      })(function (e) {
+        var t = e.showHeaderBack,
+          a = e.resolveInitialState,
+          r = Object(d.a)(t, a),
+          n = Object(o.a)(r, 2),
+          l = n[0],
+          m = n[1],
+          f = Object(i.a)()
+            ? Object(s.a)(p.d.HEADER, "PostForRentHeader")
+            : Object(s.a)(p.d.DESKTOP_HEADER, "PostForRentHeader"),
+          b = Object(s.a)(p.d.PAGE, "PostForRent");
+        return l
+          ? c.a.createElement(u.a, null)
+          : c.a.createElement(
+              c.a.Fragment,
+              null,
+              c.a.createElement(f, { entity: "PostForRentHeader", onBack: m }),
+              c.a.createElement(b, { entity: "PostForRent" })
+            );
+      });
+    },
+    function (e, t, a) {
+      "use strict";
+      var r = a(11),
+        n = a(14),
+        i = a(12),
+        o = a(6),
+        l = a(0),
+        c = a.n(l),
+        s = a(382),
+        u = a(392),
+        p = a(1),
+        d = a(463);
+      t.a = Object(r.b)(null, function (e, t) {
+        return {
+          resolveInitialState: function () {
+            e(Object(n.a)("preference", { value: "S" }, !0)),
+              e(Object(n.a)("price", { value: "" }, !0)),
+              e(Object(n.a)("pricePerUnitArea", { value: "" }, !0)),
+              e(Object(n.a)("perUnitArea", { value: "" }, !0)),
+              e(Object(n.a)("electricityWaterCharges", { value: null }, !0)),
+              e(Object(n.a)("maintenance", { value: "" }, !0)),
+              e(Object(n.a)("maintenanceCriteria", { value: "" }, !0)),
+              e(Object(n.a)("bookingAmount", { value: "" }, !0)),
+              e(Object(n.a)("annualDues", { value: "" }, !0)),
+              e(Object(n.a)("membership", { value: "" }, !0)),
+              e(Object(n.a)("propertyAvailability", { value: "I" }, !0)),
+              e({
+                type: "UPDATE_INPUT_VALUE_description",
+                payload: { description: "", isAutoGenerated: !1 },
+              });
+          },
+          showHeaderBack: function () {
+            e({
+              type: "UPDATE_PostForSaleHeader",
+              payload: Object(i.a)()
+                ? { showBack: !0 }
+                : { showBackButton: !0 },
+            });
+          },
+        };
+      })(function (e) {
+        var t = e.showHeaderBack,
+          a = e.resolveInitialState,
+          r = Object(d.a)(t, a),
+          n = Object(o.a)(r, 2),
+          l = n[0],
+          m = n[1],
+          f = Object(i.a)()
+            ? Object(s.a)(p.d.HEADER, "PostForSaleHeader")
+            : Object(s.a)(p.d.DESKTOP_HEADER, "PostForSaleHeader"),
+          b = Object(s.a)(p.d.PAGE, "PostForSale");
+        return l
+          ? c.a.createElement(u.a, null)
+          : c.a.createElement(
+              c.a.Fragment,
+              null,
+              c.a.createElement(f, { entity: "PostForSaleHeader", onBack: m }),
+              c.a.createElement(b, { entity: "PostForSale" })
+            );
+      });
+    },
+    function (e, t, a) {
+      "use strict";
+      var r = a(11),
+        n = a(6),
+        i = a(4),
+        o = a.n(i),
+        l = a(5),
+        c = a(0),
+        s = a.n(c),
+        u = a(392),
+        p = a(382),
+        d = a(1),
+        m = a(463),
+        f = a(12),
+        b = a(8),
+        y = a(561),
+        g = function (e) {
+          var t = e.showHeaderBack,
+            a = e.resolveInitialState,
+            i = Object(r.c)();
+          Object(c.useEffect)(
+            function () {
+              Object(l.a)(
+                o.a.mark(function e() {
+                  return o.a.wrap(function (e) {
+                    for (;;)
+                      switch ((e.prev = e.next)) {
+                        case 0:
+                          return (e.next = 2), i(Object(y.a)());
+                        case 2:
+                          (e.t0 = e.sent),
+                            e.t0 > 0 ||
+                              (window.location.href = "".concat(
+                                b.a,
+                                "/do/buyourservices?source=ppf"
+                              ));
+                        case 5:
+                        case "end":
+                          return e.stop();
+                      }
+                  }, e);
+                })
+              )();
+            },
+            [i]
+          );
+          var g = Object(m.a)(t, a),
+            v = Object(n.a)(g, 2),
+            h = v[0],
+            E = v[1],
+            _ = Object(f.a)()
+              ? Object(p.a)(d.d.HEADER, "LeaseToSellHeader")
+              : Object(p.a)(d.d.DESKTOP_HEADER, "LeaseToSellHeaderDesktop"),
+            A = Object(p.a)(d.d.PAGE, "LeaseToSell");
+          return h
+            ? s.a.createElement(u.a, null)
+            : s.a.createElement(
+                s.a.Fragment,
+                null,
+                s.a.createElement(_, {
+                  entity: Object(f.a)()
+                    ? "LeaseToSellHeader"
+                    : "LeaseToSellHeaderDesktop",
+                  onBack: E,
+                }),
+                s.a.createElement(A, { entity: "LeaseToSell" })
+              );
+        },
+        v = a(14);
+      t.a = Object(r.b)(null, function (e, t) {
+        return {
+          showHeaderBack: function () {},
+          resolveInitialState: function () {
+            e(Object(v.a)("resCom", { value: "C" }, !0)),
+              e(Object(v.a)("preference", { value: "S" }, !0)),
+              e(Object(v.a)("propertyAvailability", { value: "" }, !0));
+          },
+        };
+      })(g);
+    },
     function (e, t, a) {
       "use strict";
       var r = a(11),
         n = (a(8), a(37)),
         i = a(0),
         o = a.n(i),
-        l = a(426),
-        c = a(409),
+        l = a(427),
+        c = a(410),
         s = a(23),
-        u = a(755),
+        u = a(756),
         p = a.n(u),
-        d = a(448),
+        d = a(449),
         m = a(1),
         f = function (e) {
           var t = e.isDesktop,
@@ -63502,6 +64247,7 @@
             );
       });
     },
+    ,
     function (e, t, a) {
       "use strict";
       var r = a(11),
@@ -63511,407 +64257,12 @@
         l = a(5),
         c = a(0),
         s = a.n(c),
-        u = a(391),
-        p = a(381),
-        d = a(1),
-        m = a(462),
-        f = a(12),
-        b = a(8),
-        y = a(560),
-        g = function (e) {
-          var t = e.showHeaderBack,
-            a = e.resolveInitialState,
-            i = Object(r.c)();
-          Object(c.useEffect)(
-            function () {
-              Object(l.a)(
-                o.a.mark(function e() {
-                  return o.a.wrap(function (e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (e.next = 2), i(Object(y.a)());
-                        case 2:
-                          (e.t0 = e.sent),
-                            e.t0 > 0 ||
-                              (window.location.href = "".concat(
-                                b.a,
-                                "/do/buyourservices?source=ppf"
-                              ));
-                        case 5:
-                        case "end":
-                          return e.stop();
-                      }
-                  }, e);
-                })
-              )();
-            },
-            [i]
-          );
-          var g = Object(m.a)(t, a),
-            v = Object(n.a)(g, 2),
-            h = v[0],
-            E = v[1],
-            _ = Object(f.a)()
-              ? Object(p.a)(d.d.HEADER, "LeaseToSellHeader")
-              : Object(p.a)(d.d.DESKTOP_HEADER, "LeaseToSellHeaderDesktop"),
-            A = Object(p.a)(d.d.PAGE, "LeaseToSell");
-          return h
-            ? s.a.createElement(u.a, null)
-            : s.a.createElement(
-                s.a.Fragment,
-                null,
-                s.a.createElement(_, {
-                  entity: Object(f.a)()
-                    ? "LeaseToSellHeader"
-                    : "LeaseToSellHeaderDesktop",
-                  onBack: E,
-                }),
-                s.a.createElement(A, { entity: "LeaseToSell" })
-              );
-        },
-        v = a(14);
-      t.a = Object(r.b)(null, function (e, t) {
-        return {
-          showHeaderBack: function () {},
-          resolveInitialState: function () {
-            e(Object(v.a)("resCom", { value: "C" }, !0)),
-              e(Object(v.a)("preference", { value: "S" }, !0)),
-              e(Object(v.a)("propertyAvailability", { value: "" }, !0));
-          },
-        };
-      })(g);
-    },
-    function (e, t, a) {
-      "use strict";
-      var r = a(11),
-        n = a(14),
-        i = a(12),
-        o = a(6),
-        l = a(0),
-        c = a.n(l),
-        s = a(381),
-        u = a(391),
-        p = a(1),
-        d = a(462);
-      t.a = Object(r.b)(null, function (e, t) {
-        return {
-          resolveInitialState: function () {
-            e(Object(n.a)("preference", { value: "S" }, !0)),
-              e(Object(n.a)("price", { value: "" }, !0)),
-              e(Object(n.a)("pricePerUnitArea", { value: "" }, !0)),
-              e(Object(n.a)("perUnitArea", { value: "" }, !0)),
-              e(Object(n.a)("electricityWaterCharges", { value: null }, !0)),
-              e(Object(n.a)("maintenance", { value: "" }, !0)),
-              e(Object(n.a)("maintenanceCriteria", { value: "" }, !0)),
-              e(Object(n.a)("bookingAmount", { value: "" }, !0)),
-              e(Object(n.a)("annualDues", { value: "" }, !0)),
-              e(Object(n.a)("membership", { value: "" }, !0)),
-              e(Object(n.a)("propertyAvailability", { value: "I" }, !0)),
-              e({
-                type: "UPDATE_INPUT_VALUE_description",
-                payload: { description: "", isAutoGenerated: !1 },
-              });
-          },
-          showHeaderBack: function () {
-            e({
-              type: "UPDATE_PostForSaleHeader",
-              payload: Object(i.a)()
-                ? { showBack: !0 }
-                : { showBackButton: !0 },
-            });
-          },
-        };
-      })(function (e) {
-        var t = e.showHeaderBack,
-          a = e.resolveInitialState,
-          r = Object(d.a)(t, a),
-          n = Object(o.a)(r, 2),
-          l = n[0],
-          m = n[1],
-          f = Object(i.a)()
-            ? Object(s.a)(p.d.HEADER, "PostForSaleHeader")
-            : Object(s.a)(p.d.DESKTOP_HEADER, "PostForSaleHeader"),
-          b = Object(s.a)(p.d.PAGE, "PostForSale");
-        return l
-          ? c.a.createElement(u.a, null)
-          : c.a.createElement(
-              c.a.Fragment,
-              null,
-              c.a.createElement(f, { entity: "PostForSaleHeader", onBack: m }),
-              c.a.createElement(b, { entity: "PostForSale" })
-            );
-      });
-    },
-    function (e, t, a) {
-      "use strict";
-      var r = a(11),
-        n = a(14),
-        i = a(12),
-        o = a(6),
-        l = a(0),
-        c = a.n(l),
-        s = a(381),
-        u = a(391),
-        p = a(1),
-        d = a(462);
-      t.a = Object(r.b)(null, function (e, t) {
-        return {
-          resolveInitialState: function () {
-            e(Object(n.a)("preference", { value: "R" }, !0)),
-              e(Object(n.a)("agreement", { value: "2" }, !0)),
-              e(Object(n.a)("price", { value: "" }, !0)),
-              e(Object(n.a)("pricePerUnitArea", { value: "" }, !0)),
-              e(Object(n.a)("electricityWaterCharges", { value: !0 }, !0)),
-              e({ type: "UPDATE_Pricing", payload: { addMore: void 0 } }),
-              e({ type: "UPDATE_PricingDetails", payload: { visible: !1 } }),
-              e({
-                type: "UPDATE_INPUT_VALUE_description",
-                payload: { description: "", isAutoGenerated: !1 },
-              });
-          },
-          showHeaderBack: function () {
-            e({
-              type: "UPDATE_PostForRentHeader",
-              payload: Object(i.a)()
-                ? { showBack: !0 }
-                : { showBackButton: !0 },
-            });
-          },
-        };
-      })(function (e) {
-        var t = e.showHeaderBack,
-          a = e.resolveInitialState,
-          r = Object(d.a)(t, a),
-          n = Object(o.a)(r, 2),
-          l = n[0],
-          m = n[1],
-          f = Object(i.a)()
-            ? Object(s.a)(p.d.HEADER, "PostForRentHeader")
-            : Object(s.a)(p.d.DESKTOP_HEADER, "PostForRentHeader"),
-          b = Object(s.a)(p.d.PAGE, "PostForRent");
-        return l
-          ? c.a.createElement(u.a, null)
-          : c.a.createElement(
-              c.a.Fragment,
-              null,
-              c.a.createElement(f, { entity: "PostForRentHeader", onBack: m }),
-              c.a.createElement(b, { entity: "PostForRent" })
-            );
-      });
-    },
-    function (e, t, a) {
-      "use strict";
-      var r = a(0),
-        n = a(79),
-        i = a(11),
-        o = (a(28), a(51)),
-        l = a(219),
-        c = a(152),
-        s = a(60),
-        u = function () {
-          return function (e, t) {
-            var a = window.location.pathname,
-              r = (Object(o.a)(), t()),
-              n = r.metaData.dropoutDataSource,
-              i = r.isEditProperty,
-              u = r.userState,
-              p = (u = void 0 === u ? {} : u).userData,
-              d = (p = void 0 === p ? {} : p).user,
-              m = (d = void 0 === d ? {} : d).userClass,
-              f = r.values,
-              b = f.preference.value,
-              y = f.propertyType.value,
-              g = f.resCom.value,
-              v = f.city.value.id,
-              h = f.locality.value.id;
-            return (
-              !(
-                i ||
-                "/postproperty" === a ||
-                "/postproperty/" === a ||
-                "/postproperty/thankyou" === a ||
-                "/postproperty/register" === a ||
-                window.location.hostname.includes("propadmin") ||
-                s.a.get("dropoutSubmitted") ||
-                Object(l.a)(n) ||
-                Object(c.a)(n)
-              ) &&
-              b &&
-              y &&
-              g &&
-              v &&
-              h &&
-              "O" === m
-            );
-          };
-        },
-        p = a(651),
-        d = a(754),
-        m = a.n(d),
-        f = ["mousedown", "keydown", "touchstart", "click"];
-      t.a = function (e) {
-        var t = Object(n.h)(),
-          a = Object(i.c)(),
-          o = Object(i.d)(function (e) {
-            return e.metaData && e.metaData.dropoutDataSource;
-          }),
-          l = Object(r.useRef)(null),
-          c = Object(r.useCallback)(
-            function () {
-              l.current && clearTimeout(l.current),
-                a(u()) &&
-                  (l.current = setTimeout(function () {
-                    return a(Object(p.a)(o || "PPF_DROPOUT"));
-                  }, 72e5));
-            },
-            [t, l, a, o]
-          );
-        Object(r.useEffect)(
-          function () {
-            if (!e)
-              return (
-                f.forEach(function (e) {
-                  window.addEventListener(e, c);
-                }),
-                c(),
-                function (e) {
-                  return f.forEach(function (e) {
-                    window.removeEventListener(e, c);
-                  });
-                }
-              );
-          },
-          [e, c]
-        ),
-          Object(r.useEffect)(
-            function () {
-              !a(u()) && l.current && clearTimeout(l.current);
-            },
-            [t, e, l, a]
-          );
-        var s = Object(r.useCallback)(
-          function (e) {
-            console.log(a(u())),
-              a(u()) && a(Object(p.a)(o || "PPF_DROPOUT", e));
-          },
-          [a, o]
-        );
-        Object(r.useEffect)(
-          function () {
-            var e = new m.a();
-            return (
-              window.addEventListener("beforeunload", function (t) {
-                s(e);
-              }),
-              function () {
-                return window.removeEventListener("beforeunload", s);
-              }
-            );
-          },
-          [s]
-        );
-      };
-    },
-    function (e, t, a) {
-      "use strict";
-      var r = a(0),
-        n = a(79),
-        i = a(80),
-        o = a(377),
-        l = a(1),
-        c = a(362),
-        s = (a(132), a(121), a(60)),
-        u = function (e, t) {
-          return function (a, r) {
-            var n = t.pathname,
-              i = r().metaData.dropoutDataSource;
-            return !(
-              e ||
-              "/postproperty" === n ||
-              "/postproperty/" === n ||
-              "/postproperty/thankyou" === n ||
-              "/postproperty/register" === n ||
-              window.location.hostname.includes("propadmin") ||
-              s.a.get("neverShow") ||
-              "/postproperty/coworkingRequest" === n ||
-              i
-            );
-          };
-        },
-        p = a(11),
-        d = ["mousedown", "keydown", "touchstart", "click"];
-      t.a = function (e, t) {
-        var a = Object(n.h)(),
-          s = Object(r.useRef)(null),
-          m = Object(p.c)(),
-          f = Object(r.useCallback)(
-            function () {
-              s.current && clearTimeout(s.current),
-                m(u(e, a)) && (s.current = setTimeout(t.current.open, 12e4));
-            },
-            [e, a, s, t, m]
-          );
-        Object(r.useEffect)(function () {
-          Object.keys(i)
-            .concat(Object.keys(o.a.value))
-            .map(function (e) {
-              var t = (i[e] || {}).type,
-                a =
-                  [l.e.NUMBER, l.e.TEXT, l.e.TEXTAREA].indexOf(t) > -1 ||
-                  ["description"].indexOf(e) > -1;
-              return new c.a(
-                function (t, a) {
-                  return a({
-                    type: "SET_LAST_UPDATED_FIELD",
-                    payload: { field: e },
-                  });
-                },
-                a ? "INPUT_BLUR_".concat(e) : "UPDATE_INPUT_VALUE_".concat(e),
-                !1
-              );
-            });
-        }, []),
-          Object(r.useEffect)(
-            function () {
-              if (!e)
-                return (
-                  d.forEach(function (e) {
-                    window.addEventListener(e, f);
-                  }),
-                  f(),
-                  function (e) {
-                    return d.forEach(function (e) {
-                      window.removeEventListener(e, f);
-                    });
-                  }
-                );
-            },
-            [e, f]
-          ),
-          Object(r.useEffect)(
-            function () {
-              !m(u(e, a)) && s.current && clearTimeout(s.current);
-            },
-            [a, e, s, m]
-          );
-      };
-    },
-    function (e, t, a) {
-      "use strict";
-      var r = a(11),
-        n = a(6),
-        i = a(4),
-        o = a.n(i),
-        l = a(5),
-        c = a(0),
-        s = a.n(c),
-        u = a(462),
-        p = a(391),
+        u = a(463),
+        p = a(392),
         d = a(12),
-        m = a(381),
+        m = a(382),
         f = a(1),
-        b = a(560),
+        b = a(561),
         y = a(8),
         g = function (e) {
           var t = e.showHeaderBack,
@@ -64041,6 +64392,7 @@
     function (e, t, a) {
       e.exports = { bgimg: "pfr_bgimg__3npa2" };
     },
+    ,
     ,
     ,
     ,
@@ -64421,6 +64773,46 @@
         placeholderShimmer: "shimmer_placeholderShimmer__Z7DLR",
       };
     },
+    function (e, t, a) {
+      e.exports = {
+        gradientstatus: "qrDetails_gradientstatus__2D8cD",
+        progressBarRegular: "qrDetails_progressBarRegular__1x4bj",
+        showProgress: "qrDetails_showProgress__38GTk",
+        shadowWrapper: "qrDetails_shadowWrapper__3WUct",
+        container: "qrDetails_container__uSK6i",
+        iconWrap: "qrDetails_iconWrap__3YusG",
+        scanText: "qrDetails_scanText__23r1E",
+        qrcodeWrap: "qrDetails_qrcodeWrap__3XanC",
+        fraudAlert: "qrDetails_fraudAlert__3nrFc",
+        alignContent: "qrDetails_alignContent__3qWw9",
+        qrImageWrap: "qrDetails_qrImageWrap__eJZWa",
+        qrScamText: "qrDetails_qrScamText__3EvHJ",
+        videoWrap: "qrDetails_videoWrap__3jPO_",
+        buttonWraper: "qrDetails_buttonWraper__32BXy",
+        buttonBorder: "qrDetails_buttonBorder__WzPyx",
+        recommendTextWrap: "qrDetails_recommendTextWrap__3KuHD",
+        recommendText: "qrDetails_recommendText__1B_Ab",
+        qrCodeScam: "qrDetails_qrCodeScam__2N9j_",
+        rotate90: "qrDetails_rotate90__1jM3w",
+        spacer8: "qrDetails_spacer8__1wyIc",
+        rotate270: "qrDetails_rotate270__2WmVV",
+        scanQrbold: "qrDetails_scanQrbold__3Tt81",
+        scanQrsemibold: "qrDetails_scanQrsemibold__1nu0A",
+        videoContainer: "qrDetails_videoContainer__3Ctkw",
+        cardWrap: "qrDetails_cardWrap__1mqG2",
+        qrHeader: "qrDetails_qrHeader__3gkWW",
+        list: "qrDetails_list__23Tf8",
+        count: "qrDetails_count__FOUXY",
+        subHeader: "qrDetails_subHeader__7QwrK",
+        text: "qrDetails_text__2kesx",
+        bottomContent: "qrDetails_bottomContent__3U71t",
+        skipIconWrap: "qrDetails_skipIconWrap__Ami_c",
+        postPropetyButton: "qrDetails_postPropetyButton__1Nc17",
+        timerOnClip: "qrDetails_timerOnClip__7MrNz",
+        spacer7: "qrDetails_spacer7__1daxn",
+        soundMute: "qrDetails_soundMute__2NV_s",
+      };
+    },
     ,
     ,
     ,
@@ -64674,19 +65066,19 @@
       var r = a(0),
         n = a.n(r),
         i = a(11),
-        o = (a(391), a(89)),
+        o = (a(392), a(89)),
         l = a(6),
         c = a(2),
         s = a(3),
         u = a(79),
-        p = a(739),
-        d = a(169),
-        m = a(381),
+        p = a(740),
+        d = a(170),
+        m = a(382),
         f = a(1),
         b = { "/editproperty/route/features": "/editproperty/photodetails" },
         y = a(23),
-        g = a(501),
-        v = a(135),
+        g = a(502),
+        v = a(136),
         h = function (e) {
           var t = [];
           return (
@@ -64722,26 +65114,26 @@
             return {};
           }
         )(g.a),
-        _ = a(837),
+        _ = a(844),
         A = a.n(_),
-        T = a(461),
+        T = a(462),
         O = a(36),
         P = a(19),
         S = a(34),
         C = a(32),
-        I = a(27),
+        I = a(28),
         N = a(33),
-        L = a(838),
-        w = a.n(L),
+        w = a(845),
+        L = a.n(w),
         R = a(59),
-        j = a(366),
+        j = a(367),
         k = a(31),
-        D = a(370),
-        U = a(429),
-        B = a(444),
-        x = a(364),
+        D = a(371),
+        B = a(430),
+        x = a(445),
+        U = a(365),
         F = a(65),
-        M = a(946),
+        M = a(954),
         W = a.n(M),
         V = function (e) {
           return n.a.createElement(
@@ -64772,9 +65164,9 @@
       var G = V,
         H = a(53),
         Y = a(45),
-        Q = a(212),
+        Q = a(213),
         K = a(51),
-        q = a(28),
+        q = a(29),
         J = "Your Full Name",
         X = (function (e) {
           function t(e) {
@@ -65191,7 +65583,7 @@
                 }
               }),
               (a.handleEdit = function () {
-                a.props.history.push("/postproperty");
+                a.props.history.push("/postproperty/");
               });
             var r = e.userData,
               n = (r = void 0 === r ? {} : r).input,
@@ -65280,7 +65672,7 @@
                   return n.a.createElement(
                     "div",
                     {
-                      className: "".concat(w.a.formSection, " pageComponent"),
+                      className: "".concat(L.a.formSection, " pageComponent"),
                       "data-label": "REGISTRATION_FORM",
                     },
                     n.a.createElement(
@@ -65289,14 +65681,14 @@
                       n.a.createElement(F.a, {
                         heading: "Looks like you\u2019re new to 99acres,",
                         fontClass: "".concat(
-                          w.a.headingTextIcon,
+                          L.a.headingTextIcon,
                           " title_semiBold"
                         ),
                       }),
                       n.a.createElement(F.a, {
                         heading: "Continue by creating a new account...",
                         fontClass: "".concat(
-                          w.a.headingTextIcon,
+                          L.a.headingTextIcon,
                           " title_semiBold"
                         ),
                       })
@@ -65305,7 +65697,7 @@
                       "div",
                       {
                         className: "".concat(
-                          w.a.inputGroupLabel,
+                          L.a.inputGroupLabel,
                           " list_header_semiBold"
                         ),
                       },
@@ -65315,12 +65707,12 @@
                       "div",
                       {
                         className: ""
-                          .concat(w.a.formGroup, " ")
+                          .concat(L.a.formGroup, " ")
                           .concat(g && "disableInput"),
                       },
                       n.a.createElement(
                         "div",
-                        { className: w.a.tags_wrapper },
+                        { className: L.a.tags_wrapper },
                         n.a.createElement(
                           j.a,
                           {
@@ -65339,7 +65731,7 @@
                       ),
                       n.a.createElement(
                         "div",
-                        { className: w.a.tags_wrapper },
+                        { className: L.a.tags_wrapper },
                         n.a.createElement(
                           j.a,
                           {
@@ -65359,10 +65751,10 @@
                     ),
                     n.a.createElement(
                       "div",
-                      { className: "".concat(w.a.formGroup) },
+                      { className: "".concat(L.a.formGroup) },
                       n.a.createElement(
                         "div",
-                        { className: w.a.inputWrap },
+                        { className: L.a.inputWrap },
                         n.a.createElement(D.a, {
                           "data-label": "NAME",
                           className: "pageComponent",
@@ -65380,7 +65772,7 @@
                       ),
                       n.a.createElement(
                         "div",
-                        { className: w.a.inputWrap },
+                        { className: L.a.inputWrap },
                         n.a.createElement(D.a, {
                           "data-label": "EMAIL_ID",
                           className: "pageComponent",
@@ -65398,8 +65790,8 @@
                       !t &&
                         n.a.createElement(
                           "div",
-                          { className: w.a.inputWrap },
-                          n.a.createElement(B.a, {
+                          { className: L.a.inputWrap },
+                          n.a.createElement(x.a, {
                             "data-label": "PASSWORD",
                             className: "pageComponent",
                             type: "password",
@@ -65414,11 +65806,11 @@
                         ),
                       n.a.createElement(
                         "div",
-                        { className: w.a.inputWrap },
-                        n.a.createElement(U.a, {
+                        { className: L.a.inputWrap },
+                        n.a.createElement(B.a, {
                           "data-label": "PHONE",
                           className: "".concat(
-                            w.a.phoneField,
+                            L.a.phoneField,
                             " pageComponent"
                           ),
                           name: "phone",
@@ -65435,7 +65827,7 @@
                         })
                       ),
                       a
-                        ? n.a.createElement(x.a, {
+                        ? n.a.createElement(U.a, {
                             txt: a,
                             bgColor: "redBlue",
                             alertIcn: "iconS_PPFDesk_16 icon_redWarning",
@@ -65443,7 +65835,7 @@
                         : null,
                       n.a.createElement(
                         "div",
-                        { className: w.a.checkBoxWrapper },
+                        { className: L.a.checkBoxWrapper },
                         y
                           ? n.a.createElement(Q.a, {
                               id: "allow99",
@@ -65473,7 +65865,7 @@
                       y
                         ? n.a.createElement(
                             "div",
-                            { className: "".concat(w.a.inlineText, " m-t-20") },
+                            { className: "".concat(L.a.inlineText, " m-t-20") },
                             n.a.createElement(
                               "span",
                               { className: "caption_strong_medium" },
@@ -65485,7 +65877,7 @@
                                 href: "https://www.99acres.com/do/Company/privacypolicy",
                                 target: "_blank",
                                 className: "input_counter_focused ".concat(
-                                  w.a.hyperLinkTNC
+                                  L.a.hyperLinkTNC
                                 ),
                               },
                               "Privacy Policy"
@@ -65501,7 +65893,7 @@
                                 href: "https://99acres.com/do/Company/termsconditions",
                                 target: "_blank",
                                 className: "input_counter_focused ".concat(
-                                  w.a.hyperLinkTNC
+                                  L.a.hyperLinkTNC
                                 ),
                               },
                               "Terms and Conditions"
@@ -65515,7 +65907,7 @@
                           )
                         : n.a.createElement(
                             "div",
-                            { className: "".concat(w.a.inlineText, " m-t-20") },
+                            { className: "".concat(L.a.inlineText, " m-t-20") },
                             n.a.createElement(
                               "span",
                               { className: "caption_strong_medium" },
@@ -65537,9 +65929,9 @@
                       "div",
                       {
                         className: ""
-                          .concat(w.a.full_width_btn, " ")
-                          .concat(w.a.submitBtn, " ")
-                          .concat(w.a.inputWrap),
+                          .concat(L.a.full_width_btn, " ")
+                          .concat(L.a.submitBtn, " ")
+                          .concat(L.a.inputWrap),
                       },
                       n.a.createElement(
                         R.a,
@@ -65640,7 +66032,7 @@
               (a.handleEdit = function () {
                 var e = a.props;
                 e.location;
-                e.history.push("/postproperty");
+                e.history.push("/postproperty/");
               }),
               (a.state = { isOwner: !0, errMessage: "" }),
               a
@@ -65657,21 +66049,21 @@
                     a = (e.errMessage, this.props.isCrawledUser);
                   return n.a.createElement(
                     "div",
-                    { className: w.a.formSection },
+                    { className: L.a.formSection },
                     n.a.createElement(
                       G,
                       { handleEdit: this.handleEdit },
                       n.a.createElement(F.a, {
                         heading: "Welcome",
                         fontClass: "".concat(
-                          w.a.headingTextIcon,
+                          L.a.headingTextIcon,
                           " title_semiBold"
                         ),
                       }),
                       n.a.createElement(F.a, {
                         heading: "To continue please let us know correctly",
                         fontClass: "".concat(
-                          w.a.headingTextIcon,
+                          L.a.headingTextIcon,
                           " title_semiBold"
                         ),
                       })
@@ -65680,7 +66072,7 @@
                       "div",
                       {
                         className: "".concat(
-                          w.a.inputGroupLabel,
+                          L.a.inputGroupLabel,
                           " list_header_semiBold"
                         ),
                       },
@@ -65688,12 +66080,12 @@
                     ),
                     n.a.createElement(
                       "div",
-                      { className: w.a.formGroup },
+                      { className: L.a.formGroup },
                       n.a.createElement(
                         "div",
                         {
                           className: ""
-                            .concat(w.a.tags_wrapper, " ")
+                            .concat(L.a.tags_wrapper, " ")
                             .concat(a && "disableInput"),
                         },
                         n.a.createElement(
@@ -65714,7 +66106,7 @@
                       ),
                       n.a.createElement(
                         "div",
-                        { className: w.a.tags_wrapper },
+                        { className: L.a.tags_wrapper },
                         n.a.createElement(
                           j.a,
                           {
@@ -65736,8 +66128,8 @@
                       "div",
                       {
                         className: "body_med "
-                          .concat(w.a.inlineText, " ")
-                          .concat(w.a.inputWrap),
+                          .concat(L.a.inlineText, " ")
+                          .concat(L.a.inputWrap),
                       },
                       "Please choose accurately. If in future you wish to change this, it can only be done via the my profile section."
                     ),
@@ -65745,9 +66137,9 @@
                       "div",
                       {
                         className: ""
-                          .concat(w.a.full_width_btn, " ")
-                          .concat(w.a.submitBtn, " ")
-                          .concat(w.a.inputWrap),
+                          .concat(L.a.full_width_btn, " ")
+                          .concat(L.a.submitBtn, " ")
+                          .concat(L.a.inputWrap),
                       },
                       n.a.createElement(
                         R.a,
@@ -65790,11 +66182,11 @@
             }
           )(Z)
         ),
-        ee = a(947),
+        ee = a(955),
         te = a.n(ee),
-        ae = a(948),
+        ae = a(956),
         re = a.n(ae),
-        ne = a(545),
+        ne = a(546),
         ie = (function (e) {
           function t(e) {
             var a;
@@ -66016,7 +66408,7 @@
               (a.handleEdit = function () {
                 var e = a.props;
                 e.location;
-                e.history.push("/postproperty");
+                e.history.push("/postproperty/");
               }),
               (a.handleAllow99Change = function (e, t) {
                 a.setState({ allow99: t });
@@ -66282,7 +66674,7 @@
                       n.a.createElement(
                         "div",
                         { className: te.a.alertWrap },
-                        n.a.createElement(x.a, {
+                        n.a.createElement(U.a, {
                           txt: "Phone number successfully verified",
                           bgColor: "darkBlue",
                           typoClass: "list_header_semiBold",
@@ -66418,9 +66810,9 @@
             }
           )(ie)
         ),
-        le = a(991),
+        le = a(999),
         ce = a.n(le),
-        se = a(215),
+        se = a(216),
         ue = (function (e) {
           function t(e) {
             var a;
@@ -66510,7 +66902,7 @@
                 e.flow === k.p
                   ? (window.location.href =
                       "/do/buyer/ShowBuyerForms/editBuyerProfile")
-                  : t.push("/postproperty");
+                  : t.push("/postproperty/");
               }),
               (a.state = {
                 showRegisterSuccess: !1,
@@ -66781,7 +67173,7 @@
             }
           )(ue)
         ),
-        de = a(548),
+        de = a(549),
         me = a.n(de),
         fe = (function (e) {
           function t(e) {
@@ -66822,7 +67214,7 @@
               (a.handleEdit = function () {
                 var e = a.props;
                 e.location;
-                e.history.push("/postproperty");
+                e.history.push("/postproperty/");
               }),
               (a.handleSubmit = function (e) {
                 e.preventDefault();
@@ -67081,8 +67473,8 @@
             }
           )(fe)
         ),
-        ye = a(524),
-        ge = a(132),
+        ye = a(525),
+        ge = a(133),
         ve = Object(i.b)(
           function (e) {
             return {
@@ -67157,10 +67549,10 @@
         Ee = a(4),
         _e = a.n(Ee),
         Ae = a(5),
-        Te = a(992),
+        Te = a(1e3),
         Oe = a.n(Te),
-        Pe = a(481),
-        Se = a(482),
+        Pe = a(482),
+        Se = a(483),
         Ce = function (e) {
           var t = e.propId,
             a = e.isRefPropLoading,
@@ -67247,10 +67639,10 @@
             )
           );
         },
-        Ie = a(993),
+        Ie = a(1001),
         Ne = a.n(Ie),
-        Le = a(994),
-        we = a.n(Le),
+        we = a(1002),
+        Le = a.n(we),
         Re = function (e) {
           var t = e.children;
           return n.a.createElement(
@@ -67258,17 +67650,17 @@
             null,
             n.a.createElement(
               "div",
-              { className: "".concat(we.a.heading, " title_l_semiBold") },
+              { className: "".concat(Le.a.heading, " title_l_semiBold") },
               t
             )
           );
         },
         je = a(10),
-        ke = a(995),
+        ke = a(1003),
         De = a.n(ke),
-        Ue = a(996),
-        Be = a.n(Ue),
-        xe = function (e) {
+        Be = a(1004),
+        xe = a.n(Be),
+        Ue = function (e) {
           var t = e.propertyData.propId,
             a = Object(Y.a)("PROPLOGIN"),
             r = ""
@@ -67289,7 +67681,7 @@
               n.a.createElement(
                 "div",
                 { className: De.a.qrWrap },
-                n.a.createElement(Be.a, {
+                n.a.createElement(xe.a, {
                   value: r,
                   size: "150",
                   fgColor: "#0078DB",
@@ -67303,12 +67695,12 @@
             )
           );
         },
-        Fe = a(1005),
+        Fe = a(1013),
         Me = a.n(Fe),
-        We = a(223),
-        Ve = a(746),
+        We = a(224),
+        Ve = a(747),
         Ge = a.n(Ve),
-        He = a(747),
+        He = a(748),
         Ye = a.n(He),
         Qe = function (e) {
           var t = e.propertyData,
@@ -67472,12 +67864,12 @@
             )
           );
         },
-        Ke = a(1006),
+        Ke = a(1014),
         qe = a.n(Ke),
-        Je = a(1007),
+        Je = a(1015),
         Xe = a.n(Je),
         ze = a(37),
-        Ze = a(1008),
+        Ze = a(1016),
         $e = a.n(Ze),
         et = function (e) {
           var t = e.propertyData,
@@ -67798,9 +68190,9 @@
                 )
               );
         },
-        tt = a(1009),
+        tt = a(1017),
         at = a.n(tt),
-        rt = a(542),
+        rt = a(543),
         nt = function (e) {
           var t = e.position;
           return "left" == t
@@ -67879,9 +68271,9 @@
                 n.a.createElement(rt.a, { position: t })
               );
         },
-        it = a(771),
+        it = a(778),
         ot = a.n(it),
-        lt = a(1010),
+        lt = a(1018),
         ct = a.n(lt),
         st = function (e) {
           return "left" == e.position
@@ -67975,9 +68367,9 @@
                 )
               );
         },
-        ut = a(1011),
+        ut = a(1019),
         pt = a.n(ut),
-        dt = a(857),
+        dt = a(864),
         mt = a.n(dt),
         ft = function (e) {
           var t = e.position,
@@ -68087,8 +68479,8 @@
                 )
               );
         },
-        bt = a(537),
-        yt = a(1012),
+        bt = a(538),
+        yt = a(1020),
         gt = a.n(yt),
         vt = function (e) {
           var t = e.position,
@@ -68216,8 +68608,8 @@
                 )
               );
         },
-        ht = a(541),
-        Et = a(1013),
+        ht = a(542),
+        Et = a(1021),
         _t = a.n(Et),
         At = function (e) {
           return "left" === e.position
@@ -68361,7 +68753,7 @@
         Tt = function (e) {
           switch (e) {
             case "qrScan":
-              return xe;
+              return Ue;
             case "completionScore":
               return Qe;
             case "requestVerification":
@@ -68383,11 +68775,11 @@
               return null;
           }
         },
-        Ot = a(1014),
+        Ot = a(1022),
         Pt = a.n(Ot),
-        St = a(139),
-        Ct = a(410),
-        It = a(395),
+        St = a(140),
+        Ct = a(411),
+        It = a(396),
         Nt = function (e) {
           var t = e.propId,
             a = e.userClass,
@@ -68573,9 +68965,9 @@
                 )
               );
         },
-        Lt = a(1015),
-        wt = a.n(Lt),
-        Rt = a(1016),
+        wt = a(1023),
+        Lt = a.n(wt),
+        Rt = a(1024),
         jt = a.n(Rt),
         kt = function (e) {
           var t = e.propId;
@@ -68584,7 +68976,7 @@
             null,
             n.a.createElement(
               "div",
-              { className: wt.a.msgWrapper },
+              { className: Lt.a.msgWrapper },
               n.a.createElement(
                 "div",
                 null,
@@ -68626,12 +69018,12 @@
           );
         },
         Dt = a(12),
-        Ut = a(572),
-        Bt = a(535),
-        xt = a(441),
-        Ft = a(1017),
+        Bt = a(572),
+        xt = a(536),
+        Ut = a(442),
+        Ft = a(1025),
         Mt = a.n(Ft),
-        Wt = a(570),
+        Wt = a(571),
         Vt = function (e) {
           return n.a.createElement(
             "div",
@@ -68698,14 +69090,14 @@
             N = Object(i.d)(function (e) {
               return e.metaData;
             }).accessSource,
-            L = Object(r.useState)({}),
-            w = Object(l.a)(L, 2),
-            R = w[0],
-            j = w[1],
+            w = Object(r.useState)({}),
+            L = Object(l.a)(w, 2),
+            R = L[0],
+            j = L[1],
             k = Object(r.useState)({}),
             D = Object(l.a)(k, 2),
-            U = D[0],
-            B = D[1];
+            B = D[0],
+            x = D[1];
           Object(r.useEffect)(
             function () {
               Object(Ae.a)(
@@ -68733,7 +69125,7 @@
                         case 3:
                           (r = e.sent) &&
                             r.listing &&
-                            (j(r.listing), r.userDetails && B(r.userDetails));
+                            (j(r.listing), r.userDetails && x(r.userDetails));
                         case 5:
                         case "end":
                           return e.stop();
@@ -68744,7 +69136,7 @@
             },
             [I, t]
           );
-          var x = Object(Ut.a)(d, f, m, b),
+          var U = Object(Bt.a)(d, f, m, b),
             F = {},
             M = {};
           return (
@@ -68770,7 +69162,7 @@
               n.a.createElement(Ce, {
                 propId: R.propId,
                 preference: y,
-                isRefPropLoading: x,
+                isRefPropLoading: U,
                 childPropPreference: m,
                 parentPropPreference: b,
                 resCom: g,
@@ -68813,7 +69205,7 @@
                 n.a.createElement(Nt, {
                   propId: R.propId,
                   userClass: C,
-                  userDetails: U,
+                  userDetails: B,
                   profileId: I,
                   resCom: R.listingCategory,
                   preference: R.preference,
@@ -68855,7 +69247,7 @@
                       n.a.createElement(
                         "div",
                         { className: Ne.a.reviewBn },
-                        n.a.createElement(Bt.a, {
+                        n.a.createElement(xt.a, {
                           locality: _,
                           project: h,
                           city: T,
@@ -68863,7 +69255,7 @@
                           sourcePage: "PPF_DESKTOP",
                         })
                       ),
-                      n.a.createElement(xt.a, {
+                      n.a.createElement(Ut.a, {
                         cityId: T.value.id,
                         platform: "desktop",
                         campaignName: "raBanner_ppf_thankyou_desktop",
@@ -68973,10 +69365,10 @@
           "leaseToSell",
           "sellToLease",
         ],
-        qt = a(828),
-        Jt = (a(735), a(180)),
-        Xt = a(576),
-        zt = a(420),
+        qt = a(829),
+        Jt = (a(736), a(181)),
+        Xt = a(577),
+        zt = a(421),
         Zt = Object(i.b)(null, function (e, t) {
           t.entity;
           return {
@@ -69028,10 +69420,10 @@
           })();
           return n.a.createElement(zt.b, { successCallBack: s });
         }),
-        $t = a(1018),
+        $t = a(1026),
         ea = a.n($t),
-        ta = a(489),
-        aa = a(488),
+        ta = a(490),
+        aa = a(489),
         ra = a.n(aa),
         na = Object(i.b)(function (e) {
           return {
@@ -69102,10 +69494,10 @@
             )
           );
         }),
-        ia = a(477),
-        oa = a(1019),
+        ia = a(478),
+        oa = a(1027),
         la = a.n(oa),
-        ca = a(400),
+        ca = a(401),
         sa = a(55),
         ua = function (e) {
           return e
@@ -69285,10 +69677,10 @@
             )
           );
         }),
-        da = a(748),
+        da = a(749),
         ma = a(22),
-        fa = a(750),
-        ba = a(448),
+        fa = a(751),
+        ba = a(449),
         ya = Object(i.b)(function (e) {
           var t = e.metaData,
             a = (t = void 0 === t ? {} : t).accessSource;
@@ -69300,13 +69692,13 @@
             ].includes(a),
           };
         })(ba.a),
-        ga = a(124),
-        va = a(239),
-        ha = a(652),
-        Ea = a(751),
-        _a = a(512),
-        Aa = a(134),
-        Ta = a(1020),
+        ga = a(125),
+        va = a(240),
+        ha = a(653),
+        Ea = a(752),
+        _a = a(513),
+        Aa = a(135),
+        Ta = a(1028),
         Oa = a.n(Ta),
         Pa = function () {
           return n.a.createElement(
@@ -69353,9 +69745,9 @@
         },
         Sa = a(57),
         Ca = a.n(Sa),
-        Ia = a(591),
+        Ia = a(592),
         Na = a(67),
-        La = function (e) {
+        wa = function (e) {
           var t = e.close,
             a = Object(i.d)(function (e) {
               return e.isEditProperty;
@@ -69437,19 +69829,314 @@
             )
           );
         },
-        wa = a(827),
-        Ra = a(826),
-        ja = a(825),
-        ka = a(824),
-        Da = a(829),
-        Ua = a(823),
-        Ba = {
+        La = a(830),
+        Ra = a(831),
+        ja = a(832),
+        ka = a(833),
+        Da = a(836),
+        Ba = a(834),
+        xa = a(1029),
+        Ua = a.n(xa),
+        Fa = a(757),
+        Ma = a.n(Fa),
+        Wa = a(758),
+        Va = a.n(Wa),
+        Ga = a(759),
+        Ha = a.n(Ga),
+        Ya = a(760),
+        Qa = a(761),
+        Ka = {
+          width: "322px",
+          "max-height": "286px",
+          "overflow-y": "auto",
+          padding: "32px 32px 15px",
+          "border-radius": "12px",
+        },
+        qa = Object(i.b)(function (e) {
+          return { propertyDetails: e.propertyView };
+        })(
+          Object(Ya.a)(function (e) {
+            var t = e || {},
+              a = t.timer,
+              r = t.clipId,
+              i = t.replayClip,
+              o = t.skipClip,
+              l = t.playPauseClip,
+              c = t.playPauseState,
+              s = t.setClipSound,
+              u = t.clipSound,
+              p = "00:".concat(1 === (a + "").length ? "0" + a : a);
+            return n.a.createElement(
+              "div",
+              { className: Ua.a.shadowWrapper },
+              n.a.createElement(
+                "div",
+                Object.assign(
+                  { className: "".concat(Ua.a.container, " pageComponent") },
+                  Object(ze.a)("QrCodeArareness", "page", !1, null)
+                ),
+                n.a.createElement(
+                  "div",
+                  { className: Ua.a.scanText },
+                  n.a.createElement(
+                    "span",
+                    { className: Ua.a.iconWrap },
+                    n.a.createElement("i", {
+                      className: "iconS_Common_20 icon_thumbsUpBlue",
+                    })
+                  ),
+                  n.a.createElement(
+                    "div",
+                    null,
+                    "Your property details are saved and will be posted after this video."
+                  )
+                ),
+                n.a.createElement(
+                  "div",
+                  { className: Ua.a.qrcodeWrap },
+                  n.a.createElement(
+                    "div",
+                    { className: Ua.a.fraudAlert },
+                    "FRAUD ALERT!"
+                  ),
+                  n.a.createElement(
+                    "div",
+                    { className: Ua.a.qrScamText },
+                    "Protect yourself from QRcode scam"
+                  ),
+                  n.a.createElement(
+                    "div",
+                    { className: Ua.a.alignContent },
+                    n.a.createElement(
+                      "span",
+                      { className: Ua.a.scanQrbold },
+                      "DO NOT SCAN QR Code "
+                    ),
+                    n.a.createElement(
+                      "span",
+                      { className: Ua.a.scanQrsemibold },
+                      " to receive payment or else you will lose your money"
+                    ),
+                    n.a.createElement(
+                      "span",
+                      { className: Ua.a.qrImageWrap },
+                      n.a.createElement("img", { src: Ma.a, alt: "" })
+                    ),
+                    a <= 0 &&
+                      n.a.createElement(
+                        "span",
+                        Object.assign(
+                          {
+                            className: "".concat(
+                              Ua.a.skipIconWrap,
+                              " pageComponent"
+                            ),
+                            onClick: o,
+                          },
+                          Object(ze.a)("VideoClipSkipAndPost", "custom", !1)()
+                        ),
+                        n.a.createElement("i", {
+                          className: "iconS_Common_32 icon_close",
+                        })
+                      )
+                  ),
+                  n.a.createElement(
+                    "div",
+                    { className: Ua.a.videoContainer },
+                    n.a.createElement(
+                      "div",
+                      { style: { position: "relative" } },
+                      n.a.createElement(
+                        "div",
+                        { className: Ua.a.videoWrap },
+                        n.a.createElement("iframe", {
+                          id: "iframeTest",
+                          width: "100%",
+                          height: "100%",
+                          src: "https://www.youtube.com/embed/".concat(
+                            r,
+                            "?enablejsapi=1&controls=0"
+                          ),
+                          frameBorder: "0",
+                          allow:
+                            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                          allowFullScreen: !0,
+                          title: "QR Code Awareness",
+                        })
+                      ),
+                      n.a.createElement(
+                        "div",
+                        { className: Ua.a.gradientstatus },
+                        n.a.createElement(
+                          "div",
+                          { className: "".concat(Ua.a.progressBarRegular) },
+                          n.a.createElement("div", {
+                            className: "".concat(Ua.a.showProgress),
+                            style: { width: 6.3 * (60 - a) + "px" },
+                          }),
+                          n.a.createElement("span", {
+                            className: Ua.a.spacer7,
+                          }),
+                          a >= 0 &&
+                            n.a.createElement(
+                              n.a.Fragment,
+                              null,
+                              n.a.createElement(
+                                "span",
+                                null,
+                                n.a.createElement(
+                                  "span",
+                                  { onClick: l, style: { cursor: "pointer" } },
+                                  c
+                                    ? n.a.createElement("i", {
+                                        className:
+                                          "iconS_Common_24 icon_circlePlay",
+                                      })
+                                    : n.a.createElement("i", {
+                                        className:
+                                          "iconS_Common_24 icon_pauseIcn",
+                                      })
+                                ),
+                                n.a.createElement(
+                                  "span",
+                                  { className: Ua.a.soundMute },
+                                  u
+                                    ? n.a.createElement("img", {
+                                        onClick: function () {
+                                          return s(0);
+                                        },
+                                        src: Va.a,
+                                        alt: "",
+                                      })
+                                    : n.a.createElement("img", {
+                                        onClick: function () {
+                                          return s(90);
+                                        },
+                                        src: Ha.a,
+                                        alt: "",
+                                      })
+                                )
+                              )
+                            ),
+                          a > 0 &&
+                            n.a.createElement(
+                              "span",
+                              { className: Ua.a.timerOnClip },
+                              " ",
+                              p
+                            )
+                        )
+                      ),
+                      n.a.createElement(
+                        "div",
+                        {
+                          className: ""
+                            .concat(Ua.a.buttonWraper, " ")
+                            .concat(
+                              a <= 0 && Ua.a.buttonBorder,
+                              " pageComponent"
+                            ),
+                        },
+                        n.a.createElement(
+                          R.a,
+                          Object(ze.a)(
+                            a > 0
+                              ? "VideoClipTryToSkip"
+                              : a < 0
+                              ? "VideoClipReplay"
+                              : "VideoClipSkipAndPost",
+                            "custom",
+                            !1
+                          )(),
+                          a > 0
+                            ? n.a.createElement(
+                                "span",
+                                null,
+                                "Skip video in ".concat(p)
+                              )
+                            : a < 0
+                            ? n.a.createElement(
+                                "span",
+                                { onClick: i },
+                                " ",
+                                "Replay ",
+                                n.a.createElement("i", {
+                                  className:
+                                    "iconS_Common_24 icon_replay ".concat(
+                                      Ua.a.spacer8
+                                    ),
+                                })
+                              )
+                            : n.a.createElement(
+                                "span",
+                                { onClick: o },
+                                "Skip and Post Property",
+                                " ",
+                                n.a.createElement("i", {
+                                  className:
+                                    "iconS_Common_24 icon_blueDownArrow "
+                                      .concat(Ua.a.rotate270, " ")
+                                      .concat(Ua.a.spacer8),
+                                })
+                              )
+                        )
+                      ),
+                      n.a.createElement(
+                        "div",
+                        { className: Ua.a.recommendTextWrap },
+                        n.a.createElement("i", {
+                          className: "iconS_Common_20 icon_circleYellowWarning",
+                        }),
+                        n.a.createElement(
+                          "div",
+                          { className: Ua.a.recommendText },
+                          "We highly recommend you to watch this safety video and protect yourself from fraud."
+                        )
+                      )
+                    ),
+                    n.a.createElement(
+                      "div",
+                      null,
+                      n.a.createElement(Qa.a, { customStyle: Ka })
+                    )
+                  ),
+                  a <= 0 &&
+                    n.a.createElement(
+                      "div",
+                      Object.assign(
+                        {
+                          className: "".concat(
+                            Ua.a.postPropetyButton,
+                            " pageComponent"
+                          ),
+                        },
+                        Object(ze.a)(
+                          a <= 0
+                            ? "VideoClipPostPrpty"
+                            : "VideoClipSkipAndPost",
+                          "custom",
+                          !1
+                        )(),
+                        { onClick: o }
+                      ),
+                      n.a.createElement(
+                        R.a,
+                        { variant: "primaryRegular" },
+                        "Post Property"
+                      )
+                    )
+                )
+              )
+            );
+          })
+        ),
+        Ja = {
           OwnerZeroListing: "widget",
           OwnerReplaceListing: "widget",
           Subscription: "widget",
           TopUsp: "widget",
         },
-        xa = function (e) {
+        Xa = function (e) {
           var t = e.isScreening,
             a = Object(r.useRef)(null),
             o = Object(u.h)(),
@@ -69685,6 +70372,7 @@
                   !o.pathname.includes("rera") &&
                   !o.pathname.includes("register") &&
                   !o.pathname.includes("coworkingRequest") &&
+                  !o.pathname.includes("qrCodeawAreness") &&
                   g(Object(p.a)(o.pathname));
               },
               [o, g]
@@ -69697,7 +70385,7 @@
               [o]
             ),
             Object(qt.a)(h, a),
-            Object(wa.a)(h);
+            Object(La.a)(h);
           var P = Object.entries(d.a[Object(y.a)(navigator.userAgent)])
               .filter(function (e) {
                 var t = Object(l.a)(e, 2);
@@ -69727,7 +70415,7 @@
                 n.a.createElement(u.a, { to: "".concat(r).concat(o.search) })
               );
             }),
-            C = Object.entries(Ba)
+            C = Object.entries(Ja)
               .map(function (e) {
                 var t = Object(l.a)(e, 2),
                   a = t[0],
@@ -69807,6 +70495,11 @@
                       ),
                       n.a.createElement(
                         u.b,
+                        { path: "/postproperty/qrCodeAwareness" },
+                        n.a.createElement(qa, null)
+                      ),
+                      n.a.createElement(
+                        u.b,
                         { path: "/postproperty/register" },
                         n.a.createElement(
                           n.a.Fragment,
@@ -69839,7 +70532,7 @@
                           n.a.createElement("div", {
                             style: { width: "240px" },
                           }),
-                          n.a.createElement(Ua.a, null)
+                          n.a.createElement(Ba.a, null)
                         )
                       ),
                       n.a.createElement(
@@ -69872,28 +70565,28 @@
             n.a.createElement(
               St.a,
               { id: "screeningSaveModal" },
-              n.a.createElement(La, null)
+              n.a.createElement(wa, null)
             )
           );
         },
-        Fa = Object(i.b)(function (e) {
+        za = Object(i.b)(function (e) {
           var t = e.metaData;
           return {
             isScreening:
               "screening" === (t = void 0 === t ? {} : t).accessSource,
           };
-        })(xa),
-        Ma = a(60),
-        Wa = a(121),
-        Va = a(757),
-        Ga = a(758),
-        Ha = a(569),
-        Ya = a(759),
-        Qa = a(816),
-        Ka = a(761),
-        qa = a(772),
-        Ja = a.n(qa),
-        Xa = function (e) {
+        })(Xa),
+        Za = a(60),
+        $a = a(122),
+        er = a(764),
+        tr = a(765),
+        ar = a(570),
+        rr = a(766),
+        nr = a(823),
+        ir = a(768),
+        or = a(779),
+        lr = a.n(or),
+        cr = function (e) {
           var t = e.name,
             a = e.data,
             r = a.title,
@@ -69902,8 +70595,8 @@
           return n.a.createElement(
             "div",
             {
-              className: "".concat(Ja.a.footercolumn, " ").concat(
-                Ja.a[
+              className: "".concat(lr.a.footercolumn, " ").concat(
+                lr.a[
                   (function () {
                     var e =
                       arguments.length > 0 && void 0 !== arguments[0]
@@ -69927,7 +70620,7 @@
               "p",
               {
                 className: "".concat(
-                  Ja.a.footercolumnhead,
+                  lr.a.footercolumnhead,
                   " section_header_bold typoWhiteColor"
                 ),
               },
@@ -69953,9 +70646,9 @@
             )
           );
         };
-      Xa.defaultProps = { name: "", data: { title: "", list: [] } };
-      var za = Xa,
-        Za = {
+      cr.defaultProps = { name: "", data: { title: "", list: [] } };
+      var sr = cr,
+        ur = {
           col2: function () {
             var e =
               arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -69964,87 +70657,19 @@
               list: [
                 {
                   FINAL_LABEL: "Mobile Apps",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/mobile-apps"
-                  ),
+                  URL: "https://www.99acres.com/mobile-apps",
                 },
                 {
-                  FINAL_LABEL: "National Home",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/Home-Real-Estate.htm"
-                  ),
-                },
-                {
-                  FINAL_LABEL: "Buy Our Services",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/do/buyourservices"
-                  ),
-                },
-                {
-                  FINAL_LABEL: "Residential Property",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/property-real-estate-buy-rent-residential"
-                  ),
-                },
-                {
-                  FINAL_LABEL: "Commercial Property",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/property-real-estate-buy-rent-commercial"
-                  ),
+                  FINAL_LABEL: "Our Services",
+                  URL: "https://www.99acres.com/do/buyourservices/?source=hamburger",
                 },
                 {
                   FINAL_LABEL: "Price Trends",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/real-estate-property-rates-index"
-                  ),
+                  URL: "https://www.99acres.com/real-estate-property-rates-index",
                 },
                 {
-                  FINAL_LABEL: "NRI Services",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/NRI-Real-Estate.htm"
-                  ),
-                },
-                {
-                  FINAL_LABEL: "Services In India",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/Home-Real-Estate.htm"
-                  ),
-                },
-                {
-                  FINAL_LABEL: "New Projects",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/new-projects-in-india"
-                  ),
-                },
-                {
-                  FINAL_LABEL: "Advertise your property",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/postproperty/"
-                  ),
-                },
-                {
-                  FINAL_LABEL: "Sitemap",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/do/Company/sitemap"
-                  ),
-                },
-                {
-                  FINAL_LABEL: "Get Alerts",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/do/buyer/ShowBuyerForms/DisplayForm"
-                  ),
+                  FINAL_LABEL: "Post your Property",
+                  URL: "https://www.99acres.com/postproperty/?p1=-1&p2=S&p3=0&lstAcn=NR_R&lstAcnId=-1&src=FTR",
                 },
                 {
                   FINAL_LABEL: "Builders in India",
@@ -70052,10 +70677,15 @@
                 },
                 {
                   FINAL_LABEL: "Articles",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/articles"
-                  ),
+                  URL: "https://www.99acres.com/articles",
+                },
+                {
+                  FINAL_LABEL: "Customer Service",
+                  URL: "https://www.99acres.com/faq/",
+                },
+                {
+                  FINAL_LABEL: "Sitemap",
+                  URL: "https://www.99acres.com/do/Company/sitemap?lstAcn=CP_R&lstAcnId=1&src=FTR",
                 },
               ],
             };
@@ -70065,82 +70695,52 @@
               title: "Company",
               list: [
                 {
-                  FINAL_LABEL: "About Us",
+                  FINAL_LABEL: "About us",
                   URL: "https://www.99acres.com/do/Company/aboutUs",
                 },
                 {
-                  FINAL_LABEL: "Contact Us",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/load/Company/contactUs"
-                  ),
+                  FINAL_LABEL: "Contact us",
+                  URL: "https://www.99acres.com/load/Company/contactUs?lstAcn=CP_R&lstAcnId=1&src=FTR",
                 },
                 {
-                  FINAL_LABEL: "Careers with Us",
-                  URL: "http://careers.99acres.com/",
+                  FINAL_LABEL: "Careers with us",
+                  URL: "http://careers.infoedge.in/",
                 },
                 {
-                  FINAL_LABEL: "Terms and Conditions",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/load/Company/termsconditions"
-                  ),
+                  FINAL_LABEL: "Terms & Conditions",
+                  URL: "https://www.99acres.com/load/Company/termsconditions?lstAcn=CP_R&lstAcnId=1&src=FTR",
                 },
                 {
                   FINAL_LABEL: "Request Info",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/load/Company/requestinfo"
-                  ),
+                  URL: "https://www.99acres.com/load/Company/requestinfo?lstAcn=CP_R&lstAcnId=1&src=FTR",
                 },
                 {
                   FINAL_LABEL: "Feedback",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/load/Company/feedback"
-                  ),
+                  URL: "https://www.99acres.com/load/Company/feedback?lstAcn=CP_R&lstAcnId=1&src=FTR",
                 },
                 {
                   FINAL_LABEL: "Report a problem",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/load/Company/feedback"
-                  ),
+                  URL: "https://www.99acres.com/load/Company/feedback?lstAcn=CP_R&lstAcnId=1&src=FTR",
                 },
                 {
                   FINAL_LABEL: "Testimonials",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/load/Company/testimonial"
-                  ),
+                  URL: "https://www.99acres.com/load/Company/testimonial?lstAcn=CP_R&lstAcnId=1&src=FTR",
                 },
                 {
                   FINAL_LABEL: "Privacy Policy",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/load/Company/privacy"
-                  ),
+                  URL: "https://www.99acres.com/load/Company/privacy?lstAcn=CP_R&lstAcnId=1&src=FTR",
                 },
                 {
                   FINAL_LABEL: "Summons/Notices",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/load/Company/summons_notices"
-                  ),
+                  URL: "https://www.99acres.com/load/Company/summons_notices?lstAcn=CP_R&lstAcnId=1&src=FTR",
                 },
                 {
                   FINAL_LABEL: "Grievances",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/load/Company/grievances"
-                  ),
+                  URL: "https://www.99acres.com/load/Company/grievances?lstAcn=CP_R&lstAcnId=1&src=FTR",
                 },
                 {
                   FINAL_LABEL: "Safety Guide",
-                  URL: "".concat(
-                    Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SITE_URL,
-                    "/load/Company/safetyguide"
-                  ),
+                  URL: "https://www.99acres.com/load/Company/safetyguide?lstAcn=CP_R&lstAcnId=1&src=FTR",
                 },
               ],
             };
@@ -70179,10 +70779,6 @@
                   URL: "https://www.meritnation.com",
                 },
                 {
-                  FINAL_LABEL: "Buy Property in India",
-                  URL: "http://www.allcheckdeals.com/",
-                },
-                {
                   FINAL_LABEL: "PaisaBazaar.com",
                   URL: "https://www.paisabazaar.com/",
                 },
@@ -70191,33 +70787,37 @@
                   URL: "https://www.ambitionbox.com/",
                 },
                 {
-                  FINAL_LABEL: "FirstNaukri.com - A jobsite for campus hiring!",
+                  FINAL_LABEL: "FirstNaukri.com - A jobsite for campus hiring",
                   URL: "https://www.firstnaukri.com/",
+                },
+                {
+                  FINAL_LABEL: "Jobhai.com \u2013 Find Jobs Near You",
+                  URL: "https://www.jobhai.com/",
                 },
               ],
             };
           },
         },
-        $a = a(1021),
-        er = a(459),
-        tr = function (e) {
+        pr = a(1030),
+        dr = a(460),
+        mr = function (e) {
           return (
-            Object($a.a)(e),
+            Object(pr.a)(e),
             n.a.createElement(
               "div",
-              { className: "".concat(Ja.a.footerrightcontent) },
+              { className: "".concat(lr.a.footerrightcontent) },
               n.a.createElement(
                 "div",
                 {
                   className: ""
-                    .concat(Ja.a.footercolumn, " ")
-                    .concat(Ja.a.contactus),
+                    .concat(lr.a.footercolumn, " ")
+                    .concat(lr.a.contactus),
                 },
                 n.a.createElement(
                   "p",
                   {
                     className: "".concat(
-                      Ja.a.footercolumnhead,
+                      lr.a.footercolumnhead,
                       " section_header_bold typoWhiteColor"
                     ),
                   },
@@ -70232,7 +70832,7 @@
                   "p",
                   {
                     className: "".concat(
-                      Ja.a.timings,
+                      lr.a.timings,
                       " caption_strong_medium typoWhiteColor"
                     ),
                   },
@@ -70240,14 +70840,14 @@
                 ),
                 n.a.createElement(
                   "p",
-                  { className: " ".concat(Ja.a.emailid, " typoWhiteColor") },
+                  { className: " ".concat(lr.a.emailid, " typoWhiteColor") },
                   "Email - feedback@99acres.com"
                 ),
                 n.a.createElement(
                   "p",
                   {
                     className: "".concat(
-                      Ja.a.footercolumnhead,
+                      lr.a.footercolumnhead,
                       " section_header_bold typoWhiteColor"
                     ),
                   },
@@ -70255,7 +70855,7 @@
                 ),
                 n.a.createElement(
                   "div",
-                  { className: Ja.a.socialIconsContainer },
+                  { className: lr.a.socialIconsContainer },
                   n.a.createElement(
                     "a",
                     {
@@ -70264,7 +70864,7 @@
                     },
                     n.a.createElement("i", {
                       className: "iconS_Common_24 icon_fb ".concat(
-                        Ja.a.socialicon
+                        lr.a.socialicon
                       ),
                     })
                   ),
@@ -70276,7 +70876,7 @@
                     },
                     n.a.createElement("i", {
                       className: "iconS_Common_24 icon_yt ".concat(
-                        Ja.a.socialicon
+                        lr.a.socialicon
                       ),
                     })
                   ),
@@ -70288,7 +70888,7 @@
                     },
                     n.a.createElement("i", {
                       className: "iconS_Common_24 icon_tw ".concat(
-                        Ja.a.socialicon
+                        lr.a.socialicon
                       ),
                     })
                   ),
@@ -70300,7 +70900,7 @@
                     },
                     n.a.createElement("i", {
                       className: "iconS_Common_24 icon_insta ".concat(
-                        Ja.a.socialicon
+                        lr.a.socialicon
                       ),
                     })
                   )
@@ -70309,7 +70909,7 @@
                   "p",
                   {
                     className: "".concat(
-                      Ja.a.footercolumnhead,
+                      lr.a.footercolumnhead,
                       " section_header_bold typoWhiteColor"
                     ),
                   },
@@ -70317,7 +70917,7 @@
                 ),
                 n.a.createElement(
                   "div",
-                  { className: Ja.a.appContainer },
+                  { className: lr.a.appContainer },
                   n.a.createElement(
                     "a",
                     {
@@ -70325,7 +70925,7 @@
                       target: "_blank",
                       href: "https://play.google.com/store/apps/details?id=com.nnacres.app&hl=en",
                     },
-                    n.a.createElement(er.LazyLoadImage, {
+                    n.a.createElement(dr.LazyLoadImage, {
                       width: "160",
                       height: "47",
                       alt: "99acres Android App",
@@ -70335,7 +70935,7 @@
                 ),
                 n.a.createElement(
                   "div",
-                  { className: Ja.a.appContainer },
+                  { className: lr.a.appContainer },
                   n.a.createElement(
                     "a",
                     {
@@ -70343,7 +70943,7 @@
                       target: "_blank",
                       href: "https://itunes.apple.com/in/app/99acres-property-search/id781765588",
                     },
-                    n.a.createElement(er.LazyLoadImage, {
+                    n.a.createElement(dr.LazyLoadImage, {
                       width: "160",
                       height: "47",
                       alt: "99acres iOS App",
@@ -70356,7 +70956,7 @@
                   { className: "caption_subdued_small typoWhiteColor" },
                   n.a.createElement(
                     "span",
-                    { className: Ja.a.disclaimer },
+                    { className: lr.a.disclaimer },
                     "*Usage of 99acres.com to upload content showing area in non standard units or which enables targeting by religion/community/caste/race is prohibited. Please report inappropriate content by writing to us at",
                     " "
                   ),
@@ -70364,7 +70964,7 @@
                     "a",
                     {
                       className: "badges_large_primary_subtle ".concat(
-                        Ja.a.disclaimer_link
+                        lr.a.disclaimer_link
                       ),
                       href: "mailto:legal@99acres.com?Subject=Report Inappropriate Content",
                     },
@@ -70375,7 +70975,7 @@
                   "div",
                   {
                     className: "list_header_semiBold ".concat(
-                      Ja.a.reservedtext,
+                      lr.a.reservedtext,
                       " typoWhiteColor"
                     ),
                   },
@@ -70384,7 +70984,7 @@
                   n.a.createElement(
                     "a",
                     {
-                      className: "".concat(Ja.a.bluelink, " hyperlinks_small"),
+                      className: "".concat(lr.a.bluelink, " hyperlinks_small"),
                       href: "https://www.naukri.com/",
                     },
                     "naukri.com"
@@ -70396,7 +70996,7 @@
             )
           );
         };
-      var ar = function () {
+      var fr = function () {
           var e = Object(u.h)(),
             t = Object(r.useState)(!1),
             a = Object(l.a)(t, 2),
@@ -70420,34 +71020,34 @@
                     "div",
                     {
                       className: "".concat(
-                        Ja.a.footerContainer,
+                        lr.a.footerContainer,
                         " typoWhiteColor"
                       ),
                     },
                     n.a.createElement(
                       "div",
-                      { className: "".concat(Ja.a.footerwrapper) },
+                      { className: "".concat(lr.a.footerwrapper) },
                       n.a.createElement(
                         "div",
-                        { className: "".concat(Ja.a.footerleftcontent) },
-                        Object.keys(Za).map(function (e) {
+                        { className: "".concat(lr.a.footerleftcontent) },
+                        Object.keys(ur).map(function (e) {
                           return n.a.createElement(
                             T.a,
                             { key: e },
-                            n.a.createElement(za, { name: e, data: Za[e](!0) })
+                            n.a.createElement(sr, { name: e, data: ur[e](!0) })
                           );
                         })
                       ),
-                      n.a.createElement(tr, null)
+                      n.a.createElement(mr, null)
                     )
                   )
                 )
               : null
           );
         },
-        rr = a(762),
-        nr = a(767);
-      var ir = function (e) {
+        br = a(769),
+        yr = a(774);
+      var gr = function (e) {
           var t = e.isEditProperty,
             a = Object(i.c)();
           Object(r.useEffect)(
@@ -70455,7 +71055,7 @@
               a(
                 (function (e) {
                   return function (t, a) {
-                    var r = Ma.a.get("ppfData"),
+                    var r = Za.a.get("ppfData"),
                       n = a(),
                       i = Object(K.a)(),
                       o = n.metaData,
@@ -70480,15 +71080,15 @@
                             "coworkingRequest"
                           ) && (c = "/postproperty/coworkingRequest")),
                       "undefined" !== typeof window &&
-                        Object(Va.a)(e) &&
+                        Object(er.a)(e) &&
                         window.history.replaceState(
                           null,
                           "",
                           ""
-                            .concat(c || "/postproperty")
+                            .concat(c || "/postproperty/")
                             .concat(window.location.search)
                         ),
-                      Object(Ga.a)(n),
+                      Object(tr.a)(n),
                       "undefined" !== typeof window &&
                         e &&
                         (Object(ma.a)("editField") || Object(ma.a)("field")))
@@ -70510,7 +71110,7 @@
                     }
                     (("/postproperty" !== c && "/postproperty/" !== c) ||
                       n.isEditProperty) &&
-                      Object(Wa.b)().forEach(function (e) {
+                      Object($a.b)().forEach(function (e) {
                         return t(Object(ge.validatePage)(e, !1));
                       });
                   };
@@ -70519,7 +71119,7 @@
             },
             [t, a]
           );
-          var l = Object(Qa.a)(t),
+          var l = Object(nr.a)(t),
             c = l.isLoading,
             s = l.multiPropUnitsRef,
             u = l.officeEditWarningRef,
@@ -70533,26 +71133,26 @@
                 n.a.Fragment,
                 null,
                 n.a.createElement(Pa, null),
-                n.a.createElement(Ha.a, null),
+                n.a.createElement(ar.a, null),
                 n.a.createElement(
                   St.a,
                   { ref: s },
-                  n.a.createElement(Ya.a, null)
+                  n.a.createElement(rr.a, null)
                 ),
                 n.a.createElement(
                   St.a,
                   { ref: u, showCross: !1 },
-                  n.a.createElement(Ka.a, null)
+                  n.a.createElement(ir.a, null)
                 ),
                 n.a.createElement(
                   St.a,
                   { ref: d, showCross: !1 },
-                  n.a.createElement(nr.a, null)
+                  n.a.createElement(yr.a, null)
                 ),
                 n.a.createElement(
                   St.a,
                   { ref: p },
-                  n.a.createElement(rr.a, null)
+                  n.a.createElement(br.a, null)
                 )
               )
             : n.a.createElement(
@@ -70565,19 +71165,19 @@
                       .concat(A.a.mainWrapper, " ")
                       .concat(m && A.a.noHeader),
                   },
-                  n.a.createElement(Fa, null)
+                  n.a.createElement(za, null)
                 ),
-                n.a.createElement(ar, null)
+                n.a.createElement(fr, null)
               );
         },
-        or = a(46),
-        lr = a(815),
-        cr = a(13);
-      a(582),
+        vr = a(46),
+        hr = a(822),
+        Er = a(13);
+      a(583),
         a(15),
         (t.default = function () {
           var e = Object(r.useRef)(null),
-            t = Object(lr.a)(e).isLoading;
+            t = Object(hr.a)(e).isLoading;
           return n.a.createElement(
             "div",
             null,
@@ -70587,17 +71187,17 @@
                   n.a.Fragment,
                   null,
                   n.a.createElement(Pa, null),
-                  !Object(or.a)("/editproperty") &&
-                    n.a.createElement(Ha.a, null)
+                  !Object(vr.a)("/editproperty") &&
+                    n.a.createElement(ar.a, null)
                 )
               : n.a.createElement(
                   i.a,
                   { store: e.current },
-                  n.a.createElement(ir, {
-                    isEditProperty: Object(or.a)("/editproperty"),
+                  n.a.createElement(gr, {
+                    isEditProperty: Object(vr.a)("/editproperty"),
                   })
                 ),
-            n.a.createElement(cr.a, null)
+            n.a.createElement(Er.a, null)
           );
         });
     },
