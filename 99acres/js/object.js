@@ -1,797 +1,176 @@
-var  objectForUpload = {
-  preference: {
-    value: "S",
-  },
-  agreement: {
-    value: "2",
-  },
-  sharingCount: {
-    value: "",
-  },
-  sharingType: {
-    value: "",
-  },
-  tenantGender: {
-    value: "",
-  },
-  suitableFor: {
-    value: [],
-  },
-  availableFor: {
-    value: [],
-  },
-  additionalRooms: {
-    value: [],
-  },
-  waterSource: {
-    value: [],
-  },
-  overlooking: {
-    value: [],
-  },
-  powerBackup: {
-    value: "",
-  },
-  amenities: {
-    value: [],
-  },
-  bedroomNum: {
-    value: "",
-  },
-  areaType: {},
-  noticeDuration: {
-    value: "",
-  },
-  furnish: {
-    value: "",
-  },
-  parking: {
-    value: 0,
-  },
-  facing: {
-    value: "",
-  },
-  flooring: {
-    value: "",
-  },
-  widthOfFacingRoad: {
-    value: "",
-  },
-  callPreference: {
-    value: [],
-  },
-  callPreferencetext: {},
-  updatedDescription: {},
-  widthOfFacingRoadUnit: {
-    value: "1",
-  },
-  bathroomNum: {
-    value: "",
-  },
-  balconyNum: {
-    value: "",
-  },
-  ownership: {
-    value: "",
-  },
-  price: {
-    value: "",
-  },
-  inclusive: {
-    value: false,
-  },
-  taxGovtCharges: {
-    value: false,
-  },
-  negotiable: {
-    value: false,
-  },
-  electricityWaterCharges: {
-    value: true,
-  },
-  propertyType: {
-    value: 1,
-  },
-  resCom: {
-    value: "R",
-  },
-  superPropertyType: {
-    value: 1,
-  },
-  totalFloor: {
-    value: "",
-  },
-  floorNum: {
-    value: "",
-  },
-  areaUnit: {
-    value: 1,
-  },
-  superBuiltup: {
-    value: "",
-  },
-  builtup: {
-    value: "",
-  },
-  carpet: {
-    value: "",
-  },
-  age: {
-    value: "",
-  },
-  openParking: {
-    value: 0,
-  },
-  coveredParking: {
-    value: 0,
-  },
-  propertyAvailability: {
-    value: "",
-  },
-  availability: {},
-  isBrokerage: {
-    value: "",
-  },
-  brokerageType: {
-    value: "FIXED_AMOUNT",
-  },
-  brokerage: {
-    value: "",
-  },
-  brokerageNegotiable: {
-    value: false,
-  },
-  maintenance: {
-    value: "",
-  },
-  maintenanceCriteria: {
-    value: "1",
-  },
-  expectedRental: {
-    value: "",
-  },
-  bookingAmount: {
-    value: "",
-  },
-  annualDues: {
-    value: "",
-  },
-  membership: {
-    value: "",
-  },
-  bedsNum: {
-    value: "",
-  },
-  capacity: {
-    value: "",
-  },
-  bathroomAttached: {
-    value: false,
-  },
-  balconyAttached: {
-    value: false,
-  },
-  earlyLeavingCharges: {
-    value: "",
-  },
-  earlyLeavingChargesType: {
-    value: "",
-  },
-  rentAgreementDuration: {},
-  depositType: {
-    value: "",
-  },
-  deposit: {
-    value: "",
-  },
-  petAllowed: {
-    value: "",
-  },
-  drinkingAllowed: {
-    value: "",
-  },
-  smokingAllowed: {
-    value: "",
-  },
-  visitorAllowed: {
-    value: "",
-  },
-  partiesAllowed: {
-    value: "",
-  },
-  lastEntryTime: {},
-  otherRule: {},
-  totalPriceIncludes: {
-    value: [],
-  },
-  laundryAvailability: {
-    value: "",
-  },
-  laundryCharge: {
-    value: "",
-  },
-  laundryChargeType: {
-    value: "FIXED",
-  },
-  waterAvailability: {
-    value: "",
-  },
-  waterCharge: {
-    value: "",
-  },
-  waterChargeType: {
-    value: "FIXED",
-  },
-  wifiAvailability: {
-    value: "",
-  },
-  wifiCharge: {
-    value: "",
-  },
-  wifiChargeType: {
-    value: "FIXED",
-  },
-  housekeepingAvailability: {
-    value: "",
-  },
-  housekeepingCharge: {
-    value: "",
-  },
-  housekeepingChargeType: {
-    value: "FIXED",
-  },
-  electricityAvailability: {
-    value: "",
-  },
-  electricityCharge: {
-    value: "",
-  },
-  electricityChargeType: {
-    value: "FIXED",
-  },
-  dthAvailability: {
-    value: "",
-  },
-  dthCharge: {
-    value: "",
-  },
-  dthChargeType: {
-    value: "FIXED",
-  },
-  qualityRating: {
-    value: "",
-  },
-  numberOfProperties: {
-    value: "",
-  },
-  totalRooms: {
-    value: "",
-  },
-  foodAvailability: {
-    value: "",
-  },
-  foodType: {
-    value: "",
-  },
-  foodAvailabilityWeekdays: {
-    value: [],
-  },
-  foodAvailabilityWeekends: {
-    value: [],
-  },
-  foodChargeType: {
-    value: "",
-  },
-  foodCharge: {
-    value: "",
-  },
-  breakfastCharge: {
-    value: "",
-  },
-  lunchCharge: {
-    value: "",
-  },
-  dinnerCharge: {
-    value: "",
-  },
-  otherAmenities: {
-    value: [],
-  },
-  propertyFeatures: {
-    value: [],
-  },
-  societyFeatures: {
-    value: [],
-  },
-  commonFurnish_diningTable: {
-    value: false,
-  },
-  commonFurnish_Tv: {
-    value: 0,
-  },
-  commonFurnish_washingMachine: {
-    value: 0,
-  },
-  commonFurnish_Ac: {
-    value: 0,
-  },
-  commonFurnish_sofa: {
-    value: false,
-  },
-  commonFurnish_WaterPurfier: {
-    value: false,
-  },
-  commonFurnish_ModularKitchen: {
-    value: false,
-  },
-  commonFurnish_fans: {
-    value: false,
-  },
-  commonFurnish_light: {
-    value: 0,
-  },
-  commonFurnish_curtains: {
-    value: false,
-  },
-  commonFurnish_fridge: {
-    value: false,
-  },
-  commonFurnish_geyser: {
-    value: false,
-  },
-  commonFurnish_stove: {
-    value: false,
-  },
-  commonFurnish_microwave: {
-    value: false,
-  },
-  commonFurnish_chimney: {
-    value: false,
-  },
-  commonFurnish_exhaustFan: {
-    value: false,
-  },
-  commonFurnish_wardrobe: {
-    value: 0,
-  },
-  furnishing_Tv: {
-    value: 0,
-  },
-  furnishing_Ac: {
-    value: 0,
-  },
-  furnishing_Bed: {
-    value: 0,
-  },
-  furnishing_Fan: {
-    value: 0,
-  },
-  furnishing_Gey: {
-    value: 0,
-  },
-  furnishing_Light: {
-    value: 0,
-  },
-  furnishing_Ward: {
-    value: 0,
-  },
-  furnishing_Chmny: {
-    value: false,
-  },
-  furnishing_Curt: {
-    value: false,
-  },
-  furnishing_Dinngtbl: {
-    value: false,
-  },
-  furnishing_Exhstfn: {
-    value: false,
-  },
-  furnishing_Kit: {
-    value: false,
-  },
-  furnishing_Ref: {
-    value: false,
-  },
-  furnishing_Sofa: {
-    value: false,
-  },
-  furnishing_Stv: {
-    value: false,
-  },
-  furnishing_Washmchn: {
-    value: false,
-  },
-  furnishing_Wtrpurfr: {
-    value: false,
-  },
-  furnishing_fan_toggle: {
-    value: false,
-  },
-  furnishing_geyser_toggle: {
-    value: false,
-  },
-  furnishing_studytable: {
-    value: false,
-  },
-  furnishing_Microwave: {
-    value: false,
-  },
-  availabilityMonth: {},
-  superArea: {
-    value: "",
-  },
-  minimumContractDuration: {},
-  availabilityDate: {
-    value: "",
-  },
-  propertySpecification: {
-    value: "N",
-  },
-  minArea: {
-    value: "",
-  },
-  maxArea: {
-    value: "",
-  },
-  washroomNumber: {
-    value: "",
-  },
-  plotLength: {
-    value: "",
-  },
-  plotBreadth: {
-    value: "",
-  },
-  isBoundaryWallMade: {
-    value: "",
-  },
-  cornerProperty: {
-    value: false,
-  },
-  wheelChairFriendly: {
-    value: false,
-  },
-  petFriendly: {
-    value: false,
-  },
-  withinGatedCommunity: {
-    value: false,
-  },
-  pricePerUnitArea: {
-    value: "",
-  },
-  availableRooms: {
-    value: "",
-  },
-  priceRangeText: {},
-  priceInWords: {},
-  depositPriceInWords: {},
-  depositMonthsInWords: {},
-  meetingRoomsNum: {
-    value: "",
-  },
-  minSeats: {
-    value: "",
-  },
-  maxSeats: {
-    value: "",
-  },
-  cabinsNum: {
-    value: "",
-  },
-  receptionArea: {
-    value: "",
-  },
-  washroomAvailable: {
-    value: "",
-  },
-  privateWashrooms: {
-    value: 0,
-  },
-  sharingWashrooms: {
-    value: 0,
-  },
-  conferenceRoomsAvailable: {
-    value: "",
-  },
-  conferenceRoomsCount: {
-    value: "",
-  },
-  pantryType: {
-    value: "",
-  },
-  pantryArea: {
-    value: "",
-  },
-  pantryAreaUnit: {
-    value: 1,
-  },
-  furnishingAvailable: {
-    value: "",
-  },
-  centralAirConditioningAvailable: {
-    value: "",
-  },
-  oxygenDuctAvailable: {
-    value: "",
-  },
-  upsAvailable: {
-    value: "",
-  },
-  fireSafetyMeasures: {
-    value: [],
-  },
-  rentIncrement: {
-    value: "",
-  },
-  fireNoc: {
-    value: "",
-  },
-  occupancyCertificate: {
-    value: "",
-  },
-  lockInPeriod: {
-    value: "",
-  },
-  officeUsedFor: {
-    value: [],
-  },
-  multiFloorSelect: {
-    value: "",
-  },
-  multiFloorNum: {
-    value: [],
-  },
-  staircaseNum: {
-    value: "",
-  },
-  dgUpsPriceIncluded: {
-    value: false,
-  },
-  wallsType: {
-    value: "",
-  },
-  doorsAvailable: {
-    value: "",
-  },
-  bareshellCentralAirConditioningAvailable: {
-    value: "",
-  },
-  bsFlooring: {
-    value: "",
-  },
-  commercialParkingAvailable: {
-    value: "",
-  },
-  privateBasementParkingAvailable: {
-    value: false,
-  },
-  privateOutsideParkingAvailable: {
-    value: false,
-  },
-  publicParkingAvailable: {
-    value: false,
-  },
-  parkingCount: {
-    value: "",
-  },
-  liftsAvailable: {
-    value: "",
-  },
-  passengerLifts: {
-    value: 0,
-  },
-  serviceLifts: {
-    value: 0,
-  },
-  modernLiftsAvailable: {
-    value: false,
-  },
-  minimumLeasableSuperBuiltUp: {
-    value: "",
-  },
-  priceType: {
-    value: "FIXED",
-  },
-  hidePrice: {
-    value: "",
-  },
-  minPrice: {
-    value: "",
-  },
-  maxPrice: {
-    value: "",
-  },
-  minPriceInWords: {},
-  maxPriceInWords: {},
-  verifyListing: {
-    value: false,
-  },
-  uploadImage: {
-    value: false,
-  },
-  reimburse: {
-    value: false,
-  },
-  assuredReturns: {
-    value: "",
-  },
-  leaseGuarantee: {
-    value: "",
-  },
-  entranceWidth: {
-    value: "",
-  },
-  ceilingHeight: {
-    value: "",
-  },
-  entranceWidthUnit: {
-    value: "1",
-  },
-  ceilingHeightUnit: {
-    value: "1",
-  },
-  washroomTypes: {
-    value: [],
-  },
-  parkingTypes: {
-    value: [],
-  },
-  shopLocatedIn: {
-    value: "",
-  },
-  isPreLeased: {
-    value: "",
-  },
-  currentMonthlyRent: {
-    value: "",
-  },
-  currentLeaseTenure: {
-    value: "",
-  },
-  annualRentIncrease: {
-    value: "",
-  },
-  leasedTo: {
-    value: {},
-  },
-  expectedAnnualReturns: {
-    value: "",
-  },
-  hideExpectedAnnualReturns: {
-    value: false,
-  },
-  suitableBusinessType: {
-    value: [],
-  },
-  otherSuitableBusinessType: {
-    value: "",
-  },
-  locatedNear: {
-    value: [],
-  },
-  mainRoadFacing: {
-    value: false,
-  },
-  shopLocatedInOthers: {
-    value: "",
-  },
-  city: {
-    value: {
-      id: "",
-      label: "",
-      lat: "",
-      lng: "",
-    },
-  },
-  locationState: {
-    value: {
-      id: "",
-      label: "",
-      lat: "",
-      lng: "",
-    },
-  },
-  locality: {
-    value: {
-      id: "",
-      label: "",
-      lat: "",
-      lng: "",
-    },
-  },
-  subLocality: {
-    value: {
-      id: "",
-      label: "",
-      lat: "",
-      lng: "",
-    },
-  },
-  project: {
-    value: {
-      id: "",
-      label: "",
-      lat: "",
-      lng: "",
-    },
-  },
-  tower: {
-    value: {
-      id: "",
-      label: "",
-      lat: "",
-      lng: "",
-    },
-  },
-  zoneType: {
-    value: {
-      id: "",
-      label: "",
-    },
-  },
-  locatedInside: {
-    value: {
-      id: "",
-      label: "",
-    },
-  },
-  address: {
-    value: "",
-  },
-  latLng: {
-    value: {
-      lat: 28.653386,
-      lng: 77.228165,
-      field: "",
-    },
-  },
-  floorPlanId: {
-    value: "",
-  },
-  postedAs: {
-    value: "O",
-  },
-  description: {
-    value: "",
-    isAutoGenerated: false,
-    error: "",
-    descriptionReviewed: false,
-  },
-  usps: [],
-  perUnitArea: {
-    value: "",
-  },
-  projectCoverPhoto: {
-    coverPhoto: null,
-  },
-  expectedAnnualReturnsCriteria: {
-    value: true,
-  },
-  locationAdvantages: [],
-  suggestUsp: [],
-  lastActiveUrl: "/postproperty/primarydetails",
-  mediaUploadChannels: [],
-  PriceRecommender: {
-    loading: false,
-    minPrice: "",
-    maxPrice: "",
-    totalPrice: "",
-    price: "",
-    pricingReasons: [],
-    otherReasons: "",
-    visible: false,
-    isEdit: false,
-  },
-  visitedPages: {
-    PrimaryDetails: true,
-  },
-  lastUpdatedField: "superPropertyType",
-  CommercialProject: {
-    projectData: {},
-  },
-  premiumVersion: {},
-};
-
-export { objectForUpload };
+K = Object(n.a)(
+  {
+    formattedRequest: "Y",
+    listing: Object(n.a)(
+      {
+        propName: e.values.project.value.label,
+        propertyType: e.values.propertyType.value,
+        postedAs:
+          e.userState.userData && e.userState.userData.user
+            ? e.userState.userData.user.userClass
+            : "O",
+        postedBy: e.userState.userData
+          ? e.userState.userData.user.profileId
+          : "",
+        profileId: e.userState.userData.user.superProfileId
+          ? e.userState.userData.user.superProfileId
+          : e.userState.userData.user.profileId,
+        userType: e.userState.userData
+          ? e.userState.userData.user.userClass
+          : "",
+        propertySpecification: "",
+        ownership: e.values.ownership.value,
+        transactType: "1",
+        bedroomNum: e.values.bedroomNum.value,
+        bathroomNum: e.values.bathroomNum.value,
+        washroomNumber: e.values.washroomNumber.value,
+        balconyNum: e.values.balconyNum.value,
+        rentalAttributes:
+          JSON.stringify(o(e)) === JSON.stringify({})
+            ? null
+            : JSON.stringify(o(e)),
+        wheelChairFriendly: e.values.wheelChairFriendly.value ? "Y" : "N",
+        cornerProperty: e.values.cornerProperty.value ? "Y" : "N",
+        isMainRoadProperty: e.values.mainRoadFacing.value,
+        rentalIncome: e.values.expectedRental.value,
+        availabilityDate: e.values.availabilityDate.value,
+        numberOfProperties: e.values.numberOfProperties.value,
+        totalRooms: e.values.totalRooms.value,
+        petFriendly: e.values.petFriendly.value ? "Y" : "N",
+        additionalRooms: e.values.additionalRooms.value.toString(),
+        description: e.values.description.value,
+        descriptionAutogenerated: e.values.description.isAutoGenerated,
+        listingCategory: e.values.resCom.value,
+        availabilityMonth: e.values.availabilityMonth.value,
+        preference: e.values.preference.value,
+        qualityRating: e.values.qualityRating.value,
+        totalFloor: e.values.totalFloor.value,
+        availability: e.values.availability.value,
+        noticeDuration:
+          e.values.noticeDuration.value === s.a.NONE
+            ? ""
+            : e.values.noticeDuration.value,
+        rentAgreementDuration: e.values.rentAgreementDuration.value,
+        sharingCount:
+          "1" == e.values.sharingType.value ? e.values.sharingCount.value : 1,
+        capacity: e.values.capacity.value,
+        minimumContractDuration:
+          e.lockInPeriod && e.lockInPeriod.visible
+            ? Object(y.a)(e, "lockInPeriod")
+            : e.values.minimumContractDuration.value,
+        boostingQuantity: "",
+        boostingQuantityType: "",
+        pricing: Object(n.a)({}, A(e), {}, T(e), {
+          earlyLeavingChargesType:
+            e.values.earlyLeavingChargesType.value === s.a.NONE
+              ? ""
+              : e.values.earlyLeavingChargesType.value,
+          earlyLeavingCharges: e.values.earlyLeavingCharges.value,
+          electricityWaterCharges: e.values.electricityWaterCharges.value
+            ? "Y"
+            : "N",
+          taxGovtCharges: e.values.taxGovtCharges.value ? "Y" : "N",
+          yearlyRentIncrement: p(Object(y.a)(e, "rentIncrement")),
+          inclusiveDgUpsPrice: Object(y.a)(e, "dgUpsPriceIncluded"),
+          assuredReturns: p(Object(y.a)(e, "assuredReturns")),
+          leaseGuarantee: p(Object(y.a)(e, "leaseGuarantee")),
+        }),
+        houseRules: O(e),
+        specification: {
+          facing: e.values.facing.value,
+          features: Object(P.a)(e).toString(),
+          isBoundaryWallMade: e.values.isBoundaryWallMade.value ? "Y" : "N",
+          powerBackup: e.values.powerBackup.value,
+          widthOfFacingRoad: e.values.widthOfFacingRoad.value,
+          widthOfFacingRoadUnit: e.values.widthOfFacingRoadUnit.value,
+          overlooking: e.values.overlooking.value.toString(),
+          waterSource: e.values.waterSource.value.toString(),
+          withinGatedCommunity: e.values.withinGatedCommunity.value ? "Y" : "N",
+          reservedParking: JSON.stringify(i(e)),
+          furnish: e.values.furnish.value,
+          furnishingAttributes: W(e),
+          flooring:
+            e.bsFlooring && e.bsFlooring.visible
+              ? e.values.bsFlooring.value
+              : e.values.flooring.value || "",
+          bathroomAttached: e.values.bathroomAttached.value ? "Y" : "N",
+          balconyAttached: e.values.balconyAttached.value ? "Y" : "N",
+          commonFurnishingAttributes: V(e),
+          bedsNum: e.values.bedsNum.value,
+          stairCases: p(Object(y.a)(e, "staircaseNum")),
+          haveFireNOC: !!+Object(y.a)(e, "fireNoc"),
+          haveOccupancyCertificate: !!+Object(y.a)(e, "occupancyCertificate"),
+          haveModernLift: !!Object(y.a)(e, "modernLiftsAvailable"),
+          privateLifts: p(Object(y.a)(e, "passengerLifts")) || null,
+          serviceLifts: p(Object(y.a)(e, "serviceLifts")) || null,
+          totalParkingCount: p(Object(y.a)(e, "parkingCount")),
+          havePvtBasementParking: !!Object(y.a)(
+            e,
+            "privateBasementParkingAvailable"
+          ),
+          havePvtOpenParking: !!Object(y.a)(
+            e,
+            "privateOutsideParkingAvailable"
+          ),
+          havePublicParking: Q()
+            ? !!Object(y.a)(e, "publicParkingAvailable") ||
+              Object(y.a)(e, "parkingTypes").indexOf("2") > -1
+            : null,
+          havePvtParking: Q()
+            ? Object(y.a)(e, "parkingTypes").indexOf("1") > -1
+            : null,
+          haveMultilevelParking: Q()
+            ? Object(y.a)(e, "parkingTypes").indexOf("3") > -1
+            : null,
+          constructionWallStatus: p(Object(y.a)(e, "wallsType")),
+          locatedNear: Object(y.a)(e, "locatedNear").toString(),
+          entranceWidth: p(Object(y.a)(e, "entranceWidth")),
+          entranceWidthUnit: p(Object(y.a)(e, "entranceWidthUnit")),
+          ceilingHeight: p(Object(y.a)(e, "ceilingHeight")),
+          ceilingHeightUnit: p(Object(y.a)(e, "ceilingHeightUnit")),
+          suitableForBusinessTypes: B(e),
+          suggestedUsp: Object(y.a)(e, "suggestUsp"),
+        },
+        priceEstimatorAttribute: N(e),
+        price: Object(n.a)(
+          {},
+          h(e),
+          {},
+          E(e),
+          {},
+          _(e),
+          {},
+          w(e),
+          {
+            inclusive: e.values.inclusive.value ? "Y" : "N",
+            negotiable: e.values.negotiable.value ? "Y" : "N",
+            perUnitArea: e.values.pricePerUnitArea.value,
+          },
+          L(e),
+          {},
+          R(e)
+        ),
+        verified: {
+          status: e.values.verifyListing.value ? "Y" : "N",
+        },
+        area: v(e),
+        location: Object(n.a)({}, Object(l.c)(e), {}, j(e), {}, D(e)),
+        media: {
+          photos: a.includes("photos") ? null : Object(C.a)(e),
+        },
+      },
+      Object(S.a)(e),
+      {
+        projectUnitFloorPlanId: Object(y.a)(e, "floorPlanId"),
+        availableRooms: Object(y.a)(e, "availableRooms"),
+        officeSpecification: d(e),
+        preLeaseDetails: b(e),
+        locationAdvantages: F(e),
+        topUsp: M(e),
+      }
+    ),
+    mediaUploadChannels: I(e),
+    dropoutId: e.dropoutId,
+  },
+  t
+);
