@@ -1,8 +1,8 @@
 {
   "name": "99acres Uploader",
   "description": "Upload Ad to 99acres.com",
-  "version": "3.0",
-  "manifest_version": 3,
+  "version": "4.0",
+  "manifest_version": 4,
   "options_page": "99acres/html/options.html",
   "permissions": [
     "storage",
