@@ -1,4 +1,4 @@
-var obj = {
+var basicObject = {
   preference: {
     value: "S",
   },
@@ -6560,6 +6560,27 @@ var cities = [
     parent_city: "Other International",
   },
 ];
+var z;
+var obj;
+var myUploadData = [];
+function changeObjAndZ(zValue) {
+  z = zValue;
+  obj = JSON.parse(JSON.stringify(basicObject));
+}
+// getParameterFromUrl = function (parameterName) {
+//   var returnVal = "";
+//   var url = window.location.href;
+//   var parameters = url.split("?")[1].split("&");
+//   for (var i = 0; i < parameters.length; i++) {
+//     var parameter = parameters[i].split("=");
+//     if (parameter[0] == parameterName) {
+//       returnVal = parameter[1];
+//       break;
+//     }
+//   }
+//   return returnVal;
+// };
+
 var myModalContent = `<button type="button" id="myModalOpen" class="btn btn-primary rounded-0 p-3" style="position: fixed;bottom: 0;right: 0;z-index: 9999;">Upload File</button>`;
 var myModal = document.createElement("div");
 myModal.innerHTML = myModalContent;
@@ -6567,147 +6588,186 @@ myModal.setAttribute("id", "myModal");
 
 var area = 0;
 if (window.location.href.indexOf("postproperty") > -1) {
-  document.body.appendChild(myModal);
+  var url = window.location.href;
+  if (url.indexOf("?") > -1) {
+    if (url.indexOf("&isActive") > -1) {
+    } else {
+      localStorage.removeItem("ppfData");
+      var url = new URL(window.location.href);
+      var tabValue = url.searchParams.get("tabValue");
+      myModal.innerHTML = `<div style="background: black;opacity: 0.8;z-index: 9998;width: 100vw;height: 100vh;position: fixed; top: 0; left:0; bottom: 0; right: 0;"><button type="button" id="myModalOpen" class="btn btn-primary rounded-0 p-3" style="position: fixed;top: 50%;right: 50%;z-index: 9999;">Load data</button></div>`;
+      document.body.appendChild(myModal);
+      setUpDataFromLocalStorage(tabValue);
+    } 
+  } else {
+    document.body.appendChild(myModal);
+    setUploadFile();
+  }
 }
-
-document.querySelector("#myModalOpen").addEventListener("click", function () {
-  var input = document.createElement("input");
-  input.setAttribute("type", "file");
-  input.setAttribute("id", "myFile");
-  input.setAttribute("accept", ".xlsx");
-  input.setAttribute("style", "display: none;");
-  document.body.appendChild(input);
-  document.querySelector("#myFile").click();
-  document.querySelector("#myFile").addEventListener("change", function () {
-    var file = document.querySelector("#myFile").files[0];
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      var workbook = XLSX.read(e.target.result, {
-        type: "binary",
-      });
-      const wsname = workbook.SheetNames[0];
-      const data = XLSX.utils.sheet_to_json(workbook.Sheets[wsname], {
-        raw: false,
-      });
-      var z = data[0];
-      if (z["type"] == "Rent / Lease") {
-        obj.preference.value = "R";
-        setAvailabilityDate(z.availabilityDate);
-        obj.electricityWaterCharges.value =
-          z["electricityWaterCharges"] == "Yes" ? true : false;
-        setOwnership(z.ownership);
-        obj.agreement.value = z.agreement == "Any" ? "2" : "1";
-        setUpFurnish(z,z.furnish);
-      } else if (z["type"] == "Sell") {
-        setUpFurnish(z,z.furnish);
-        obj.preference.value = "S";
-        obj.negotiable.value = z["priceNegotiable"] == "Yes" ? true : false;
-        obj.inclusive.value = z["inclusive price"] == "Yes" ? true : false;
-        obj.taxGovtCharges.value = z["Tax excluded"] == "Yes" ? true : false;
-        setOverLooking(z.overlooking);
-        setOwnership(z.ownership);
-      } else if (z["type"] == "Paying Guest") {
-        obj.preference.value = "P";
-        setAvailabilityDate(z.availabilityDate);
-        obj.sharingType.value = z.roomType == "Sharing" ? "1" : "2";
-        obj.petAllowed.value = z.petAllowed == "No" ? "N" : "Y";
-        obj.drinkingAllowed.value = z.drinkingAllowed == "No" ? "N" : "Y";
-        obj.smokingAllowed.value = z.smokingAllowed == "No" ? "N" : "Y";
-        obj.visitorAllowed.value = z.visitorAllowed == "No" ? "N" : "Y";
-        obj.partiesAllowed.value = z.partiesAllowed == "No" ? "N" : "Y";
-        obj.otherRule.value = z.otherRule;
-        setRooms(z.additionalRooms);
-        setSuitableFor(z.suitableFor);
-        setEntryTime(z.entryTime);
-        obj.sharingCount.value =
-          z.peopleShareRoom.length == 1 ? parseInt(z.peopleShareRoom) : 5;
-        obj.availableRooms.value = z.availableRooms;
-        obj.bedsNum.value = z.availableBeds;
-        obj.tenantGender.value =
-          z.availableFor.value == "Girls"
-            ? "1"
-            : z.availableFor == "Boys"
-            ? "2"
-            : "3";
-        obj.depositType.value =
-          z["Deposit Type"] == "Fixed"
-            ? "FIXED"
-            : z["Deposit Type"] == "Multiple of Rent"
-            ? "MULTIPLE"
-            : "";
-        obj.earlyLeavingChargesType.value =
-          z["earlyLeavingChargesType"] == "Fixed"
-            ? "FIXED"
-            : z["earlyLeavingChargesType"] == "Multiple of Rent"
-            ? "MULTIPLE"
-            : "";
-        obj.minimumContractDuration.value = z.minimumContractDuration;
-        obj.earlyLeavingCharges.value = z["earlyLeavingCharges"];
-        obj.deposit.value = z["Deposit Amount"];
-        obj.suggestUsp = {};
-        obj.suggestUsp.value = z["USP"];
-        obj.noticeDuration.value = z["Notice Duration"].split(" ")[0];
-      } else {
-        errors.push("Invalid type");
-      }
-      obj.resCom.value = z.propertySubType == "residential" ? "R" : "C";
-      if (z.propertySubType == "residential") {
-        obj.zoneType.value.id = "2";
-        obj.zoneType.value.label = "Commercial";
-      } else {
-        obj.zoneType.value.id = "3";
-        obj.zoneType.value.label = "Residential";
-      }
-      obj.locatedInside.value.id = "1";
-      obj.locatedInside.value.label = "IT Park";
-      setSuperPropertyType(z.superPropertyType, z);
-      setCity(z.city);
-      setState(z.state);
-      setLocality(z.locality, obj.locality);
-      setLocality(z.subLocality, obj.subLocality);
-      setLocality(z.projectName, obj.project);
-      setAge(z.age);
-      setAvailability(z.availability);
-      setAvailableFor(z.availableFor);
-      setWatersource(z.waterSource);
-      setFacing(z.Facing);
-      setFlooring(z["Floor Type"]);
-      setAvailableMonth(z.availableMonth);
-      obj.address.value = z.houseNo;
-      obj.balconyNum.value = z.balconyNum;
-      obj.bathroomNum.value = z.bathroomNum;
-      obj.bedroomNum.value = z.bedroomNum;
-      obj.carpet.value = z.carpetArea;
-      obj.superBuiltup.value = z.carpetArea;
-      obj.totalFloor.value = z.totalFloor;
-      obj.floorNum.value = z.floorNum;
-      obj.availability.value = z.availableYear;
-      obj.description.value = z.description;
-      obj.description.isAutoGenerated = false;
-      obj.openParking.value = z.openParking;
-      obj.coveredParking.value = z.coveredParking;
-      obj.parkingCount.value = z.coveredParking;
-      obj.rentAgreementDuration.value = z.RentAgreementDuration.split(" ")[0];
-      obj.price.value = z.rentAmount;
-      obj.powerBackup.value =
-        z["Power Backup"] == "Partial"
-          ? "P"
-          : z["Power Backup"] == "Full"
-          ? "F"
-          : "N";
-      obj.widthOfFacingRoad.value = z["widthOfFacingRoad"];
-      obj.widthOfFacingRoadUnit.value = z["Unit"] == "Feet" ? "1" : "2";
-      obj.isBrokerage.value = true;
-      obj.brokerage.value = z["rentAmount"];
-
-      localStorage.setItem("ppfData", JSON.stringify(obj));
-      window.location.href =
-        "https://www.99acres.com/postproperty/featurepricing";
-    };
-    // };
-    reader.readAsBinaryString(file);
+function setUpDataFromLocalStorage(tabValue) {
+  alert(tabValue)
+  document.querySelector("#myModalOpen").addEventListener("click", function () {
+    var resUploadData = JSON.parse(localStorage.getItem("myUploadData"));
+    var resObj = resUploadData[tabValue];
+    resObj.lastActiveUrl = "/postproperty/featurepricing?tabValue=" + tabValue + "&isActive";
+    localStorage.setItem("ppfData", JSON.stringify(resObj));
+    window.location.href = "https://www.99acres.com/postproperty/featurepricing?tabValue=" + tabValue + "&isActive";
   });
-});
+}
+function setUploadFile() {
+  document.querySelector("#myModalOpen").addEventListener("click", function () {
+    var input = document.createElement("input");
+    input.setAttribute("type", "file");
+    input.setAttribute("id", "myFile");
+    input.setAttribute("accept", ".xlsx");
+    input.setAttribute("style", "display: none;");
+    document.body.appendChild(input);
+    document.querySelector("#myFile").click();
+    document.querySelector("#myFile").addEventListener("change", function () {
+      var file = document.querySelector("#myFile").files[0];
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        var workbook = XLSX.read(e.target.result, {
+          type: "binary",
+        });
+        const wsname = workbook.SheetNames[0];
+        const data = XLSX.utils.sheet_to_json(workbook.Sheets[wsname], {
+          raw: false,
+        });
+        for (var i = 0; i < data.length; i++) {
+          changeObjAndZ(data[i]);
+          if (z["type"] == "Rent / Lease") {
+            obj.preference.value = "R";
+            setAvailabilityDate(z.availabilityDate);
+            obj.electricityWaterCharges.value =
+              z["electricityWaterCharges"] == "Yes" ? true : false;
+            setOwnership(z.ownership);
+            obj.agreement.value = z.agreement == "Any" ? "2" : "1";
+            setUpFurnish(z, z.furnish);
+          } else if (z["type"] == "Sell") {
+            setUpFurnish(z, z.furnish);
+            obj.preference.value = "S";
+            obj.negotiable.value = z["priceNegotiable"] == "Yes" ? true : false;
+            obj.inclusive.value = z["inclusive price"] == "Yes" ? true : false;
+            obj.taxGovtCharges.value =
+              z["Tax excluded"] == "Yes" ? true : false;
+            setOverLooking(z.overlooking);
+            setOwnership(z.ownership);
+          } else if (z["type"] == "Paying Guest") {
+            obj.preference.value = "P";
+            setAvailabilityDate(z.availabilityDate);
+            obj.sharingType.value = z.roomType == "Sharing" ? "1" : "2";
+            obj.petAllowed.value = z.petAllowed == "No" ? "N" : "Y";
+            obj.drinkingAllowed.value = z.drinkingAllowed == "No" ? "N" : "Y";
+            obj.smokingAllowed.value = z.smokingAllowed == "No" ? "N" : "Y";
+            obj.visitorAllowed.value = z.visitorAllowed == "No" ? "N" : "Y";
+            obj.partiesAllowed.value = z.partiesAllowed == "No" ? "N" : "Y";
+            obj.otherRule.value = z.otherRule;
+            setRooms(z.additionalRooms);
+            setSuitableFor(z.suitableFor);
+            setEntryTime(z.entryTime);
+            obj.sharingCount.value =
+              z.peopleShareRoom.length == 1 ? parseInt(z.peopleShareRoom) : 5;
+            obj.availableRooms.value = z.availableRooms;
+            obj.bedsNum.value = z.availableBeds;
+            obj.tenantGender.value =
+              z.availableFor.value == "Girls"
+                ? "1"
+                : z.availableFor == "Boys"
+                ? "2"
+                : "3";
+            obj.depositType.value =
+              z["Deposit Type"] == "Fixed"
+                ? "FIXED"
+                : z["Deposit Type"] == "Multiple of Rent"
+                ? "MULTIPLE"
+                : "";
+            obj.earlyLeavingChargesType.value =
+              z["earlyLeavingChargesType"] == "Fixed"
+                ? "FIXED"
+                : z["earlyLeavingChargesType"] == "Multiple of Rent"
+                ? "MULTIPLE"
+                : "";
+            obj.minimumContractDuration.value = z.minimumContractDuration;
+            obj.earlyLeavingCharges.value = z["earlyLeavingCharges"];
+            obj.deposit.value = z["Deposit Amount"];
+            obj.suggestUsp = {};
+            obj.suggestUsp.value = z["USP"];
+            obj.noticeDuration.value = z["Notice Duration"].split(" ")[0];
+          }
+          obj.resCom.value = z.propertySubType == "residential" ? "R" : "C";
+          if (z.propertySubType == "residential") {
+            obj.zoneType.value.id = "2";
+            obj.zoneType.value.label = "Commercial";
+          } else {
+            obj.zoneType.value.id = "3";
+            obj.zoneType.value.label = "Residential";
+          }
+          obj.locatedInside.value.id = "1";
+          obj.locatedInside.value.label = "IT Park";
+          setSuperPropertyType(z.superPropertyType, z);
+          setCity(z.city);
+          setState(z.state);
+          setLocality(z.locality, obj.locality);
+          setLocality(z.subLocality, obj.subLocality);
+          setLocality(z.projectName, obj.project);
+          setAge(z.age);
+          setAvailability(z.availability);
+          setAvailableFor(z.availableFor);
+          setWatersource(z.waterSource);
+          setFacing(z.Facing);
+          setFlooring(z["Floor Type"]);
+          setAvailableMonth(z.availableMonth);
+          obj.address.value = z.houseNo;
+          obj.balconyNum.value = z.balconyNum;
+          obj.bathroomNum.value = z.bathroomNum;
+          obj.bedroomNum.value = z.bedroomNum;
+          obj.carpet.value = z.carpetArea;
+          obj.superBuiltup.value = z.carpetArea;
+          obj.totalFloor.value = z.totalFloor;
+          obj.floorNum.value = z.floorNum;
+          obj.availability.value = z.availableYear;
+          obj.description.value = z.description;
+          obj.description.isAutoGenerated = false;
+          obj.openParking.value = z.openParking;
+          obj.coveredParking.value = z.coveredParking;
+          obj.parkingCount.value = z.coveredParking;
+          obj.rentAgreementDuration.value =
+            z.RentAgreementDuration.split(" ")[0];
+          obj.price.value = z.rentAmount;
+          obj.powerBackup.value =
+            z["Power Backup"] == "Partial"
+              ? "P"
+              : z["Power Backup"] == "Full"
+              ? "F"
+              : "N";
+          obj.widthOfFacingRoad.value = z["widthOfFacingRoad"];
+          obj.widthOfFacingRoadUnit.value = z["Unit"] == "Feet" ? "1" : "2";
+          obj.isBrokerage.value = true;
+          obj.brokerage.value = z["rentAmount"];
+          myUploadData.push(obj);
+          // localStorage.setItem("ppfData", JSON.stringify(obj));
+          // window.location.href =
+          //   "https://www.99acres.com/postproperty/featurepricing";
+        }
+        localStorage.setItem("myUploadData", JSON.stringify(myUploadData));
+        // open data.length count of tabs in chrome
+        for (let i = 0; i < data.length; i++) {
+          setTimeout(() => {
+            window.open(
+              "https://www.99acres.com/postproperty/featurepricing?tabValue=" +
+                i
+            );
+            if (i == data.length - 1) {
+              window.location.reload();
+            }
+          }, i * 500);
+        }
+      };
+      reader.readAsBinaryString(file);
+    });
+  });
+}
 function setUpPantry(type) {
   if (type == "") {
     obj.pantryType.value = 3;
@@ -6755,7 +6815,7 @@ function setSuperPropertyType(type, z) {
   } else if (type == "Bareshell") {
     obj.occupancyCertificate.value = 1;
     obj.fireNoc.value = 1;
-        obj.propertyType.value = 92;
+    obj.propertyType.value = 92;
     obj.superPropertyType.value = "Office";
     obj.doorsAvailable.value = true;
     obj.oxygenDuctAvailable.value = true;
@@ -7259,7 +7319,7 @@ function setUpFireSafety(type) {
     }
   });
 }
-function setUpFurnish(z,furnish){
+function setUpFurnish(z, furnish) {
   if (furnish == "Unfurnished") {
     obj.furnish.value = 2;
   } else if (furnish == "Semi-Furnished") {
@@ -7282,8 +7342,6 @@ function setUpFurnish(z,furnish){
   obj.furnishing_Ref.value = z["Fridge"] == "No" ? false : true;
   obj.furnishing_Sofa.value = z["Sofa"] == "No" ? false : true;
   obj.furnishing_Stv.value = z["Stove"] == "No" ? false : true;
-  obj.furnishing_Washmchn.value =
-    z["Washing Machine"] == "No" ? false : true;
-  obj.furnishing_Wtrpurfr.value =
-    z["Water Purifier"] == "No" ? false : true;
+  obj.furnishing_Washmchn.value = z["Washing Machine"] == "No" ? false : true;
+  obj.furnishing_Wtrpurfr.value = z["Water Purifier"] == "No" ? false : true;
 }

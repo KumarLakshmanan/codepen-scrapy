@@ -3,10 +3,10 @@ const head =
   document.getElementsByTagName("head")[0] ||
   document.documentElement;
 
-var script1 = document.createElement("script");
-script1.setAttribute("type", "module");
-script1.src = chrome.runtime.getURL("/99acres/js/object.js");
-head.insertBefore(script1, head.lastChild);
+// var script1 = document.createElement("script");
+// script1.setAttribute("type", "module");
+// script1.src = chrome.runtime.getURL("/99acres/js/object.js");
+// head.insertBefore(script1, head.lastChild);
 
 var script2 = document.createElement("script");
 script2.src = chrome.runtime.getURL("/99acres/js/search.js");

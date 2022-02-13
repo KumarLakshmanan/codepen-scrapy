@@ -38,7 +38,6 @@
     {
       "resources": [
         "/99acres/js/search.js",
-        "/99acres/js/object.js",
         "/99acres/js/jquery.min.js",
         "/99acres/js/jszip.js",
         "/99acres/js/xlsx.js",
