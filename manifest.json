@@ -1,36 +1,23 @@
 {
-  "name": "99acres Uploader",
-  "description": "Upload Ad to 99acres.com",
-  "version": "4.0",
-  "manifest_version": 4,
-  "options_page": "99acres/html/options.html",
-  "permissions": [
-    "storage",
-    "tabs",
-    "declarativeContent",
-    "activeTab",
-    "scripting",
-    "*://*.99acres.com/*"
-  ],
+  "name": "CODEPEN",
+  "description": "The Automation Program to Fill data using Javascript",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [],
   "content_scripts": [
     {
-      "matches": ["*://*.99acres.com/*"],
+      "matches": ["*://*.codepen.io/*"],
       "js": ["/99acres/js/content.js"],
       "all_frames": true
     }
   ],
   "action": {
     "default_icon": {
-      "48": "48.png",
       "128": "128.png",
       "512": "512.png"
     }
   },
-  "background": {
-    "service_worker": "/99acres/js/content.js"
-  },
   "icons": {
-    "48": "48.png",
     "128": "128.png",
     "512": "512.png"
   },
@@ -40,11 +27,10 @@
         "/99acres/js/search.js",
         "/99acres/js/jquery.min.js",
         "/99acres/js/jszip.js",
-        "/99acres/js/xlsx.js",
         "/99acres/js/xlsx.full.min.js",
         "/99acres/css/style.css"
       ],
-      "matches": ["*://*.99acres.com/*"]
+      "matches": ["*://*.codepen.io/*"]
     }
   ]
 }
